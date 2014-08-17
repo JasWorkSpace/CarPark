@@ -1,0 +1,48 @@
+---- get_token Matches (47 in 3 files) ----
+Lclib.c (e:\wwb\autocontrol\program\js2c):int get_token(void); 
+Lclib.c (e:\wwb\autocontrol\program\js2c):  get_token(); 
+Lclib.c (e:\wwb\autocontrol\program\js2c):  get_token();
+Lclib.c (e:\wwb\autocontrol\program\js2c):  get_token(); 
+Lclib.c (e:\wwb\autocontrol\program\js2c):  get_token(); 
+Lclib.c (e:\wwb\autocontrol\program\js2c):  get_token(); 
+Lclib.c (e:\wwb\autocontrol\program\js2c):  get_token(); 
+Lclib.c (e:\wwb\autocontrol\program\js2c):  get_token();
+Lclib.c (e:\wwb\autocontrol\program\js2c):  get_token(); 
+Littlec.c (e:\wwb\autocontrol\program\js2c):int func_pop(void), is_var(char *s), get_token(void); 
+Littlec.c (e:\wwb\autocontrol\program\js2c):		token_type = get_token();
+Littlec.c (e:\wwb\autocontrol\program\js2c):			get_token(); 
+Littlec.c (e:\wwb\autocontrol\program\js2c):		get_token();
+Littlec.c (e:\wwb\autocontrol\program\js2c):            get_token();
+Littlec.c (e:\wwb\autocontrol\program\js2c):  get_token(); /* get type */
+Littlec.c (e:\wwb\autocontrol\program\js2c):    get_token(); /* get name */ 
+Littlec.c (e:\wwb\autocontrol\program\js2c):    get_token(); 
+Littlec.c (e:\wwb\autocontrol\program\js2c):  get_token();  /* get type */
+Littlec.c (e:\wwb\autocontrol\program\js2c):    get_token(); /* get var name */ 
+Littlec.c (e:\wwb\autocontrol\program\js2c):    get_token (); 
+Littlec.c (e:\wwb\autocontrol\program\js2c):  get_token(); 
+Littlec.c (e:\wwb\autocontrol\program\js2c):    get_token(); 
+Littlec.c (e:\wwb\autocontrol\program\js2c):    get_token(); 
+Littlec.c (e:\wwb\autocontrol\program\js2c):      get_token();
+Littlec.c (e:\wwb\autocontrol\program\js2c):     get_token(); 
+Littlec.c (e:\wwb\autocontrol\program\js2c):    get_token();
+Littlec.c (e:\wwb\autocontrol\program\js2c):  get_token(); 
+Littlec.c (e:\wwb\autocontrol\program\js2c):  get_token(); /* get start of loop */ 
+Littlec.c (e:\wwb\autocontrol\program\js2c):  get_token(); 
+Littlec.c (e:\wwb\autocontrol\program\js2c):  get_token(); 
+Littlec.c (e:\wwb\autocontrol\program\js2c):    get_token(); 
+Littlec.c (e:\wwb\autocontrol\program\js2c):  get_token(); 
+Littlec.c (e:\wwb\autocontrol\program\js2c):      get_token(); 
+Parser.c (e:\wwb\autocontrol\program\js2c):int find_var(char *s), get_token(void); 
+Parser.c (e:\wwb\autocontrol\program\js2c):	get_token(); 
+Parser.c (e:\wwb\autocontrol\program\js2c):			get_token(); 
+Parser.c (e:\wwb\autocontrol\program\js2c):				get_token(); 
+Parser.c (e:\wwb\autocontrol\program\js2c):		get_token(); 
+Parser.c (e:\wwb\autocontrol\program\js2c):		get_token(); 
+Parser.c (e:\wwb\autocontrol\program\js2c):		get_token (); 
+Parser.c (e:\wwb\autocontrol\program\js2c):		get_token(); 
+Parser.c (e:\wwb\autocontrol\program\js2c):		get_token(); 
+Parser.c (e:\wwb\autocontrol\program\js2c):		get_token(); 
+Parser.c (e:\wwb\autocontrol\program\js2c):			get_token(); 
+Parser.c (e:\wwb\autocontrol\program\js2c):			get_token(); 
+Parser.c (e:\wwb\autocontrol\program\js2c):				get_token(); 
+Parser.c (e:\wwb\autocontrol\program\js2c):int get_token(void)
