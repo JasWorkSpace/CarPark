@@ -48,7 +48,7 @@ public class SportUtil {
         return 0;
     }
     public static double getCalorie(double diatance, int sportType){
-        return diatance * 60 * (1.036 + sportType/10.0f);//kg * distance * 1.036
+        return diatance * 60 * (1.336 + sportType/10.0f);//kg * distance * 1.336
     }
 
     public static synchronized boolean setLastLocation(double latitude, double longitude){

@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.text.TextUtils;
 import android.util.AttributeSet;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -31,13 +32,14 @@ public class FloatControlSmileFlash extends ClickListenerRelativeLayout implemen
     public final static int ID_BUTTON_SMILE = 1;
     public final static int ID_BUTTON_FLASH = 2;
     public FloatControlSmileFlash(Context context) {
-        super(context);
+        this(context, null);
     }
     public FloatControlSmileFlash(Context context, AttributeSet attrs) {
-        super(context, attrs);
+        this(context, attrs, 0);
     }
     public FloatControlSmileFlash(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        LayoutInflater.from(context).inflate(R.layout.layout_floatcontrolmenu_smileflash1, this);
     }
     @Override
     protected void onFinishInflate() {
@@ -107,6 +109,7 @@ public class FloatControlSmileFlash extends ClickListenerRelativeLayout implemen
         }
     }
     public void ScaleHideOrShow(final boolean show, final int AnimationDuration){
+        if(show == (mSmileColorButton.getVisibility() == VISIBLE))return;
         new Runnable(){
             @Override
             public void run() {

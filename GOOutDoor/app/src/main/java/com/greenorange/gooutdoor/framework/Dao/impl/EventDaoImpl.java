@@ -3,9 +3,7 @@ package com.greenorange.gooutdoor.framework.Dao.impl;
 import android.content.Context;
 import android.support.v4.app.DialogFragment;
 import android.view.View;
-
-import com.greenorange.gooutdoor.GOApplication;
-import com.greenorange.gooutdoor.GOConfig;
+import com.greenorange.gooutdoor.framework.Config;
 import com.greenorange.gooutdoor.framework.Dao.EventDao;
 import com.greenorange.gooutdoor.framework.Feature;
 import com.greenorange.gooutdoor.framework.Model.Event.EventClick;
@@ -27,8 +25,8 @@ public class EventDaoImpl implements EventDao {
     public EventDaoImpl(Context context){
         mContext = context;
         if(Feature.isUmengSupport()) {
-            AnalyticsConfig.setAppkey("54fe8b69fd98c5a997000479");
-            AnalyticsConfig.setChannel(GOConfig.CHANNEL);
+            AnalyticsConfig.setAppkey(Config.ANALYTICS_KEY);
+            AnalyticsConfig.setChannel(Config.ANALYTICS_CHANNEL);
         }
     }
     @Override

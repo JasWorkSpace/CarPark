@@ -14,8 +14,10 @@
         android:text="上海"/>
     <TextView style="@style/gaodeofflinemap_item_level_1_textview"
               android:id="@+id/down"
-              android:paddingRight="@dimen/gaodeofflinemap_padding1_left"
-              android:text="上海"/>
+              android:paddingRight="@dimen/gaodeofflinemap_padding1_left"/>
+    <ImageView style="@style/gaodeofflinemap_item_level_1_download_icon"
+              android:id="@+id/downicon"
+              android:src="@drawable/icon_download"/>
     <!--<com.greenorange.gooutdoorheleper.view.ProgressBotton.MasterLayout
         android:id="@+id/MasterLayout01"
         style="@style/gaodeofflinemap_item_level_1_download_icon"

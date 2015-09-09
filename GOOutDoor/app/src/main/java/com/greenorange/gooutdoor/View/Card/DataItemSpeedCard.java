@@ -60,7 +60,7 @@ public class DataItemSpeedCard extends DataItemCard implements View.OnClickListe
         }
     }
     private void updateState(){
-        int state = (Integer)SharePerferenceUtils.getValue(SharePreference.KEY_DATA_ITEM_SPEEDCARD, STATE_V1);
+        int state = (Integer)SharePerferenceUtils.getValue(SharePreference.KEY_DATA_ITEM_SPEEDCARD, STATE_V2);
         if(state != STATE_V1 && state != STATE_V2){
             state = STATE_V1;
             setState(state);

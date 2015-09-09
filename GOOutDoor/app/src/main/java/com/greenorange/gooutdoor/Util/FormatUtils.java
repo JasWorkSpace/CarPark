@@ -61,6 +61,12 @@ public class FormatUtils {
         }
         return context.getString(R.string.float_3_1, data);//is data == 100.it return 00.0
     }
+    public static String getFloat3to2(Context context, float data){
+        if(data >= 999.0f){
+            data %= 1000.0f;
+        }
+        return context.getString(R.string.float_3_2, data);//is data == 100.it return 00.00
+    }
     public static String getDouble3to1(Context context, double data){
         return getFloat3to1(context, (float)data);
     }

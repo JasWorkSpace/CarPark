@@ -1,6 +1,7 @@
 package com.greenorange.gooutdoor.UI.activity;
 
 import com.greenorange.gooutdoor.UI.activity.swipebacklayout.BaseSettingsActivity;
+import com.greenorange.gooutdoor.UI.fragment.FragmentGaodeOffLineMapCityList;
 import com.greenorange.gooutdoor.UI.fragment.FragmentRecordSports;
 import com.greenorange.gooutdoor.UI.fragment.FragmentSettings;
 import com.greenorange.gooutdoor.UI.fragment.FragmentSmile;
@@ -35,7 +36,7 @@ public class GOSettingsActivity{
     public static class GOActivity extends BaseSettingsActivity{
         @Override
         public String getSettingsFragmentName() {
-            return FragmentUI.class.getName();
+            return FragmentGaodeOffLineMapCityList.class.getName();
         }
 
     }

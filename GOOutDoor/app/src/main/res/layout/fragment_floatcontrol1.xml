@@ -3,25 +3,25 @@
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-    <com.greenorange.gooutdoor.View.layout.FloatControlSmileFlash1
+    <com.greenorange.gooutdoor.View.layout.FloatControlSmileFlash
          android:id="@+id/FloatControlSmileFlash"
          android:paddingBottom="@dimen/floatcontrol_button_margin_buttom"
          android:layout_alignParentBottom="true"
          android:layout_width="fill_parent"
          android:layout_height="wrap_content"/>
     <!-- arcmenu  -->
-    <com.greenorange.gooutdoor.View.layout.FloatControlMenu1
+    <com.greenorange.gooutdoor.View.layout.FloatControlMenu
          android:id="@+id/FloatControlMenu"
          android:layout_width="fill_parent"
          android:layout_height="wrap_content"/>
     <!-- timer -->
-    <com.greenorange.gooutdoor.View.layout.TimerRelativeLayout1
+    <com.greenorange.gooutdoor.View.layout.TimerRelativeLayout
         android:id="@+id/FloatControlTimer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
     <!-- sports -->
-    <com.greenorange.gooutdoor.View.layout.FloatControlSports1
+    <com.greenorange.gooutdoor.View.layout.FloatControlSports
         android:visibility="gone"
         android:layout_alignParentBottom="true"
         android:paddingBottom="@dimen/floatcontrol_button_margin_buttom"

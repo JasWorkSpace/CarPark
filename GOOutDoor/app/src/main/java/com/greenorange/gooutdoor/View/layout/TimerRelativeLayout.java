@@ -7,24 +7,23 @@ import android.graphics.Point;
 import android.os.Handler;
 import android.os.Message;
 import android.util.AttributeSet;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import com.greenorange.outdoorhelper.R;
 import com.greenorange.gooutdoor.framework.Model.Event.EventID;
 import com.greenorange.gooutdoor.framework.Utils.Util;
-import com.greenorange.gooutdoor.framework.widget.NumberAnimation;
 import com.greenorange.gooutdoor.framework.widget.RevealView.CircularRevealView;
 
 /**
  * Created by JasWorkSpace on 15/4/17.
  */
-public class TimerRelativeLayout extends RelativeLayout implements View.OnClickListener, NumberAnimation.InterpolatedTimeListener {
+public class TimerRelativeLayout extends RelativeLayout implements View.OnClickListener {
     private CircularRevealView mCircularRevealView;
     private TextView           mTextNumberView;
-    private RelativeLayout     mTouchRelativeLayout;
-
     public final static int ID_TIMER_STATE = 1;
 
     public final static int TIMER_STATE_OPEN       = 0;
@@ -34,18 +33,19 @@ public class TimerRelativeLayout extends RelativeLayout implements View.OnClickL
     private int  mState = TIMER_STATE_CLOSE;
 
     public TimerRelativeLayout(Context context) {
-        super(context);
+        this(context, null);
     }
     public TimerRelativeLayout(Context context, AttributeSet attrs) {
-        super(context, attrs);
+        this(context, attrs, 0);
     }
     public TimerRelativeLayout(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        LayoutInflater.from(context).inflate(R.layout.layout_timer1, this);
     }
     private boolean notifyStateChange(int state){
         if(mState == state)return false;
         int last = mState;
-        mTouchRelativeLayout.setClickable(state != TIMER_STATE_CLOSE);
+        mTextNumberView.setClickable(state != TIMER_STATE_CLOSE);
         mState = state;
         Util.postEvent(Util.produceEventStateChange(EventID.ID_STATE_TimerRelativeLayout,
                 ID_TIMER_STATE, null , mState, last));
@@ -56,11 +56,9 @@ public class TimerRelativeLayout extends RelativeLayout implements View.OnClickL
         super.onFinishInflate();
         mCircularRevealView = (CircularRevealView) findViewById(R.id.circular);
         mTextNumberView     = (TextView) findViewById(R.id.txtNumber);
-        mTouchRelativeLayout = (RelativeLayout) findViewById(R.id.touch);
-        mTouchRelativeLayout.setOnClickListener(this);
-        mTouchRelativeLayout.setClickable(false);
+        mTextNumberView.setOnClickListener(this);
+        reSetTextNumberView();
     }
-
     public void animationshow(int color, View src, int animationtime){
         if(notifyStateChange(TIMER_STATE_OPEN)) {
             cancelTextNumberViewAnimation();
@@ -68,7 +66,6 @@ public class TimerRelativeLayout extends RelativeLayout implements View.OnClickL
             mCircularRevealView.reveal(p.x, p.y, color, src.getHeight() / 2, animationtime, new showAnimation());
         }
     }
-
     public void animationHide(View src, int animationtime){
         if(notifyStateChange(TIMER_STATE_CLOSE)) {
             cancelTextNumberViewAnimation();
@@ -80,7 +77,6 @@ public class TimerRelativeLayout extends RelativeLayout implements View.OnClickL
         if(mTextNumberView != null){
             Animation animaton = mTextNumberView.getAnimation();
             if(animaton != null)animaton.cancel();
-            mTextNumberView.setAlpha(0);//make sure its inviable
         }
     }
     public void interrupt(){
@@ -160,30 +156,34 @@ public class TimerRelativeLayout extends RelativeLayout implements View.OnClickL
                     index = number.length -1;
                     reSetTextNumberView();
                     mTextNumberView.setVisibility(VISIBLE);
-                    animationTextView();
-                }break;
+                    mTextNumberView.setClickable(true);
+                }
                 case MSG_TIME_SEC: {
-                    if (--index >= 0 && mState == TIMER_STATE_OPEN) {
-                        animationTextView();
+                    if (index >= 0 && mState == TIMER_STATE_OPEN) {
+                        animationTextView(number[index--]);
+                        mHandler.sendEmptyMessageDelayed(MSG_TIME_SEC, 1000);
                     }else{
+                        reSetTextNumberView();
                         mHandler.sendEmptyMessage(MSG_TIME_TIMEOUT);
                     }
                 }break;
                 case MSG_TIME_TIMEOUT:{
+                    reSetTextNumberView();
                     mHandler.removeCallbacksAndMessages(null);
                     notifyStateChange(TIMER_STATE_TIMEOUT);
-                    reSetTextNumberView();
+
                 }break;
                 case MSG_TIME_INTERRUPUT:{
+                    reSetTextNumberView();
                     mHandler.removeCallbacksAndMessages(null);
                     notifyStateChange(TIMER_STATE_INTERRUPT);
-                    reSetTextNumberView();
+
                 }break;
                 case MSG_TIME_CLOSE:{
+                    reSetTextNumberView();
                     mHandler.removeCallbacksAndMessages(null);
                     notifyStateChange(TIMER_STATE_CLOSE);
-                    reSetTextNumberView();
-                }
+                }break;
             }
         }
     };
@@ -191,42 +191,17 @@ public class TimerRelativeLayout extends RelativeLayout implements View.OnClickL
         if(mTextNumberView != null){
             mTextNumberView.setText("");
             cancelTextNumberViewAnimation();
-            mTextNumberView.setVisibility(INVISIBLE);
+            mTextNumberView.setVisibility(GONE);
+            mTextNumberView.setClickable(false);
         }
     }
-    private boolean enrefresh = false;
-
-    private void animationTextView(){
-        enrefresh = true;
-        NumberAnimation rotateAnim = new NumberAnimation(
-                mTextNumberView.getWidth() / 2.0f, mTextNumberView.getHeight() / 2.0f, NumberAnimation.ROTATE_DECREASE);
-        if (rotateAnim != null) {
-            rotateAnim.setInterpolatedTimeListener(this);
-//            rotateAnim.setFillAfter(true);
-            mTextNumberView.startAnimation(rotateAnim);
+    private void animationTextView(String text){
+        Animation animation = mTextNumberView.getAnimation();
+        if(animation == null){
+            mTextNumberView.setAnimation(
+                    animation = AnimationUtils.loadAnimation(getContext(), R.anim.animation_timer_scale));
         }
-    }
-    @Override
-    public boolean interpolatedTime(float interpolatedTime) {
-        if (enrefresh && interpolatedTime > 0.5f) {
-             mTextNumberView.setText(number[index]);
-             enrefresh = false;
-             if(index >= 0 && mState == TIMER_STATE_OPEN){
-                 mHandler.removeMessages(MSG_TIME_SEC);
-                 mHandler.sendEmptyMessageDelayed(MSG_TIME_SEC, 1000);
-                 return true;
-             }
-        }
-        //change the alpha
-        if(mState == TIMER_STATE_OPEN) {
-            if (interpolatedTime > 0.5f) {
-                mTextNumberView.setAlpha((interpolatedTime - 0.5f) * 2);
-            } else {
-                mTextNumberView.setAlpha(1 - interpolatedTime * 2);
-            }
-        }else{
-            reSetTextNumberView();//for reset
-        }
-        return false;
+        mTextNumberView.setText(text);
+        animation.start();
     }
 }

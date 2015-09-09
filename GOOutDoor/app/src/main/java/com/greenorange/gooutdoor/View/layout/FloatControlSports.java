@@ -2,9 +2,12 @@ package com.greenorange.gooutdoor.View.layout;
 
 import android.content.Context;
 import android.util.AttributeSet;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+
+import com.greenorange.gooutdoor.framework.Dao.Interface.SportsState;
 import com.greenorange.outdoorhelper.R;
 import com.greenorange.gooutdoor.framework.Model.Event.EventID;
 import com.greenorange.gooutdoor.framework.Utils.Util;
@@ -26,15 +29,16 @@ public class FloatControlSports extends ClickListenerRelativeLayout implements V
     private View   mStop;
 
     public FloatControlSports(Context context) {
-        super(context);
+        this(context, null);
     }
 
     public FloatControlSports(Context context, AttributeSet attrs) {
-        super(context, attrs);
+        this(context, attrs, 0);
     }
 
     public FloatControlSports(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        LayoutInflater.from(context).inflate(R.layout.layout_floatcontrol_sportscontrol1, this);
     }
 
     @Override
@@ -95,5 +99,10 @@ public class FloatControlSports extends ClickListenerRelativeLayout implements V
     }
     public void dispatcherEvent(int id){
         Util.postEvent(Util.produceEventClick(EventID.ID_CLICK_FloatControlSports, null, id));
+    }
+    public void init(int state){
+        boolean showpause = !(state == SportsState.STATE_PAUSE || state == SportsState.STATE_STOP);
+        mControlLayout.setVisibility(showpause ? GONE : VISIBLE);
+        mPauseLayout.setVisibility(showpause ? VISIBLE : GONE);
     }
 }

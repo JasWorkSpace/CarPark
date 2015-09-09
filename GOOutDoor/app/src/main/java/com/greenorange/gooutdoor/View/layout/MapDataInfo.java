@@ -2,9 +2,10 @@ package com.greenorange.gooutdoor.View.layout;
 
 import android.content.Context;
 import android.util.AttributeSet;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import com.greenorange.outdoorhelper.R;
 import com.greenorange.gooutdoor.framework.Model.Event.EventID;
@@ -14,7 +15,7 @@ import com.greenorange.gooutdoor.framework.Utils.Util;
 /**
  * Created by JasWorkSpace on 15/4/28.
  */
-public class MapDataInfo extends RelativeLayout implements View.OnClickListener {
+public class MapDataInfo extends LinearLayout implements View.OnClickListener {
 
     public final static int ID_CLICK_ROTATION = 1;
     public final static int ID_CLICK_CAMERA   = 2;
@@ -22,13 +23,15 @@ public class MapDataInfo extends RelativeLayout implements View.OnClickListener 
     private ImageView mSportsTypeImageView;
     private TextView  mSportsStateTextView;
     public MapDataInfo(Context context) {
-        super(context);
+        this(context, null);
     }
     public MapDataInfo(Context context, AttributeSet attrs) {
-        super(context, attrs);
+        this(context, attrs, 0);
     }
     public MapDataInfo(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        LayoutInflater.from(context).inflate(R.layout.layout_mapdatainfo, this);
+        setBackgroundResource(R.color.toolbar_bg_color_1);
     }
     @Override
     protected void onFinishInflate() {

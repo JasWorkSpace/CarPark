@@ -1,6 +1,8 @@
 package com.greenorange.gooutdoor.UI.fragment;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,9 +14,14 @@ import android.widget.TextView;
 import com.amap.api.maps.offlinemap.OfflineMapCity;
 import com.amap.api.maps.offlinemap.OfflineMapManager;
 import com.amap.api.maps.offlinemap.OfflineMapProvince;
+import com.amap.api.maps.offlinemap.OfflineMapStatus;
 import com.greenorange.gooutdoor.framework.Log;
 import com.greenorange.gooutdoor.framework.Utils.Utils;
 import com.greenorange.gooutdoor.framework.widget.AnimatedExpandableListView;
+import com.greenorange.gooutdoor.framework.widget.swipemenulist.SwipeMenu;
+import com.greenorange.gooutdoor.framework.widget.swipemenulist.SwipeMenuItem;
+import com.greenorange.gooutdoor.framework.widget.swipemenulist.SwipeMenuLayout;
+import com.greenorange.gooutdoor.framework.widget.swipemenulist.SwipeMenuView;
 import com.greenorange.outdoorhelper.R;
 
 import java.util.ArrayList;
@@ -106,6 +113,17 @@ public class FragmentGaodeOffLineMapCityList extends BaseOffLineMapListFragment 
     public void onDownload(int i, int i2, String s) {
 
     }
+
+    @Override
+    public void onCheckUpdate(boolean b, String s) {
+
+    }
+
+    @Override
+    public void onRemove(boolean b, String s, String s2) {
+
+    }
+
     private class GaodeOffLineMapExpandableListAdapter extends AnimatedExpandableListView.AnimatedExpandableListAdapter{
         private Context mContext;
         private List<OfflineMapProvince> provinceList = new ArrayList<OfflineMapProvince>();// 保存一级目录的省直辖市
@@ -155,12 +173,48 @@ public class FragmentGaodeOffLineMapCityList extends BaseOffLineMapListFragment 
         }
         @Override
         public View getRealChildView(int groupPosition, int childPosition, boolean isLastChild, View convertView, ViewGroup parent) {
-            return getGOChildView(groupPosition,childPosition,isLastChild,convertView,parent);
+            return getGOChildView(groupPosition, childPosition, isLastChild, convertView, parent);
         }
         @Override
         public int getRealChildrenCount(int groupPosition) {
             return cityMap.get(groupPosition).size();
         }
+        //for we don't swipe item.
+//        private View getSwipeGOChildView(int groupPosition, int childPosition, boolean isLastChild, View convertView, ViewGroup parent){
+//            SwipeMenuLayout layout = null;
+//            if (convertView == null) {
+//                View contentView = getGOChildView(groupPosition, childPosition, isLastChild, convertView, parent);
+//                SwipeMenu menu = new SwipeMenu(mContext);
+//                createMenu(menu);
+//                SwipeMenuView menuView = new SwipeMenuView(menu);
+//                menuView.setOnSwipeItemClickListener(new SwipeMenuView.OnSwipeItemClickListener() {
+//                    @Override
+//                    public void onItemClick(SwipeMenuView view, SwipeMenu menu, int index) {
+//                        Log.d("setOnSwipeItemClickListener ->" + index);
+//                    }
+//                });
+//                layout = new SwipeMenuLayout(contentView, menuView,null, null);
+//            } else {
+//                layout = (SwipeMenuLayout) convertView;
+//                layout.closeMenu();
+//            }
+//            layout.setPosition(childPosition);
+//            return layout;
+//        }
+//        public void createMenu(SwipeMenu menu) {
+//            // Test Code
+//            SwipeMenuItem item = new SwipeMenuItem(mContext);
+//            item.setTitle("Item 1");
+//            item.setBackground(new ColorDrawable(Color.GRAY));
+//            item.setWidth(300);
+//            menu.addMenuItem(item);
+//
+//            item = new SwipeMenuItem(mContext);
+//            item.setTitle("Item 2");
+//            item.setBackground(new ColorDrawable(Color.RED));
+//            item.setWidth(300);
+//            menu.addMenuItem(item);
+//        }
         public View getGOChildView(int groupPosition, int childPosition, boolean isLastChild, View convertView, ViewGroup parent) {
             ViewHolder holder = null;
             if (convertView == null) {
@@ -176,7 +230,12 @@ public class FragmentGaodeOffLineMapCityList extends BaseOffLineMapListFragment 
         private void bindchildview(ViewHolder viewHolder, OfflineMapCity offlineMapCity){
             viewHolder.cityName.setText(offlineMapCity.getCity());
             viewHolder.citySize.setText(Utils.getMBFromSize(mContext, offlineMapCity.getSize()));
-
+            int state = offlineMapCity.getState();
+            switch(state){
+                case OfflineMapStatus.SUCCESS:{
+                    
+                }break;
+            }
         }
         class ViewHolder {
             TextView cityName;

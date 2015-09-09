@@ -257,14 +257,6 @@
         <item name="android:textSize">20sp</item>
         <item name="android:paddingLeft">@dimen/gaodeofflinemap_padding1_left</item>
     </style>
-    <style name="gaodeofflinemap_item_level_2_textview">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">@dimen/gaodeofflinemap_item_height</item>
-        <item name="android:gravity">center_vertical</item>
-        <item name="android:textColor">@color/card_title_text</item>
-        <item name="android:textSize">16sp</item>
-        <item name="android:paddingLeft">@dimen/gaodeofflinemap_padding2_left</item>
-    </style>
     <style name="gaodeofflinemap_item_level_1_download_icon">
         <item name="android:layout_width">@dimen/gaodeofflinemap_item_download_icon_height</item>
         <item name="android:layout_height">@dimen/gaodeofflinemap_item_download_icon_height</item>
@@ -273,6 +265,15 @@
         <item name="android:textSize">10sp</item>
         <item name="android:layout_marginRight">@dimen/gaodeofflinemap_padding_left</item>
     </style>
+    <style name="gaodeofflinemap_item_level_2_textview">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/gaodeofflinemap_item_height</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/card_title_text</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:paddingLeft">@dimen/gaodeofflinemap_padding2_left</item>
+    </style>
+
     <style name="gaodeofflinemap_item_level_1_download_arr">
         <item name="android:layout_width">@dimen/gaodeofflinemap_item_download_arr_height</item>
         <item name="android:layout_height">@dimen/gaodeofflinemap_item_download_arr_height</item>

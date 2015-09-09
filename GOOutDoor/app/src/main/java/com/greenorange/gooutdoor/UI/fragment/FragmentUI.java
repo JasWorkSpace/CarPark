@@ -75,17 +75,17 @@ public class FragmentUI extends BaseFragment implements OfflineMapManager.Offlin
                 try {
                     // 下载全国概要图、直辖市、港澳离线地图数据
                     if (groupPosition == 0 || groupPosition == 1 || groupPosition == 2) {
-                        isStart = amapManager.downloadByProvinceName(cityMap.get(groupPosition).get(childPosition).getCity());
+                         amapManager.downloadByProvinceName(cityMap.get(groupPosition).get(childPosition).getCity());
                     }
                     // 下载各省的离线地图数据
                     else {
                         // 下载各省列表中的省份离线地图数据
                         if (childPosition == 0) {
-                            isStart = amapManager.downloadByProvinceName(provinceList.get(groupPosition).getProvinceName());
+                            amapManager.downloadByProvinceName(provinceList.get(groupPosition).getProvinceName());
                         }
                         // 下载各省列表中的城市离线地图数据
                         else if (childPosition > 0) {
-                            isStart = amapManager.downloadByCityName(cityMap.get(groupPosition).get(childPosition).getCity());
+                            amapManager.downloadByCityName(cityMap.get(groupPosition).get(childPosition).getCity());
                         }
                     }
                 } catch (AMapException e) {
@@ -292,6 +292,17 @@ public class FragmentUI extends BaseFragment implements OfflineMapManager.Offlin
         }
         ((adapter)expandableListView.getAdapter()).notifyDataSetChanged();
     }
+
+    @Override
+    public void onCheckUpdate(boolean b, String s) {
+
+    }
+
+    @Override
+    public void onRemove(boolean b, String s, String s2) {
+
+    }
+
     private void changeOfflineMapTitle(int status) {
         if (mGroupPosition == 0 || mGroupPosition == 1 || mGroupPosition == 2) {
             cityMap.get(mGroupPosition).get(mChildPosition).setState(status);

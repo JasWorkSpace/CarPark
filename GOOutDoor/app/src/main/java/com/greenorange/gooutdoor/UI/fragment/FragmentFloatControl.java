@@ -1,18 +1,19 @@
 package com.greenorange.gooutdoor.UI.fragment;
 
 import android.os.Bundle;
+import android.support.v4.app.DialogFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.greenorange.gooutdoor.UI.activity.GOSettingsActivity;
 import com.greenorange.gooutdoor.Util.ActivityUtils;
-import com.greenorange.outdoorhelper.R;
-import com.greenorange.gooutdoor.UI.fragment.dialog.FinishSportsDialog;
 import com.greenorange.gooutdoor.View.layout.FloatControlMenu;
 import com.greenorange.gooutdoor.View.layout.FloatControlSmileFlash;
 import com.greenorange.gooutdoor.View.layout.FloatControlSports;
 import com.greenorange.gooutdoor.View.layout.TimerRelativeLayout;
+import com.greenorange.outdoorhelper.R;
+import com.greenorange.gooutdoor.UI.fragment.dialog.FinishSportsDialog;
 import com.greenorange.gooutdoor.framework.Dao.FlashDao;
 import com.greenorange.gooutdoor.framework.Dao.Interface.Dao;
 import com.greenorange.gooutdoor.framework.Dao.Interface.SportsState;
@@ -29,10 +30,10 @@ import com.squareup.otto.Subscribe;
  */
 public class FragmentFloatControl extends BaseFragment {
 
-    private FloatControlMenu       mFloatControlMenu;
+    private FloatControlMenu mFloatControlMenu;
     private FloatControlSmileFlash mFloatControlSmileFlash;
-    private TimerRelativeLayout    mTimerRelativeLayout;
-    private FloatControlSports     mFloatControlSports;
+    private TimerRelativeLayout mTimerRelativeLayout;
+    private FloatControlSports mFloatControlSports;
 
     public final static int AnimationDuration = 200;
 
@@ -41,7 +42,7 @@ public class FragmentFloatControl extends BaseFragment {
     private int newSportsID = -1;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_floatcontrol, null);
+        return inflater.inflate(R.layout.fragment_floatcontrol1, null);
     }
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
@@ -69,6 +70,7 @@ public class FragmentFloatControl extends BaseFragment {
             // FloatControlMenu
             case EventID.ID_CLICK_FloatControlMenu:{
                 newSportsID = eventClick.viewID;
+                mFloatControlMenu.setFloatingActionMenuEnable(false);
                 mTimerRelativeLayout.animationshow(SportUtil.getSportsColor(getActivity(), newSportsID),
                         eventClick.view , AnimationDuration * 2);
             }break;
@@ -76,7 +78,10 @@ public class FragmentFloatControl extends BaseFragment {
             //  FloatControlSports
             case EventID.ID_CLICK_FloatControlSports:{
                 if(FloatControlSports.CLICK_ID_STOP == eventClick.viewID){
-                    FinishSportsDialog.show(getActivity());
+                    DialogFragment dialogFragment = (DialogFragment) getActivity().getSupportFragmentManager().findFragmentByTag(FinishSportsDialog.TAG_FRAGMENT);
+                    if(dialogFragment == null) {//show dialog.
+                        FinishSportsDialog.show(getActivity());
+                    }
                 } else if(FloatControlSports.CLICK_ID_CONTINUE == eventClick.viewID){
                     mFloatControlSports.setPauseState(true, FloatControlMenu.AnimationDuration);
                     mFloatControlSmileFlash.ScaleHideOrShow(true, FloatControlMenu.AnimationDuration);
@@ -108,12 +113,14 @@ public class FragmentFloatControl extends BaseFragment {
                     if(TimerRelativeLayout.TIMER_STATE_TIMEOUT == eventStateChange.newState){
                         mTimerRelativeLayout.animationHide(mFloatControlMenu.mButtonMain, FloatControlMenu.AnimationDuration * 2);
                         mFloatControlMenu.setVisibility(View.GONE);
+                        mFloatControlMenu.setFloatingActionMenuEnable(true);
                         mFloatControlSports.setVisibility(View.VISIBLE);
                         mFloatControlSports.setPauseState(true, FloatControlMenu.AnimationDuration);
                         Util.postEvent(Util.produceEventMSG(EventID.ID_MSG_FragmentFloatControl,
                                 EVENT_MSG_NEWSPORTS, newSportsID));
                     } else if(TimerRelativeLayout.TIMER_STATE_INTERRUPT == eventStateChange.newState){
                         mTimerRelativeLayout.animationHide(mFloatControlMenu.mButtonMain, FloatControlMenu.AnimationDuration * 2);
+                        mFloatControlMenu.setFloatingActionMenuEnable(true);
                     }
                 }
             }break;
@@ -144,9 +151,11 @@ public class FragmentFloatControl extends BaseFragment {
         }
     }
     public void init(int state){
-        if(SportUtil.isSportingState(state)){
-            mFloatControlMenu.setVisibility(View.VISIBLE);
-            mFloatControlSports.setVisibility(View.GONE);
-        }
+        boolean showmenu = !(SportUtil.isSportingState(state) || state == SportsState.STATE_STOP);
+        mFloatControlMenu.setVisibility( showmenu ? View.VISIBLE : View.GONE);
+        mFloatControlSports.setVisibility(showmenu ? View.GONE : View.VISIBLE);
+        mFloatControlSports.init(state);
+        boolean showpause = !(state == SportsState.STATE_PAUSE || state == SportsState.STATE_STOP);
+        mFloatControlSmileFlash.ScaleHideOrShow(showpause, AnimationDuration);
     }
 }

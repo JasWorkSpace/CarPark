@@ -38,8 +38,8 @@ public class ShareExt extends AsyncTask<Object, Integer, String> implements iMap
             if(mBaseMapFragment.getMaoScreenShot(this)
                     && WaitMapBitmap()){
                 if(isActivityUseAble() && !isCancelled()){
-                    ViewUtils.savePicture(ViewUtils.createWaterMakerBitmap(mMapBitmap,null,
-                            mGOMainActivity.getString(R.string.goapplication_app_name)), "./sdcard/3.jpg");
+//                    ViewUtils.savePicture(ViewUtils.createWaterMakerBitmap(mMapBitmap,null,
+//                            mGOMainActivity.getString(R.string.goapplication_app_name)), "./sdcard/3.jpg");
                     View view = mGOMainActivity.getWaterMakerView();
                     if(view != null && mMapBitmap != null){
                         if(ViewUtils.savePicture(ViewUtils.createWaterMakerBitmap(mMapBitmap,

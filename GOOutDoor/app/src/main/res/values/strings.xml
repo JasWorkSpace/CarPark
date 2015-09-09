@@ -19,8 +19,8 @@
     <string name="layout_map_data_item_card_value_v1_1_2">距离</string>
 
     <string name="layout_map_data_item_card_value_2_1">000.0</string>
-    <string name="layout_map_data_item_card_value_t_2_1">Km/min</string>
-    <string name="layout_map_data_item_card_value_t1_2_1">min/Km</string>
+    <string name="layout_map_data_item_card_value_t_2_1">Km/H</string>
+    <string name="layout_map_data_item_card_value_t1_2_1">Min/Km</string>
     <string name="layout_map_data_item_card_value_v1_2_1">速度</string>
     <string name="layout_map_data_item_card_value_v2_2_1">配速</string>
 

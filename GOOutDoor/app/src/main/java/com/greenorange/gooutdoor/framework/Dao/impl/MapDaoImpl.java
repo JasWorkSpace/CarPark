@@ -1,7 +1,10 @@
 package com.greenorange.gooutdoor.framework.Dao.impl;
 
 import android.content.Context;
+import com.amap.api.maps.MapsInitializer;
 import com.greenorange.gooutdoor.GOApplication;
+import com.greenorange.gooutdoor.GOConfig;
+import com.greenorange.gooutdoor.framework.Config;
 import com.greenorange.outdoorhelper.R;
 import com.greenorange.gooutdoor.framework.Dao.Interface.SportsTYPE;
 import com.greenorange.gooutdoor.framework.Dao.MapDao;
@@ -28,8 +31,14 @@ public class MapDaoImpl implements MapDao{
     private HashMap<Integer, LocationFilterConfig>    mDefaultMAPFliterConfig;
     public  MapDaoImpl(Context context){
         init(context);
+        initApiKey(context);
     }
-
+    private void initApiKey(Context context) {
+        LocationConfig gaode = mMAPLocationConfig.get(MAPTYPE.MAPTYPE_GAODE);
+        if(gaode.enable){
+            MapsInitializer.setApiKey(GOConfig.DEBUG_LOCATION ? Config.AMAP_KEY_DEV : Config.AMAP_KEY_RELEASE);
+        }
+    }
     public boolean init(Context context) {
         mDefaultMapType = Integer.parseInt(context.getString(R.string.config_default_maptype));
         //// for map location config

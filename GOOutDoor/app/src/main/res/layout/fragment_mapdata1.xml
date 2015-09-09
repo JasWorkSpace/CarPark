@@ -13,7 +13,7 @@
         android:id="@+id/gridview"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"/>
-    <com.greenorange.gooutdoor.View.layout.MapDataInfo1
+    <com.greenorange.gooutdoor.View.layout.MapDataInfo
         android:id="@+id/mapdata"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"/>

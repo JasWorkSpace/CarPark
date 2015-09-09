@@ -46,15 +46,6 @@
         <provider android:authorities="com.greenorange.gooutdoor.provider"
             android:name="com.greenorange.gooutdoor.framework.provider.ScheduleProvider" android:exported="false"/>
         <service android:name="com.greenorange.gooutdoor.Service.LocationService" />
-        <!-- gaode map -->
-        <!-- for Jas test and debug gaode map key -->
-        <meta-data
-            android:name="com.amap.api.v2.apikey"
-            android:value="c752bebe26292681c13de386029118e8"/>
-        <!-- qc -->
-        <!--<meta-data
-            android:name="com.amap.api.v2.apikey"
-            android:value="799ba1adaca47407b7df27f9626536d2"/>-->
     </application>
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>

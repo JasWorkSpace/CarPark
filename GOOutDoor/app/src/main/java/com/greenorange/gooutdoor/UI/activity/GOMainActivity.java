@@ -7,12 +7,9 @@ import android.os.Message;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.text.TextUtils;
-import android.text.format.Time;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.view.animation.AnimationUtils;
 import android.widget.Toast;
 
@@ -20,15 +17,12 @@ import com.greenorange.gooutdoor.GOApplication;
 import com.greenorange.gooutdoor.GOConfig;
 import com.greenorange.gooutdoor.UI.fragment.BaseMapFragment;
 import com.greenorange.gooutdoor.UI.fragment.FragmentFloatControl;
-import com.greenorange.gooutdoor.UI.fragment.FragmentFloatControl1;
 import com.greenorange.gooutdoor.UI.fragment.FragmentGaodeMap;
-import com.greenorange.gooutdoor.UI.fragment.FragmentMapData1;
+import com.greenorange.gooutdoor.UI.fragment.FragmentMapData;
 import com.greenorange.gooutdoor.Util.Utils;
+import com.greenorange.gooutdoor.View.layout.FloatControlSports;
 import com.greenorange.gooutdoor.View.layout.MapDataInfo;
-import com.greenorange.gooutdoor.entity.SportsDBData;
-import com.greenorange.gooutdoor.framework.DB.SportsDBHelper;
 import com.greenorange.gooutdoor.framework.Dao.ApplicationDao;
-import com.greenorange.gooutdoor.framework.Log;
 import com.greenorange.gooutdoor.framework.Utils.AndroidUtils;
 import com.greenorange.gooutdoor.framework.Utils.SportUtil;
 import com.greenorange.gooutdoor.mode.ShareExt;
@@ -37,7 +31,6 @@ import com.greenorange.outdoorhelper.R;
 import com.greenorange.gooutdoor.Service.SportsControl;
 import com.greenorange.gooutdoor.UI.fragment.dialog.FinishSportsDialog;
 import com.greenorange.gooutdoor.Util.ActivityUtils;
-import com.greenorange.gooutdoor.View.layout.FloatControlSports;
 import com.greenorange.gooutdoor.framework.Dao.Interface.SportsState;
 import com.greenorange.gooutdoor.framework.Dao.SportsDao;
 import com.greenorange.gooutdoor.framework.Dao.MapDao;
@@ -52,8 +45,6 @@ import com.greenorange.gooutdoor.framework.Utils.Util;
 import com.greenorange.gooutdoor.framework.widget.dialogs.iface.ISimpleDialogListener;
 import com.squareup.otto.Subscribe;
 
-import java.util.Calendar;
-import java.util.Timer;
 
 /**
  * Created by JasWorkSpace on 15/4/10.
@@ -61,10 +52,10 @@ import java.util.Timer;
 public class GOMainActivity extends BaseActionBarActivity implements ISimpleDialogListener {
     private SportsDao        mSportsDao;
     //private FragmentMapData mFragmentMapData;
-    private FragmentMapData1 mFragmentMapData;
+    private FragmentMapData mFragmentMapData;
     private BaseMapFragment  mBaseMapFragment;
     //private FragmentFloatControl mFragmentFloatControl;
-    private FragmentFloatControl1 mFragmentFloatControl;
+    private FragmentFloatControl mFragmentFloatControl;
     private ShareExt         mSharePicture;
 
     public View getWaterMakerView(){
@@ -110,13 +101,13 @@ public class GOMainActivity extends BaseActionBarActivity implements ISimpleDial
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.setCustomAnimations(R.anim.fragmentfloatcontrol_in, R.anim.fragmentfloatcontrol_out);
         //fragmentTransaction.add(R.id.control, mFragmentFloatControl = new FragmentFloatControl()).commit();
-        fragmentTransaction.add(R.id.control, mFragmentFloatControl = new FragmentFloatControl1()).commit();
+        fragmentTransaction.add(R.id.control, mFragmentFloatControl = new FragmentFloatControl()).commit();
     }
     private void loadMapData(){
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         //fragmentTransaction.setCustomAnimations(R.anim.actionbar_top_in, R.anim.actionbar_top_out);
         //fragmentTransaction.add(R.id.mapdata, mFragmentMapData = new FragmentMapData()).commit();
-        fragmentTransaction.add(R.id.mapdata, mFragmentMapData   = new FragmentMapData1()).commit();
+        fragmentTransaction.add(R.id.mapdata, mFragmentMapData   = new FragmentMapData()).commit();
     }
     private final static int MSG_SHOW_MAPDATA           = 1;
     private final static int MSG_HIDE_MAPDATA           = 2;

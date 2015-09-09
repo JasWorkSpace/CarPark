@@ -19,6 +19,7 @@ import com.greenorange.gooutdoor.framework.widget.ActionMenu.FloatingActionMenu;
 import com.greenorange.gooutdoor.framework.Dao.Interface.SportsTYPE;
 import com.greenorange.gooutdoor.framework.widget.FloatSubButton;
 
+
 /**
  * Created by JasWorkSpace on 15/4/13.
  */
@@ -45,26 +46,31 @@ public class FloatControlMenu extends ClickListenerRelativeLayout implements Vie
                     ID_STATE_MENU, menu, mMenuState, last));
         }
     }
-    public  FloatControlMenu(Context context) {
-        super(context);
+    public FloatControlMenu(Context context) {
+        this(context, null);
     }
-    public  FloatControlMenu(Context context, AttributeSet attrs) {
-        super(context, attrs);
+    public FloatControlMenu(Context context, AttributeSet attrs) {
+        this(context, attrs, 0);
     }
-    public  FloatControlMenu(Context context, AttributeSet attrs, int defStyleAttr) {
+    public FloatControlMenu(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        LayoutInflater.from(context).inflate(R.layout.layout_floatcontrolmenu1, this);
     }
     @Override
     public void onClick(View v) {
         if(v instanceof FloatSubButton){
-            mFloatingActionMenu.toggle(true);
-            Util.postEvent(Util.produceEventClick(EventID.ID_CLICK_FloatControlMenu,
-                    v, ((FloatSubButton)v).getFloatSubButtonID()));
+            if(!mFloatingActionMenu.isAnimating()) {
+                mFloatingActionMenu.toggle(true);
+                Util.postEvent(Util.produceEventClick(EventID.ID_CLICK_FloatControlMenu,
+                        v, ((FloatSubButton) v).getFloatSubButtonID()));
+            }
             return;
         }
         switch(v.getId()){
             case R.id.touchroot:{
-                mFloatingActionMenu.toggle(true);
+                if(!mFloatingActionMenu.isAnimating()) {
+                    mFloatingActionMenu.toggle(true);
+                }
             }break;
         }
     }
@@ -151,5 +157,8 @@ public class FloatControlMenu extends ClickListenerRelativeLayout implements Vie
         subview.setLayoutParams(new FrameLayout.LayoutParams(size,size,Gravity.TOP | Gravity.LEFT));
         subview.setOnClickListener(this);
         return subview;
+    }
+    public void setFloatingActionMenuEnable(boolean enable){
+        mButtonMain.setClickable(enable);
     }
 }

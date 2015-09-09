@@ -15,6 +15,8 @@
     <string name="float_3_1" translatable="false">
         <xliff:g id="format">%1$03.01f</xliff:g>
     </string>
-
+    <string name="float_3_2" translatable="false">
+        <xliff:g id="format">%1$03.02f</xliff:g>
+    </string>
     <string name="size_m">%1$.2f MB</string>
 </resources>
