@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Config default font -->
+    <string name="config_default_font">gbk.ttf</string>
+    <string name="config_default_fontpath">fonts/gbk.ttf</string>
+
+    <!-- Config support map type -->
+    <!-- first is default value. flow is support map type . link MAPTYPE.java-->
+    <string name="config_default_maptype">1</string>
+    <!--params: 1, map type .its same as MAPTYPE define
+                2, mapenable, 1 enable ,0 disable
+                3, update frq ms
+                5, min distance-->
+    <string-array name="config_maps">
+        <item>1;1;2000;30</item>
+        <item>2;0;2000;30</item>
+    </string-array>
+    <!--params: 1, map type .its same as MAPTYPE define
+                2, sports type. its same as SportsTYPE define
+                3, min filter
+                4, max filter-->
+    <string-array name="config_maps_filter_default">
+        <item>1;2;10</item>
+        <item>2;2;10</item>
+    </string-array>
+    <string-array name="config_maps_filter">
+        <!--walk-->
+        <item>1;1;2;60</item>
+        <item>2;1;2;60</item>
+        <!--bicycle-->
+        <item>1;2;3;100</item>
+        <item>2;2;3;100</item>
+        <!--ski-->
+        <item>1;3;4;120</item>
+        <item>2;3;4;120</item>
+        <!--run-->
+        <item>1;4;2;80</item>
+        <item>2;4;2;80</item>
+    </string-array>
+
+
+    <!-- Config support flash mode-->
+    <!-- first is mode, second is open time, third is close time, four is next mode -->
+    <!-- -1 : unuse  0 : alway others : etc.  -->
+    <string-array name="config_flash_frq">
+        <item>0;-1;-1;2</item>
+        <item>2;0;-1;1</item>
+        <item>1;1000;2000;0</item>
+    </string-array>
+
+    <!-- Config smile file -->
+    <!-- first is name , second is file ,third is thumbnail-->
+    <string-array name="config_smile_file_name">
+        <item>@string/name_smile_smile</item>
+        <item>@string/name_smile_circular</item>
+        <item>@string/name_smile_wonder</item>
+    </string-array>
+    <string-array name="config_smile_file">
+        <item>file:///android_asset/smile/smile_gif_smile.gif</item>
+        <item>file:///android_asset/smile/smile_gif_circular.gif</item>
+        <item>file:///android_asset/smile/smile_gif_wonder.gif</item>
+    </string-array>
+    <string-array name="config_smile_thumbnail">
+        <item>file:///android_asset/smile/smile_thumbnail_smile.png</item>
+        <item>file:///android_asset/smile/smile_thumbnail_circular.png</item>
+        <item>file:///android_asset/smile/smile_thumbnail_wonder.png</item>
+    </string-array>
+    <string-array name="config_smile_fileid">
+        <item>@drawable/smile_gif_smile</item>
+        <item>@drawable/smile_gif_circular</item>
+        <item>@drawable/smile_gif_wonder</item>
+    </string-array>
+
+    <!-- for mapdata -->
+    <!-- its oriection for mapdat default show. link -->
+    <integer-array name="config_mapdata">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </integer-array>
+
+</resources>

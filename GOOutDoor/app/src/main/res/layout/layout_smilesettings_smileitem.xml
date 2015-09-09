@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              style="@style/fragment_settings_smile_smile">
+    <ImageView style="@style/fragment_settings_smile_smile.icon"
+              android:src="@drawable/colorsmile_normal_selector"
+              android:id="@+id/smile_icon"/>
+    <TextView style="@style/fragment_settings_smile_smile.name"
+              android:id="@+id/smile_name"/>
+</LinearLayout>

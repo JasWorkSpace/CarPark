@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <!--<PullToZoomScrollViewEx-->
+        <!--android:id="@+id/scroll_view"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--app:zoomView="@layout/layout_settings_head_zoomview"-->
+        <!--app:contentView="@layout/layout_settings_content"-->
+        <!--app:headerView="@layout/layout_settings_head"/>-->
+    <!-- we don't need it-->
+    <com.greenorange.gooutdoor.framework.widget.pulltozoomview.PullToZoomScrollViewEx
+        android:id="@+id/scrollview"
+        android:scrollbars="none"
+        android:baselineAligned="false"
+        android:cacheColorHint="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:zoomView="@layout/layout_settings_head_zoomview"
+        app:contentView="@layout/layout_settings_content"/>
+</LinearLayout>

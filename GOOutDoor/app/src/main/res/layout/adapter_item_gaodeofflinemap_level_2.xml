@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/edit_hint_font"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:gravity="center_vertical"
+    android:paddingLeft="@dimen/gaodeofflinemap_padding_left"
+    android:layout_height="@dimen/gaodeofflinemap_item_height">
+    <TextView style="@style/gaodeofflinemap_item_level_2_textview"
+        android:textSize="25sp"
+        android:id="@+id/name"
+        android:text="上海"/>
+    <TextView style="@style/gaodeofflinemap_item_level_1_textview"
+        android:id="@+id/size"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:text="上海"/>
+    <com.greenorange.gooutdoorheleper.view.ProgressBotton.MasterLayout
+        android:id="@+id/MasterLayout01"
+        style="@style/gaodeofflinemap_item_level_1_download_icon"
+        android:gravity="center"
+        android:clickable="true" >
+    </com.greenorange.gooutdoorheleper.view.ProgressBotton.MasterLayout>
+</LinearLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/mapdata_root"
+              android:visibility="invisible"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/layout_map_data"
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:id="@+id/mapdatacard"/>
+        <include layout="@layout/layout_mapdata_info"
+                 android:id="@+id/mapinfo"
+                 android:layout_width="fill_parent"
+                 android:layout_height="@dimen/layout_map_data_flog_height"
+                 android:layout_below="@id/mapdatacard"/>
+    </RelativeLayout>
+</RelativeLayout>

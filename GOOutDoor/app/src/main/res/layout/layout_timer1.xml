@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+           android:orientation="vertical"
+           android:gravity="center"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+    <com.greenorange.gooutdoor.framework.widget.RevealView.CircularRevealView
+        android:id="@+id/circular"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"/>
+    <TextView
+        android:id="@+id/txtNumber"
+        android:layout_marginTop="20dip"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:textSize="160sp"
+        android:textColor="#FFFFFF"
+        style="@style/text_shadow_style"/>
+</merge>

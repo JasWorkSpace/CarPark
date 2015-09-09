@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <include layout="@layout/layout_floatcontrolmenu_smileflash" android:id="@+id/FloatControlSmileFlash"/>
+    <!-- arcmenu  -->
+    <include layout="@layout/layout_floatcontrolmenu" android:id="@+id/FloatControlMenu"/>
+    <!-- timer -->
+    <include layout="@layout/layout_timer" android:id="@+id/FloatControlTimer"/>
+
+    <!-- sports -->
+    <include layout="@layout/layout_floatcontrol_sportscontrol" android:id="@+id/FloatControlSports" />
+</RelativeLayout>

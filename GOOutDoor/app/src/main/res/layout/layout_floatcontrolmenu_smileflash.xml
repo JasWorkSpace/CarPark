@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.greenorange.gooutdoor.View.layout.FloatControlSmileFlash xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_margin="@dimen/floatcontrol_button_margin_buttom"
+    android:layout_alignParentBottom="true"
+    android:gravity="center_vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/floatcontrol_button_main">
+    <ImageView
+        android:id="@+id/button_colorsmile"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/colorsmile_normal_selector"
+        android:layout_width="@dimen/floatcontrol_button_main1"
+        android:layout_height="@dimen/floatcontrol_button_main1"/>
+    <ImageView
+        android:id="@+id/button_flash"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/light_off_normal_selector"
+        android:layout_width="@dimen/floatcontrol_button_main1"
+        android:layout_height="@dimen/floatcontrol_button_main1"/>
+</com.greenorange.gooutdoor.View.layout.FloatControlSmileFlash>

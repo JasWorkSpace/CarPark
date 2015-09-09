@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="wrap_content"
+              android:gravity="center"
+              android:layout_height="match_parent">
+    <TextView style="@style/fragment_offlinemap_toolbar.textview" android:id="@+id/citylist" android:text="@string/fragment_settings_offlinemap_title_listcity"/>
+    <TextView style="@style/fragment_offlinemap_toolbar.textview" android:id="@+id/downloadlist" android:text="@string/fragment_settings_offlinemap_title_down"/>
+</LinearLayout>

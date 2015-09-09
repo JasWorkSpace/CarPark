@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.greenorange.gooutdoor.View.layout.MapDataCardRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:jas="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <!-- totle time and distance -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout style="@style/layout_map_data_item_left">
+                <include layout="@layout/layout_card_time" android:id="@+id/card_time"/>
+            </LinearLayout>
+            <LinearLayout style="@style/layout_map_data_item_right">
+                <include layout="@layout/layout_card_distance" android:id="@+id/card_distance"/>
+            </LinearLayout>
+        </LinearLayout>
+        <!-- speed and calorde -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout style="@style/layout_map_data_item_left">
+                <include layout="@layout/layout_card_speed" android:id="@+id/card_speed"/>
+            </LinearLayout>
+            <LinearLayout style="@style/layout_map_data_item_right">
+                <include layout="@layout/layout_card_calorie" android:id="@+id/card_calorie"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</com.greenorange.gooutdoor.View.layout.MapDataCardRelativeLayout>

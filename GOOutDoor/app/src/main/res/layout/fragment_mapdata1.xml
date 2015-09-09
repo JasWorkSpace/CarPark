@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:visibility="gone"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+    <com.greenorange.gooutdoor.framework.widget.DragableGridview
+        android:background="@color/white"
+        android:scrollbars="none"
+        android:numColumns="2"
+        android:layoutAnimation="@anim/layoutanimation_mapdata"
+        android:id="@+id/gridview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+    <com.greenorange.gooutdoor.View.layout.MapDataInfo1
+        android:id="@+id/mapdata"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

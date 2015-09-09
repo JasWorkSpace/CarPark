@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/touchroot"
+                    android:visibility="gone"
+                    android:background="#44000000"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"/>
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/floatcontrol_button_margin_buttom"
+        android:layout_width="fill_parent"
+        android:gravity="center"
+        android:layout_height="@dimen/floatcontrol_button_main">
+        <ImageView
+            android:id="@+id/plus_background"
+            android:background="@drawable/bg_big_green"
+            android:layout_width="@dimen/floatcontrol_button_main"
+            android:layout_height="@dimen/floatcontrol_button_main"/>
+        <ImageView
+            android:id="@+id/button_plus"
+            android:background="@drawable/icon_plus"
+            android:layout_width="@dimen/floatcontrol_button_main"
+            android:layout_height="@dimen/floatcontrol_button_main"/>
+    </RelativeLayout>
+</RelativeLayout>

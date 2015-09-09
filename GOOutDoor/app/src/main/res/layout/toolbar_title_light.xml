@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:gravity="center_vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <TextView style="@style/toolbar_title_textstyle_light"
+              android:id="@+id/toolbar_title"
+              android:gravity="center_vertical"
+              android:layout_width="fill_parent"
+              android:text="@string/goapplication_app_name"
+              android:layout_height="fill_parent"/>
+</LinearLayout>

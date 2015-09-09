@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="@drawable/bg_settings_smile"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+        <com.greenorange.gooutdoor.framework.widget.HorizontalListView
+            android:layout_alignParentBottom="true"
+            android:id="@+id/smilelistview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"/>
+</RelativeLayout>

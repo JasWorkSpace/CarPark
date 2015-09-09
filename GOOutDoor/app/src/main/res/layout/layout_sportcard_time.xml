@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.greenorange.gooutdoor.View.Card.Card
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/sportcard"
+    app:viewcolor="@color/layout_map_data_item_card_time_colorview_color"
+    app:defaultValue="@string/layout_map_data_item_card_value_1_1"
+    app:titletext="@string/layout_map_data_item_card_value_v1_1_1"
+    app:titlecolor="@color/layout_map_data_item_card_time_colorview_color"
+    android:layout_height="@dimen/layout_map_data_item_height"/>

@@ -1,0 +1,26 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- share -->
+    <!-- app:actionProviderClass="android.support.v7.widget.ShareActionProvider" -->
+    <item android:id="@+id/action_share" android:title="@string/toolbar_share"
+        android:icon="@drawable/icon_menu_share"
+        android:orderInCategory="100" app:showAsAction="ifRoom" />
+    <!-- record -->
+    <item android:id="@+id/action_record" android:title="@string/toolbar_record"
+        android:icon="@drawable/ic_launcher"
+        android:orderInCategory="100" app:showAsAction="never" />
+    <!-- setting -->
+    <item android:id="@+id/action_settings" android:title="@string/toolbar_setting"
+        android:icon="@drawable/ic_launcher"
+        android:orderInCategory="100" app:showAsAction="never" />
+    <!-- exit -->
+    <item android:id="@+id/action_exit" android:title="@string/toolbar_exit"
+        android:icon="@drawable/ic_launcher"
+        android:orderInCategory="100" app:showAsAction="never" />
+    <!-- textui -->
+    <item android:id="@+id/action_ui" android:title="@string/hello_world"
+          android:icon="@drawable/ic_launcher"
+          android:orderInCategory="100" app:showAsAction="never" />
+</menu>

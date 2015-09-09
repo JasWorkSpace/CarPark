@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.greenorange.gooutdoor.framework.widget.FloatSubButton xmlns:android="http://schemas.android.com/apk/res/android"
+      android:id="@+id/sub"
+      android:gravity="top|left"
+      android:background="@drawable/button_submain_run"
+      android:layout_width="@dimen/floatcontrol_button_sub"
+      android:layout_height="@dimen/floatcontrol_button_sub">
+</com.greenorange.gooutdoor.framework.widget.FloatSubButton>

@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:jas="http://schemas.android.com/apk/res-auto">
+    <!-- for swipwe back -->
+    <style name="SwipeBackLayout">
+        <item name="edge_size">50dip</item>
+        <item name="shadow_left">@drawable/shadow_left</item>
+        <item name="shadow_right">@drawable/shadow_right</item>
+        <item name="shadow_bottom">@drawable/shadow_bottom</item>
+    </style>
+    
+    <style name="toolbar_title_textstyle">
+        <item name="android:textSize">@dimen/toolbar_title_textsize</item>
+        <!--<item name="android:textStyle">bold</item>-->
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="toolbar_title_textstyle_light">
+        <item name="android:textSize">@dimen/toolbar_title_textsize</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <!-- for layout map data -->
+    <style name="layout_map_data_item_left">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/layout_map_data_item_height</item>
+        <item name="android:paddingRight">@dimen/layout_map_data_item_padding</item>
+        <item name="android:paddingTop">@dimen/layout_map_data_item_padding</item>
+        <item name="android:paddingBottom">@dimen/layout_map_data_item_padding</item>
+        <item name="android:paddingLeft">@dimen/layout_map_data_item_padding_left</item>
+    </style>
+    <style name="layout_map_data_item_right">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/layout_map_data_item_height</item>
+        <item name="android:paddingLeft">@dimen/layout_map_data_item_padding</item>
+        <item name="android:paddingTop">@dimen/layout_map_data_item_padding</item>
+        <item name="android:paddingBottom">@dimen/layout_map_data_item_padding</item>
+        <item name="android:paddingRight">@dimen/layout_map_data_item_padding_left</item>
+    </style>
+    <!--<style name="layout_map_data_item_time">-->
+        <!--<item name="jas:viewcolor">@color/layout_map_data_item_card_time_colorview_color</item>-->
+        <!--<item name="jas:defaultValue">@string/layout_map_data_item_card_value_1_1</item>-->
+        <!--<item name="jas:titlecolor">@color/layout_map_data_item_card_time_titlecolor</item>-->
+        <!--<item name="jas:titletext">@string/layout_map_data_item_card_value_v1_1_1</item>-->
+    <!--</style>-->
+    <style name="layout_map_data_item_distance">
+        <!--<item name="jas:viewcolor">@color/layout_map_data_item_card_distance_colorview_color</item>-->
+        <!--<item name="jas:defaultValue">@string/layout_map_data_item_card_value_1_2</item>-->
+        <!--<item name="jas:unittext1">@string/layout_map_data_item_card_value_t_1_2</item>-->
+        <!--<item name="jas:titlecolor">@color/layout_map_data_item_card_distance_titlecolor</item>-->
+        <!--<item name="jas:titletext">@string/layout_map_data_item_card_value_v1_1_2</item>-->
+    </style>
+    <style name="layout_map_data_item_speed">
+        <!--<item name="jas:viewcolor">@color/layout_map_data_item_card_speed_colorview_color</item>-->
+        <!--<item name="jas:defaultValue">@string/layout_map_data_item_card_value_1_2</item>-->
+        <!--<item name="jas:unittext1">@string/layout_map_data_item_card_value_t_2_1</item>-->
+        <!--<item name="jas:unittext2">@string/layout_map_data_item_card_value_t1_2_1</item>-->
+        <!--<item name="jas:titlecolor">@color/layout_map_data_item_card_speed_titlecolor</item>-->
+        <!--<item name="jas:titletext">@string/layout_map_data_item_card_value_v1_1_2</item>-->
+        <!--<item name="jas:subtitlecolor">@color/layout_map_data_item_card_speed_subtitlecolor</item>-->
+        <!--<item name="jas:subtitletext">@string/layout_map_data_item_card_value_v2_2_1</item>-->
+    </style>
+    <style name="layout_map_data_item_calorie">
+        <!--<item name="jas:viewcolor">@color/layout_map_data_item_card_calorie_colorview_color</item>-->
+        <!--<item name="jas:defaultValue">@string/layout_map_data_item_card_value_1_2</item>-->
+        <!--<item name="jas:unittext1">@string/layout_map_data_item_card_value_t_2_2</item>-->
+        <!--<item name="jas:titlecolor">@color/layout_map_data_item_card_calorie_titlecolor</item>-->
+        <!--<item name="jas:titletext">@string/layout_map_data_item_card_value_v1_2_2</item>-->
+    </style>
+
+    <style name="text_shadow_style">
+        <item name="android:shadowColor">#80000000</item>
+        <item name="android:shadowDx">1.0</item>
+        <item name="android:shadowDy">1.0</item>
+        <item name="android:shadowRadius">0.5</item>
+    </style>
+
+
+
+    <style name="layout_floatcontrol_spoetscontrol_iamge">
+        <item name="android:layout_weight">@dimen/floatcontrol_sports_main</item>
+        <item name="android:layout_height">@dimen/floatcontrol_sports_main</item>
+    </style>
+    <style name="layout_floatcontrol_spoetscontrol_text" >
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/floatcontrol_sports_textsize</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="GODialogLight" parent="Material.App.Dialog.Simple.Light">
+        <item name="di_inAnimation">@anim/material_anim_scale_in</item>
+        <item name="di_outAnimation">@anim/material_anim_scale_out</item>
+    </style>
+    <!-- for settings -->
+    <style name="layout_settings_icon">
+        <item name="android:layout_width">@dimen/layout_settings_head_width</item>
+        <item name="android:layout_height">@dimen/layout_settings_head_height</item>
+    </style>
+    <style name="layout_settings_lab">
+        <item name="android:gravity">center</item>
+        <item name="android:padding">@dimen/layout_settings_icon_lab_padding</item>
+        <item name="android:textSize">@dimen/layout_settings_icon_lab</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="layout_settings_version" parent="@style/layout_settings_lab">
+        <item name="android:textSize">@dimen/layout_settings_icon_version</item>
+    </style>
+    <style name="layout_settings_item">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/layout_settings_item_height</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+    <style name="layout_settings_item_icon_layout">
+        <item name="android:layout_width">@dimen/layout_settings_item_icon_layout_width</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="layout_settings_item_icon">
+        <item name="android:layout_height">@dimen/layout_settings_item_icon_height</item>
+        <item name="android:layout_width">@dimen/layout_settings_item_icon_width</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="layout_settings_item_content_layout">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+    <style name="layout_settings_item_content_textview">
+        <item name="android:clickable">true</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">#de000000</item>
+        <item name="android:textSize">@dimen/layout_settings_item_content_textview_textsize</item>
+    </style>
+
+    <style name="layout_map_icon_movetolocation">
+        <item name="android:layout_width">@dimen/layout_map_icon_movetolocation_width</item>
+        <item name="android:layout_height">@dimen/layout_map_icon_movetolocation_height</item>
+        <item name="android:layout_marginBottom">@dimen/layout_map_icon_movetolocation_margin_buttom</item>
+        <item name="android:layout_marginLeft">@dimen/layout_map_icon_movetolocation_margin_right</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+
+    <!-- for settings -->
+    <style name="layout_settings_category">
+        <item name="android:paddingLeft">@dimen/layout_settings_preference_icon_padding</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+    <style name="layout_settings_category_textview">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">@dimen/layout_settings_category_layout_padding_top</item>
+        <item name="android:paddingBottom">@dimen/layout_settings_category_layout_padding_bottom</item>
+        <item name="android:textSize">@dimen/layout_settings_category_textsize</item>
+        <item name="android:textColor">@color/goapplication_main_color</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="layout_settings_preference">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+    <style name="layout_settings_preference.icon">
+        <item name="android:layout_height">@dimen/layout_settings_preference_icon_height</item>
+        <item name="android:layout_width">@dimen/layout_settings_preference_icon_width</item>
+        <item name="android:padding">@dimen/layout_settings_preference_icon_padding</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+    <style name="layout_settings_preference.titleview">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:paddingLeft">@dimen/layout_settings_preference_padding</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">@dimen/layout_settings_preference_titleview_testsize</item>
+    </style>
+    <style name="layout_settings_preference.switch">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:paddingRight">@dimen/layout_settings_preference_padding</item>
+    </style>
+
+
+    <!-- frangment_offlinemap -->
+    <style name="fragment_offlinemap_toolbar">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">@dimen/fragment_offlinemap_tootlebar_textview_layout_width</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="fragment_offlinemap_toolbar.textview" parent="fragment_offlinemap_toolbar">
+        <item name="android:focusable">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">@dimen/fragment_offlinemap_tootlebar_textview_layout_width</item>
+        <item name="android:textColor">@drawable/fragment_offlinemap_toolbar_textcolor</item>
+        <item name="android:textSize">@dimen/fragment_offlinemap_tootlebar_textview_textsize</item>
+        <item name="android:clickable">true</item>
+        <item name="android:background">@drawable/fragment_offlinemap_toolbar_textbg</item>
+    </style>
+    <style name="fragment_offlinemap_toolbar.textview_line" parent="fragment_offlinemap_toolbar">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">5dp</item>
+        <item name="android:background">@drawable/fragment_offlinemap_toolbar_textcolor</item>
+    </style>
+
+    <!-- for smile adapter item-->
+    <style name="fragment_settings_smile_smile">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">@dimen/fragment_settings_smile_smile_layout_width</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    <style name="fragment_settings_smile_smile.icon" parent="@style/fragment_settings_smile_smile">
+        <item name="android:layout_height">@dimen/fragment_settings_smile_smile_icon_layout_height</item>
+        <item name="android:layout_width">@dimen/fragment_settings_smile_smile_icon_layout_width</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+    <style name="fragment_settings_smile_smile.name" parent="@style/fragment_settings_smile_smile">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_marginTop">@dimen/fragment_settings_smile_smile_textview_layout_margin_top</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/fragment_settings_smile_smile_textview_textsize</item>
+    </style>
+
+    <style name="sportcard">
+        <item name="android:padding">@dimen/layout_map_data_item_padding</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/layout_map_data_item_height</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+
+    <!-- for offline item-->
+    <style name="gaodeofflinemap_item_level_1_textview">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/gaodeofflinemap_item_height</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/card_light_text</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:paddingLeft">@dimen/gaodeofflinemap_padding1_left</item>
+    </style>
+    <style name="gaodeofflinemap_item_level_2_textview">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/gaodeofflinemap_item_height</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/card_title_text</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:paddingLeft">@dimen/gaodeofflinemap_padding2_left</item>
+    </style>
+    <style name="gaodeofflinemap_item_level_1_download_icon">
+        <item name="android:layout_width">@dimen/gaodeofflinemap_item_download_icon_height</item>
+        <item name="android:layout_height">@dimen/gaodeofflinemap_item_download_icon_height</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:layout_marginRight">@dimen/gaodeofflinemap_padding_left</item>
+    </style>
+    <style name="gaodeofflinemap_item_level_1_download_arr">
+        <item name="android:layout_width">@dimen/gaodeofflinemap_item_download_arr_height</item>
+        <item name="android:layout_height">@dimen/gaodeofflinemap_item_download_arr_height</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:layout_marginRight">@dimen/gaodeofflinemap_padding_left</item>
+    </style>
+    <style name="gaodeofflinemap_item_level_group_textview">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/gaodeofflinemap_item_height</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/card_title_text</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:paddingLeft">@dimen/gaodeofflinemap_padding_left</item>
+    </style>
+</resources>
