@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              style="@style/layout_recordsports_recylerview_item"
+              android:orientation="horizontal">
+      <!-- day and time-->
+      <LinearLayout style="@style/layout_recordsports_recylerview_item_itemlayout">
+            <com.greenorange.gooutdoor.framework.widget.autofittextview.AutofitTextView
+                style="@style/layout_recordsports_recylerview_item_itemtextview"
+                android:textColor="@color/goapplication_main_color"
+                android:id="@+id/item_day"/>
+            <com.greenorange.gooutdoor.framework.widget.autofittextview.AutofitTextView
+                style="@style/layout_recordsports_recylerview_item_itemtextview_value"
+                android:id="@+id/item_time"/>
+      </LinearLayout>
+      <!--icon  -->
+      <LinearLayout style="@style/layout_recordsports_recylerview_item_itemlayout">
+            <ImageView style="@style/layout_recordsports_recylerview_item_itemicon"
+                android:id="@+id/item_sportstype"/>
+      </LinearLayout>
+      <!-- sports time-->
+      <LinearLayout style="@style/layout_recordsports_recylerview_item_itemlayout">
+          <com.greenorange.gooutdoor.framework.widget.autofittextview.AutofitTextView
+              style="@style/layout_recordsports_recylerview_item_itemtextview"
+              android:text="@string/fragment_recordsports_item_sports_time"/>
+          <com.greenorange.gooutdoor.framework.widget.autofittextview.AutofitTextView
+              style="@style/layout_recordsports_recylerview_item_itemtextview_value"
+              android:id="@+id/item_sportstime"/>
+      </LinearLayout>
+      <!-- sports distance-->
+      <LinearLayout style="@style/layout_recordsports_recylerview_item_itemlayout">
+          <com.greenorange.gooutdoor.framework.widget.autofittextview.AutofitTextView
+              style="@style/layout_recordsports_recylerview_item_itemtextview"
+              android:text="@string/fragment_recordsports_item_sports_distance"/>
+          <com.greenorange.gooutdoor.framework.widget.autofittextview.AutofitTextView
+              style="@style/layout_recordsports_recylerview_item_itemtextview_value"
+              android:id="@+id/item_sportsdistance"/>
+      </LinearLayout>
+      <!-- sports calorie-->
+      <LinearLayout style="@style/layout_recordsports_recylerview_item_itemlayout">
+          <com.greenorange.gooutdoor.framework.widget.autofittextview.AutofitTextView
+              style="@style/layout_recordsports_recylerview_item_itemtextview"
+              android:text="@string/fragment_recordsports_item_sports_calorie"/>
+          <com.greenorange.gooutdoor.framework.widget.autofittextview.AutofitTextView
+              style="@style/layout_recordsports_recylerview_item_itemtextview_value"
+              android:id="@+id/item_sportscalorie"/>
+      </LinearLayout>
+</LinearLayout>

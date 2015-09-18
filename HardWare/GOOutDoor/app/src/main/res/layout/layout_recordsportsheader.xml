@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout_recordsports_header">
+    <!-- distance -->
+    <TextView style="@style/layout_recordsports_header_textview_title"
+        android:text="@string/activity_recordsports_header_sports_distance"/>
+    <TextView android:id="@+id/distance" style="@style/layout_recordsports_header_textview_distance"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView style="@style/layout_recordsports_header_textview_title"
+                      android:text="@string/activity_recordsports_header_sports_count"/>
+            <TextView android:id="@+id/count" style="@style/layout_recordsports_header_textview_count"/>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView style="@style/layout_recordsports_header_textview_title"
+                      android:text="@string/activity_recordsports_header_sports_calorie"/>
+            <TextView android:id="@+id/calorie" style="@style/layout_recordsports_header_textview_calorie"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

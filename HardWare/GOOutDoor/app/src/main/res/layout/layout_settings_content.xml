@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <!-- preference settings -->
+    <com.greenorange.gooutdoor.View.layout.SettingsPreferenceCategory
+        style="@style/layout_settings_category"
+        app:category_title="@string/layout_settings_category_normal"/>
+        <!-- key is same as  SharePreference KEY_SETTINGS_KEEPSCREENON-->
+        <com.greenorange.gooutdoor.View.layout.SettingsPreference
+            style="@style/layout_settings_preference"
+            android:id="@+id/settings_keepscreenon"
+            app:preference_key="KEY_SETTINGS_KEEPSCREENON"
+            app:preference_icon="@drawable/icon_settings_keepscreen"
+            app:preference_title="@string/layout_settings_preference_screenon"
+            app:preference_switch="true"/>
+        <com.greenorange.gooutdoor.View.layout.SettingsPreference
+            style="@style/layout_settings_preference"
+            android:id="@+id/settings_offlinemap"
+            app:preference_key="settings_offlinemap"
+            app:preference_icon="@drawable/icon_settings_offlinemap"
+            app:preference_title="@string/layout_settings_preference_offlinemap"/>
+        <com.greenorange.gooutdoor.View.layout.SettingsPreference
+            style="@style/layout_settings_preference"
+            android:id="@+id/settings_smile"
+            android:visibility="gone"
+            app:preference_key="settings_smile"
+            app:preference_icon="@drawable/icon_settings_offlinemap"
+            app:preference_title="@string/layout_settings_preference_smile"/>
+    <include layout="@layout/layout_settings_preference_divider"/>
+
+    <!-- preference more -->
+    <com.greenorange.gooutdoor.View.layout.SettingsPreferenceCategory
+        style="@style/layout_settings_category"
+        app:category_title="@string/layout_settings_category_more"/>
+    <com.greenorange.gooutdoor.View.layout.SettingsPreference
+        style="@style/layout_settings_preference"
+        android:id="@+id/settings_checkupdate"
+        app:preference_key="settings_checkupdate"
+        app:preference_icon="@drawable/icon_settings_update"
+        app:preference_title="@string/layout_settings_preference_checkoutupdate"/>
+    <com.greenorange.gooutdoor.View.layout.SettingsPreference
+        style="@style/layout_settings_preference"
+        android:id="@+id/settings_about"
+        android:visibility="gone"
+        app:preference_key="settings_about"
+        app:preference_icon="@drawable/icon_settings_about"
+        app:preference_title="@string/layout_settings_preference_aboutus"/>
+    <include layout="@layout/layout_settings_preference_divider"/>
+</LinearLayout>

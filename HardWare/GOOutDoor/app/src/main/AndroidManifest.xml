@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:jas="http://schemas.android.com/apk/res-auto"
+    package="com.greenorange.outdoorhelper" >
+    <!-- package="com.greenorange.gooutdoor" -->
+    <application
+        android:largeHeap="true"
+        android:allowBackup="true"
+        android:name="com.greenorange.gooutdoor.GOApplication"
+        android:icon="@drawable/applogo"
+        android:label="@string/goapplication_app_name"
+        android:theme="@style/GOApplication" >
+        <activity
+            android:name="com.greenorange.gooutdoor.UI.activity.GOMainActivity"
+            android:theme="@style/GOApplication"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.greenorange.gooutdoor.UI.activity.GOSettingsActivity$GOSettingsMainActivity"
+                  android:theme="@style/GOApplication.Settings"
+                  android:screenOrientation="portrait"
+                  android:configChanges="orientation|screenSize"/>
+        <activity android:name="com.greenorange.gooutdoor.UI.activity.GOSettingsActivity$GOSettingsSmileActivity"
+                  android:theme="@style/GOApplication.Settings"
+                  android:screenOrientation="portrait"
+                  android:configChanges="orientation|screenSize"/>
+        <activity android:name="com.greenorange.gooutdoor.UI.activity.GOSettingsOffLineMapActivity"
+                  android:theme="@style/GOApplication.Settings"
+                  android:screenOrientation="portrait"
+                  android:configChanges="orientation|screenSize"/>
+        <activity android:name="com.greenorange.gooutdoor.UI.activity.GOSettingsActivity$GOSmileActivity"
+                  android:theme="@style/GOApplication.Settings"
+                  android:screenOrientation="portrait"
+                  android:configChanges="orientation|screenSize"/>
+        <activity android:name="com.greenorange.gooutdoor.UI.activity.GOSettingsActivity$GOActivity"
+                  android:theme="@style/GOApplication.Settings"
+                  android:screenOrientation="portrait"
+                  android:configChanges="orientation|screenSize"/>
+        <activity android:name="com.greenorange.gooutdoor.UI.activity.GOSettingsActivity$GORecordActivity"
+                  android:theme="@style/GOApplication.Settings"
+                  android:screenOrientation="portrait"
+                  android:configChanges="orientation|screenSize"/>
+        <!-- for provider data -->
+        <provider android:authorities="com.greenorange.gooutdoor.provider"
+            android:name="com.greenorange.gooutdoor.framework.provider.ScheduleProvider" android:exported="false"/>
+        <service android:name="com.greenorange.gooutdoor.Service.LocationService" />
+    </application>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ADVANCED_WIDGET_SCENE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+</manifest>

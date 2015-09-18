@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+        <include layout="@layout/fragment_baserecyleview"/>
+        <RelativeLayout style="@style/layout_recordsports_emptyview"
+                        android:visibility="invisible"
+                        android:paddingBottom="?actionBarSize"
+                        android:id="@+id/emptyview">
+            <ImageView style="@style/layout_recordsports_emptyview.icon"
+                       android:id="@+id/emptyview_icon"
+                       android:layout_centerHorizontal="true"/>
+            <TextView style="@style/layout_recordsports_emptyview.text"
+                       android:text="@string/fragment_recordsports_emptyview_text"
+                       android:layout_below="@id/emptyview_icon"/>
+        </RelativeLayout>
+</RelativeLayout>

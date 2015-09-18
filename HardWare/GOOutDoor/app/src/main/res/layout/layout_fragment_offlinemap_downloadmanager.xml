@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:id="@+id/itemlayer"
+                  android:paddingLeft="@dimen/gaodeofflinemap_padding1_left"
+                  style="@style/gaodeofflinemap_download_item">
+        <TextView style="@style/gaodeofflinemap_download_item.name" android:id="@+id/name"/>
+        <ImageView style="@style/gaodeofflinemap_download_item.icon" android:id="@+id/delete" android:src="@drawable/maps_delete"/>
+        <ImageView style="@style/gaodeofflinemap_download_item.icon" android:id="@+id/control" android:src="@drawable/maps_done"/>
+    </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:id="@+id/headerlayer"
+                  style="@style/gaodeofflinemap_download_item_header">
+        <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:id="@+id/header"
+                  style="@style/gaodeofflinemap_download_item_header"/>
+    </LinearLayout>
+</LinearLayout>

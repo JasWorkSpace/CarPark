@@ -1,6 +1,0 @@
-<resources>
-
-    <style name="GOApplication" parent="AppTheme">
-        <item name="android:colorAccent">@color/goapplication_main_color</item>
-    </style>
-</resources>

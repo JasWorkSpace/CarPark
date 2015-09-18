@@ -1,0 +1,9 @@
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/text1"
+    android:background="@android:color/transparent"
+    android:layout_width="wrap_content"
+    android:layout_height="?actionBarSize"
+    android:gravity="center"
+    android:textColor="@drawable/fragment_offlinemap_toolbar_textcolor"
+    android:textSize="@dimen/fragment_offlinemap_tootlebar_textview_textsize"
+    android:textAllCaps="true" />

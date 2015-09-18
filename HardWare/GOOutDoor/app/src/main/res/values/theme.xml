@@ -1,0 +1,89 @@
+<resources>
+    <style name="Base.AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. for support-->
+        <item name="colorPrimary">@color/goapplication_main_color</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="colorAccent">@color/goapplication_main_color</item>
+        <!-- Customize your theme here. for android -->
+        <item name="android:colorPrimary">@color/goapplication_main_color</item>
+        <item name="android:colorPrimaryDark">@color/black</item>
+        <item name="android:colorAccent">@color/goapplication_main_color</item>
+    </style>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Base.AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <!-- Customize your theme here. -->
+        <item name="android:textViewStyle">@style/AppTheme.Widget.TextView</item>
+        <!-- Action Bar Theme -->
+        <item name="android:actionBarStyle">@style/AppTheme.ActionBar</item>
+        <item name="android:activityOpenEnterAnimation">@anim/activity_slide_right_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/activity_slide_left_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/activity_slide_right_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/activity_slide_left_out</item>
+        <item name="drawerArrowStyle">@style/ToolbarColorStyle</item>
+        <item name="android:actionOverflowButtonStyle">@style/CustomActionOverflowButtonStyle</item>
+    </style>
+    <!-- AppTheme ActionBar Style -->
+    <style name="AppTheme.ActionBar" parent="android:Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:titleTextStyle">@style/AppTheme.ActionBar.TextAppearance</item>
+        <item name="fontPath">@string/config_default_fontpath</item>
+        <item name="android:actionOverflowButtonStyle">@style/CustomActionOverflowButtonStyle</item>
+    </style>
+    <style name="CustomActionOverflowButtonStyle" parent="Base.Widget.AppCompat.ActionButton.Overflow">
+        <item name="android:src">@drawable/icon_menu_overflow</item>
+    </style>
+    <style name="AppTheme.ActionBar.TextAppearance" parent="android:TextAppearance.Holo.Widget.ActionBar.Title.Inverse">
+        <item name="fontPath">@string/config_default_fontpath</item>
+    </style>
+    <style name="AppTheme.Widget"/>
+
+    <style name="AppTheme.Widget.TextView" parent="android:Widget.Holo.Light.TextView">
+        <!-- Custom Attr-->
+        <item name="fontPath">@string/config_default_fontpath</item>
+    </style>
+
+    <style name="AppTheme.Widget.TextView.Style">
+        <item name="fontPath">@string/config_default_fontpath</item>
+    </style>
+
+    <style name="AppTheme.Widget.TextViewAppearanceStyle" parent="android:Widget.Holo.Light.TextView">
+        <item name="android:textAppearance">@style/TextAppearance.FontPath</item>
+    </style>
+
+    <style name="TextAppearance.FontPath" parent="android:TextAppearance">
+        <!-- Custom Attr-->
+        <item name="fontPath">@string/config_default_fontpath</item>
+        <item name="android:textColor">@android:color/white</item>
+        <!--<item name="android:textColor">#444</item>-->
+    </style>
+
+    <style name="TextAppearance.FontPathView" parent="android:TextAppearance">
+        <!-- Custom Attr-->
+        <!--<item name="fontPath">fonts/gbk.ttf</item>-->
+        <item name="fontPath">@string/config_default_fontpath</item>
+        <!--<item name="android:textColor">#444</item>-->
+    </style>
+    <style name="ToolbarColorStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">#fff</item>
+    </style>
+    <style name="GoToolBarPopStyle" parent="@style/Theme.AppCompat.Light">
+        <item name="dropDownListViewStyle">@style/GoToolBarPopDropDownListView.Example</item>
+        <item name="android:textColor">@drawable/toolbar_popitem_textcolor</item>
+        <item name="displayOptions">useLogo|showHome|showTitle</item>
+        <item name="android:textViewStyle">@style/AppTheme.Widget.TextView</item>
+    </style>
+    <style name="GoToolBarPopDropDownListView.Example" parent="@style/Widget.AppCompat.Light.ListView.DropDown">
+        <item name="android:listSelector">@drawable/click_background_selector</item>
+        <!--<item name="android:background">@drawable/click_background_selector</item>-->
+    </style>
+
+    <style name="GOApplication" parent="AppTheme"/>
+    <style name="GOApplicationSwape" parent="GOApplication">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+    <style name="GOApplication.Settings" parent="GOApplicationSwape"/>
+</resources>

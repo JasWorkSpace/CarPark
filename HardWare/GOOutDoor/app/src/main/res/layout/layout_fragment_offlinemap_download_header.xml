@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              style="@style/gaodeofflinemap_download_item_header">
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/header"
+    style="@style/gaodeofflinemap_download_item_header"/>
+</LinearLayout>

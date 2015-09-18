@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+      android:paddingLeft="@dimen/gaodeofflinemap_padding1_left"
+      style="@style/gaodeofflinemap_download_item">
+    <TextView style="@style/gaodeofflinemap_download_item.name" android:id="@+id/name"/>
+    <ImageView style="@style/gaodeofflinemap_download_item.icon" android:id="@+id/delete" android:src="@drawable/maps_delete"/>
+    <ImageView style="@style/gaodeofflinemap_download_item.icon" android:id="@+id/control" android:src="@drawable/maps_done"/>
+</LinearLayout>

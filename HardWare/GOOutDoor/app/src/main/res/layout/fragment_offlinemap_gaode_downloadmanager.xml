@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.greenorange.gooutdoor.framework.widget.PinnedSectionListView
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      android:orientation="vertical"
+      android:id="@+id/expandable"
+      android:background="@color/white"
+      android:layout_width="match_parent"
+      android:cacheColorHint="#00000000"
+      android:childDivider="@android:color/darker_gray"
+      android:layout_height="match_parent"/>

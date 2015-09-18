@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="goapplication_app_name">运动助手</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="toolbar_refresh">刷新</string>
+    <string name="toolbar_share">分享</string>
+    <string name="toolbar_record">记录</string>
+    <string name="toolbar_setting">设置</string>
+    <string name="toolbar_exit">退出</string>
+    
+    <!--for layout map data card -->
+    <string name="layout_map_data_item_card_value_1_1">00:00:00</string>
+    <string name="layout_map_data_item_card_value_v1_1_1">持续时间</string>
+    <string name="layout_map_data_item_sq">/</string>
+    <string name="layout_map_data_item_card_value_1_2">00.0</string>
+    <string name="layout_map_data_item_card_value_t_1_2">Km</string>
+    <string name="layout_map_data_item_card_value_v1_1_2">距离</string>
+
+    <string name="layout_map_data_item_card_value_2_1">000.0</string>
+    <string name="layout_map_data_item_card_value_t_2_1">Km/H</string>
+    <string name="layout_map_data_item_card_value_t1_2_1">Min/Km</string>
+    <string name="layout_map_data_item_card_value_v1_2_1">速度</string>
+    <string name="layout_map_data_item_card_value_v2_2_1">配速</string>
+
+    <string name="layout_map_data_item_card_value_2_2">000.0</string>
+    <string name="layout_map_data_item_card_value_t_2_2">千卡</string>
+    <string name="layout_map_data_item_card_value_v1_2_2">卡路里</string>
+
+
+    <!-- for test provider layout -->
+    <string name="test_provider_add">增加</string>
+    <string name="test_provider_del">删除</string>
+    <string name="test_provider_read">读取</string>
+    <string name="test_provider_update">刷新</string>
+
+    <string name="test_user_userid">String 用户ID</string>
+    <string name="test_user_username">String 用户名</string>
+    <string name="test_user_userpassword">String 用户密码</string>
+    <string name="test_user_userlastlogintime">Long 用户最后登录时间</string>
+    <string name="test_user_usertotal_count">Int 用户总运动次数</string>
+    <string name="test_user_userlasttotal_typecount">String 用户运动次数汇总</string>
+    <string name="test_user_usertotal_distance">DOUBLE 用户总运动距离</string>
+    <string name="test_user_usertotal_time">LONG 用户总运动时间</string>
+    <string name="test_user_usertotal_calorie">DOUBLE 用户总消耗卡路里</string>
+
+    <!-- layout float control -->
+    <string name="floatcontrol_sports_continue">继续</string>
+    <string name="floatcontrol_sports_stop">结束</string>
+    <!-- layout mapdata flog -->
+    <string name="layout_map_data_flog_runing">跑步中</string>
+    <string name="layout_map_data_flog_bicycling">骑行中</string>
+    <string name="layout_map_data_flog_walking">快走中</string>
+    <string name="layout_map_data_flog_skiing">滑雪中</string>
+    <string name="layout_map_data_flog_run">跑步</string>
+    <string name="layout_map_data_flog_bicycle">骑行</string>
+    <string name="layout_map_data_flog_walk">快走</string>
+    <string name="layout_map_data_flog_ski">滑雪</string>
+
+    <!-- for settings activity -->
+    <string name="layout_settings_offlinemap">离线地图</string>
+    <string name="layout_settings_share">分享设置</string>
+    <string name="layout_settings_checkupdate">检查更新</string>
+
+    <!-- for finish sport dialog -->
+    <string name="dialog_finishsports_title">结束运动</string>
+    <string name="dialog_finishsports_message">是否结束运动</string>
+    <string name="dialog_finishsports_cancel">继续运动</string>
+    <string name="dialog_finishsports_ok">结束</string>
+
+    <!-- for settings -->
+    <string name="layout_settings_category_normal">偏好设置</string>
+    <string name="layout_settings_preference_screenon">让屏幕保持常亮</string>
+    <string name="layout_settings_preference_offlinemap">离线地图</string>
+    <string name="layout_settings_category_more">更多设置</string>
+    <string name="layout_settings_preference_checkoutupdate">检查更新</string>
+    <string name="layout_settings_preference_aboutus">关于我们</string>
+    <string name="layout_settings_update_islast">当前已是最新版本</string>
+    <string name="layout_settings_update_networkunuse">请检查网络设置</string>
+    <string name="layout_settings_update_fail">版本更新失败</string>
+    <string name="layout_settings_preference_smile">闪屏设置</string>
+
+    <string name="fragment_settings_offlinemap_title">离线地图</string>
+    <string name="fragment_settings_offlinemap_title_listcity">城市列表</string>
+    <string name="fragment_settings_offlinemap_title_down">下载管理</string>
+    <!-- for gomainactivity-->
+    <string name="gomainactivity_exit_check">再按一次退出</string>
+    <string name="gomainactivity_sportsing_exitfail">哎呀，在运动着呢</string>
+
+    <!-- smile -->
+    <string name="name_smile_smile">彩色笑脸</string>
+    <string name="name_smile_circular">彩色圆环</string>
+    <string name="name_smile_wonder">警示</string>
+
+    <string name="accelerometer_rotation_un_open">请先将屏幕旋转功能打开</string>
+    <string name="share_error_nodata">当前没有数据进行分享</string>
+    <string name="sports_data_save_asynctack_savedata">数据保存中</string>
+    <string name="sports_data_save_asynctack_screenshot">屏幕保存中</string>
+
+
+    <!-- offline map title -->
+    <string name="gaode_offline_map_title_xianggang">香港</string>
+    <string name="gaode_offline_map_title_aomen">澳门</string>
+    <string name="gaode_offline_map_title_gaiyao">概要</string>
+    <string name="gaode_offline_map_title_all_gaiyao">全国概要图</string>
+    <string name="gaode_offline_map_title_all_gangao">直辖市</string>
+    <string name="gaode_offline_map_title_all_zhixiashi">港澳</string>
+    <string name="gaode_offline_map_download_uzip">解压中</string>
+    <string name="gaode_offline_map_download_waiting">等待中</string>
+    <string name="gaode_offline_map_download_pauseing">暂停中</string>
+    <string name="gaode_offline_map_download_down">已下载</string>
+    <string name="offline_map_download_dialog_message">当前处于非WIFI网络，确认下载？</string>
+    <string name="offline_map_download_dialog_cancel">取消</string>
+    <string name="offline_map_download_dialog_download">下载</string>
+    <string name="offline_map_download_header_downloading">正在下载</string>
+    <string name="offline_map_download_header_downloaded">已下载</string>
+
+    <!-- for record sports -->
+    <string name="fragment_recordsports_emptyview_text">去跑跑吧</string>
+    <string name="fragment_recordsports_header_text" translatable="false">
+        <xliff:g id="format">%1$d年%2$d月</xliff:g>
+    </string>
+    <string name="fragment_recordsports_item_day" translatable="false">
+        <xliff:g id="format">%1$02d日</xliff:g>
+    </string>
+    <string name="fragment_recordsports_item_time" translatable="false">
+        <xliff:g id="format">%1$02d:%2$02d</xliff:g>
+    </string>
+    <string name="fragment_recordsports_item_sports_time">时间</string>
+    <string name="fragment_recordsports_item_sports_distance">公里</string>
+    <string name="fragment_recordsports_item_sports_calorie">千卡</string>
+    <string name="activity_recordsports_header_sports_distance">总距离（公里）</string>
+    <string name="activity_recordsports_header_sports_count">运动次数</string>
+    <string name="activity_recordsports_header_sports_calorie">总消耗能量（千卡）</string>
+    <string name="share_string_nodata" translatable="false">我正在使用 ＃运动助手＃ 记录运动中，来挑一起战吧</string>
+    <string name="share_string_alldata" translatable="false">我使用 ＃运动助手＃ 跑了 %1$s 公里，消耗 %2$s 千卡的能量，来一起挑战吧</string>
+</resources>
+
