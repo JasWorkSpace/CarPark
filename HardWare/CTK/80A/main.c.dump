@@ -1,0 +1,223 @@
+
+/********************************************
+2014/05/24 太阳能充电控制器V1.0
+
+BY ICESPRING
+
+*********************************************/
+#include <pic.h>
+#include "mypic.h"
+#include "74HC595.h"
+
+
+
+
+void main()
+{
+	BatteryStandard = Battery_12V;//使用12v系统的情况
+
+	SystemStateInit();				//系统初始化
+	LoadModeSelect();				//从EEPROM中读取模式状态，放到SystemModeType变量中
+
+
+	while(1)
+	{
+
+		/*****测试代码部分**********/
+		
+		PVState = 1;//测试用，测试跑马灯的跑马情况
+		TURN_OFF_LoadCtrl;
+		
+		/*****测试代码结束*********/
+		SelectMode();		//载入当前的系统模式 时控+光控、手动、纯光控、常开模式
+		SwitchBatteryState(); //判断每次蓄电池的状态，进行状态的切换
+		LoadCurrentDealWith();                 //检测负载电流状态，根据负载状况进行相应的处理
+		
+		
+		if(PVCount >= 50)                      //5s检测处理一次 50
+		{
+			PVCount = 0;
+			SolarPanelDealWith();			   //根据太阳能电池板的电压，进行相应的处理，并获得当前太阳能电池板的状态 
+		}
+
+		if(PWMChargeFlag == 1)                 //调用PWM充电函数100ms 监测一次
+		{
+			PWMChargeFlag = 0;                 //定时器值还原
+			PWMCharge();
+		}    
+
+
+		//数码管设置相关
+		if(!SettingMode)			//非设置状态下
+		{
+			if(Key1 == 0)				//按键按下
+			{
+				Dig_display = 1;
+				Display_num(EENum);
+			}
+			else
+			{
+				Dig_display = 0;
+			}
+
+			if(SettingTime == SETTING_TIME_CONFIRM)		//按下的时间到达5秒钟进入设置模式
+    		{
+    			SettingTime = 0;
+    			SettingMode = 1;
+    		}
+		}
+		else					//在设置状态下
+		{
+			LoadOpen = 0;		//为保证安全，设置模式下负载关闭
+			Display_num(EENum);
+			if(SettingTime == SETTING_TIME_CONFIRM * 2)		//无任何操作返回非设置模式，感觉时间有点短，所以乘以2
+			{
+				SettingTime = 0;
+				SettingMode = 0;
+			}
+			if(Key1 == 0)
+			{
+				Delay(5);	//消除抖动
+				if(Key1 == 0)
+				{
+					SettingTime = 0; //5秒从头开始计数
+					while(Key1 == 0);//直到按键抬起
+					EENum++;
+					if(EENum > 18)	EENum = 1;//只有1-18的状态编号
+					SaveModeSelect();
+				}
+			}
+		}
+
+		if(PVState == 1)//能充电，则进行跑马灯展示
+		{
+			if(RunningTime < RUNNING_TIME)
+			{
+				Led_25 = 0;
+				Led_50 = 1;
+				Led_75 = 1;
+				Led_100 = 1;
+			}
+			else if(RunningTime < 2 * RUNNING_TIME)
+			{
+				Led_50 = 0;
+			}
+			else if(RunningTime < 3 * RUNNING_TIME)
+			{
+				Led_75 = 0;
+			}
+			else if(RunningTime < 4 * RUNNING_TIME)
+			{
+				Led_100 = 0;
+			}
+			else
+			{
+				RunningTime = 0;
+			}
+		}
+		
+	}
+
+	
+	
+}
+
+
+
+void interrupt ISR_Timer()
+{
+	if(TMR1IF)//用于较长时间的定时，必须使用16位定时器
+	{
+		TMR1IF = 0;								//定时器1的中断处理
+		TMR1H = (65536 - (100000 / 4)) >> 8;
+    	TMR1L = (65536 - (100000 / 4)) & 0xFF; //100ms中断一次
+    	
+    	if(!SettingMode)  //非设定模式下
+    	{
+    		if(Key1 == 0)
+	    	{
+	    		SettingTime++;	
+	    	}
+	    	else
+	    	{
+	    		SettingTime = 0;
+	    	}
+    	}
+    	
+    	
+    	if(SettingMode)		//设定模式下
+    	{
+    		BlinkTime++;
+    		SettingTime++;
+    		if(BlinkTime == 10) //设置模式下闪烁交替约为1s
+    		{
+    			BlinkTime = 0;
+    			Dig_display = !Dig_display;
+    		}
+    	}
+    	else
+    	{
+    		Dig_display = 0;
+    	}
+
+    	if(SystemModeType == TIME_MODE)		//时控模式下计时
+    	{
+    		TimeModeHour++;
+    	}
+
+    	if(EnhanceChargeFlag)             //提升充电
+		{
+			EnhanceCharge_Time++;   
+		}
+        if(EqualizingChargeFlag)          //均衡充电
+		{
+			EqualizingCharge_Time++;   
+		}
+        if(OverLoadTime != 0)				//负载5分钟翻转一次
+		{
+			OverLoadTime++;
+		}
+		if(PVState)
+		{
+			RunningTime++;
+		}
+	}
+	if(TMR2IF)									//定时器2的中断处理		低电平阶段
+    {
+        TMR2IF = 0;								//清除timer2中断标志位
+		
+	}
+
+	if(TMR4IF)									//定时器4的中断处理    高电平阶段
+    {
+        TMR4IF = 0;								//清除timer4中断标志位
+		
+	}
+
+	if(TMR6IF)									//定时器6的中断处理    高电平阶段用来检测—12V电压和
+    {
+        TMR6IF = 0;								//清除timer6中断标志位
+		if(Dig_display)
+		{
+			if(dig_switch)
+			{
+				DS2 = 1;							//关段位选
+				HC595_Send_Data(Led_Disbuf[shi]);	//显示十位
+				DS1 = 0;							//开段位选
+				dig_switch = 0;
+			}
+			else
+			{
+				DS1 = 1;							//关段位选
+				HC595_Send_Data(Led_Disbuf[ge]);	//显示个位
+				DS2 = 0;							//开段位选
+				dig_switch = 1;
+			}
+		}
+		else
+		{
+			DS1 = 1;
+			DS2 = 1;
+		}
+	}
+}

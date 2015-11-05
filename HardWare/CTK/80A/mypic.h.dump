@@ -1,0 +1,668 @@
+__CONFIG(0x0704);
+__CONFIG(0x0033);
+#define uchar unsigned char
+#define uint  unsigned int
+
+/*系统模式定义*/
+#define OUTPUT_MODE                 0x01    //固定输出模式
+#define LIGHT_MODE                  0x02    //光控模式
+#define MANUAL_MODE                 0x04    //按钮用来控制输出
+#define TEST_MODE                   0x08    //
+#define TIME_MODE                   0X10    //光控+时控
+
+/*系统状态定义*/
+#define BATTERY_STATE_POWER_UP       0      //系统第一次上电
+#define BATTERY_STATE_VOLTAGE_UNDER  1      //蓄电池欠压
+#define BATTERY_STATE_VOLTAGE_WARN   2      //蓄电池欠压告警
+#define BATTERY_STATE_VOLTAGE_NORMAL 3      //蓄电池电压正常
+#define BATTERY_STATE_VOLTAGE_FULL   4      //蓄电池满
+#define BATTERY_STATE_VOLTAGE_OVER   5      //蓄电池过压 
+#define BATTERY_STATE_ERROR          6      //系统错误 
+
+/*数组阈值
+蓄电池电压 阈值电压=系统标准电压*[R42/(R41+R42)]*阈值系数/参考电压5V*255等分；  12V 对应122.4
+转化成二进制取前八位 */
+#define BATTERY_VOLTAGE_UNDER           0   // 113 //  2.22  50    //阈值系数9/10.  蓄电池欠压判断阈值，低于此数值，表示蓄电池欠压  
+#define RETURN_VOLTAGE_UNDER            1   // 130 //  2.56  75    //阈值系数3.2/3. 还需要定义一个欠压返回电压
+#define BATTERY_VOLTAGE_WARN            2   // 125 //  2.45  100   //阈值系数10/10. 蓄电池欠压报警判断阈值，低于此数值，高于欠压阈值，表示蓄电池欠压告警 
+#define BATTERY_VOLTAGE_NORMAL          3   // 138 //  2.71  150   //阈值系数11/10. 蓄电池电压正常判断阈值，低于此数值，高于告警阈值，表示蓄电池电压正常
+#define BATTERY_VOLTAGE_FULL            4   // 171 //  3.35  200   //阈值系数11/8.  蓄电池电压充满判断阈值，低于此数值，高于正常阈值，表示蓄电池电压充满，高于表示过压
+#define RETURN_VOLTAGE_FULL             5   // 153 //  3.00  175   //阈值系数10/8.  还需要定义一个过压返回电压
+#define SOLAR_PANEL_VOLTAGE_NOLIGHT     6   // 9   //太阳能电池板无光判断阈值，高于此数值，表示无光；等于0表示强光；两者之间为弱光
+#define Enhance_Charge_VOLTAGE          7   //阈值系数3.7/3. 提升充电电压阈值
+#define Equalizing_Charge_VOLTAGE       8   //阈值系数12/10. 均衡充点电压阈值
+#define Floating_Charge_VOLTAGE         9   //阈值系数2.3/2. 提升充电电压阈值
+#define DAY_VOLTAGE                     10  //白天黑夜判定阈值，可以开关灯DAY_VOLTAGE(7V) 62, NIGHT_VOLTAGE(3V) 26
+#define NIGHT_VOLTAGE                   11
+
+/*定义负载接入标志*/
+#define LOAD_CONNECT      0                //负载已经接入
+#define LOAD_NOTCONNECT   1                //负载断开
+
+//开关控制宏
+#define TURN_OFF_LoadCtrl_1         (PORTA |= (1 << 3))     //负载1的开关，RA3
+#define TURN_ON_LoadCtrl_1          (PORTA &= ~(1 << 3))
+#define TURN_OFF_LoadCtrl_2         (PORTC |= (1 << 2))     //负载2的开关, RC2
+#define TURN_ON_LoadCtrl_2          (PORTC &= ~(1 << 2))
+#define TURN_OFF_PwmCtrl            (PORTC |= (1 << 5))    // PwmCtrl开关 RC5
+#define TURN_ON_PwmCtrl             (PORTC &= ~(1 << 5))
+
+
+//开关控制宏
+#define Key1        RC1         //按键
+#define Led_C       RA4     //LED_CHARGE
+#define Led_L1      RB6     //LED_LOAD1
+#define Led_L2      RB7     //LED_LOAD2
+#define Led_25      RC6     //
+#define Led_50      RC7     //
+#define Led_75      RB0     //
+#define Led_100     RB1     //
+
+
+//数码管位选
+#define DS1     RC0
+#define DS2     RA5
+
+#define SETTING_TIME_CONFIRM 50 //使用定时器1，按下按键的确认时间
+#define CHARGE_TIME 36000  //使用定时器1，充电时间，100ms中断，充电时间为1小时
+#define OVER_LOAD_TIME 3000 ////定义断开和接通负载的时间间隔(定时器设置为每100ms进行一次中断，5分钟的间隔需要3000次中断)
+#define RUNNING_TIME   10  //充电时的跑马灯计时器，一秒一次
+
+
+/*负载反馈电压阈值*/
+#define LOAD_FB_VOLTAGE_NORMAL          10  //反馈电压小于该阈值，数据右对齐，0.01/5 *1024，则负载正常4.5A过载反馈9.207，取9
+#define LOAD_FB_VOLTAGE_OVER            20  //反馈电压大于上个阈值，小于本阈值，则负载过载。9A短路返回回来对应18.44，取18
+
+//开关控制宏
+#define TURN_OFF_LoadCtrl       (PORTC |= (1 << 2));\
+                                (PORTA |= (1 << 3))     //LoadCtrl1 RA3;LoadCtrl2 RC2
+#define TURN_ON_LoadCtrl        (PORTC &= ~(1 << 2));\
+                                (PORTA &= ~(1 << 3))
+
+#define TURN_OFF_PwmCtrl         (PORTC |= (1 << 5))    // #define PwmCtrl RC5
+#define TURN_ON_PwmCtrl          (PORTC &= ~(1 << 5))
+/*变量定义区*/
+
+uchar *BatteryStandard = (void *)0; //定义一个指针指向某个标准的数组，未来扩展自适应
+/*  前六个数字分别代表
+BATTERY_VOLTAGE_UNDER （10.8）, RETURN_VOLTAGE_UNDER （12.8）, BATTERY_VOLTAGE_WARN （12.0）, BATTERY_VOLTAGE_NORMAL （13.2）,
+BATTERY_VOLTAGE_FULL （16.5）, RETURN_VOLTAGE_FULL（15.0）
+第七个代表
+SOLAR_PANEL_VOLTAGE_NOLIGHT （Vp = Vb - 0.853 * X X即为该数值，如X取值为10，Vb=12时，Vp=3.47 弱光）
+后三个数字分别代表
+Enhance_Charge_VOLTAGE （14.8）, Equalizing_Charge_VOLTAGE （14.4）, Floating_Charge_VOLTAGE（13.8）
+再后面两位是白天黑夜判定阈值，可以开关灯
+DAY_VOLTAGE(7V) 62, NIGHT_VOLTAGE(3V) 26        */
+uchar Battery_12V[] = {112 , 133 , 124 , 137 , 171 , 155 , 9 , 153 , 149 , 143 , 62 , 26};  //12V系统，其他系统自行添加
+
+uchar SystemModeType = MANUAL_MODE;        //保存当前系统所处的状态
+uchar EENum = 0;                            //保存EEPROM中的数字
+uchar BatteryState = BATTERY_STATE_POWER_UP; //蓄电池状态默认为第一次上电状态
+uchar BatteryLastState;
+
+bit Dig_display = 0;          //数码管显示标志位
+bit dig_switch = 0;             //显示个位还是十位？0为个位，1为十位
+bit SettingMode = 0;            //判断是否为设置模式
+bit LoadOpen = 0;               //决定负载是否可以打开
+bit LoadState = 0;              //为0负载不正常，为1负载正常
+bit LoadShort = 0;              //为0正常，为1负载短路过
+bit LoadFlag = 0;               //为0负载接入，为1断开
+bit PVState = 0;                //为0不能充电，为1可以充电
+
+bit EnhanceChargeFlag = 0;           //提升充电是否开启
+bit EqualizingChargeFlag = 0;        //均衡充电是否开启
+bit FloatingChargeFlag = 0;          //浮充充电是否开启
+bit PWMChargeFlag = 0;               //time1中，100ms中断一次，ChangePWMFlag翻转一次，更改一次PWM占空比
+bit PWMFlag = 0;                     //为一时可以产生PWM
+bit T0Flag = 0;                      //监视T0是否打开
+
+uchar ge;                       //数码管的个位数字，为了支持中断服务的动态扫描，定义为全局变量
+uchar shi;                      //数码管的十位数字
+
+
+uchar LightTime = 0;       //时控模式中时控时间
+uchar SettingTime = 0;      //用来记录按下按键后流逝的时间
+uchar BlinkTime = 0;        //用来记录闪烁时的时间，一般为1秒交替
+uchar RunningTime = 0;
+uint TimeModeHour = 0;      //用来记录时控模式的一小时时间
+uint EnhanceCharge_Time = 0;        //提升充电定时标志（定时器设置为每100ms进行一次中断，则需要进行36000次中断才能记够一个小时，需要注意EnhanceCharge_Time的类型）
+uint EqualizingCharge_Time = 0;     //均衡充电定时标志
+uint OverLoadTime = 0 ;             //负载过载时，放电定时
+
+uchar gSolarPanelVoltage;    //用来记录太阳能电池板电压的全局变量
+uchar gBatteryVoltage;       //用来记录电池电压的全局变量
+uchar ClampVoltage = 0;            //钳位电压
+
+uchar DutyRatio = 0;                 //0-255，数值越大占空比越大
+uchar PwmCount = 0;                  //当前计数值
+uchar PVCount = 0;                   //电池板5秒钟检测一次，用在定时器1中，=50的时候5秒
+
+
+/*软件延迟函数，x约为50us*/                   
+void Delay(uint x)
+{
+    uint a,b;
+    for(a=x;a>0;a--)
+        for(b=10;b>0;b--);
+} 
+
+void SystemStateInit()
+{
+
+//应该加上 检测是否有输出，选择系统电压
+
+    //1、系统时钟配置，由控制字决定，这里使用默认的4M内部晶振
+    OSCCON = 0x70;      //FIC16F1933配置成8M内部；    OSCCON = 0x78;//FIC16F1933配置成16M内部
+
+
+    //2、I/O口配置
+    //CMCON0 = 0x07;                        //关闭比较器
+    TRISA = 0x00;   //全部输出
+    TRISB = 0x3C;   //RB2：BatteryDet;;;RB3：OverCurrentDet;;;RB4：PVDet;;;RB5：TemperatureDet
+    TRISC = 0x02;   //RC1为SwDet
+    ANSELA = 0X00;
+    ANSELB = 0x3C;  //RB2：BatteryDet(AN8);;;RB3：OverCurrentDet(AN9);;;RB4：PVDet(AN11);;;RB5：TemperatureDet(AN13)
+
+
+    //3、定时器配置
+#if 0
+    //定时器0配置，65us中断一次
+    T0CS = 0;                              //使用内部时钟
+    PSA = 1;                               //不使用分频
+    TMR0 = 191;                            //（256-65），65us中断一次，如果频率不对，通过微调此项，同时中断处理函数中也需要调整
+#endif
+    //定时器1配置，100ms中断一次，使用TIMER1
+    TMR1H = (65536 - (100000 / 4)) >> 8;
+    TMR1L = (65536 - (100000 / 4)) & 0xFF;//100ms中断一次
+    PEIE = 1;                             //允许外设中断
+    TMR1IF = 0;                           //清除timer1中断标志位
+    TMR1IE = 1;                           //允许timer1溢出中断
+    T1CON = 0x31;                         //内部8/4 = 2M时钟，8分频，周期4us，启动timer1
+
+    //定时器2配置
+    TMR2IF = 0;                           //清除timer2中断标志位
+    T2CON = 0x06;                         //内部8/4 = 2M时钟，16分频，无后分频，启动timer2
+    PR2 = 125;                             // 计数器周期为8us，定时为1ms中断一次
+    TMR2IE = 1;                           //允许timer2与PR2匹配中断
+    
+    //定时器4配置
+    TMR4IF = 0;                           //清除timer4中断标志位
+    T4CON = 0x06;                         //内部8/4 = 2M时钟，16分频，无后分频，启动timer4
+    PR4 = 250;                              // 计数器周期为8us，定时为2ms中断一次
+    TMR4IE = 1;                           //允许timer4与PR4匹配中断
+
+    //定时器6配置
+    TMR6IF = 0;                           //清除timer6中断标志位
+    T6CON = 0x06;                          //16预分频，2M/16 = 128k , 周期为8us
+    PR6 = 250;                             //寄存器和谁比较的值
+    TMR6IE = 1;                           //允许timer6与PR6匹配中断
+//  T6CON = 0x01;                         //内部8/4 = 2M时钟，4分频，无后分频，关闭timer6
+//  T6CON = 0x05;                         //内部8/4 = 2M时钟，4分频，无后分频，打开timer6
+
+    //4、中断设置
+    PEIE = 1;                              //允许外设中断
+    GIE = 1;                               //打开全局中断
+
+    //5、ADC配置，已经在I/O配置中配置，具体启动放到各个采样函数中
+    //6、PWM配置，暂未实现
+
+#if 1
+    Led_C = 1;         //  配置所有灯灭
+    Led_L1 = 1;
+    Led_L2 = 1;
+    Led_25 = 1;
+    Led_50 = 1;
+    Led_75 = 1;
+    Led_100 = 1;
+#endif
+}
+
+//EEPROM写入函数，默认写入地址为空间的0地址
+void WriteEE(uchar data)
+{
+    while(WR == 1);//等待写完成
+    
+    GIE = 0; //关中断
+    EEADRL = 0x02;//写入地址信息
+    EEDATL = data;//写入数据信息
+    EEPGD = 0;//操作EEPROM
+    CFGS = 0;
+     WREN = 1; //写EEPROM允许
+    EECON2 = 0x55;//写入特定时序
+    EECON2 = 0xaa;
+    WR = 1; //执行写操作
+    GIE = 1; //开中断
+    while(WR == 1);//等待写完成
+    WREN = 0;//禁止写入EEPROM
+}
+
+//EEPROM读数据函数
+uchar ReadEE()
+{
+    while(RD == 1);//等待读完成
+    EEADRL = 0x02;//写入要读的址址
+    EEPGD = 0;//操作EEPROM
+    CFGS = 0;
+    RD = 1;//执行读操作
+    while(RD == 1);//等待读完成
+    return EEDATL;//返回读取的数据
+}
+
+//载入模式
+//01 - 15 时控模式
+//16 手动模式
+//17 纯光控模式
+//18 常开模式（用户模式？）
+//00 上电/错误模式
+void LoadModeSelect()
+{
+    //WriteEE(16);
+    EENum = ReadEE();
+    if(EENum == 0)
+    {
+        SystemModeType = TEST_MODE;//系统错误模式，暂时未用，下次启动自动切换到手动模式
+        WriteEE(16);
+    }
+    else if(EENum > 0 && EENum < 16)
+    {
+        SystemModeType = TIME_MODE;//光控+时控
+        LightTime = EENum;
+        
+    }
+    else if(EENum == 16)
+    {
+        SystemModeType = MANUAL_MODE;
+    }
+    else if(EENum == 17)
+    {
+        SystemModeType = LIGHT_MODE;//纯光控
+    }
+    else if(EENum == 18)
+    {
+        SystemModeType = OUTPUT_MODE;
+    }
+    else
+    {
+        SystemModeType = TEST_MODE;
+    }
+}
+
+void SaveModeSelect()    // 保存当前的设定状态，写入到EEPROM中
+{
+    WriteEE(EENum);
+    if(EENum == 0)
+    {
+        SystemModeType = TEST_MODE;//系统错误模式，暂时未用，下次启动自动切换到手动模式
+        WriteEE(16);
+    }
+    else if(EENum > 0 && EENum < 16)
+    {
+        SystemModeType = LIGHT_MODE;//光控+时控
+        LightTime = EENum;
+        
+    }
+    else if(EENum == 16)
+    {
+        SystemModeType = MANUAL_MODE;
+    }
+    else if(EENum == 17)
+    {
+        SystemModeType = LIGHT_MODE;//纯光控
+    }
+    else if(EENum == 18)
+    {
+        SystemModeType = OUTPUT_MODE;
+    }
+    else
+    {
+        SystemModeType = TEST_MODE;
+    }
+}
+
+void SelectMode()
+{
+    switch(SystemModeType)
+    {
+        case TIME_MODE:
+        {
+            if(gSolarPanelVoltage < *(BatteryStandard + NIGHT_VOLTAGE) && LightTime) //降到光强启动点，并且未到达设定时间
+            {
+                if(TimeModeHour >= 36000)   //到了一小时
+                {
+                    TimeModeHour = 0;
+                    LightTime--;
+                }
+                if(LightTime != 0)
+                {
+                    LoadOpen = 1;//可以开启负载
+                }
+                else
+                {
+                    LoadOpen = 0;//时间到关闭负载，等待下一次光强
+
+                }
+            }
+            else if(gSolarPanelVoltage > *(BatteryStandard + DAY_VOLTAGE))  //升到光强启动点，不会开启负载
+            {
+                LoadOpen = 0;//不可开负载
+                LightTime = ReadEE();//重置光强时间
+            }
+            break;
+        }
+        case LIGHT_MODE://暂时没有做延时20s启动的设定
+        {
+            if(gSolarPanelVoltage < *(BatteryStandard + NIGHT_VOLTAGE))     //降到光强启动点
+            {
+                LoadOpen = 1;//可以开启负载
+            }
+            else if(gSolarPanelVoltage > *(BatteryStandard + DAY_VOLTAGE))
+            {
+                LoadOpen = 0;//不可开负载
+            }
+            break;
+        }
+        case OUTPUT_MODE:
+        {
+            LoadOpen = 1;   //负载可以常开
+            break;
+        }
+        case MANUAL_MODE:   //通过按键控制，在手动模式下，每按一次按键改变一下负载状态
+        {
+
+            if(!SettingMode && Key1 == 0)
+            {
+                Delay(5);//消抖
+                if(Key1 == 0)
+                {
+                    while(Key1 == 0)
+                    {   
+                        Dig_display = 1;//直到按键抬起
+                        if(SettingTime == SETTING_TIME_CONFIRM)     //按下的时间到达5秒钟进入设置模式
+                        {
+                            SettingTime = 0;
+                            SettingMode = 1;
+                            LoadOpen = 0;//进入设置模式关闭负载
+                            break;
+                        }
+                    }    
+                    LoadOpen = !LoadOpen;
+                    //Led_25 = !Led_25; 为测试用
+                }
+ 
+            }
+            break;
+        }
+    }
+}
+
+uchar BatteryStateSwitch(uchar BatteryVoltage)
+{
+    if(BatteryVoltage < *(BatteryStandard + BATTERY_VOLTAGE_UNDER))
+        return BATTERY_STATE_VOLTAGE_UNDER;
+    else if(BatteryVoltage >= *(BatteryStandard + BATTERY_VOLTAGE_UNDER) && BatteryVoltage < *(BatteryStandard + BATTERY_VOLTAGE_WARN))
+        return BATTERY_STATE_VOLTAGE_WARN;
+    else if(BatteryVoltage >= *(BatteryStandard + BATTERY_VOLTAGE_WARN) && BatteryVoltage < *(BatteryStandard + BATTERY_VOLTAGE_NORMAL))
+        return BATTERY_STATE_VOLTAGE_NORMAL;
+    else if(BatteryVoltage >= *(BatteryStandard + BATTERY_VOLTAGE_NORMAL) && BatteryVoltage < *(BatteryStandard + BATTERY_VOLTAGE_FULL))
+        return BATTERY_STATE_VOLTAGE_FULL;
+    else 
+        return BATTERY_STATE_VOLTAGE_OVER;
+}
+
+/*通过ADC读取蓄电池电压，并将读取值返回，此处可直接使用转换后的整形数而不必采用准确的电压值，下同*/
+uchar GetBatteryVoltage()   //此处感觉短时间取平均值无意义，且系统效率优先，省略加权平均
+{
+    ADCON0 = 0b00100001;    //使用AN8,使能AD转换
+    ADCON1 = 0b00010000;    //数据结果左对齐，8分频，负参考电压VSS，正参考电压VDD
+
+    ADGO = 1;//开始转换
+    while(ADGO);
+    return ADRESH;
+}
+
+/*通过ADC读取太阳能电池板的电压，并将读取值返回*/
+uchar GetSolarPanelVoltage()
+{
+    ADCON0 = 0b00101101;    //使用AN11,使能AD转换
+    ADCON1 = 0b00010000;    //数据结果左对齐，8分频，负参考电压VSS，正参考电压VDD
+    ADGO = 1;//开始转换
+    while(ADGO);
+    return ADRESH;
+}
+
+/*通过ADC读取反馈电压，并将读取值返回*/
+uchar GetFbVoltage()
+{
+    ADCON0 = 0b00100101;    //使用AN9,使能AD转换
+    ADCON1 = 0b00010000;    //数据结果左对齐，8分频，负参考电压VSS，正参考电压VDD
+    ADGO = 1;//开始转换
+    while(ADGO);
+    return ADRESH;
+}
+
+
+/*根据反馈电压，判断负载情况，进行相应的处理，无需返回*/
+void LoadCurrentDealWith()
+{
+    if((BatteryState != BATTERY_STATE_VOLTAGE_UNDER) && (BatteryState != BATTERY_STATE_VOLTAGE_OVER) && LoadOpen)  //正常状态才执行，且负载允许打开
+    {
+        uchar FbVoltage;
+        FbVoltage = GetFbVoltage();                       //读取反馈电压
+        if((FbVoltage < LOAD_FB_VOLTAGE_NORMAL) && (LoadState == 1))            //负载正常
+        {
+            if(LoadFlag == LOAD_NOTCONNECT)
+            {
+                LoadState = 1;                                //修改负载正常标志位，可以开启负载
+                OverLoadTime = 0;               //负载没有过载，不需要定时
+                TURN_ON_LoadCtrl;                     //接通负载
+                LoadFlag = LOAD_CONNECT;
+            }
+        }
+        if((FbVoltage >= LOAD_FB_VOLTAGE_NORMAL) || (LoadState == 0))           //负载不正常
+        {
+            LoadState = 0;
+            if(( FbVoltage >= LOAD_FB_VOLTAGE_OVER) || (LoadShort == 1))        //负载短路，必须重启，否则LoadShort不能还原
+            {
+                TURN_OFF_LoadCtrl;                            //关闭负载
+                LoadFlag = LOAD_NOTCONNECT;
+                OverLoadTime = 0;                   //短路状态也不进行计时
+                LoadShort = 1;
+            }
+            else                                              //负载过载，但未短路
+            {
+                if(OverLoadTime == 0)                         //开启定时语句
+                {
+                    OverLoadTime = 1;
+                }   
+                if(OverLoadTime >= OVER_LOAD_TIME)  //5分钟到时
+                {
+                    OverLoadTime = 1;
+                    if(LoadFlag == LOAD_CONNECT)
+                    {
+                        TURN_OFF_LoadCtrl;                    //关闭负载
+                        LoadFlag = LOAD_NOTCONNECT;
+                    }
+                    else if(LoadFlag == LOAD_NOTCONNECT)
+                    {
+                        TURN_ON_LoadCtrl;                     //接通负载
+                        LoadFlag = LOAD_CONNECT;
+                        LoadState = 1;                        //修改负载正常标志位
+                        OverLoadTime = 0;                     //关闭计时
+                    }
+                }
+            }
+        }
+    }
+    else
+    {
+        TURN_OFF_LoadCtrl;              //关闭负载
+        LoadFlag = LOAD_NOTCONNECT;
+    }
+}
+
+void SolarPanelDealWith()
+{
+    ;
+}
+
+void PWMCharge()
+{
+    ;
+}
+
+
+void SwitchBatteryState()
+{
+    switch(BatteryState)
+    {
+        case BATTERY_STATE_POWER_UP:
+        {
+            BatteryState = BatteryStateSwitch(gBatteryVoltage);
+            EnhanceCharge_Time = 0;
+            EqualizingCharge_Time = 0;
+            BatteryLastState = BATTERY_STATE_POWER_UP;
+            break;
+        }
+        case BATTERY_STATE_VOLTAGE_UNDER:
+        {
+            if(BatteryLastState != BATTERY_STATE_VOLTAGE_UNDER)
+            {
+                ClampVoltage = *(BatteryStandard + Enhance_Charge_VOLTAGE);
+            }
+            if(PVState)//可以充电
+            {
+                 EnhanceChargeFlag = 1;                            //进行提升充电
+            }
+            else
+            {
+                        EnhanceChargeFlag = 0;              //不可进行提升充电
+                        EnhanceCharge_Time = 0;
+                        gBatteryVoltage = GetBatteryVoltage();
+                        if(gBatteryVoltage > *(BatteryStandard + RETURN_VOLTAGE_UNDER))          //欠压返回电压
+                        {
+                            BatteryState = BatteryStateSwitch(gBatteryVoltage);
+                        }
+            }
+
+            if(EnhanceCharge_Time >= CHARGE_TIME)                 //准备切换下一状态
+                     {
+                        EnhanceChargeFlag = 0;
+                        EnhanceCharge_Time = 0;
+                        Delay(100);                                       // 等待一段时间，等待电池电压回落
+                        gBatteryVoltage = GetBatteryVoltage();
+                        if(gBatteryVoltage > *(BatteryStandard + RETURN_VOLTAGE_UNDER))         //欠压返回电压
+                        {
+                            BatteryState = BatteryStateSwitch(gBatteryVoltage);
+                        }                      
+                     }  
+                   
+            BatteryLastState = BATTERY_STATE_VOLTAGE_UNDER;               
+            break;           
+        }
+        case BATTERY_STATE_VOLTAGE_WARN:
+        {
+
+            if(BatteryLastState != BATTERY_STATE_VOLTAGE_WARN)     //第一次进入该状态
+            {
+                ClampVoltage = *(BatteryStandard + Equalizing_Charge_VOLTAGE);  //钳位电压?????????????????????
+
+            }
+            if(PVState == 1)                                     //能充电状态
+            {
+                EqualizingChargeFlag = 1;                        //进行均衡充电
+            }
+            else
+            {
+                EqualizingChargeFlag = 0;
+                EqualizingCharge_Time = 0;
+                gBatteryVoltage = GetBatteryVoltage();
+                BatteryState = BatteryStateSwitch(gBatteryVoltage);
+            }
+            if(EqualizingCharge_Time >= CHARGE_TIME)              //准备切换下一状态
+            {
+                EqualizingChargeFlag = 0;
+                EqualizingCharge_Time = 0;
+
+                Delay(100);
+                gBatteryVoltage = GetBatteryVoltage();
+                BatteryState = BatteryStateSwitch(gBatteryVoltage);
+            }
+            BatteryLastState = BATTERY_STATE_VOLTAGE_WARN;
+            break; 
+        }
+        case BATTERY_STATE_VOLTAGE_NORMAL:
+        {
+            if(BatteryLastState != BATTERY_STATE_VOLTAGE_NORMAL)     //第一次进入该状态
+            {
+                ClampVoltage = *(BatteryStandard + Equalizing_Charge_VOLTAGE);  //钳位电压
+            }
+            if(PVState == 1)                                       //能充电状态
+            {
+                EqualizingChargeFlag = 1;                          //进行均衡充电
+            }
+            else
+            {
+                EqualizingChargeFlag = 0;
+                EqualizingCharge_Time = 0;
+                gBatteryVoltage = GetBatteryVoltage();
+                BatteryState = BatteryStateSwitch(gBatteryVoltage);
+            }
+            if(EqualizingCharge_Time >= CHARGE_TIME)               //准备切换下一状态
+            {
+                EqualizingChargeFlag = 0;
+                EqualizingCharge_Time = 0;
+                Delay(100);
+                gBatteryVoltage = GetBatteryVoltage();
+                BatteryState = BatteryStateSwitch(gBatteryVoltage);
+            } 
+            BatteryLastState = BATTERY_STATE_VOLTAGE_NORMAL;
+            break;
+        }
+        case BATTERY_STATE_VOLTAGE_FULL:
+        {
+            if(BatteryLastState != BATTERY_STATE_VOLTAGE_FULL)     //第一次进入该状态
+            {
+                ClampVoltage = *(BatteryStandard + Floating_Charge_VOLTAGE);            //钳位电压????????????????
+            }
+            if(PVState == 1)                                       //能充电状态
+            {
+                FloatingChargeFlag = 1;                            //进行浮充充电
+            }
+            else
+            {
+                FloatingChargeFlag = 0;
+            }
+            gBatteryVoltage = GetBatteryVoltage();                 //读取蓄电池电压
+            BatteryState = BatteryStateSwitch(gBatteryVoltage);      //根据当前的蓄电池电压进行切换
+
+            if(BatteryState != BATTERY_STATE_VOLTAGE_FULL)
+            {
+                FloatingChargeFlag = 0;
+            }
+            BatteryLastState = BATTERY_STATE_VOLTAGE_FULL;
+            break;
+        }
+        case BATTERY_STATE_VOLTAGE_OVER:
+        {
+            if(BatteryLastState != BATTERY_STATE_VOLTAGE_OVER)       //第一次进入该状态
+            {
+                        ClampVoltage = 0;           //钳位电压???????????????????????????????????????????????????????????????????????
+                        T0IE = 0;                                          //关闭timer0中断 //关PWM充电
+                        T0Flag = 0;
+                        PWMFlag = 0;                                        //关闭PWM输出
+            }
+            gBatteryVoltage = GetBatteryVoltage();                 //读取蓄电池电压
+            if(gBatteryVoltage < *(BatteryStandard + RETURN_VOLTAGE_FULL))           //过压返回电压
+            {
+                BatteryState = BatteryStateSwitch(gBatteryVoltage);
+            }
+            BatteryLastState = BATTERY_STATE_VOLTAGE_OVER;                 
+            break;
+        }
+        case BATTERY_STATE_ERROR:
+        {
+            while(1);
+        }
+    }
+}
+
