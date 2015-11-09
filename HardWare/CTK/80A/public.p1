@@ -1,0 +1,48 @@
+Version 3.2 HI-TECH Software Intermediate Code
+"49 C:\CTK\CTK80A 150928\CTK80A_Jas\public.h
+[v _OS_Time `ul 1 e ]
+"49 C:\CTK\CTK80A 150928\CTK80A_Jas\public.h
+[i _OS_Time
+-> -> -> 0 `i `l `ul
+]
+[; ;public.h: 49: unsigned long OS_Time = 0;
+[; ;public.h: 52: void CTKSoftDelay(unsigned int x);
+"6 C:\CTK\CTK80A 150928\CTK80A_Jas\public.c
+[v _CTKSoftDelay `(v 1 ef1`ui ]
+{
+[; ;public.c: 6: void CTKSoftDelay(unsigned int x){
+[e :U _CTKSoftDelay ]
+[v _x `ui 1 r1 ]
+[f ]
+"7
+[v _a `ui 1 a ]
+[v _b `ui 1 a ]
+[; ;public.c: 7: unsigned int a,b;
+[; ;public.c: 8: for(a=x;a>0;a--)
+"8
+{
+[e = _a _x ]
+[e $ > _a -> -> 0 `i `ui 2  ]
+[e $U 3  ]
+"9
+[e :U 2 ]
+[; ;public.c: 9: for(b=10;b>0;b--);
+{
+[e = _b -> -> 10 `i `ui ]
+[e $ > _b -> -> 0 `i `ui 5  ]
+[e $U 6  ]
+[e :U 5 ]
+[e -- _b -> -> 1 `i `ui ]
+[e $ > _b -> -> 0 `i `ui 5  ]
+[e :U 6 ]
+}
+"8
+[e -- _a -> -> 1 `i `ui ]
+[e $ > _a -> -> 0 `i `ui 2  ]
+[e :U 3 ]
+"9
+}
+[; ;public.c: 10: }
+"10
+[e :UE 1 ]
+}

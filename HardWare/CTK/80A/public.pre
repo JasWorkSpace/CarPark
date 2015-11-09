@@ -1,0 +1,16 @@
+
+# 1 "C:\CTK\CTK80A 150928\CTK80A_Jas\public.c"
+
+# 49 "C:\CTK\CTK80A 150928\CTK80A_Jas\public.h"
+unsigned long OS_Time = 0;
+
+
+void CTKSoftDelay(unsigned int x);
+
+# 6 "C:\CTK\CTK80A 150928\CTK80A_Jas\public.c"
+void CTKSoftDelay(unsigned int x){
+unsigned int a,b;
+for(a=x;a>0;a--)
+for(b=10;b>0;b--);
+}
+

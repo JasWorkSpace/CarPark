@@ -1,5 +1,22 @@
 
-# 1 "C:\CTK\CTK80A 150928\CTK80A_Jas\main.c"
+# 1 "C:\CTK\CTK80A 150928\CTK80A_Jas\LM016.c"
+
+# 49 "C:\CTK\CTK80A 150928\CTK80A_Jas\public.h"
+unsigned long OS_Time = 0;
+
+
+void CTKSoftDelay(unsigned int x);
+
+# 55 "C:\CTK\CTK80A 150928\CTK80A_Jas\LM016.h"
+void API_LCD_INIT(void);
+void API_LCD_CLEAR(void);
+void API_LCD_PRINT_LINE(unsigned char linenumber,unsigned char * charPointer,unsigned char postion);
+void lcd_write_command(unsigned char command);
+void lcd_write_data(unsigned char data);
+void lcd_print_line1(unsigned char *charPaint, unsigned char postion, unsigned char clear);
+void lcd_print_line2(unsigned char *charPaint, unsigned char clear);
+void lcd_move_char(unsigned char postion);
+void num_to_char(int number, unsigned char point);
 
 # 140 "C:\Program Files\HI-TECH Software\PICC\9.80\include\pic16f1934.h"
 volatile unsigned char INDF0 @ 0x000;
@@ -3233,530 +3250,137 @@ extern unsigned char eeprom_read(unsigned char addr);
 #pragma inline(_delay)
 extern void _delay(unsigned long);
 
-# 49 "C:\CTK\CTK80A 150928\CTK80A_Jas\public.h"
-unsigned long OS_Time = 0;
+# 14 "C:\CTK\CTK80A 150928\CTK80A_Jas\LM016.c"
+void lcd_write_command(unsigned char command){
+RC1 = 0;
+RC2 = 0;
+PORTD = command;
 
 
-void CTKSoftDelay(unsigned int x);
 
-# 55 "C:\CTK\CTK80A 150928\CTK80A_Jas\LM016.h"
-void API_LCD_INIT(void);
-void API_LCD_CLEAR(void);
-void API_LCD_PRINT_LINE(unsigned char linenumber,unsigned char * charPointer,unsigned char postion);
-void lcd_write_command(unsigned char command);
-void lcd_write_data(unsigned char data);
-void lcd_print_line1(unsigned char *charPaint, unsigned char postion, unsigned char clear);
-void lcd_print_line2(unsigned char *charPaint, unsigned char clear);
-void lcd_move_char(unsigned char postion);
-void num_to_char(int number, unsigned char point);
-
-# 85 "C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h"
-unsigned int *BatteryStandard = (void *)0;
-
-# 95
-unsigned int Battery_12V[] = {256 , 303 , 284 , 313 , 391 , 355 , 351 , 341 , 327 , 3965 , 900};
-unsigned int Battery_24V[] = {512 , 606 , 568 , 626 , 782 , 710 , 702 , 682 , 654 , 8231 , 3333};
-
-unsigned char SystemErrorState = 0;
-unsigned char SystemModeType = 0x03;
-unsigned char EENum = 0;
-unsigned char BatteryState = 0;
-unsigned char BatteryLastState = 0;
-
-bit LoadOpen = 0;
-bit LoadState = 0;
-bit LoadShort = 0;
-bit LoadFlag = 0;
-bit PVState = 0;
-
-bit EnhanceChargeFlag = 0;
-bit EqualizingChargeFlag = 0;
-bit FloatingChargeFlag = 0;
-bit PWMChargeFlag = 0;
-bit PWMFlag = 0;
-bit T2Flag = 0;
-bit PVChargeFlag = 0;
-
-bit System12V = 0;
-bit System24V = 0;
-
-bit DAYTIME = 0;
-
-unsigned char LightTime = 0;
-unsigned int TimeModeHour = 0;
-unsigned int EnhanceCharge_Time = 0;
-
-
-unsigned int EqualizingCharge_Time = 0;
-unsigned int OverLoadTime = 0 ;
-
-unsigned int SDSolarPanelVoltage = 0;
-unsigned int SDBatteryVoltage = 0;
-
-unsigned int gSolarPanelVoltage;
-unsigned int gBatteryVoltage;
-unsigned int gFbVoltage;
-unsigned int ClampVoltage = 0;
-unsigned int TemVoltage = 0;
-unsigned int TemBase = 0;
-unsigned int ADVoltage = 0;
-unsigned int ADBase = 0;
-
-unsigned char DutyRatio = 0;
-unsigned char PwmCount = 0;
-unsigned char PVCount = 0;
-
-
-unsigned char ErrorType = 0;
-
-unsigned int SystemErrorCount = 0;
-
-bit LPVFlag = 0;
-unsigned char LPVCount = 0;
-
-unsigned char globalState = 0;
-
-
-unsigned char lcd_state = 0;
-unsigned char lcd_setting_state = 0;
-unsigned char lcd_timer = 0;
-unsigned char lcd_extinguwish_timer = 0;
-unsigned char enter_settings_timer = 0;
-unsigned char setting_save_timer = 0;
-unsigned char setting_no_save_timer = 0;
-bit isNeedChange = 0;
-
-
-unsigned char ReadEE(unsigned char addr);
-void WriteEE(unsigned char data, unsigned char addr);
-unsigned int getADValue(unsigned char channel);
-
-void system_state_init();
-
-
-void load_system_state();
-void save_system_state();
-
-unsigned int GetBatteryVoltage();
-unsigned int GetSolarPanelVoltage();
-unsigned int GetChargeCurrentVoltage();
-unsigned int GetLoadCurrentVoltage();
-
-
-void SelectMode();
-
-void LoadCurrentDealWith();
-
-void SolarPanelDealWith();
-
-void PWMCharge();
-
-unsigned char BatteryStateSwitch(unsigned int BatteryVoltage);
-
-void SwitchBatteryState();
-
-void KaiJi();
-
-unsigned char GetBoradTemperature();
-unsigned char GetOutTemperature();
-
-void LedDisplay();
-
-void saveToEEPROM(unsigned int data, unsigned char type);
-unsigned int readFromEEPROM(unsigned char type);
-
-# 38 "C:\CTK\CTK80A 150928\CTK80A_Jas\kernel.h"
-void LoadParamFromEPPROM();
-
-void SaveParamToEPPROM();
-
-# 54
-unsigned int ParamConfig[11] = {0,0,0,0,0,0,0,0,0,0,0};
-
-# 64
-unsigned char PWM_CONTROL_FLAG = 0;
-unsigned long PWM_CONTROL_TIMEOUT = 0;
-unsigned char PWM_ON_TIME = 0;
-
-# 80
-typedef struct _InputIOState{
-unsigned char HWState;
-unsigned char enable;
-unsigned char swState;
-unsigned int ADValue;
-unsigned long ADTime;
-};
-struct _InputIOState BATTERY = {1, 0, 1, 1, 1};
-struct _InputIOState SOLARPANEL = {1, 0, 1, 1, 1};
-struct _InputIOState CHARGE = {1, 0, 1, 1, 1};
-struct _InputIOState LOAD = {1, 0, 1, 1, 1};
-
-# 96
-typedef struct _SystemConfig{
-unsigned char Param_config;
-unsigned int Param_BATTERY_VOLTAGE_UNDER;
-unsigned int Param_RETURN_VOLTAGE_UNDER;
-unsigned int Param_BATTERY_VOLTAGE_WARN;
-unsigned int Param_BATTERY_VOLTAGE_NORMAL;
-unsigned int Param_BATTERY_VOLTAGE_FULL;
-unsigned int Param_RETURN_VOLTAGE_FULL;
-unsigned int Param_Enhance_Charge_VOLTAGE;
-unsigned int Param_Equalizing_Charge_VOLTAGE;
-unsigned int Param_Floating_Charge_VOLTAGE;
-unsigned int Param_DAY_VOLTAGE;
-unsigned int Param_NIGHT_VOLTAGE;
-};
-
-struct _SystemConfig SystemConfig12V = {1 ,256 , 303 , 284 , 313 , 391 , 355 , 351 , 341 , 327 , 3965 , 900};
-
-struct _SystemConfig SystemConfig24V = {2 ,512 , 606 , 568 , 626 , 782 , 710 , 702 , 682 , 654 , 8231 , 3333};
-
-struct _SystemConfig *SystemConfig;
-
-# 12 "C:\CTK\CTK80A 150928\CTK80A_Jas\74HC595.h"
-void HC595_Send_Data(unsigned char byte)
-{
-
-}
-
-void Display_num(unsigned char code)
-{
-
-}
-
-# 12 "C:\Program Files\HI-TECH Software\PICC\9.80\include\stdio.h"
-typedef int ptrdiff_t;
-typedef unsigned size_t;
-typedef unsigned short wchar_t;
-
-# 31 "C:\Program Files\HI-TECH Software\PICC\9.80\include\stdarg.h"
-typedef void * va_list[1];
-
-#pragma inline(__va_start)
-extern void * __va_start(void);
-
-#pragma inline(__va_arg)
-extern void * __va_arg(void *, ...);
-
-# 27 "C:\Program Files\HI-TECH Software\PICC\9.80\include\stdio.h"
-extern int errno;
-
-# 58
-struct __prbuf
-{
-char * ptr;
-void (* func)(char);
-};
-
-# 17 "C:\Program Files\HI-TECH Software\PICC\9.80\include\conio.h"
-extern int errno;
-
-
-extern void init_uart(void);
-
-extern char getch(void);
-extern char getche(void);
-extern void putch(char);
-extern void ungetch(char);
-
-extern bit kbhit(void);
-
-# 31
-extern char * cgets(char *);
-extern void cputs(const char *);
-
-# 103 "C:\Program Files\HI-TECH Software\PICC\9.80\include\stdio.h"
-extern int cprintf(char *, ...);
-#pragma printf_check(cprintf)
-
-
-
-extern int _doprnt(struct __prbuf *, const register char *, register va_list);
-
-# 195
-extern char * gets(char *);
-extern int puts(const char *);
-extern int scanf(const char *, ...);
-extern int sscanf(const char *, const char *, ...);
-extern int vprintf(const char *, va_list);
-extern int vsprintf(char *, const char *, va_list);
-extern int vscanf(const char *, va_list ap);
-extern int vsscanf(const char *, const char *, va_list);
-
-#pragma printf_check(printf) const
-#pragma printf_check(sprintf) const
-extern int sprintf(char *, const char *, ...);
-extern int printf(const char *, ...);
-
-# 22 "C:\CTK\CTK80A 150928\CTK80A_Jas\main.c"
-unsigned char KeyEvent_PendKeyCode = 1;
-unsigned long KeyEvent_KeyTime = 0;
-unsigned char KeyEvent_KeyCode = 1;
-
-void setKeyEventDealed(){
-KeyEvent_KeyCode = 1;
-}
-void setKeyEventDispatchered(){
-KeyEvent_PendKeyCode = 1;
-KeyEvent_KeyTime = OS_Time;
-}
-void handlerKeyEventInput(int keyCode){
-
-if(keyCode == 2 || keyCode == 3 || keyCode == 4){
-if(KeyEvent_PendKeyCode != keyCode){
-KeyEvent_PendKeyCode = keyCode;
-KeyEvent_KeyTime = OS_Time;
-}
-}
-}
-void handlerKeyEvent(){
-setKeyEventDealed();
-if(KeyEvent_PendKeyCode == 2 && RB4 != 2){
-KeyEvent_KeyCode = 2;
-setKeyEventDispatchered();
-}else if(KeyEvent_PendKeyCode == 3 && RB3 != 3){
-KeyEvent_KeyCode = 3;
-setKeyEventDispatchered();
-}else if(KeyEvent_PendKeyCode == 4 && RB5 != 4){
-KeyEvent_KeyCode = 4;
-setKeyEventDispatchered();
-}
+CTKSoftDelay(50);
+RC3 = 1;
+RC3 = 0;
 }
 
 
-unsigned char LCD_PAGE = 0;
-unsigned int LCD_POINT = 0;
+void lcd_write_data(unsigned char data){
+RC1 = 1;
+RC2 = 0;
+PORTD = data;
 
-void updateLCDShow(unsigned char page,unsigned char point_line){
-if(page == LCD_PAGE)return;
-LCD_PAGE = page;
-unsigned char data[15] = {0};
-switch(LCD_PAGE){
-case 0:{
-sprintf(data, "Bv13.2V Soc0000");
-}break;
-case 1:{
 
-}break;
-}
-}
 
-# 80
-unsigned char LCD_CurrentState = 0;
-unsigned char LCD_LastState = 0;
-unsigned long LCD_StateTime = 0;
-void setLCDBackground(unsigned char open){
-if(open == 1){
-(LATC &= ~(1 << 4));
-}else {
-(LATC |= (1 << 4));
-}
-}
-void tranformLCDState(int state){
-if(state != LCD_CurrentState){
-LCD_LastState = LCD_CurrentState;
-LCD_CurrentState = state;
-LCD_StateTime = OS_Time;
-}
-}
-unsigned int handlerLCD(){
-switch(LCD_CurrentState){
-case 0:{
-if(LCD_LastState != 0){
-API_LCD_INIT();
-API_LCD_CLEAR();
-}
-tranformLCDState(2);
-}break;
-case 1:{
-if(LCD_LastState != 1){
-API_LCD_CLEAR();
-}
-setLCDBackground(0);
-if(KeyEvent_KeyCode != 1){
-setKeyEventDealed();
-tranformLCDState(2);
-}
-}break;
-case 2:{
-if(LCD_LastState != 2){
-setLCDBackground(1);
-
-}else{
-
-}
-}break;
-}
-}
-
-# 132
-void setPWM(char open){
-if(open == 1){
-(PORTA &= ~(1 << 0));
-}else{
-(PORTA |= (1 << 0));
-}
-}
-void openOrClosePWM(unsigned char open){
-PWM_CONTROL_FLAG = open;
-TMR2IE = open;
-setPWM(open);
-}
-void handlerPWMInterrupt(){
-if(PWM_CONTROL_FLAG == 0){
-openOrClosePWM(0);
-}else{
-if(PWM_CONTROL_TIMEOUT != 0){
-
-}
-}
+CTKSoftDelay(30);
+RC3 = 1;
+RC3 = 0;
 }
 
 
-bit isSettingMode = 0;
-bit isSaveSettings = 0;
-bit rb4_flag = 0;
-bit is_second_setting;
-bit needInitSetting;
-unsigned char batteryType = 0;
-unsigned char const *charPointer;
-
-# 169
-unsigned char OS_CurrentState = 0;
-unsigned long OS_StateTime = 0;
-
-void tranform_OS_State(int state){
-if(state != OS_CurrentState){
-OS_CurrentState = state;
-OS_StateTime = OS_Time;
-}
-}
-unsigned char handlerOSStateMachine(){
-switch(OS_CurrentState){
-case 0:{
-(LATC |= (1 << 4));
-PWM_CONTROL_FLAG = 0;
-}break;
-case 1:{
-
-}break;
-case 2:{
-
-}break;
-}
+void lcd_wait_for_busy(void){
+unsigned char readin = 0;
+do {
+RC1 = 0;
+RC2 = 1;
+TRISD = 0xFF;
+RC3 = 1;
+readin = PORTD;
+RC3 = 0;
+}while(RD7 == 1);
+TRISD = 0x00;
 }
 
-void main(){
-system_state_init();
-LoadParamFromEPPROM();
-
-API_LCD_INIT();
-API_LCD_CLEAR();
-(LATC |= (1 << 4));
-KaiJi();
-while(1)
-{
-asm("CLRWDT");
-
-SelectMode();
-SystemModeType = 0x01;
-LoadCurrentDealWith();
-SwitchBatteryState();
-LedDisplay();
-if(PVCount > 50)
-{
-PVCount = 0;
-SolarPanelDealWith();
+void API_LCD_INIT(void){
+lcd_write_command(0x38);
+lcd_write_command(0x0c);
+lcd_write_command(0x06);
+lcd_write_command(0x01);
+CTKSoftDelay(1000);
 }
-if(PWMChargeFlag == 1)
-{
-PWMChargeFlag = 0;
-PWMCharge();
+void API_LCD_CLEAR(void){
+lcd_write_command(0x01);
+CTKSoftDelay(1000);
+}
+void API_LCD_PRINTString(unsigned char *charPointer){
+while(*charPointer != 0) {
+lcd_write_data(*charPointer);
+charPointer++;
+}
+}
+void API_LCD_PRINT_LINE(unsigned char linenumber, unsigned char *charPointer, unsigned char postion){
+if(linenumber == 0){
+lcd_write_command(0x0c);
+lcd_write_command(0x80 + postion);
+}else if(linenumber == 1){
+lcd_write_command(0xc0 + postion);
+lcd_write_command(0x0c);
+}
+API_LCD_PRINTString(charPointer);
+}
+void API_LCD_MOVE_POINT(unsigned char position){
+unsigned char i = 0;
+lcd_write_command(0x0f);
+lcd_write_command(0x02);
+while(i++ < position) {
+lcd_write_command(0x14);
+}
+}
+
+void lcd_print_line1(unsigned char *charPointer, unsigned char postion, unsigned char clear) {
+if(clear)API_LCD_CLEAR();
+API_LCD_PRINT_LINE(0, charPointer, postion);
+}
+
+
+void lcd_print_line2(unsigned char *charPointer, unsigned char postion) {
+API_LCD_PRINT_LINE(1, charPointer, postion);
+}
+
+void lcd_move_char(unsigned char postion){
+API_LCD_MOVE_POINT(postion);
 }
 
 
 
-if (lcd_extinguwish_timer == 70) {
 
-lcd_extinguwish_timer++;
+void num_to_char(int num, unsigned char point) {
 
-lcd_write_command(0x08);
-}
+unsigned char tmp, t = 0;
 
-if (isSaveSettings) {
-isSaveSettings = 0;
-isNeedChange = 1;
-lcd_state = 2;
-isSettingMode = 0;
-
-}
-
-if (isSettingMode && needInitSetting) {
-needInitSetting = 0;
-isNeedChange = 1;
-lcd_state = 3;
-is_second_setting = 0;
-}
-
-}
-}
-
-void interrupt ISR_Timer()
-{
-if(IOCBF3 && lcd_state != 0 && lcd_state != 1)
-{
-
-if (RB3 == 0) {
-handlerKeyEventInput(3);
-}
-IOCBF3 = 0;
-}
-if(IOCBF5 && lcd_state != 0 && lcd_state != 1)
-{
-if (RB5 == 0) {
-handlerKeyEventInput(4);
-}
-IOCBF5 = 0;
+unsigned char lcdNum4[4] = {0,0,0,0};
+switch(point) {
+case 1:
+lcdNum4[0] = '0' + num;
+break;
+case 2:
+tmp = num / 10;
+lcdNum4[0] = '0' + tmp;
+tmp = num % 10;
+lcdNum4[1] = '0' + tmp;
+lcdNum4[2] = '\0';
+break;
+case 3:
+tmp = num / 100;
+if (tmp != 0) {
+lcdNum4[t] = '0' + tmp;
+t++;
 }
 
-if(IOCBF4)
-{
+tmp = (num / 10) % 10;
+lcdNum4[t] = '0' + tmp;
+t++;
 
-if (RB4 == 0) {
-handlerKeyEventInput(2);
+lcdNum4[t] = '.';
+t++;
+
+tmp = num % 10;
+lcdNum4[t] = '0' + tmp;
+t++;
+
+lcdNum4[t] = '\0';
+break;
+default:
+break;
+}
 }
 
-IOCBF4 = 0;
-}
-
-if(TMR1IF)
-{
-OS_Time ++;
-TMR1IF = 0;
-TMR1H = (65536 - (100000 / 4)) >> 8;
-TMR1L = (65536 - (100000 / 4)) & 0xFF;
-}
-if(TMR2IF)
-{
-TMR2IF = 0;
-if(PWMFlag == 1)
-{
-PwmCount++;
-
-if(PwmCount >= DutyRatio)
-(PORTA |= (1 << 0));
-else
-(PORTA &= ~(1 << 0));
-}
-handlerPWMInterrupt();
-}
-if(TMR4IF)
-{
-TMR4IF = 0;
-RE2 = ~RE2;
-}
-if(TMR6IF)
-{
-TMR6IF = 0;
-}
-}

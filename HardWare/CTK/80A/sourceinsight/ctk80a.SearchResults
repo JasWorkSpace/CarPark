@@ -1,0 +1,9 @@
+---- LOAD_NOTCONNECT 匹配 (8 在 2 文件 ) ----
+Mypic.c (c:\ctk\ctk80a 150928\ctk80a_jas):	LoadFlag = LOAD_NOTCONNECT;
+Mypic.c (c:\ctk\ctk80a 150928\ctk80a_jas):            if(LoadFlag == LOAD_NOTCONNECT)
+Mypic.c (c:\ctk\ctk80a 150928\ctk80a_jas):                LoadFlag = LOAD_NOTCONNECT;
+Mypic.c (c:\ctk\ctk80a 150928\ctk80a_jas):                        LoadFlag = LOAD_NOTCONNECT;
+Mypic.c (c:\ctk\ctk80a 150928\ctk80a_jas):                    else if(LoadFlag == LOAD_NOTCONNECT)
+Mypic.c (c:\ctk\ctk80a 150928\ctk80a_jas):        LoadFlag = LOAD_NOTCONNECT;
+Mypic.c (c:\ctk\ctk80a 150928\ctk80a_jas):	if(LoadFlag == LOAD_NOTCONNECT)
+Mypic.h (c:\ctk\ctk80a 150928\ctk80a_jas):#define LOAD_NOTCONNECT			1		//负载断开

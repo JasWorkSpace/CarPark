@@ -9,9 +9,10 @@
 	; Compiler options:
 	;
 	; -obattery.cof -mbattery.map --summary=default --output=default \
-	; main.p1 --chip=16F1934 -P --runtime=default --opt=default -D__DEBUG=1 \
-	; -g --asmlist --errformat=Error   [%n] %f; %l.%c %s \
-	; --msgformat=Advisory[%n] %s --warnformat=Warning [%n] %f; %l.%c %s
+	; main.p1 LM016.p1 public.p1 kernel.p1 mypic.p1 --chip=16F1934 -P \
+	; --runtime=default --opt=default -D__DEBUG=1 -g --asmlist \
+	; --errformat=Error   [%n] %f; %l.%c %s --msgformat=Advisory[%n] %s \
+	; --warnformat=Warning [%n] %f; %l.%c %s
 	;
 
 

@@ -2639,94 +2639,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _setting_no_save_timer `uc 1 e ]
 "165 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
 [v _isNeedChange `b 1 e ]
-"54 C:\CTK\CTK80A 150928\CTK80A_Jas\kernel.h
-[v _ParamConfig `ui -> 11 `i e ]
-"64 C:\CTK\CTK80A 150928\CTK80A_Jas\kernel.h
-[v _PWM_CONTROL_FLAG `uc 1 e ]
-"65 C:\CTK\CTK80A 150928\CTK80A_Jas\kernel.h
-[v _PWM_CONTROL_TIMEOUT `ul 1 e ]
-"66 C:\CTK\CTK80A 150928\CTK80A_Jas\kernel.h
-[v _PWM_ON_TIME `uc 1 e ]
-[s S260 `uc 1 `uc 1 `uc 1 `ui 1 `ul 1 ]
-[n S260 _InputIOState HWState enable swState ADValue ADTime ]
-"87 C:\CTK\CTK80A 150928\CTK80A_Jas\kernel.h
-[v _BATTERY `S260 1 e ]
-"88 C:\CTK\CTK80A 150928\CTK80A_Jas\kernel.h
-[v _SOLARPANEL `S260 1 e ]
-"89 C:\CTK\CTK80A 150928\CTK80A_Jas\kernel.h
-[v _CHARGE `S260 1 e ]
-"90 C:\CTK\CTK80A 150928\CTK80A_Jas\kernel.h
-[v _LOAD `S260 1 e ]
-[s S261 `uc 1 `ui 1 `ui 1 `ui 1 `ui 1 `ui 1 `ui 1 `ui 1 `ui 1 `ui 1 `ui 1 `ui 1 ]
-[n S261 _SystemConfig Param_config Param_BATTERY_VOLTAGE_UNDER Param_RETURN_VOLTAGE_UNDER Param_BATTERY_VOLTAGE_WARN Param_BATTERY_VOLTAGE_NORMAL Param_BATTERY_VOLTAGE_FULL Param_RETURN_VOLTAGE_FULL Param_Enhance_Charge_VOLTAGE Param_Equalizing_Charge_VOLTAGE Param_Floating_Charge_VOLTAGE Param_DAY_VOLTAGE Param_NIGHT_VOLTAGE ]
-"111 C:\CTK\CTK80A 150928\CTK80A_Jas\kernel.h
-[v _SystemConfig12V `S261 1 e ]
-"113 C:\CTK\CTK80A 150928\CTK80A_Jas\kernel.h
-[v _SystemConfig24V `S261 1 e ]
-"115 C:\CTK\CTK80A 150928\CTK80A_Jas\kernel.h
-[v _SystemConfig `*S261 1 e ]
-"22 C:\CTK\CTK80A 150928\CTK80A_Jas\main.c
-[v _KeyEvent_PendKeyCode `uc 1 e ]
-"23 C:\CTK\CTK80A 150928\CTK80A_Jas\main.c
-[v _KeyEvent_KeyTime `ul 1 e ]
-"24 C:\CTK\CTK80A 150928\CTK80A_Jas\main.c
-[v _KeyEvent_KeyCode `uc 1 e ]
-"57 C:\CTK\CTK80A 150928\CTK80A_Jas\main.c
-[v _LCD_PAGE `uc 1 e ]
-"58 C:\CTK\CTK80A 150928\CTK80A_Jas\main.c
-[v _LCD_POINT `ui 1 e ]
-"206 C:\Program Files\HI-TECH Software\PICC\9.80\include\stdio.h
-[v _sprintf `(i 0 e1v`*uc`*Cuc ]
-"80 C:\CTK\CTK80A 150928\CTK80A_Jas\main.c
-[v _LCD_CurrentState `uc 1 e ]
-"81 C:\CTK\CTK80A 150928\CTK80A_Jas\main.c
-[v _LCD_LastState `uc 1 e ]
-"82 C:\CTK\CTK80A 150928\CTK80A_Jas\main.c
-[v _LCD_StateTime `ul 1 e ]
-"55 C:\CTK\CTK80A 150928\CTK80A_Jas\LM016.h
-[v _API_LCD_INIT `(v 0 ef ]
-"56 C:\CTK\CTK80A 150928\CTK80A_Jas\LM016.h
-[v _API_LCD_CLEAR `(v 0 ef ]
-"155 C:\CTK\CTK80A 150928\CTK80A_Jas\main.c
-[v _isSettingMode `b 1 e ]
-"156 C:\CTK\CTK80A 150928\CTK80A_Jas\main.c
-[v _isSaveSettings `b 1 e ]
-"157 C:\CTK\CTK80A 150928\CTK80A_Jas\main.c
-[v _rb4_flag `b 1 e ]
-"158 C:\CTK\CTK80A 150928\CTK80A_Jas\main.c
-[v _is_second_setting `b 1 e ]
-"159 C:\CTK\CTK80A 150928\CTK80A_Jas\main.c
-[v _needInitSetting `b 1 e ]
-"160 C:\CTK\CTK80A 150928\CTK80A_Jas\main.c
-[v _batteryType `uc 1 e ]
-"161 C:\CTK\CTK80A 150928\CTK80A_Jas\main.c
-[v _charPointer `*Cuc 1 e ]
-"169 C:\CTK\CTK80A 150928\CTK80A_Jas\main.c
-[v _OS_CurrentState `uc 1 e ]
-"170 C:\CTK\CTK80A 150928\CTK80A_Jas\main.c
-[v _OS_StateTime `ul 1 e ]
-[p mainexit ]
-"172 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _system_state_init `(v 0 ef ]
-"38 C:\CTK\CTK80A 150928\CTK80A_Jas\kernel.h
-[v _LoadParamFromEPPROM `(v 0 ef ]
-"196 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _KaiJi `(v 0 ef ]
-"184 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _SelectMode `(v 0 ef ]
-"186 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _LoadCurrentDealWith `(v 0 ef ]
-"194 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _SwitchBatteryState `(v 0 ef ]
-"201 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _LedDisplay `(v 0 ef ]
-"188 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _SolarPanelDealWith `(v 0 ef ]
-"190 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _PWMCharge `(v 0 ef ]
-"58 C:\CTK\CTK80A 150928\CTK80A_Jas\LM016.h
-[v _lcd_write_command `(v 0 ef1`uc ]
-[p f _sprintf 8388608 ]
+"52 C:\CTK\CTK80A 150928\CTK80A_Jas\public.h
+[v _CTKSoftDelay `(v 0 ef1`ui ]
+"62 C:\CTK\CTK80A 150928\CTK80A_Jas\LM016.h
+[v _lcd_move_char `(v 0 ef1`uc ]
+"59 C:\CTK\CTK80A 150928\CTK80A_Jas\LM016.h
+[v _lcd_write_data `(v 0 ef1`uc ]
 [; ;pic16f1934.h: 140: volatile unsigned char INDF0 @ 0x000;
 [; ;pic16f1934.h: 144: volatile unsigned char INDF1 @ 0x001;
 [; ;pic16f1934.h: 148: volatile unsigned char PCL @ 0x002;
@@ -5307,1125 +5225,2668 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;mypic.h: 201: void LedDisplay();
 [; ;mypic.h: 203: void saveToEEPROM(unsigned int data, unsigned char type);
 [; ;mypic.h: 204: unsigned int readFromEEPROM(unsigned char type);
-[; ;kernel.h: 38: void LoadParamFromEPPROM();
-[; ;kernel.h: 40: void SaveParamToEPPROM();
-"54 C:\CTK\CTK80A 150928\CTK80A_Jas\kernel.h
-[i _ParamConfig
-:U ..
--> -> 0 `i `ui
--> -> 0 `i `ui
--> -> 0 `i `ui
--> -> 0 `i `ui
--> -> 0 `i `ui
--> -> 0 `i `ui
--> -> 0 `i `ui
--> -> 0 `i `ui
--> -> 0 `i `ui
--> -> 0 `i `ui
--> -> 0 `i `ui
-..
-]
-[; ;kernel.h: 54: unsigned int ParamConfig[11] = {0,0,0,0,0,0,0,0,0,0,0};
-"64
-[i _PWM_CONTROL_FLAG
--> -> 0 `i `uc
-]
-[; ;kernel.h: 64: unsigned char PWM_CONTROL_FLAG = 0;
-"65
-[i _PWM_CONTROL_TIMEOUT
--> -> -> 0 `i `l `ul
-]
-[; ;kernel.h: 65: unsigned long PWM_CONTROL_TIMEOUT = 0;
-"66
-[i _PWM_ON_TIME
--> -> 0 `i `uc
-]
-[; ;kernel.h: 66: unsigned char PWM_ON_TIME = 0;
-[; ;kernel.h: 80: typedef struct _InputIOState{
-[; ;kernel.h: 81: unsigned char HWState;
-[; ;kernel.h: 82: unsigned char enable;
-[; ;kernel.h: 83: unsigned char swState;
-[; ;kernel.h: 84: unsigned int ADValue;
-[; ;kernel.h: 85: unsigned long ADTime;
-[; ;kernel.h: 86: };
-"87
-[i _BATTERY
-:U ..
-:U ..
--> -> 1 `i `uc
--> -> 0 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `ui
--> -> -> 1 `i `l `ul
-..
-..
-]
-[; ;kernel.h: 87: struct _InputIOState BATTERY = {1, 0, 1, 1, 1};
-"88
-[i _SOLARPANEL
-:U ..
-:U ..
--> -> 1 `i `uc
--> -> 0 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `ui
--> -> -> 1 `i `l `ul
-..
-..
-]
-[; ;kernel.h: 88: struct _InputIOState SOLARPANEL = {1, 0, 1, 1, 1};
-"89
-[i _CHARGE
-:U ..
-:U ..
--> -> 1 `i `uc
--> -> 0 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `ui
--> -> -> 1 `i `l `ul
-..
-..
-]
-[; ;kernel.h: 89: struct _InputIOState CHARGE = {1, 0, 1, 1, 1};
-"90
-[i _LOAD
-:U ..
-:U ..
--> -> 1 `i `uc
--> -> 0 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `ui
--> -> -> 1 `i `l `ul
-..
-..
-]
-[; ;kernel.h: 90: struct _InputIOState LOAD = {1, 0, 1, 1, 1};
-[; ;kernel.h: 96: typedef struct _SystemConfig{
-[; ;kernel.h: 97: unsigned char Param_config;
-[; ;kernel.h: 98: unsigned int Param_BATTERY_VOLTAGE_UNDER;
-[; ;kernel.h: 99: unsigned int Param_RETURN_VOLTAGE_UNDER;
-[; ;kernel.h: 100: unsigned int Param_BATTERY_VOLTAGE_WARN;
-[; ;kernel.h: 101: unsigned int Param_BATTERY_VOLTAGE_NORMAL;
-[; ;kernel.h: 102: unsigned int Param_BATTERY_VOLTAGE_FULL;
-[; ;kernel.h: 103: unsigned int Param_RETURN_VOLTAGE_FULL;
-[; ;kernel.h: 104: unsigned int Param_Enhance_Charge_VOLTAGE;
-[; ;kernel.h: 105: unsigned int Param_Equalizing_Charge_VOLTAGE;
-[; ;kernel.h: 106: unsigned int Param_Floating_Charge_VOLTAGE;
-[; ;kernel.h: 107: unsigned int Param_DAY_VOLTAGE;
-[; ;kernel.h: 108: unsigned int Param_NIGHT_VOLTAGE;
-[; ;kernel.h: 109: };
-"111
-[i _SystemConfig12V
-:U ..
-:U ..
--> -> 1 `i `uc
--> -> 256 `i `ui
--> -> 303 `i `ui
--> -> 284 `i `ui
--> -> 313 `i `ui
--> -> 391 `i `ui
--> -> 355 `i `ui
--> -> 351 `i `ui
--> -> 341 `i `ui
--> -> 327 `i `ui
--> -> 3965 `i `ui
--> -> 900 `i `ui
-..
-..
-]
-[; ;kernel.h: 111: struct _SystemConfig SystemConfig12V = {1 ,256 , 303 , 284 , 313 , 391 , 355 , 351 , 341 , 327 , 3965 , 900};
-"113
-[i _SystemConfig24V
-:U ..
-:U ..
--> -> 2 `i `uc
--> -> 512 `i `ui
--> -> 606 `i `ui
--> -> 568 `i `ui
--> -> 626 `i `ui
--> -> 782 `i `ui
--> -> 710 `i `ui
--> -> 702 `i `ui
--> -> 682 `i `ui
--> -> 654 `i `ui
--> -> 8231 `i `ui
--> -> 3333 `i `ui
-..
-..
-]
-[; ;kernel.h: 113: struct _SystemConfig SystemConfig24V = {2 ,512 , 606 , 568 , 626 , 782 , 710 , 702 , 682 , 654 , 8231 , 3333};
-[; ;kernel.h: 115: struct _SystemConfig *SystemConfig;
-"13 C:\CTK\CTK80A 150928\CTK80A_Jas\74HC595.h
-[v _HC595_Send_Data `(v 1 ef1`uc ]
+"6 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.c
+[; ;mypic.c: 6: asm("\tpsect config,class=CONFIG,delta=2"); asm("\tdw ""0x061C");
+[; 	psect config,class=CONFIG,delta=2 ;#
+[; 	dw 0x061C ;#
+"7
+[; ;mypic.c: 7: asm("\tpsect config,class=CONFIG,delta=2"); asm("\tdw ""0x0233");
+[; 	psect config,class=CONFIG,delta=2 ;#
+[; 	dw 0x0233 ;#
+"12
+[v _WriteEE `(v 1 ef2`uc`uc ]
 {
-[; ;74HC595.h: 12: void HC595_Send_Data(unsigned char byte)
-[; ;74HC595.h: 13: {
-[e :U _HC595_Send_Data ]
-[v _byte `uc 1 r1 ]
+[; ;mypic.c: 11: void WriteEE(unsigned char data, unsigned char addr)
+[; ;mypic.c: 12: {
+[e :U _WriteEE ]
+[v _data `uc 1 r1 ]
+[v _addr `uc 1 r2 ]
 [f ]
-[; ;74HC595.h: 15: }
+[; ;mypic.c: 13: while(WR == 1);
+"13
+[e $U 261  ]
+[e :U 262 ]
+[e :U 261 ]
+[e $ == -> _WR `i -> 1 `i 262  ]
+[e :U 263 ]
+[; ;mypic.c: 15: GIE = 0;
 "15
-[e :UE 262 ]
-}
+[e = _GIE -> -> 0 `i `b ]
+[; ;mypic.c: 16: EEADRL = addr;
+"16
+[e = _EEADRL _addr ]
+[; ;mypic.c: 17: EEDATL = data;
+"17
+[e = _EEDATL _data ]
+[; ;mypic.c: 18: EEPGD = 0;
 "18
-[v _Display_num `(v 1 ef1`uc ]
-{
-[; ;74HC595.h: 17: void Display_num(unsigned char code)
-[; ;74HC595.h: 18: {
-[e :U _Display_num ]
-[v _code `uc 1 r1 ]
-[f ]
-[; ;74HC595.h: 20: }
+[e = _EEPGD -> -> 0 `i `b ]
+[; ;mypic.c: 19: CFGS = 0;
+"19
+[e = _CFGS -> -> 0 `i `b ]
+[; ;mypic.c: 20: WREN = 1;
 "20
-[e :UE 263 ]
-}
-[; ;stdio.h: 12: typedef int ptrdiff_t;
-[; ;stdio.h: 13: typedef unsigned size_t;
-[; ;stdio.h: 14: typedef unsigned short wchar_t;
-[; ;stdarg.h: 31: typedef void * va_list[1];
-[; ;stdarg.h: 34: extern void * __va_start(void);
-[; ;stdarg.h: 37: extern void * __va_arg(void *, ...);
-[; ;stdio.h: 27: extern int errno;
-[; ;stdio.h: 58: struct __prbuf
-[; ;stdio.h: 59: {
-[; ;stdio.h: 60: char * ptr;
-[; ;stdio.h: 61: void (* func)(char);
-[; ;stdio.h: 62: };
-[; ;conio.h: 17: extern int errno;
-[; ;conio.h: 20: extern void init_uart(void);
-[; ;conio.h: 22: extern char getch(void);
-[; ;conio.h: 23: extern char getche(void);
-[; ;conio.h: 24: extern void putch(char);
-[; ;conio.h: 25: extern void ungetch(char);
-[; ;conio.h: 27: extern bit kbhit(void);
-[; ;conio.h: 31: extern char * cgets(char *);
-[; ;conio.h: 32: extern void cputs(const char *);
-[; ;stdio.h: 103: extern int cprintf(char *, ...);
-[; ;stdio.h: 108: extern int _doprnt(struct __prbuf *, const register char *, register va_list);
-[; ;stdio.h: 195: extern char * gets(char *);
-[; ;stdio.h: 196: extern int puts(const char *);
-[; ;stdio.h: 197: extern int scanf(const char *, ...);
-[; ;stdio.h: 198: extern int sscanf(const char *, const char *, ...);
-[; ;stdio.h: 199: extern int vprintf(const char *, va_list);
-[; ;stdio.h: 200: extern int vsprintf(char *, const char *, va_list);
-[; ;stdio.h: 201: extern int vscanf(const char *, va_list ap);
-[; ;stdio.h: 202: extern int vsscanf(const char *, const char *, va_list);
-[; ;stdio.h: 206: extern int sprintf(char *, const char *, ...);
-[; ;stdio.h: 207: extern int printf(const char *, ...);
-"22 C:\CTK\CTK80A 150928\CTK80A_Jas\main.c
-[i _KeyEvent_PendKeyCode
--> -> 1 `i `uc
-]
-[; ;main.c: 22: unsigned char KeyEvent_PendKeyCode = 1;
+[e = _WREN -> -> 1 `i `b ]
+[; ;mypic.c: 21: EECON2 = 0x55;
+"21
+[e = _EECON2 -> -> 85 `i `uc ]
+[; ;mypic.c: 22: EECON2 = 0xaa;
+"22
+[e = _EECON2 -> -> 170 `i `uc ]
+[; ;mypic.c: 23: WR = 1;
 "23
-[i _KeyEvent_KeyTime
--> -> -> 0 `i `l `ul
-]
-[; ;main.c: 23: unsigned long KeyEvent_KeyTime = 0;
+[e = _WR -> -> 1 `i `b ]
+[; ;mypic.c: 24: GIE = 1;
 "24
-[i _KeyEvent_KeyCode
--> -> 1 `i `uc
-]
-[; ;main.c: 24: unsigned char KeyEvent_KeyCode = 1;
+[e = _GIE -> -> 1 `i `b ]
+[; ;mypic.c: 25: while(WR == 1);
+"25
+[e $U 264  ]
+[e :U 265 ]
+[e :U 264 ]
+[e $ == -> _WR `i -> 1 `i 265  ]
+[e :U 266 ]
+[; ;mypic.c: 26: WREN = 0;
 "26
-[v _setKeyEventDealed `(v 1 ef ]
-{
-[; ;main.c: 26: void setKeyEventDealed(){
-[e :U _setKeyEventDealed ]
-[f ]
-[; ;main.c: 27: KeyEvent_KeyCode = 1;
+[e = _WREN -> -> 0 `i `b ]
+[; ;mypic.c: 27: }
 "27
-[e = _KeyEvent_KeyCode -> -> 1 `i `uc ]
-[; ;main.c: 28: }
-"28
-[e :UE 265 ]
+[e :UE 260 ]
 }
-"29
-[v _setKeyEventDispatchered `(v 1 ef ]
-{
-[; ;main.c: 29: void setKeyEventDispatchered(){
-[e :U _setKeyEventDispatchered ]
-[f ]
-[; ;main.c: 30: KeyEvent_PendKeyCode = 1;
-"30
-[e = _KeyEvent_PendKeyCode -> -> 1 `i `uc ]
-[; ;main.c: 31: KeyEvent_KeyTime = OS_Time;
 "31
-[e = _KeyEvent_KeyTime _OS_Time ]
-[; ;main.c: 32: }
-"32
-[e :UE 266 ]
-}
-"33
-[v _handlerKeyEventInput `(v 1 ef1`i ]
+[v _ReadEE `(uc 1 ef1`uc ]
 {
-[; ;main.c: 33: void handlerKeyEventInput(int keyCode){
-[e :U _handlerKeyEventInput ]
-[v _keyCode `i 1 r1 ]
+[; ;mypic.c: 30: unsigned char ReadEE(unsigned char addr)
+[; ;mypic.c: 31: {
+[e :U _ReadEE ]
+[v _addr `uc 1 r1 ]
 [f ]
-[; ;main.c: 35: if(keyCode == 2 || keyCode == 3 || keyCode == 4){
-"35
-[e $ ! || || == _keyCode -> 2 `i == _keyCode -> 3 `i == _keyCode -> 4 `i 268  ]
-{
-[; ;main.c: 36: if(KeyEvent_PendKeyCode != keyCode){
-"36
-[e $ ! != -> _KeyEvent_PendKeyCode `i _keyCode 269  ]
-{
-[; ;main.c: 37: KeyEvent_PendKeyCode = keyCode;
-"37
-[e = _KeyEvent_PendKeyCode -> _keyCode `uc ]
-[; ;main.c: 38: KeyEvent_KeyTime = OS_Time;
-"38
-[e = _KeyEvent_KeyTime _OS_Time ]
-"39
-}
+[; ;mypic.c: 32: while(RD == 1);
+"32
+[e $U 268  ]
 [e :U 269 ]
-"40
-}
 [e :U 268 ]
-[; ;main.c: 39: }
-[; ;main.c: 40: }
-[; ;main.c: 41: }
-"41
+[e $ == -> _RD `i -> 1 `i 269  ]
+[e :U 270 ]
+[; ;mypic.c: 33: EEADRL = addr;
+"33
+[e = _EEADRL _addr ]
+[; ;mypic.c: 34: EEPGD = 0;
+"34
+[e = _EEPGD -> -> 0 `i `b ]
+[; ;mypic.c: 35: CFGS = 0;
+"35
+[e = _CFGS -> -> 0 `i `b ]
+[; ;mypic.c: 36: RD = 1;
+"36
+[e = _RD -> -> 1 `i `b ]
+[; ;mypic.c: 37: while(RD == 1);
+"37
+[e $U 271  ]
+[e :U 272 ]
+[e :U 271 ]
+[e $ == -> _RD `i -> 1 `i 272  ]
+[e :U 273 ]
+[; ;mypic.c: 38: return EEDATL;
+"38
+[e ) _EEDATL ]
+[e $UE 267  ]
+[; ;mypic.c: 39: }
+"39
 [e :UE 267 ]
 }
 "42
-[v _handlerKeyEvent `(v 1 ef ]
+[v _system_state_init `(v 1 ef ]
 {
-[; ;main.c: 42: void handlerKeyEvent(){
-[e :U _handlerKeyEvent ]
+[; ;mypic.c: 41: void system_state_init()
+[; ;mypic.c: 42: {
+[e :U _system_state_init ]
 [f ]
-[; ;main.c: 43: setKeyEventDealed();
-"43
-[e ( _setKeyEventDealed ..  ]
-[; ;main.c: 44: if(KeyEvent_PendKeyCode == 2 && RB4 != 2){
+[; ;mypic.c: 44: OSCCON = 0x70;
 "44
-[e $ ! && == -> _KeyEvent_PendKeyCode `i -> 2 `i != -> _RB4 `i -> 2 `i 271  ]
-{
-[; ;main.c: 45: KeyEvent_KeyCode = 2;
+[e = _OSCCON -> -> 112 `i `uc ]
+[; ;mypic.c: 45: WDTCON = 0x18;
 "45
-[e = _KeyEvent_KeyCode -> -> 2 `i `uc ]
-[; ;main.c: 46: setKeyEventDispatchered();
-"46
-[e ( _setKeyEventDispatchered ..  ]
-"47
-}
-[; ;main.c: 47: }else if(KeyEvent_PendKeyCode == 3 && RB3 != 3){
-[e $U 272  ]
-[e :U 271 ]
-[e $ ! && == -> _KeyEvent_PendKeyCode `i -> 3 `i != -> _RB3 `i -> 3 `i 273  ]
-{
-[; ;main.c: 48: KeyEvent_KeyCode = 3;
+[e = _WDTCON -> -> 24 `i `uc ]
+[; ;mypic.c: 48: TRISA = 0b00101010;
 "48
-[e = _KeyEvent_KeyCode -> -> 3 `i `uc ]
-[; ;main.c: 49: setKeyEventDispatchered();
+[e = _TRISA -> -> 42 `i `uc ]
+[; ;mypic.c: 49: TRISB = 0b00111110;
 "49
-[e ( _setKeyEventDispatchered ..  ]
+[e = _TRISB -> -> 62 `i `uc ]
+[; ;mypic.c: 50: TRISC = 0x00;
 "50
-}
-[; ;main.c: 50: }else if(KeyEvent_PendKeyCode == 4 && RB5 != 4){
-[e $U 274  ]
-[e :U 273 ]
-[e $ ! && == -> _KeyEvent_PendKeyCode `i -> 4 `i != -> _RB5 `i -> 4 `i 275  ]
-{
-[; ;main.c: 51: KeyEvent_KeyCode = 4;
+[e = _TRISC -> -> 0 `i `uc ]
+[; ;mypic.c: 51: TRISD = 0x00;
 "51
-[e = _KeyEvent_KeyCode -> -> 4 `i `uc ]
-[; ;main.c: 52: setKeyEventDispatchered();
+[e = _TRISD -> -> 0 `i `uc ]
+[; ;mypic.c: 52: TRISE = 0b00000010;
 "52
-[e ( _setKeyEventDispatchered ..  ]
-"53
-}
-[e :U 275 ]
+[e = _TRISE -> -> 2 `i `uc ]
+[; ;mypic.c: 54: ANSELA = 0b00101010;
 "54
-[e :U 274 ]
-[e :U 272 ]
-[; ;main.c: 53: }
-[; ;main.c: 54: }
-[e :UE 270 ]
+[e = _ANSELA -> -> 42 `i `uc ]
+[; ;mypic.c: 55: ANSELB = 0b00000110;
+"55
+[e = _ANSELB -> -> 6 `i `uc ]
+[; ;mypic.c: 56: ANSELE = 0b00000010;
+"56
+[e = _ANSELE -> -> 2 `i `uc ]
+[; ;mypic.c: 66: TMR1H = (65536 - (100000 / 4)) >> 8;
+"66
+[e = _TMR1H -> >> - -> 65536 `l / -> 100000 `l -> -> 4 `i `l -> 8 `i `uc ]
+[; ;mypic.c: 67: TMR1L = (65536 - (100000 / 4)) & 0xFF;
+"67
+[e = _TMR1L -> & - -> 65536 `l / -> 100000 `l -> -> 4 `i `l -> -> 255 `i `l `uc ]
+[; ;mypic.c: 68: PEIE = 1;
+"68
+[e = _PEIE -> -> 1 `i `b ]
+[; ;mypic.c: 69: TMR1IF = 0;
+"69
+[e = _TMR1IF -> -> 0 `i `b ]
+[; ;mypic.c: 70: TMR1IE = 1;
+"70
+[e = _TMR1IE -> -> 1 `i `b ]
+[; ;mypic.c: 71: T1CON = 0x31;
+"71
+[e = _T1CON -> -> 49 `i `uc ]
+[; ;mypic.c: 72: TMR0IE = 1;
+"72
+[e = _TMR0IE -> -> 1 `i `b ]
+[; ;mypic.c: 75: TMR2IF = 0;
+"75
+[e = _TMR2IF -> -> 0 `i `b ]
+[; ;mypic.c: 76: T2CON = 0x06;
+"76
+[e = _T2CON -> -> 6 `i `uc ]
+[; ;mypic.c: 77: PR2 = 8;
+"77
+[e = _PR2 -> -> 8 `i `uc ]
+[; ;mypic.c: 78: TMR2IE = 1;
+"78
+[e = _TMR2IE -> -> 1 `i `b ]
+[; ;mypic.c: 82: TMR4IF = 0;
+"82
+[e = _TMR4IF -> -> 0 `i `b ]
+[; ;mypic.c: 85: T4CON = 0b00000101;
+"85
+[e = _T4CON -> -> 5 `i `uc ]
+[; ;mypic.c: 86: PR4 = 250;
+"86
+[e = _PR4 -> -> 250 `i `uc ]
+[; ;mypic.c: 87: TMR4IE = 1;
+"87
+[e = _TMR4IE -> -> 1 `i `b ]
+[; ;mypic.c: 100: IOCBP = 0x38;
+"100
+[e = _IOCBP -> -> 56 `i `uc ]
+[; ;mypic.c: 101: IOCBN = 0x38;
+"101
+[e = _IOCBN -> -> 56 `i `uc ]
+[; ;mypic.c: 105: PEIE = 1;
+"105
+[e = _PEIE -> -> 1 `i `b ]
+[; ;mypic.c: 106: GIE = 1;
+"106
+[e = _GIE -> -> 1 `i `b ]
+[; ;mypic.c: 109: (PORTA |= (1 << 0));
+"109
+[e =| _PORTA -> << -> 1 `i -> 0 `i `uc ]
+[; ;mypic.c: 110: (PORTB |= (1 << 0));
+"110
+[e =| _PORTB -> << -> 1 `i -> 0 `i `uc ]
+[; ;mypic.c: 111: (PORTA |= (1 << 4));
+"111
+[e =| _PORTA -> << -> 1 `i -> 4 `i `uc ]
+[; ;mypic.c: 112: LoadFlag = 1;
+"112
+[e = _LoadFlag -> -> 1 `i `b ]
+[; ;mypic.c: 113: LoadState = 1;
+"113
+[e = _LoadState -> -> 1 `i `b ]
+[; ;mypic.c: 114: (PORTE |= (1 << 0));
+"114
+[e =| _PORTE -> << -> 1 `i -> 0 `i `uc ]
+[; ;mypic.c: 115: CTKSoftDelay(20);
+"115
+[e ( _CTKSoftDelay (1 -> -> 20 `i `ui ]
+[; ;mypic.c: 116: (PORTE &= ~(1 << 0));
+"116
+[e =& _PORTE -> ~ << -> 1 `i -> 0 `i `uc ]
+[; ;mypic.c: 117: CTKSoftDelay(20);
+"117
+[e ( _CTKSoftDelay (1 -> -> 20 `i `ui ]
+[; ;mypic.c: 120: }
+"120
+[e :UE 274 ]
 }
-"57
-[i _LCD_PAGE
--> -> 0 `i `uc
-]
-[; ;main.c: 57: unsigned char LCD_PAGE = 0;
-"58
-[i _LCD_POINT
--> -> 0 `i `ui
-]
-[; ;main.c: 58: unsigned int LCD_POINT = 0;
-"60
-[v _updateLCDShow `(v 1 ef2`uc`uc ]
+"123
+[v _getADValueOneTime `(ui 1 ef1`uc ]
 {
-[; ;main.c: 60: void updateLCDShow(unsigned char page,unsigned char point_line){
-[e :U _updateLCDShow ]
-[v _page `uc 1 r1 ]
-[v _point_line `uc 1 r2 ]
+[; ;mypic.c: 123: unsigned int getADValueOneTime(unsigned char channel){
+[e :U _getADValueOneTime ]
+[v _channel `uc 1 r1 ]
 [f ]
-[; ;main.c: 61: if(page == LCD_PAGE)return;
-"61
-[e $ ! == -> _page `i -> _LCD_PAGE `i 277  ]
-[e $UE 276  ]
+"124
+[v _AD_Result `ui 1 a ]
+[; ;mypic.c: 124: unsigned int AD_Result = 0;
+[e = _AD_Result -> -> 0 `i `ui ]
+[; ;mypic.c: 125: FVRCON = 0b00000000;
+"125
+[e = _FVRCON -> -> 0 `i `uc ]
+[; ;mypic.c: 126: ADCON0 = (channel & 0xff);
+"126
+[e = _ADCON0 -> & -> _channel `i -> 255 `i `uc ]
+[; ;mypic.c: 127: ADCON1 = 0b10010000;;
+"127
+[e = _ADCON1 -> -> 144 `i `uc ]
+[; ;mypic.c: 128: CTKSoftDelay(20);
+"128
+[e ( _CTKSoftDelay (1 -> -> 20 `i `ui ]
+[; ;mypic.c: 129: ADGO = 1;
+"129
+[e = _ADGO -> -> 1 `i `b ]
+[; ;mypic.c: 130: while(ADGO);
+"130
+[e $U 276  ]
 [e :U 277 ]
-[; ;main.c: 62: LCD_PAGE = page;
-"62
-[e = _LCD_PAGE _page ]
-"63
-[v F3219 `uc -> 15 `i s ]
-[i F3219
-:U ..
--> -> 0 `i `uc
-..
-]
-[v _data `uc -> 15 `i a ]
-[; ;main.c: 63: unsigned char data[15] = {0};
-[e = _data F3219 ]
-[; ;main.c: 64: switch(LCD_PAGE){
-"64
-[e $U 279  ]
+[e :U 276 ]
+[e $ _ADGO 277  ]
+[e :U 278 ]
+[; ;mypic.c: 131: AD_Result = ADRESL & 0x00FF;
+"131
+[e = _AD_Result -> & -> _ADRESL `i -> 255 `i `ui ]
+[; ;mypic.c: 132: AD_Result |= ADRESH <<8 ;
+"132
+[e =| _AD_Result -> << -> _ADRESH `i -> 8 `i `ui ]
+[; ;mypic.c: 133: ADCON0 = 0b00101000;
+"133
+[e = _ADCON0 -> -> 40 `i `uc ]
+[; ;mypic.c: 134: CTKSoftDelay(20);
+"134
+[e ( _CTKSoftDelay (1 -> -> 20 `i `ui ]
+[; ;mypic.c: 135: return AD_Result;
+"135
+[e ) _AD_Result ]
+[e $UE 275  ]
+[; ;mypic.c: 136: }
+"136
+[e :UE 275 ]
+}
+"137
+[v _getADValue `(ui 1 ef1`uc ]
 {
-[; ;main.c: 65: case 0:{
-"65
+[; ;mypic.c: 137: unsigned int getADValue(unsigned char channel){
+[e :U _getADValue ]
+[v _channel `uc 1 r1 ]
+[f ]
+"138
+[v _AD_Result `ui 1 a ]
+[; ;mypic.c: 138: unsigned int AD_Result = 0;
+[e = _AD_Result -> -> 0 `i `ui ]
+"139
+[v _AD_OneResult `ui 1 a ]
+[; ;mypic.c: 139: unsigned int AD_OneResult = 0;
+[e = _AD_OneResult -> -> 0 `i `ui ]
+"140
+[v _max `ui 1 a ]
+"141
+[v _min `ui 1 a ]
+"142
+[v _i `ui 1 a ]
+[; ;mypic.c: 140: unsigned int max;
+[; ;mypic.c: 141: unsigned int min;
+[; ;mypic.c: 142: unsigned int i = 0 ;
+[e = _i -> -> 0 `i `ui ]
+[; ;mypic.c: 143: for (i = 0 ; i < 10; i++){
+"143
+{
+[e = _i -> -> 0 `i `ui ]
+[e $ < _i -> -> 10 `i `ui 280  ]
+[e $U 281  ]
 [e :U 280 ]
 {
-[; ;main.c: 66: sprintf(data, "Bv13.2V Soc0000");
-"66
-[e ( _sprintf (1 , &U _data :s 1C ]
-"67
+[; ;mypic.c: 144: AD_OneResult = getADValueOneTime(channel);
+"144
+[e = _AD_OneResult ( _getADValueOneTime (1 _channel ]
+[; ;mypic.c: 145: AD_Result += AD_OneResult;
+"145
+[e =+ _AD_Result _AD_OneResult ]
+[; ;mypic.c: 146: max = (max > AD_OneResult ? max : AD_OneResult);
+"146
+[e = _max ? > _max _AD_OneResult : _max _AD_OneResult ]
+[; ;mypic.c: 147: min = (min < AD_OneResult ? min : AD_OneResult);
+"147
+[e = _min ? < _min _AD_OneResult : _min _AD_OneResult ]
+"148
 }
-[; ;main.c: 67: }break;
-[e $U 278  ]
-[; ;main.c: 68: case 1:{
-"68
+"143
+[e ++ _i -> -> 1 `i `ui ]
+[e $ < _i -> -> 10 `i `ui 280  ]
 [e :U 281 ]
+"148
+}
+[; ;mypic.c: 148: }
+[; ;mypic.c: 149: return ((AD_Result - max - min) >> 3);
+"149
+[e ) >> - - _AD_Result _max _min -> 3 `i ]
+[e $UE 279  ]
+[; ;mypic.c: 150: }
+"150
+[e :UE 279 ]
+}
+"157
+[v _GetBatteryVoltage `(ui 1 ef ]
 {
-"70
-}
-[; ;main.c: 70: }break;
-[e $U 278  ]
-"71
-}
-[; ;main.c: 71: }
-[e $U 278  ]
-"64
-[e :U 279 ]
-[e [\ _LCD_PAGE , $ -> -> 0 `i `uc 280
- , $ -> -> 1 `i `uc 281
- 278 ]
-"71
-[e :U 278 ]
-[; ;main.c: 72: }
-"72
-[e :UE 276 ]
-}
-"80
-[i _LCD_CurrentState
--> -> 0 `i `uc
-]
-[; ;main.c: 80: unsigned char LCD_CurrentState = 0;
-"81
-[i _LCD_LastState
--> -> 0 `i `uc
-]
-[; ;main.c: 81: unsigned char LCD_LastState = 0;
-"82
-[i _LCD_StateTime
--> -> -> 0 `i `l `ul
-]
-[; ;main.c: 82: unsigned long LCD_StateTime = 0;
-"83
-[v _setLCDBackground `(v 1 ef1`uc ]
-{
-[; ;main.c: 83: void setLCDBackground(unsigned char open){
-[e :U _setLCDBackground ]
-[v _open `uc 1 r1 ]
+[; ;mypic.c: 156: unsigned int GetBatteryVoltage()
+[; ;mypic.c: 157: {
+[e :U _GetBatteryVoltage ]
 [f ]
-[; ;main.c: 84: if(open == 1){
-"84
-[e $ ! == -> _open `i -> 1 `i 283  ]
-{
-[; ;main.c: 85: (LATC &= ~(1 << 4));
-"85
-[e =& _LATC -> ~ << -> 1 `i -> 4 `i `uc ]
-"86
+"158
+[v _channel `uc 1 a ]
+[; ;mypic.c: 158: unsigned char channel = 0b00101001;
+[e = _channel -> -> 41 `i `uc ]
+[; ;mypic.c: 159: return getADValue(channel);
+"159
+[e ) ( _getADValue (1 _channel ]
+[e $UE 283  ]
+[; ;mypic.c: 160: }
+"160
+[e :UE 283 ]
 }
-[; ;main.c: 86: }else {
-[e $U 284  ]
-[e :U 283 ]
+"165
+[v _GetSolarPanelVoltage `(ui 1 ef ]
 {
-[; ;main.c: 87: (LATC |= (1 << 4));
-"87
-[e =| _LATC -> << -> 1 `i -> 4 `i `uc ]
-"88
-}
-[e :U 284 ]
-[; ;main.c: 88: }
-[; ;main.c: 89: }
-"89
-[e :UE 282 ]
-}
-"90
-[v _tranformLCDState `(v 1 ef1`i ]
-{
-[; ;main.c: 90: void tranformLCDState(int state){
-[e :U _tranformLCDState ]
-[v _state `i 1 r1 ]
+[; ;mypic.c: 164: unsigned int GetSolarPanelVoltage()
+[; ;mypic.c: 165: {
+[e :U _GetSolarPanelVoltage ]
 [f ]
-[; ;main.c: 91: if(state != LCD_CurrentState){
-"91
-[e $ ! != _state -> _LCD_CurrentState `i 286  ]
-{
-[; ;main.c: 92: LCD_LastState = LCD_CurrentState;
-"92
-[e = _LCD_LastState _LCD_CurrentState ]
-[; ;main.c: 93: LCD_CurrentState = state;
-"93
-[e = _LCD_CurrentState -> _state `uc ]
-[; ;main.c: 94: LCD_StateTime = OS_Time;
-"94
-[e = _LCD_StateTime _OS_Time ]
-"95
+"166
+[v _channel `uc 1 a ]
+[; ;mypic.c: 166: unsigned char channel = 0b00100001;
+[e = _channel -> -> 33 `i `uc ]
+[; ;mypic.c: 167: return getADValue(channel);
+"167
+[e ) ( _getADValue (1 _channel ]
+[e $UE 284  ]
+[; ;mypic.c: 168: }
+"168
+[e :UE 284 ]
 }
-[e :U 286 ]
-[; ;main.c: 95: }
-[; ;main.c: 96: }
-"96
+"173
+[v _GetChargeCurrentVoltage `(ui 1 ef ]
+{
+[; ;mypic.c: 172: unsigned int GetChargeCurrentVoltage()
+[; ;mypic.c: 173: {
+[e :U _GetChargeCurrentVoltage ]
+[f ]
+"174
+[v _channel `uc 1 a ]
+[; ;mypic.c: 174: unsigned char channel = 0b00010001;
+[e = _channel -> -> 17 `i `uc ]
+[; ;mypic.c: 175: return getADValue(channel);
+"175
+[e ) ( _getADValue (1 _channel ]
+[e $UE 285  ]
+[; ;mypic.c: 176: }
+"176
 [e :UE 285 ]
 }
-"97
-[v _handlerLCD `(ui 1 ef ]
+"181
+[v _GetLoadCurrentVoltage `(ui 1 ef ]
 {
-[; ;main.c: 97: unsigned int handlerLCD(){
-[e :U _handlerLCD ]
+[; ;mypic.c: 180: unsigned int GetLoadCurrentVoltage()
+[; ;mypic.c: 181: {
+[e :U _GetLoadCurrentVoltage ]
 [f ]
-[; ;main.c: 98: switch(LCD_CurrentState){
-"98
+"182
+[v _channel `uc 1 a ]
+[; ;mypic.c: 182: unsigned char channel = 0b00011001;
+[e = _channel -> -> 25 `i `uc ]
+[; ;mypic.c: 183: return getADValue(channel);
+"183
+[e ) ( _getADValue (1 _channel ]
+[e $UE 286  ]
+[; ;mypic.c: 184: }
+"184
+[e :UE 286 ]
+}
+"190
+[v _SelectMode `(v 1 ef ]
+{
+[; ;mypic.c: 189: void SelectMode()
+[; ;mypic.c: 190: {
+[e :U _SelectMode ]
+[f ]
+[; ;mypic.c: 191: switch(SystemModeType)
+"191
 [e $U 289  ]
+[; ;mypic.c: 192: {
+"192
 {
-[; ;main.c: 99: case 0:{
-"99
+[; ;mypic.c: 193: case 0X05:
+"193
 [e :U 290 ]
+[; ;mypic.c: 194: {
+"194
 {
-[; ;main.c: 100: if(LCD_LastState != 0){
-"100
-[e $ ! != -> _LCD_LastState `i -> 0 `i 291  ]
+[; ;mypic.c: 195: if((DAYTIME == 0) && LightTime)
+"195
+[e $ ! && == -> _DAYTIME `i -> 0 `i != -> _LightTime `i -> -> -> 0 `i `uc `i 291  ]
+[; ;mypic.c: 196: {
+"196
 {
-[; ;main.c: 101: API_LCD_INIT();
-"101
-[e ( _API_LCD_INIT ..  ]
-[; ;main.c: 102: API_LCD_CLEAR();
-"102
-[e ( _API_LCD_CLEAR ..  ]
-"103
+[; ;mypic.c: 197: if(TimeModeHour >= 36000)
+"197
+[e $ ! >= -> _TimeModeHour `l -> 36000 `l 292  ]
+[; ;mypic.c: 198: {
+"198
+{
+[; ;mypic.c: 199: TimeModeHour = 0;
+"199
+[e = _TimeModeHour -> -> 0 `i `ui ]
+[; ;mypic.c: 200: LightTime--;
+"200
+[e -- _LightTime -> -> 1 `i `uc ]
+"201
 }
-[e :U 291 ]
-[; ;main.c: 103: }
-[; ;main.c: 104: tranformLCDState(2);
-"104
-[e ( _tranformLCDState (1 -> 2 `i ]
-"105
-}
-[; ;main.c: 105: }break;
-[e $U 288  ]
-[; ;main.c: 106: case 1:{
-"106
 [e :U 292 ]
+[; ;mypic.c: 201: }
+[; ;mypic.c: 202: if(LightTime != 0)
+"202
+[e $ ! != -> _LightTime `i -> 0 `i 293  ]
+[; ;mypic.c: 203: {
+"203
 {
-[; ;main.c: 107: if(LCD_LastState != 1){
-"107
-[e $ ! != -> _LCD_LastState `i -> 1 `i 293  ]
-{
-[; ;main.c: 108: API_LCD_CLEAR();
-"108
-[e ( _API_LCD_CLEAR ..  ]
-"109
+[; ;mypic.c: 204: LoadOpen = 1;
+"204
+[e = _LoadOpen -> -> 1 `i `b ]
+"205
 }
+[; ;mypic.c: 205: }
+[e $U 294  ]
+"206
 [e :U 293 ]
-[; ;main.c: 109: }
-[; ;main.c: 110: setLCDBackground(0);
-"110
-[e ( _setLCDBackground (1 -> -> 0 `i `uc ]
-[; ;main.c: 111: if(KeyEvent_KeyCode != 1){
-"111
-[e $ ! != -> _KeyEvent_KeyCode `i -> 1 `i 294  ]
+[; ;mypic.c: 206: else
+[; ;mypic.c: 207: {
+"207
 {
-[; ;main.c: 112: setKeyEventDealed();
-"112
-[e ( _setKeyEventDealed ..  ]
-[; ;main.c: 113: tranformLCDState(2);
-"113
-[e ( _tranformLCDState (1 -> 2 `i ]
-"114
+[; ;mypic.c: 208: LoadOpen = 0;
+"208
+[e = _LoadOpen -> -> 0 `i `b ]
+"209
 }
 [e :U 294 ]
-"115
-}
-[; ;main.c: 114: }
-[; ;main.c: 115: }break;
-[e $U 288  ]
-[; ;main.c: 116: case 2:{
-"116
-[e :U 295 ]
-{
-[; ;main.c: 117: if(LCD_LastState != 2){
-"117
-[e $ ! != -> _LCD_LastState `i -> 2 `i 296  ]
-{
-[; ;main.c: 118: setLCDBackground(1);
-"118
-[e ( _setLCDBackground (1 -> -> 1 `i `uc ]
-"120
-}
-[; ;main.c: 120: }else{
-[e $U 297  ]
-[e :U 296 ]
-{
-"122
-}
-[e :U 297 ]
-"123
-}
-[; ;main.c: 122: }
-[; ;main.c: 123: }break;
-[e $U 288  ]
-"124
-}
-[; ;main.c: 124: }
-[e $U 288  ]
-"98
-[e :U 289 ]
-[e [\ _LCD_CurrentState , $ -> -> 0 `i `uc 290
- , $ -> -> 1 `i `uc 292
- , $ -> -> 2 `i `uc 295
- 288 ]
-"124
-[e :U 288 ]
-[; ;main.c: 125: }
-"125
-[e :UE 287 ]
-}
-"132
-[v _setPWM `(v 1 ef1`uc ]
-{
-[; ;main.c: 132: void setPWM(char open){
-[e :U _setPWM ]
-[v _open `uc 1 r1 ]
-[f ]
-[; ;main.c: 133: if(open == 1){
-"133
-[e $ ! == -> _open `i -> 1 `i 299  ]
-{
-[; ;main.c: 134: (PORTA &= ~(1 << 0));
-"134
-[e =& _PORTA -> ~ << -> 1 `i -> 0 `i `uc ]
-"135
-}
-[; ;main.c: 135: }else{
-[e $U 300  ]
-[e :U 299 ]
-{
-[; ;main.c: 136: (PORTA |= (1 << 0));
-"136
-[e =| _PORTA -> << -> 1 `i -> 0 `i `uc ]
-"137
-}
-[e :U 300 ]
-[; ;main.c: 137: }
-[; ;main.c: 138: }
-"138
-[e :UE 298 ]
-}
-"139
-[v _openOrClosePWM `(v 1 ef1`uc ]
-{
-[; ;main.c: 139: void openOrClosePWM(unsigned char open){
-[e :U _openOrClosePWM ]
-[v _open `uc 1 r1 ]
-[f ]
-[; ;main.c: 140: PWM_CONTROL_FLAG = open;
-"140
-[e = _PWM_CONTROL_FLAG _open ]
-[; ;main.c: 141: TMR2IE = open;
-"141
-[e = _TMR2IE -> _open `b ]
-[; ;main.c: 142: setPWM(open);
-"142
-[e ( _setPWM (1 _open ]
-[; ;main.c: 143: }
-"143
-[e :UE 301 ]
-}
-"144
-[v _handlerPWMInterrupt `(v 1 ef ]
-{
-[; ;main.c: 144: void handlerPWMInterrupt(){
-[e :U _handlerPWMInterrupt ]
-[f ]
-[; ;main.c: 145: if(PWM_CONTROL_FLAG == 0){
-"145
-[e $ ! == -> _PWM_CONTROL_FLAG `i -> 0 `i 303  ]
-{
-[; ;main.c: 146: openOrClosePWM(0);
-"146
-[e ( _openOrClosePWM (1 -> -> 0 `i `uc ]
-"147
-}
-[; ;main.c: 147: }else{
-[e $U 304  ]
-[e :U 303 ]
-{
-[; ;main.c: 148: if(PWM_CONTROL_TIMEOUT != 0){
-"148
-[e $ ! != _PWM_CONTROL_TIMEOUT -> -> -> 0 `i `l `ul 305  ]
-{
-"150
-}
-[e :U 305 ]
-"151
-}
-[e :U 304 ]
-[; ;main.c: 150: }
-[; ;main.c: 151: }
-[; ;main.c: 152: }
-"152
-[e :UE 302 ]
-}
-"155
-[i _isSettingMode
--> 0 `i
-]
-[; ;main.c: 155: bit isSettingMode = 0;
-"156
-[i _isSaveSettings
--> 0 `i
-]
-[; ;main.c: 156: bit isSaveSettings = 0;
-"157
-[i _rb4_flag
--> 0 `i
-]
-[; ;main.c: 157: bit rb4_flag = 0;
-[; ;main.c: 158: bit is_second_setting;
-[; ;main.c: 159: bit needInitSetting;
-"160
-[i _batteryType
--> -> 0 `i `uc
-]
-[; ;main.c: 160: unsigned char batteryType = 0;
-[; ;main.c: 161: unsigned char const *charPointer;
-"169
-[i _OS_CurrentState
--> -> 0 `i `uc
-]
-[; ;main.c: 169: unsigned char OS_CurrentState = 0;
-"170
-[i _OS_StateTime
--> -> -> 0 `i `l `ul
-]
-[; ;main.c: 170: unsigned long OS_StateTime = 0;
-"172
-[v _tranform_OS_State `(v 1 ef1`i ]
-{
-[; ;main.c: 172: void tranform_OS_State(int state){
-[e :U _tranform_OS_State ]
-[v _state `i 1 r1 ]
-[f ]
-[; ;main.c: 173: if(state != OS_CurrentState){
-"173
-[e $ ! != _state -> _OS_CurrentState `i 307  ]
-{
-[; ;main.c: 174: OS_CurrentState = state;
-"174
-[e = _OS_CurrentState -> _state `uc ]
-[; ;main.c: 175: OS_StateTime = OS_Time;
-"175
-[e = _OS_StateTime _OS_Time ]
-"176
-}
-[e :U 307 ]
-[; ;main.c: 176: }
-[; ;main.c: 177: }
-"177
-[e :UE 306 ]
-}
-"178
-[v _handlerOSStateMachine `(uc 1 ef ]
-{
-[; ;main.c: 178: unsigned char handlerOSStateMachine(){
-[e :U _handlerOSStateMachine ]
-[f ]
-[; ;main.c: 179: switch(OS_CurrentState){
-"179
-[e $U 310  ]
-{
-[; ;main.c: 180: case 0:{
-"180
-[e :U 311 ]
-{
-[; ;main.c: 181: (LATC |= (1 << 4));
-"181
-[e =| _LATC -> << -> 1 `i -> 4 `i `uc ]
-[; ;main.c: 182: PWM_CONTROL_FLAG = 0;
-"182
-[e = _PWM_CONTROL_FLAG -> -> 0 `i `uc ]
-"183
-}
-[; ;main.c: 183: }break;
-[e $U 309  ]
-[; ;main.c: 184: case 1:{
-"184
-[e :U 312 ]
-{
-"186
-}
-[; ;main.c: 186: }break;
-[e $U 309  ]
-[; ;main.c: 187: case 2:{
-"187
-[e :U 313 ]
-{
-"189
-}
-[; ;main.c: 189: }break;
-[e $U 309  ]
-"190
-}
-[; ;main.c: 190: }
-[e $U 309  ]
-"179
-[e :U 310 ]
-[e [\ _OS_CurrentState , $ -> -> 0 `i `uc 311
- , $ -> -> 1 `i `uc 312
- , $ -> -> 2 `i `uc 313
- 309 ]
-"190
-[e :U 309 ]
-[; ;main.c: 191: }
-"191
-[e :UE 308 ]
-}
-"193
-[v _main `(v 1 ef ]
-{
-[; ;main.c: 193: void main(){
-[e :U _main ]
-[f ]
-[; ;main.c: 194: system_state_init();
-"194
-[e ( _system_state_init ..  ]
-[; ;main.c: 195: LoadParamFromEPPROM();
-"195
-[e ( _LoadParamFromEPPROM ..  ]
-[; ;main.c: 197: API_LCD_INIT();
-"197
-[e ( _API_LCD_INIT ..  ]
-[; ;main.c: 198: API_LCD_CLEAR();
-"198
-[e ( _API_LCD_CLEAR ..  ]
-[; ;main.c: 199: (LATC |= (1 << 4));
-"199
-[e =| _LATC -> << -> 1 `i -> 4 `i `uc ]
-[; ;main.c: 200: KaiJi();
-"200
-[e ( _KaiJi ..  ]
-[; ;main.c: 201: while(1)
-"201
-[e :U 316 ]
-[; ;main.c: 202: {
-"202
-{
-[; ;main.c: 203: asm("CLRWDT");
-"203
-[; CLRWDT ;#
-[; ;main.c: 205: SelectMode();
-"205
-[e ( _SelectMode ..  ]
-[; ;main.c: 206: SystemModeType = 0x01;
-"206
-[e = _SystemModeType -> -> 1 `i `uc ]
-[; ;main.c: 207: LoadCurrentDealWith();
-"207
-[e ( _LoadCurrentDealWith ..  ]
-[; ;main.c: 208: SwitchBatteryState();
-"208
-[e ( _SwitchBatteryState ..  ]
-[; ;main.c: 209: LedDisplay();
-"209
-[e ( _LedDisplay ..  ]
-[; ;main.c: 210: if(PVCount > 50)
 "210
-[e $ ! > -> _PVCount `i -> 50 `i 318  ]
-[; ;main.c: 211: {
+}
+[; ;mypic.c: 209: }
+[; ;mypic.c: 210: }
+[e $U 295  ]
 "211
-{
-[; ;main.c: 212: PVCount = 0;
+[e :U 291 ]
+[; ;mypic.c: 211: else if(DAYTIME == 1)
+[e $ ! == -> _DAYTIME `i -> 1 `i 296  ]
+[; ;mypic.c: 212: {
 "212
-[e = _PVCount -> -> 0 `i `uc ]
-[; ;main.c: 213: SolarPanelDealWith();
+{
+[; ;mypic.c: 213: LoadOpen = 0;
 "213
-[e ( _SolarPanelDealWith ..  ]
-"214
-}
-[e :U 318 ]
-[; ;main.c: 214: }
-[; ;main.c: 215: if(PWMChargeFlag == 1)
+[e = _LoadOpen -> -> 0 `i `b ]
+[; ;mypic.c: 215: TimeModeHour = 0;
 "215
-[e $ ! == -> _PWMChargeFlag `i -> 1 `i 319  ]
-[; ;main.c: 216: {
+[e = _TimeModeHour -> -> 0 `i `ui ]
 "216
-{
-[; ;main.c: 217: PWMChargeFlag = 0;
-"217
-[e = _PWMChargeFlag -> -> 0 `i `b ]
-[; ;main.c: 218: PWMCharge();
-"218
-[e ( _PWMCharge ..  ]
-"219
 }
-[e :U 319 ]
-[; ;main.c: 219: }
-[; ;main.c: 223: if (lcd_extinguwish_timer == 70) {
-"223
-[e $ ! == -> _lcd_extinguwish_timer `i -> 70 `i 320  ]
+[e :U 296 ]
+"217
+[e :U 295 ]
+[; ;mypic.c: 216: }
+[; ;mypic.c: 217: break;
+[e $U 288  ]
+"218
+}
+[; ;mypic.c: 218: }
+[; ;mypic.c: 219: case 0x02:
+"219
+[e :U 297 ]
+[; ;mypic.c: 220: {
+"220
 {
-[; ;main.c: 225: lcd_extinguwish_timer++;
+[; ;mypic.c: 221: if(DAYTIME == 0)
+"221
+[e $ ! == -> _DAYTIME `i -> 0 `i 298  ]
+[; ;mypic.c: 222: {
+"222
+{
+[; ;mypic.c: 223: LoadOpen = 1;
+"223
+[e = _LoadOpen -> -> 1 `i `b ]
+"224
+}
+[; ;mypic.c: 224: }
+[e $U 299  ]
 "225
-[e ++ _lcd_extinguwish_timer -> -> 1 `i `uc ]
-[; ;main.c: 227: lcd_write_command(0x08);
+[e :U 298 ]
+[; ;mypic.c: 225: else if(DAYTIME == 1)
+[e $ ! == -> _DAYTIME `i -> 1 `i 300  ]
+[; ;mypic.c: 226: {
+"226
+{
+[; ;mypic.c: 227: LoadOpen = 0;
 "227
-[e ( _lcd_write_command (1 -> -> 8 `i `uc ]
+[e = _LoadOpen -> -> 0 `i `b ]
 "228
 }
-[e :U 320 ]
-[; ;main.c: 228: }
-[; ;main.c: 230: if (isSaveSettings) {
+[e :U 300 ]
+"229
+[e :U 299 ]
+[; ;mypic.c: 228: }
+[; ;mypic.c: 229: break;
+[e $U 288  ]
 "230
-[e $ ! _isSaveSettings 321  ]
-{
-[; ;main.c: 231: isSaveSettings = 0;
+}
+[; ;mypic.c: 230: }
+[; ;mypic.c: 231: case 0x01:
 "231
-[e = _isSaveSettings -> -> 0 `i `b ]
-[; ;main.c: 232: isNeedChange = 1;
+[e :U 301 ]
+[; ;mypic.c: 232: {
 "232
-[e = _isNeedChange -> -> 1 `i `b ]
-[; ;main.c: 233: lcd_state = 2;
+{
+[; ;mypic.c: 233: LoadOpen = 1;
 "233
-[e = _lcd_state -> -> 2 `i `uc ]
-[; ;main.c: 234: isSettingMode = 0;
+[e = _LoadOpen -> -> 1 `i `b ]
+[; ;mypic.c: 234: break;
 "234
-[e = _isSettingMode -> -> 0 `i `b ]
+[e $U 288  ]
+"235
+}
+[; ;mypic.c: 235: }
+[; ;mypic.c: 236: case 0x03:
 "236
-}
-[e :U 321 ]
-[; ;main.c: 236: }
-[; ;main.c: 238: if (isSettingMode && needInitSetting) {
+[e :U 302 ]
+[; ;mypic.c: 237: {
+"237
+{
+[; ;mypic.c: 238: break;
 "238
-[e $ ! && _isSettingMode _needInitSetting 322  ]
-{
-[; ;main.c: 239: needInitSetting = 0;
+[e $U 288  ]
 "239
-[e = _needInitSetting -> -> 0 `i `b ]
-[; ;main.c: 240: isNeedChange = 1;
+}
 "240
-[e = _isNeedChange -> -> 1 `i `b ]
-[; ;main.c: 241: lcd_state = 3;
+}
+[; ;mypic.c: 239: }
+[; ;mypic.c: 240: }
+[e $U 288  ]
+"191
+[e :U 289 ]
+[e [\ _SystemModeType , $ -> -> 5 `i `uc 290
+ , $ -> -> 2 `i `uc 297
+ , $ -> -> 1 `i `uc 301
+ , $ -> -> 3 `i `uc 302
+ 288 ]
+"240
+[e :U 288 ]
+[; ;mypic.c: 241: }
 "241
-[e = _lcd_state -> -> 3 `i `uc ]
-[; ;main.c: 242: is_second_setting = 0;
-"242
-[e = _is_second_setting -> -> 0 `i `b ]
-"243
+[e :UE 287 ]
 }
-[e :U 322 ]
-"245
-}
-[e :U 315 ]
-"201
-[e $U 316  ]
-[e :U 317 ]
-[; ;main.c: 243: }
-[; ;main.c: 245: }
-[; ;main.c: 246: }
 "246
-[e :UE 314 ]
-}
-"249
-[v F3247 `(v 1 tf ]
-[v _ISR_Timer `IF3247 1 e ]
+[v _LoadCurrentDealWith `(v 1 ef ]
 {
-[; ;main.c: 248: void interrupt ISR_Timer()
-[; ;main.c: 249: {
-[e :U _ISR_Timer ]
+[; ;mypic.c: 245: void LoadCurrentDealWith()
+[; ;mypic.c: 246: {
+[e :U _LoadCurrentDealWith ]
 [f ]
-[; ;main.c: 250: if(IOCBF3 && lcd_state != 0 && lcd_state != 1)
+[; ;mypic.c: 247: if((BatteryState != 1) && (BatteryState != 6) && LoadOpen)
+"247
+[e $ ! && && != -> _BatteryState `i -> 1 `i != -> _BatteryState `i -> 6 `i _LoadOpen 304  ]
+[; ;mypic.c: 249: {
+"249
+{
 "250
-[e $ ! && && _IOCBF3 != -> _lcd_state `i -> 0 `i != -> _lcd_state `i -> 1 `i 324  ]
-[; ;main.c: 251: {
+[v _FbVoltage `ui 1 a ]
+[; ;mypic.c: 250: unsigned int FbVoltage;
+[; ;mypic.c: 251: FbVoltage = GetLoadCurrentVoltage();
 "251
-{
-[; ;main.c: 253: if (RB3 == 0) {
+[e = _FbVoltage ( _GetLoadCurrentVoltage ..  ]
+[; ;mypic.c: 252: FbVoltage = 0;
+"252
+[e = _FbVoltage -> -> 0 `i `ui ]
+[; ;mypic.c: 253: if((FbVoltage < 134) && (LoadState == 1))
 "253
-[e $ ! == -> _RB3 `i -> 0 `i 325  ]
-{
-[; ;main.c: 254: handlerKeyEventInput(3);
+[e $ ! && < _FbVoltage -> -> 134 `i `ui == -> _LoadState `i -> 1 `i 305  ]
+[; ;mypic.c: 254: {
 "254
-[e ( _handlerKeyEventInput (1 -> 3 `i ]
+{
+[; ;mypic.c: 255: if(LoadFlag == 1)
 "255
-}
-[e :U 325 ]
-[; ;main.c: 255: }
-[; ;main.c: 256: IOCBF3 = 0;
+[e $ ! == -> _LoadFlag `i -> 1 `i 306  ]
+[; ;mypic.c: 256: {
 "256
-[e = _IOCBF3 -> -> 0 `i `b ]
+{
+[; ;mypic.c: 257: LoadState = 1;
 "257
-}
-[e :U 324 ]
-[; ;main.c: 257: }
-[; ;main.c: 258: if(IOCBF5 && lcd_state != 0 && lcd_state != 1)
+[e = _LoadState -> -> 1 `i `b ]
+[; ;mypic.c: 258: OverLoadTime = 0;
 "258
-[e $ ! && && _IOCBF5 != -> _lcd_state `i -> 0 `i != -> _lcd_state `i -> 1 `i 326  ]
-[; ;main.c: 259: {
+[e = _OverLoadTime -> -> 0 `i `ui ]
+[; ;mypic.c: 259: (PORTA &= ~(1 << 4));
 "259
-{
-[; ;main.c: 260: if (RB5 == 0) {
+[e =& _PORTA -> ~ << -> 1 `i -> 4 `i `uc ]
+[; ;mypic.c: 260: LoadFlag = 0;
 "260
-[e $ ! == -> _RB5 `i -> 0 `i 327  ]
-{
-[; ;main.c: 261: handlerKeyEventInput(4);
+[e = _LoadFlag -> -> 0 `i `b ]
 "261
-[e ( _handlerKeyEventInput (1 -> 4 `i ]
+}
+[e :U 306 ]
 "262
 }
-[e :U 327 ]
-[; ;main.c: 262: }
-[; ;main.c: 263: IOCBF5 = 0;
+[e :U 305 ]
+[; ;mypic.c: 261: }
+[; ;mypic.c: 262: }
+[; ;mypic.c: 263: if((FbVoltage >= 134) || (LoadState == 0))
 "263
-[e = _IOCBF5 -> -> 0 `i `b ]
+[e $ ! || >= _FbVoltage -> -> 134 `i `ui == -> _LoadState `i -> 0 `i 307  ]
+[; ;mypic.c: 264: {
 "264
-}
-[e :U 326 ]
-[; ;main.c: 264: }
-[; ;main.c: 266: if(IOCBF4)
+{
+[; ;mypic.c: 265: LoadState = 0;
+"265
+[e = _LoadState -> -> 0 `i `b ]
+[; ;mypic.c: 266: if(( FbVoltage >= 400) || (LoadShort == 1))
 "266
-[e $ ! _IOCBF4 328  ]
-[; ;main.c: 267: {
+[e $ ! || >= _FbVoltage -> -> 400 `i `ui == -> _LoadShort `i -> 1 `i 308  ]
+[; ;mypic.c: 267: {
 "267
 {
-[; ;main.c: 269: if (RB4 == 0) {
+[; ;mypic.c: 268: (PORTA |= (1 << 4));
+"268
+[e =| _PORTA -> << -> 1 `i -> 4 `i `uc ]
+[; ;mypic.c: 269: LoadFlag = 1;
 "269
-[e $ ! == -> _RB4 `i -> 0 `i 329  ]
-{
-[; ;main.c: 270: handlerKeyEventInput(2);
+[e = _LoadFlag -> -> 1 `i `b ]
+[; ;mypic.c: 270: OverLoadTime = 0;
 "270
-[e ( _handlerKeyEventInput (1 -> 2 `i ]
+[e = _OverLoadTime -> -> 0 `i `ui ]
+[; ;mypic.c: 271: LoadShort = 1;
 "271
-}
-[e :U 329 ]
-[; ;main.c: 271: }
-[; ;main.c: 273: IOCBF4 = 0;
+[e = _LoadShort -> -> 1 `i `b ]
+[; ;mypic.c: 273: SystemErrorState = 1;
 "273
-[e = _IOCBF4 -> -> 0 `i `b ]
+[e = _SystemErrorState -> -> 1 `i `uc ]
+[; ;mypic.c: 274: ErrorType = 5;
 "274
+[e = _ErrorType -> -> 5 `i `uc ]
+"275
 }
-[e :U 328 ]
-[; ;main.c: 274: }
-[; ;main.c: 276: if(TMR1IF)
+[; ;mypic.c: 275: }
+[e $U 309  ]
 "276
-[e $ ! _TMR1IF 330  ]
-[; ;main.c: 277: {
+[e :U 308 ]
+[; ;mypic.c: 276: else
+[; ;mypic.c: 277: {
 "277
 {
-[; ;main.c: 278: OS_Time ++;
+[; ;mypic.c: 278: if(OverLoadTime == 0)
 "278
-[e ++ _OS_Time -> -> -> 1 `i `l `ul ]
-[; ;main.c: 279: TMR1IF = 0;
+[e $ ! == _OverLoadTime -> -> 0 `i `ui 310  ]
+[; ;mypic.c: 279: {
 "279
-[e = _TMR1IF -> -> 0 `i `b ]
-[; ;main.c: 280: TMR1H = (65536 - (100000 / 4)) >> 8;
+{
+[; ;mypic.c: 280: OverLoadTime = 1;
 "280
-[e = _TMR1H -> >> - -> 65536 `l / -> 100000 `l -> -> 4 `i `l -> 8 `i `uc ]
-[; ;main.c: 281: TMR1L = (65536 - (100000 / 4)) & 0xFF;
+[e = _OverLoadTime -> -> 1 `i `ui ]
 "281
-[e = _TMR1L -> & - -> 65536 `l / -> 100000 `l -> -> 4 `i `l -> -> 255 `i `l `uc ]
+}
+[e :U 310 ]
+[; ;mypic.c: 281: }
+[; ;mypic.c: 282: if(OverLoadTime >= 3000)
 "282
-}
-[e :U 330 ]
-[; ;main.c: 282: }
-[; ;main.c: 283: if(TMR2IF)
+[e $ ! >= _OverLoadTime -> -> 3000 `i `ui 311  ]
+[; ;mypic.c: 283: {
 "283
-[e $ ! _TMR2IF 331  ]
-[; ;main.c: 284: {
+{
+[; ;mypic.c: 284: OverLoadTime = 1;
 "284
-{
-[; ;main.c: 285: TMR2IF = 0;
+[e = _OverLoadTime -> -> 1 `i `ui ]
+[; ;mypic.c: 285: if(LoadFlag == 0)
 "285
-[e = _TMR2IF -> -> 0 `i `b ]
-[; ;main.c: 286: if(PWMFlag == 1)
+[e $ ! == -> _LoadFlag `i -> 0 `i 312  ]
+[; ;mypic.c: 286: {
 "286
-[e $ ! == -> _PWMFlag `i -> 1 `i 332  ]
-[; ;main.c: 287: {
-"287
 {
-[; ;main.c: 288: PwmCount++;
+[; ;mypic.c: 287: (PORTA |= (1 << 4));
+"287
+[e =| _PORTA -> << -> 1 `i -> 4 `i `uc ]
+[; ;mypic.c: 288: LoadFlag = 1;
 "288
-[e ++ _PwmCount -> -> 1 `i `uc ]
-[; ;main.c: 290: if(PwmCount >= DutyRatio)
-"290
-[e $ ! >= -> _PwmCount `i -> _DutyRatio `i 333  ]
-[; ;main.c: 291: (PORTA |= (1 << 0));
-"291
-[e =| _PORTA -> << -> 1 `i -> 0 `i `uc ]
-[e $U 334  ]
-"292
-[e :U 333 ]
-[; ;main.c: 292: else
-[; ;main.c: 293: (PORTA &= ~(1 << 0));
-"293
-[e =& _PORTA -> ~ << -> 1 `i -> 0 `i `uc ]
-[e :U 334 ]
-"294
+[e = _LoadFlag -> -> 1 `i `b ]
+"289
 }
-[e :U 332 ]
-[; ;main.c: 294: }
-[; ;main.c: 295: handlerPWMInterrupt();
+[; ;mypic.c: 289: }
+[e $U 313  ]
+"290
+[e :U 312 ]
+[; ;mypic.c: 290: else if(LoadFlag == 1)
+[e $ ! == -> _LoadFlag `i -> 1 `i 314  ]
+[; ;mypic.c: 291: {
+"291
+{
+[; ;mypic.c: 292: (PORTA &= ~(1 << 4));
+"292
+[e =& _PORTA -> ~ << -> 1 `i -> 4 `i `uc ]
+[; ;mypic.c: 293: LoadFlag = 0;
+"293
+[e = _LoadFlag -> -> 0 `i `b ]
+[; ;mypic.c: 294: LoadState = 1;
+"294
+[e = _LoadState -> -> 1 `i `b ]
+[; ;mypic.c: 295: OverLoadTime = 0;
 "295
-[e ( _handlerPWMInterrupt ..  ]
+[e = _OverLoadTime -> -> 0 `i `ui ]
 "296
 }
-[e :U 331 ]
-[; ;main.c: 296: }
-[; ;main.c: 297: if(TMR4IF)
+[e :U 314 ]
 "297
-[e $ ! _TMR4IF 335  ]
-[; ;main.c: 298: {
-"298
-{
-[; ;main.c: 299: TMR4IF = 0;
-"299
-[e = _TMR4IF -> -> 0 `i `b ]
-[; ;main.c: 300: RE2 = ~RE2;
-"300
-[e = _RE2 ! _RE2 ]
-"301
+[e :U 313 ]
 }
-[e :U 335 ]
-[; ;main.c: 301: }
-[; ;main.c: 302: if(TMR6IF)
+[e :U 311 ]
+"298
+}
+[e :U 309 ]
+"299
+}
+[e :U 307 ]
+"300
+}
+[; ;mypic.c: 296: }
+[; ;mypic.c: 297: }
+[; ;mypic.c: 298: }
+[; ;mypic.c: 299: }
+[; ;mypic.c: 300: }
+[e $U 315  ]
+"301
+[e :U 304 ]
+[; ;mypic.c: 301: else
+[; ;mypic.c: 302: {
 "302
-[e $ ! _TMR6IF 336  ]
-[; ;main.c: 303: {
-"303
 {
-[; ;main.c: 304: TMR6IF = 0;
+[; ;mypic.c: 303: (PORTA |= (1 << 4));
+"303
+[e =| _PORTA -> << -> 1 `i -> 4 `i `uc ]
+[; ;mypic.c: 304: LoadFlag = 1;
 "304
-[e = _TMR6IF -> -> 0 `i `b ]
+[e = _LoadFlag -> -> 1 `i `b ]
+[; ;mypic.c: 305: OverLoadTime = 0;
 "305
+[e = _OverLoadTime -> -> 0 `i `ui ]
+[; ;mypic.c: 306: LoadState = 1;
+"306
+[e = _LoadState -> -> 1 `i `b ]
+"307
+}
+[e :U 315 ]
+[; ;mypic.c: 307: }
+[; ;mypic.c: 308: }
+"308
+[e :UE 303 ]
+}
+"312
+[v _SolarPanelDealWith `(v 1 ef ]
+{
+[; ;mypic.c: 311: void SolarPanelDealWith()
+[; ;mypic.c: 312: {
+[e :U _SolarPanelDealWith ]
+[f ]
+"313
+[v _SolarPanelVoltage `ui 1 a ]
+[; ;mypic.c: 313: unsigned int SolarPanelVoltage;
+[; ;mypic.c: 314: if(PWMFlag == 0)
+"314
+[e $ ! == -> _PWMFlag `i -> 0 `i 317  ]
+[; ;mypic.c: 315: {
+"315
+{
+[; ;mypic.c: 316: if(DutyRatio > 249)
+"316
+[e $ ! > -> _DutyRatio `i -> 249 `i 318  ]
+[; ;mypic.c: 317: {
+"317
+{
+[; ;mypic.c: 318: (PORTB |= (1 << 0));
+"318
+[e =| _PORTB -> << -> 1 `i -> 0 `i `uc ]
+[; ;mypic.c: 319: CTKSoftDelay(200);
+"319
+[e ( _CTKSoftDelay (1 -> -> 200 `i `ui ]
+[; ;mypic.c: 320: SolarPanelVoltage = GetSolarPanelVoltage();
+"320
+[e = _SolarPanelVoltage ( _GetSolarPanelVoltage ..  ]
+[; ;mypic.c: 321: gSolarPanelVoltage = SolarPanelVoltage;
+"321
+[e = _gSolarPanelVoltage _SolarPanelVoltage ]
+[; ;mypic.c: 322: (PORTB &= ~(1 << 0));
+"322
+[e =& _PORTB -> ~ << -> 1 `i -> 0 `i `uc ]
+"323
+}
+[e :U 318 ]
+[; ;mypic.c: 323: }
+[; ;mypic.c: 324: if(DutyRatio == 0)
+"324
+[e $ ! == -> _DutyRatio `i -> 0 `i 319  ]
+[; ;mypic.c: 325: {
+"325
+{
+[; ;mypic.c: 326: (PORTB |= (1 << 0));
+"326
+[e =| _PORTB -> << -> 1 `i -> 0 `i `uc ]
+[; ;mypic.c: 327: if(LPVCount == 0)
+"327
+[e $ ! == -> _LPVCount `i -> 0 `i 320  ]
+[; ;mypic.c: 328: {
+"328
+{
+[; ;mypic.c: 329: (PORTA &= ~(1 << 0));
+"329
+[e =& _PORTA -> ~ << -> 1 `i -> 0 `i `uc ]
+[; ;mypic.c: 330: CTKSoftDelay(1000);
+"330
+[e ( _CTKSoftDelay (1 -> -> 1000 `i `ui ]
+[; ;mypic.c: 331: SolarPanelVoltage = GetSolarPanelVoltage();
+"331
+[e = _SolarPanelVoltage ( _GetSolarPanelVoltage ..  ]
+[; ;mypic.c: 332: gSolarPanelVoltage = SolarPanelVoltage;
+"332
+[e = _gSolarPanelVoltage _SolarPanelVoltage ]
+[; ;mypic.c: 333: (PORTA |= (1 << 0));
+"333
+[e =| _PORTA -> << -> 1 `i -> 0 `i `uc ]
+"334
+}
+[; ;mypic.c: 334: }
+[e $U 321  ]
+"335
+[e :U 320 ]
+[; ;mypic.c: 335: else
+[; ;mypic.c: 336: {
+"336
+{
+[; ;mypic.c: 337: (PORTA &= ~(1 << 0));
+"337
+[e =& _PORTA -> ~ << -> 1 `i -> 0 `i `uc ]
+[; ;mypic.c: 338: if(LPVCount > 99)
+"338
+[e $ ! > -> _LPVCount `i -> 99 `i 322  ]
+[; ;mypic.c: 339: {
+"339
+{
+[; ;mypic.c: 340: LPVCount = 0;
+"340
+[e = _LPVCount -> -> 0 `i `uc ]
+[; ;mypic.c: 341: SolarPanelVoltage = GetSolarPanelVoltage();
+"341
+[e = _SolarPanelVoltage ( _GetSolarPanelVoltage ..  ]
+[; ;mypic.c: 342: gSolarPanelVoltage = SolarPanelVoltage;
+"342
+[e = _gSolarPanelVoltage _SolarPanelVoltage ]
+[; ;mypic.c: 343: (PORTA |= (1 << 0));
+"343
+[e =| _PORTA -> << -> 1 `i -> 0 `i `uc ]
+[; ;mypic.c: 344: LPVFlag = 1;
+"344
+[e = _LPVFlag -> -> 1 `i `b ]
+"345
+}
+[e :U 322 ]
+"346
+}
+[e :U 321 ]
+"347
+}
+[e :U 319 ]
+"348
+}
+[e :U 317 ]
+[; ;mypic.c: 345: }
+[; ;mypic.c: 346: }
+[; ;mypic.c: 347: }
+[; ;mypic.c: 348: }
+[; ;mypic.c: 349: if(PWMFlag == 1)
+"349
+[e $ ! == -> _PWMFlag `i -> 1 `i 323  ]
+[; ;mypic.c: 350: {
+"350
+{
+[; ;mypic.c: 351: (PORTB |= (1 << 0));
+"351
+[e =| _PORTB -> << -> 1 `i -> 0 `i `uc ]
+[; ;mypic.c: 352: PWMFlag = 0;
+"352
+[e = _PWMFlag -> -> 0 `i `b ]
+[; ;mypic.c: 354: (PORTA &= ~(1 << 0));
+"354
+[e =& _PORTA -> ~ << -> 1 `i -> 0 `i `uc ]
+[; ;mypic.c: 355: CTKSoftDelay(200);
+"355
+[e ( _CTKSoftDelay (1 -> -> 200 `i `ui ]
+[; ;mypic.c: 356: SolarPanelVoltage = GetSolarPanelVoltage();
+"356
+[e = _SolarPanelVoltage ( _GetSolarPanelVoltage ..  ]
+[; ;mypic.c: 357: gSolarPanelVoltage = SolarPanelVoltage;
+"357
+[e = _gSolarPanelVoltage _SolarPanelVoltage ]
+[; ;mypic.c: 358: (PORTA |= (1 << 0));
+"358
+[e =| _PORTA -> << -> 1 `i -> 0 `i `uc ]
+[; ;mypic.c: 359: PWMFlag = 1;
+"359
+[e = _PWMFlag -> -> 1 `i `b ]
+[; ;mypic.c: 360: (PORTB &= ~(1 << 0));
+"360
+[e =& _PORTB -> ~ << -> 1 `i -> 0 `i `uc ]
+"361
+}
+[e :U 323 ]
+[; ;mypic.c: 361: }
+[; ;mypic.c: 362: if(gSolarPanelVoltage <= 24)
+"362
+[e $ ! <= _gSolarPanelVoltage -> -> 24 `i `ui 324  ]
+[; ;mypic.c: 363: {
+"363
+{
+[; ;mypic.c: 364: PVState = 1;
+"364
+[e = _PVState -> -> 1 `i `b ]
+"365
+}
+[; ;mypic.c: 365: }
+[e $U 325  ]
+"366
+[e :U 324 ]
+[; ;mypic.c: 366: else
+[; ;mypic.c: 367: {
+"367
+{
+[; ;mypic.c: 368: PVState = 0;
+"368
+[e = _PVState -> -> 0 `i `b ]
+[; ;mypic.c: 369: PVChargeFlag = 0;
+"369
+[e = _PVChargeFlag -> -> 0 `i `b ]
+"370
+}
+[e :U 325 ]
+[; ;mypic.c: 370: }
+[; ;mypic.c: 372: if(((gBatteryVoltage*26) - (gSolarPanelVoltage*23)) > *(BatteryStandard + 9))
+"372
+[e $ ! > - * _gBatteryVoltage -> -> 26 `i `ui * _gSolarPanelVoltage -> -> 23 `i `ui *U + _BatteryStandard * -> -> 9 `i `x -> -> # *U _BatteryStandard `i `x 326  ]
+[; ;mypic.c: 373: {
+"373
+{
+[; ;mypic.c: 374: LPVFlag = 0;
+"374
+[e = _LPVFlag -> -> 0 `i `b ]
+[; ;mypic.c: 375: LPVCount = 0;
+"375
+[e = _LPVCount -> -> 0 `i `uc ]
+[; ;mypic.c: 376: RB6 = 1;
+"376
+[e = _RB6 -> -> 1 `i `b ]
+[; ;mypic.c: 377: DAYTIME = 1;
+"377
+[e = _DAYTIME -> -> 1 `i `b ]
+"378
+}
+[e :U 326 ]
+[; ;mypic.c: 378: }
+[; ;mypic.c: 379: if(((gBatteryVoltage*26) - (gSolarPanelVoltage*23)) < 3686)
+"379
+[e $ ! < - * _gBatteryVoltage -> -> 26 `i `ui * _gSolarPanelVoltage -> -> 23 `i `ui -> -> 3686 `i `ui 327  ]
+[; ;mypic.c: 380: {
+"380
+{
+[; ;mypic.c: 381: if(DAYTIME == 1)
+"381
+[e $ ! == -> _DAYTIME `i -> 1 `i 328  ]
+[; ;mypic.c: 382: {
+"382
+{
+[; ;mypic.c: 383: if(LPVCount == 0)
+"383
+[e $ ! == -> _LPVCount `i -> 0 `i 329  ]
+[; ;mypic.c: 384: {
+"384
+{
+[; ;mypic.c: 385: LPVCount = 1;
+"385
+[e = _LPVCount -> -> 1 `i `uc ]
+"386
+}
+[e :U 329 ]
+"387
+}
+[e :U 328 ]
+"388
+}
+[e :U 327 ]
+[; ;mypic.c: 386: }
+[; ;mypic.c: 387: }
+[; ;mypic.c: 388: }
+[; ;mypic.c: 389: if(LPVFlag == 1)
+"389
+[e $ ! == -> _LPVFlag `i -> 1 `i 330  ]
+[; ;mypic.c: 390: {
+"390
+{
+[; ;mypic.c: 391: LPVFlag = 0;
+"391
+[e = _LPVFlag -> -> 0 `i `b ]
+[; ;mypic.c: 392: LPVCount = 0;
+"392
+[e = _LPVCount -> -> 0 `i `uc ]
+[; ;mypic.c: 393: if(((gBatteryVoltage*26) - (gSolarPanelVoltage*23)) < *(BatteryStandard + 10))
+"393
+[e $ ! < - * _gBatteryVoltage -> -> 26 `i `ui * _gSolarPanelVoltage -> -> 23 `i `ui *U + _BatteryStandard * -> -> 10 `i `x -> -> # *U _BatteryStandard `i `x 331  ]
+[; ;mypic.c: 394: {
+"394
+{
+[; ;mypic.c: 395: RB6 = 0;
+"395
+[e = _RB6 -> -> 0 `i `b ]
+[; ;mypic.c: 396: DAYTIME = 0;
+"396
+[e = _DAYTIME -> -> 0 `i `b ]
+"397
+}
+[e :U 331 ]
+"398
+}
+[e :U 330 ]
+[; ;mypic.c: 397: }
+[; ;mypic.c: 398: }
+[; ;mypic.c: 399: }
+"399
+[e :UE 316 ]
+}
+"404
+[v _PWMCharge `(v 1 ef ]
+{
+[; ;mypic.c: 403: void PWMCharge()
+[; ;mypic.c: 404: {
+[e :U _PWMCharge ]
+[f ]
+"405
+[v _ChangeBatteryVoltag `ui 1 a ]
+[; ;mypic.c: 405: unsigned int ChangeBatteryVoltag;
+[; ;mypic.c: 406: ChangeBatteryVoltag = GetBatteryVoltage();
+"406
+[e = _ChangeBatteryVoltag ( _GetBatteryVoltage ..  ]
+[; ;mypic.c: 407: if((EnhanceChargeFlag == 1) || (EqualizingChargeFlag == 1) || (FloatingChargeFlag == 1))
+"407
+[e $ ! || || == -> _EnhanceChargeFlag `i -> 1 `i == -> _EqualizingChargeFlag `i -> 1 `i == -> _FloatingChargeFlag `i -> 1 `i 333  ]
+[; ;mypic.c: 408: {
+"408
+{
+[; ;mypic.c: 409: (PORTB &= ~(1 << 0));
+"409
+[e =& _PORTB -> ~ << -> 1 `i -> 0 `i `uc ]
+[; ;mypic.c: 411: if(ChangeBatteryVoltag < ClampVoltage)
+"411
+[e $ ! < _ChangeBatteryVoltag _ClampVoltage 334  ]
+[; ;mypic.c: 412: {
+"412
+{
+[; ;mypic.c: 413: PVChargeFlag = 1;
+"413
+[e = _PVChargeFlag -> -> 1 `i `b ]
+[; ;mypic.c: 414: if(DutyRatio > 249)
+"414
+[e $ ! > -> _DutyRatio `i -> 249 `i 335  ]
+[; ;mypic.c: 415: {
+"415
+{
+[; ;mypic.c: 416: TMR2IE = 0;
+"416
+[e = _TMR2IE -> -> 0 `i `b ]
+[; ;mypic.c: 417: T2Flag = 0;
+"417
+[e = _T2Flag -> -> 0 `i `b ]
+[; ;mypic.c: 418: PWMFlag = 0;
+"418
+[e = _PWMFlag -> -> 0 `i `b ]
+[; ;mypic.c: 419: (PORTA &= ~(1 << 0));
+"419
+[e =& _PORTA -> ~ << -> 1 `i -> 0 `i `uc ]
+"420
+}
+[; ;mypic.c: 420: }
+[e $U 336  ]
+"421
+[e :U 335 ]
+[; ;mypic.c: 421: else
+[; ;mypic.c: 422: {
+"422
+{
+[; ;mypic.c: 423: if(T2Flag == 0)
+"423
+[e $ ! == -> _T2Flag `i -> 0 `i 337  ]
+[; ;mypic.c: 424: {
+"424
+{
+[; ;mypic.c: 425: TMR2IE = 1;
+"425
+[e = _TMR2IE -> -> 1 `i `b ]
+[; ;mypic.c: 426: T2Flag = 1;
+"426
+[e = _T2Flag -> -> 1 `i `b ]
+[; ;mypic.c: 427: PWMFlag = 1;
+"427
+[e = _PWMFlag -> -> 1 `i `b ]
+"428
+}
+[e :U 337 ]
+[; ;mypic.c: 428: }
+[; ;mypic.c: 429: DutyRatio = DutyRatio+10;
+"429
+[e = _DutyRatio -> + -> _DutyRatio `i -> 10 `i `uc ]
+"430
 }
 [e :U 336 ]
-[; ;main.c: 305: }
-[; ;main.c: 306: }
-"306
-[e :UE 323 ]
+"431
 }
-[a 1C 66 118 49 51 46 50 86 32 83 111 99 48 48 48 48 0 ]
-
+[e :U 334 ]
+[; ;mypic.c: 430: }
+[; ;mypic.c: 431: }
+[; ;mypic.c: 432: if(ChangeBatteryVoltag > ClampVoltage)
+"432
+[e $ ! > _ChangeBatteryVoltag _ClampVoltage 338  ]
+[; ;mypic.c: 433: {
+"433
+{
+[; ;mypic.c: 434: if(DutyRatio < 9)
+"434
+[e $ ! < -> _DutyRatio `i -> 9 `i 339  ]
+[; ;mypic.c: 435: {
+"435
+{
+[; ;mypic.c: 436: TMR2IE = 0;
+"436
+[e = _TMR2IE -> -> 0 `i `b ]
+[; ;mypic.c: 437: T2Flag = 0;
+"437
+[e = _T2Flag -> -> 0 `i `b ]
+[; ;mypic.c: 438: PWMFlag = 0;
+"438
+[e = _PWMFlag -> -> 0 `i `b ]
+[; ;mypic.c: 439: (PORTA |= (1 << 0));
+"439
+[e =| _PORTA -> << -> 1 `i -> 0 `i `uc ]
+[; ;mypic.c: 440: PVChargeFlag = 0;
+"440
+[e = _PVChargeFlag -> -> 0 `i `b ]
+"441
+}
+[; ;mypic.c: 441: }
+[e $U 340  ]
+"442
+[e :U 339 ]
+[; ;mypic.c: 442: else
+[; ;mypic.c: 443: {
+"443
+{
+[; ;mypic.c: 444: PVChargeFlag = 1;
+"444
+[e = _PVChargeFlag -> -> 1 `i `b ]
+[; ;mypic.c: 445: if(T2Flag == 0)
+"445
+[e $ ! == -> _T2Flag `i -> 0 `i 341  ]
+[; ;mypic.c: 446: {
+"446
+{
+[; ;mypic.c: 447: TMR2IE = 1;
+"447
+[e = _TMR2IE -> -> 1 `i `b ]
+[; ;mypic.c: 448: T2Flag = 1;
+"448
+[e = _T2Flag -> -> 1 `i `b ]
+[; ;mypic.c: 449: PWMFlag = 1;
+"449
+[e = _PWMFlag -> -> 1 `i `b ]
+"450
+}
+[e :U 341 ]
+[; ;mypic.c: 450: }
+[; ;mypic.c: 451: DutyRatio = DutyRatio-10;
+"451
+[e = _DutyRatio -> - -> _DutyRatio `i -> 10 `i `uc ]
+"452
+}
+[e :U 340 ]
+"453
+}
+[e :U 338 ]
+"454
+}
+[; ;mypic.c: 452: }
+[; ;mypic.c: 453: }
+[; ;mypic.c: 454: }
+[e $U 342  ]
+"455
+[e :U 333 ]
+[; ;mypic.c: 455: else
+[; ;mypic.c: 456: {
+"456
+{
+[; ;mypic.c: 457: if(T2Flag == 1)
+"457
+[e $ ! == -> _T2Flag `i -> 1 `i 343  ]
+[; ;mypic.c: 458: {
+"458
+{
+[; ;mypic.c: 459: TMR2IE = 0;
+"459
+[e = _TMR2IE -> -> 0 `i `b ]
+[; ;mypic.c: 460: T2Flag = 0;
+"460
+[e = _T2Flag -> -> 0 `i `b ]
+[; ;mypic.c: 461: PWMFlag = 0;
+"461
+[e = _PWMFlag -> -> 0 `i `b ]
+"462
+}
+[e :U 343 ]
+[; ;mypic.c: 462: }
+[; ;mypic.c: 463: PwmCount = 0;
+"463
+[e = _PwmCount -> -> 0 `i `uc ]
+[; ;mypic.c: 464: DutyRatio = 0;
+"464
+[e = _DutyRatio -> -> 0 `i `uc ]
+[; ;mypic.c: 465: (PORTB |= (1 << 0));
+"465
+[e =| _PORTB -> << -> 1 `i -> 0 `i `uc ]
+[; ;mypic.c: 467: PVChargeFlag = 0;
+"467
+[e = _PVChargeFlag -> -> 0 `i `b ]
+"468
+}
+[e :U 342 ]
+[; ;mypic.c: 468: }
+[; ;mypic.c: 469: }
+"469
+[e :UE 332 ]
+}
+"472
+[v _BatteryStateSwitch `(uc 1 ef1`ui ]
+{
+[; ;mypic.c: 471: unsigned char BatteryStateSwitch(unsigned int BatteryVoltage)
+[; ;mypic.c: 472: {
+[e :U _BatteryStateSwitch ]
+[v _BatteryVoltage `ui 1 r1 ]
+[f ]
+"473
+[v _adjust `ui 1 a ]
+[; ;mypic.c: 473: unsigned int adjust = (TemVoltage + ADVoltage - TemBase - ADBase );
+[e = _adjust - - + _TemVoltage _ADVoltage _TemBase _ADBase ]
+[; ;mypic.c: 474: if(BatteryVoltage < *(BatteryStandard + 0) + adjust){
+"474
+[e $ ! < _BatteryVoltage + *U + _BatteryStandard * -> -> 0 `i `x -> -> # *U _BatteryStandard `i `x _adjust 345  ]
+{
+[; ;mypic.c: 475: return 1;
+"475
+[e ) -> -> 1 `i `uc ]
+[e $UE 344  ]
+"476
+}
+[; ;mypic.c: 476: }else if(BatteryVoltage >= (*(BatteryStandard + 0) + adjust)
+[e $U 346  ]
+[e :U 345 ]
+[; ;mypic.c: 477: && BatteryVoltage < (*(BatteryStandard + 2) + adjust)){
+"477
+[e $ ! && >= _BatteryVoltage + *U + _BatteryStandard * -> -> 0 `i `x -> -> # *U _BatteryStandard `i `x _adjust < _BatteryVoltage + *U + _BatteryStandard * -> -> 2 `i `x -> -> # *U _BatteryStandard `i `x _adjust 347  ]
+{
+[; ;mypic.c: 478: return 2;
+"478
+[e ) -> -> 2 `i `uc ]
+[e $UE 344  ]
+"479
+}
+[; ;mypic.c: 479: }else if(BatteryVoltage >= (*(BatteryStandard + 2) + adjust)
+[e $U 348  ]
+[e :U 347 ]
+[; ;mypic.c: 480: && BatteryVoltage <( *(BatteryStandard + 1) + adjust)){
+"480
+[e $ ! && >= _BatteryVoltage + *U + _BatteryStandard * -> -> 2 `i `x -> -> # *U _BatteryStandard `i `x _adjust < _BatteryVoltage + *U + _BatteryStandard * -> -> 1 `i `x -> -> # *U _BatteryStandard `i `x _adjust 349  ]
+{
+[; ;mypic.c: 481: return 3;
+"481
+[e ) -> -> 3 `i `uc ]
+[e $UE 344  ]
+"482
+}
+[; ;mypic.c: 482: }else if(BatteryVoltage >= (*(BatteryStandard + 1) + adjust)
+[e $U 350  ]
+[e :U 349 ]
+[; ;mypic.c: 483: && BatteryVoltage < (*(BatteryStandard + 3) + adjust)){
+"483
+[e $ ! && >= _BatteryVoltage + *U + _BatteryStandard * -> -> 1 `i `x -> -> # *U _BatteryStandard `i `x _adjust < _BatteryVoltage + *U + _BatteryStandard * -> -> 3 `i `x -> -> # *U _BatteryStandard `i `x _adjust 351  ]
+{
+[; ;mypic.c: 484: return 4;
+"484
+[e ) -> -> 4 `i `uc ]
+[e $UE 344  ]
+"485
+}
+[; ;mypic.c: 485: }else if(BatteryVoltage >= (*(BatteryStandard + 3) + adjust)
+[e $U 352  ]
+[e :U 351 ]
+[; ;mypic.c: 486: && BatteryVoltage < (*(BatteryStandard + 4) + adjust)){
+"486
+[e $ ! && >= _BatteryVoltage + *U + _BatteryStandard * -> -> 3 `i `x -> -> # *U _BatteryStandard `i `x _adjust < _BatteryVoltage + *U + _BatteryStandard * -> -> 4 `i `x -> -> # *U _BatteryStandard `i `x _adjust 353  ]
+{
+[; ;mypic.c: 487: return 5;
+"487
+[e ) -> -> 5 `i `uc ]
+[e $UE 344  ]
+"488
+}
+[; ;mypic.c: 488: }else {
+[e $U 354  ]
+[e :U 353 ]
+{
+[; ;mypic.c: 489: return 6;
+"489
+[e ) -> -> 6 `i `uc ]
+[e $UE 344  ]
+"490
+}
+[e :U 354 ]
+[e :U 352 ]
+[e :U 350 ]
+[e :U 348 ]
+[e :U 346 ]
+[; ;mypic.c: 490: }
+[; ;mypic.c: 508: }
+"508
+[e :UE 344 ]
+}
+"512
+[v _SwitchBatteryState `(v 1 ef ]
+{
+[; ;mypic.c: 511: void SwitchBatteryState()
+[; ;mypic.c: 512: {
+[e :U _SwitchBatteryState ]
+[f ]
+[; ;mypic.c: 513: switch(BatteryState)
+"513
+[e $U 357  ]
+[; ;mypic.c: 514: {
+"514
+{
+[; ;mypic.c: 515: case 0:
+"515
+[e :U 358 ]
+[; ;mypic.c: 516: {
+"516
+{
+[; ;mypic.c: 517: lcd_state = 0;
+"517
+[e = _lcd_state -> -> 0 `i `uc ]
+[; ;mypic.c: 518: gBatteryVoltage = GetBatteryVoltage();
+"518
+[e = _gBatteryVoltage ( _GetBatteryVoltage ..  ]
+[; ;mypic.c: 519: BatteryState = BatteryStateSwitch(gBatteryVoltage);
+"519
+[e = _BatteryState ( _BatteryStateSwitch (1 _gBatteryVoltage ]
+[; ;mypic.c: 520: EnhanceChargeFlag = 0;
+"520
+[e = _EnhanceChargeFlag -> -> 0 `i `b ]
+[; ;mypic.c: 521: EnhanceCharge_Time = 0;
+"521
+[e = _EnhanceCharge_Time -> -> 0 `i `ui ]
+[; ;mypic.c: 522: EqualizingChargeFlag = 0;
+"522
+[e = _EqualizingChargeFlag -> -> 0 `i `b ]
+[; ;mypic.c: 523: EqualizingCharge_Time = 0;
+"523
+[e = _EqualizingCharge_Time -> -> 0 `i `ui ]
+[; ;mypic.c: 524: FloatingChargeFlag = 0;
+"524
+[e = _FloatingChargeFlag -> -> 0 `i `b ]
+[; ;mypic.c: 525: BatteryLastState = 0;
+"525
+[e = _BatteryLastState -> -> 0 `i `uc ]
+[; ;mypic.c: 526: break;
+"526
+[e $U 356  ]
+"527
+}
+[; ;mypic.c: 527: }
+[; ;mypic.c: 528: case 1:
+"528
+[e :U 359 ]
+[; ;mypic.c: 529: {
+"529
+{
+[; ;mypic.c: 531: if (lcd_state == 2) {
+"531
+[e $ ! == -> _lcd_state `i -> 2 `i 360  ]
+{
+[; ;mypic.c: 533: lcd_move_char(11);
+"533
+[e ( _lcd_move_char (1 -> -> 11 `i `uc ]
+[; ;mypic.c: 534: lcd_write_data(0xff);
+"534
+[e ( _lcd_write_data (1 -> -> 255 `i `uc ]
+"536
+}
+[e :U 360 ]
+[; ;mypic.c: 536: }
+[; ;mypic.c: 537: if(BatteryLastState != 1)
+"537
+[e $ ! != -> _BatteryLastState `i -> 1 `i 361  ]
+[; ;mypic.c: 538: {
+"538
+{
+[; ;mypic.c: 540: EnhanceChargeFlag = 0;
+"540
+[e = _EnhanceChargeFlag -> -> 0 `i `b ]
+[; ;mypic.c: 541: EnhanceCharge_Time = 0;
+"541
+[e = _EnhanceCharge_Time -> -> 0 `i `ui ]
+[; ;mypic.c: 542: EqualizingChargeFlag = 0;
+"542
+[e = _EqualizingChargeFlag -> -> 0 `i `b ]
+[; ;mypic.c: 543: EqualizingCharge_Time = 0;
+"543
+[e = _EqualizingCharge_Time -> -> 0 `i `ui ]
+[; ;mypic.c: 544: FloatingChargeFlag = 0;
+"544
+[e = _FloatingChargeFlag -> -> 0 `i `b ]
+[; ;mypic.c: 545: BatteryLastState = 1;
+"545
+[e = _BatteryLastState -> -> 1 `i `uc ]
+"546
+}
+[e :U 361 ]
+[; ;mypic.c: 546: }
+[; ;mypic.c: 547: if(PVState == 1)
+"547
+[e $ ! == -> _PVState `i -> 1 `i 362  ]
+[; ;mypic.c: 548: {
+"548
+{
+[; ;mypic.c: 549: ClampVoltage = *(BatteryStandard + 6) - TemBase + TemVoltage - ADBase + ADVoltage;
+"549
+[e = _ClampVoltage + - + - *U + _BatteryStandard * -> -> 6 `i `x -> -> # *U _BatteryStandard `i `x _TemBase _TemVoltage _ADBase _ADVoltage ]
+[; ;mypic.c: 550: if(EnhanceChargeFlag == 0)
+"550
+[e $ ! == -> _EnhanceChargeFlag `i -> 0 `i 363  ]
+[; ;mypic.c: 551: {
+"551
+{
+[; ;mypic.c: 552: EnhanceChargeFlag = 1;
+"552
+[e = _EnhanceChargeFlag -> -> 1 `i `b ]
+[; ;mypic.c: 553: EnhanceCharge_Time = 0;
+"553
+[e = _EnhanceCharge_Time -> -> 0 `i `ui ]
+"554
+}
+[e :U 363 ]
+"555
+}
+[; ;mypic.c: 554: }
+[; ;mypic.c: 555: }
+[e $U 364  ]
+"556
+[e :U 362 ]
+[; ;mypic.c: 556: else
+[; ;mypic.c: 557: {
+"557
+{
+[; ;mypic.c: 558: EnhanceChargeFlag = 0;
+"558
+[e = _EnhanceChargeFlag -> -> 0 `i `b ]
+[; ;mypic.c: 559: EnhanceCharge_Time = 0;
+"559
+[e = _EnhanceCharge_Time -> -> 0 `i `ui ]
+[; ;mypic.c: 560: gBatteryVoltage = GetBatteryVoltage();
+"560
+[e = _gBatteryVoltage ( _GetBatteryVoltage ..  ]
+[; ;mypic.c: 561: if(gBatteryVoltage > *(BatteryStandard + 1) - TemBase + TemVoltage - ADBase + ADVoltage)
+"561
+[e $ ! > _gBatteryVoltage + - + - *U + _BatteryStandard * -> -> 1 `i `x -> -> # *U _BatteryStandard `i `x _TemBase _TemVoltage _ADBase _ADVoltage 365  ]
+[; ;mypic.c: 562: {
+"562
+{
+[; ;mypic.c: 563: BatteryState = BatteryStateSwitch(gBatteryVoltage);
+"563
+[e = _BatteryState ( _BatteryStateSwitch (1 _gBatteryVoltage ]
+"564
+}
+[e :U 365 ]
+"565
+}
+[e :U 364 ]
+[; ;mypic.c: 564: }
+[; ;mypic.c: 565: }
+[; ;mypic.c: 567: if(EnhanceCharge_Time >= 36000)
+"567
+[e $ ! >= -> _EnhanceCharge_Time `l -> 36000 `l 366  ]
+[; ;mypic.c: 568: {
+"568
+{
+[; ;mypic.c: 569: EnhanceChargeFlag = 0;
+"569
+[e = _EnhanceChargeFlag -> -> 0 `i `b ]
+[; ;mypic.c: 570: EnhanceCharge_Time = 0;
+"570
+[e = _EnhanceCharge_Time -> -> 0 `i `ui ]
+[; ;mypic.c: 571: CTKSoftDelay(100);
+"571
+[e ( _CTKSoftDelay (1 -> -> 100 `i `ui ]
+[; ;mypic.c: 572: gBatteryVoltage = GetBatteryVoltage();
+"572
+[e = _gBatteryVoltage ( _GetBatteryVoltage ..  ]
+[; ;mypic.c: 573: if(gBatteryVoltage > *(BatteryStandard + 1) - TemBase + TemVoltage - ADBase + ADVoltage)
+"573
+[e $ ! > _gBatteryVoltage + - + - *U + _BatteryStandard * -> -> 1 `i `x -> -> # *U _BatteryStandard `i `x _TemBase _TemVoltage _ADBase _ADVoltage 367  ]
+[; ;mypic.c: 574: {
+"574
+{
+[; ;mypic.c: 575: BatteryState = BatteryStateSwitch(gBatteryVoltage);
+"575
+[e = _BatteryState ( _BatteryStateSwitch (1 _gBatteryVoltage ]
+"576
+}
+[e :U 367 ]
+"577
+}
+[e :U 366 ]
+[; ;mypic.c: 576: }
+[; ;mypic.c: 577: }
+[; ;mypic.c: 578: break;
+"578
+[e $U 356  ]
+"579
+}
+[; ;mypic.c: 579: }
+[; ;mypic.c: 580: case 2:
+"580
+[e :U 368 ]
+[; ;mypic.c: 581: {
+"581
+{
+[; ;mypic.c: 583: if(BatteryLastState != 2)
+"583
+[e $ ! != -> _BatteryLastState `i -> 2 `i 369  ]
+[; ;mypic.c: 584: {
+"584
+{
+[; ;mypic.c: 586: EnhanceChargeFlag = 0;
+"586
+[e = _EnhanceChargeFlag -> -> 0 `i `b ]
+[; ;mypic.c: 587: EnhanceCharge_Time = 0;
+"587
+[e = _EnhanceCharge_Time -> -> 0 `i `ui ]
+[; ;mypic.c: 588: EqualizingChargeFlag = 0;
+"588
+[e = _EqualizingChargeFlag -> -> 0 `i `b ]
+[; ;mypic.c: 589: EqualizingCharge_Time = 0;
+"589
+[e = _EqualizingCharge_Time -> -> 0 `i `ui ]
+[; ;mypic.c: 590: FloatingChargeFlag = 0;
+"590
+[e = _FloatingChargeFlag -> -> 0 `i `b ]
+[; ;mypic.c: 591: BatteryLastState = 2;
+"591
+[e = _BatteryLastState -> -> 2 `i `uc ]
+"592
+}
+[e :U 369 ]
+[; ;mypic.c: 592: }
+[; ;mypic.c: 593: if(PVState == 1)
+"593
+[e $ ! == -> _PVState `i -> 1 `i 370  ]
+[; ;mypic.c: 594: {
+"594
+{
+[; ;mypic.c: 595: ClampVoltage = *(BatteryStandard + 7) - TemBase + TemVoltage - ADBase + ADVoltage;
+"595
+[e = _ClampVoltage + - + - *U + _BatteryStandard * -> -> 7 `i `x -> -> # *U _BatteryStandard `i `x _TemBase _TemVoltage _ADBase _ADVoltage ]
+[; ;mypic.c: 596: if(EqualizingChargeFlag == 0)
+"596
+[e $ ! == -> _EqualizingChargeFlag `i -> 0 `i 371  ]
+[; ;mypic.c: 597: {
+"597
+{
+[; ;mypic.c: 598: EqualizingChargeFlag = 1;
+"598
+[e = _EqualizingChargeFlag -> -> 1 `i `b ]
+[; ;mypic.c: 599: EqualizingCharge_Time = 0;
+"599
+[e = _EqualizingCharge_Time -> -> 0 `i `ui ]
+"600
+}
+[e :U 371 ]
+[; ;mypic.c: 600: }
+[; ;mypic.c: 601: gBatteryVoltage = GetBatteryVoltage();
+"601
+[e = _gBatteryVoltage ( _GetBatteryVoltage ..  ]
+[; ;mypic.c: 602: if(gBatteryVoltage < *(BatteryStandard + 0) - TemBase + TemVoltage - ADBase + ADVoltage)
+"602
+[e $ ! < _gBatteryVoltage + - + - *U + _BatteryStandard * -> -> 0 `i `x -> -> # *U _BatteryStandard `i `x _TemBase _TemVoltage _ADBase _ADVoltage 372  ]
+[; ;mypic.c: 603: {
+"603
+{
+[; ;mypic.c: 604: BatteryState = 1;
+"604
+[e = _BatteryState -> -> 1 `i `uc ]
+"605
+}
+[e :U 372 ]
+"606
+}
+[; ;mypic.c: 605: }
+[; ;mypic.c: 606: }
+[e $U 373  ]
+"607
+[e :U 370 ]
+[; ;mypic.c: 607: else
+[; ;mypic.c: 608: {
+"608
+{
+[; ;mypic.c: 609: EqualizingChargeFlag = 0;
+"609
+[e = _EqualizingChargeFlag -> -> 0 `i `b ]
+[; ;mypic.c: 610: EqualizingCharge_Time = 0;
+"610
+[e = _EqualizingCharge_Time -> -> 0 `i `ui ]
+[; ;mypic.c: 611: gBatteryVoltage = GetBatteryVoltage();
+"611
+[e = _gBatteryVoltage ( _GetBatteryVoltage ..  ]
+[; ;mypic.c: 612: BatteryState = BatteryStateSwitch(gBatteryVoltage);
+"612
+[e = _BatteryState ( _BatteryStateSwitch (1 _gBatteryVoltage ]
+"613
+}
+[e :U 373 ]
+[; ;mypic.c: 613: }
+[; ;mypic.c: 615: if(EqualizingCharge_Time >= 36000)
+"615
+[e $ ! >= -> _EqualizingCharge_Time `l -> 36000 `l 374  ]
+[; ;mypic.c: 616: {
+"616
+{
+[; ;mypic.c: 617: EqualizingChargeFlag = 0;
+"617
+[e = _EqualizingChargeFlag -> -> 0 `i `b ]
+[; ;mypic.c: 618: EqualizingCharge_Time = 0;
+"618
+[e = _EqualizingCharge_Time -> -> 0 `i `ui ]
+[; ;mypic.c: 619: CTKSoftDelay(100);
+"619
+[e ( _CTKSoftDelay (1 -> -> 100 `i `ui ]
+[; ;mypic.c: 620: gBatteryVoltage = GetBatteryVoltage();
+"620
+[e = _gBatteryVoltage ( _GetBatteryVoltage ..  ]
+[; ;mypic.c: 622: BatteryState = BatteryStateSwitch(gBatteryVoltage);
+"622
+[e = _BatteryState ( _BatteryStateSwitch (1 _gBatteryVoltage ]
+"623
+}
+[e :U 374 ]
+[; ;mypic.c: 623: }
+[; ;mypic.c: 624: break;
+"624
+[e $U 356  ]
+"625
+}
+[; ;mypic.c: 625: }
+[; ;mypic.c: 626: case 3:
+"626
+[e :U 375 ]
+[; ;mypic.c: 627: {
+"627
+{
+[; ;mypic.c: 628: if(BatteryLastState != 3)
+"628
+[e $ ! != -> _BatteryLastState `i -> 3 `i 376  ]
+[; ;mypic.c: 629: {
+"629
+{
+[; ;mypic.c: 631: EnhanceChargeFlag = 0;
+"631
+[e = _EnhanceChargeFlag -> -> 0 `i `b ]
+[; ;mypic.c: 632: EnhanceCharge_Time = 0;
+"632
+[e = _EnhanceCharge_Time -> -> 0 `i `ui ]
+[; ;mypic.c: 633: EqualizingChargeFlag = 0;
+"633
+[e = _EqualizingChargeFlag -> -> 0 `i `b ]
+[; ;mypic.c: 634: EqualizingCharge_Time = 0;
+"634
+[e = _EqualizingCharge_Time -> -> 0 `i `ui ]
+[; ;mypic.c: 635: FloatingChargeFlag = 0;
+"635
+[e = _FloatingChargeFlag -> -> 0 `i `b ]
+[; ;mypic.c: 636: BatteryLastState = 3;
+"636
+[e = _BatteryLastState -> -> 3 `i `uc ]
+"638
+}
+[e :U 376 ]
+[; ;mypic.c: 638: }
+[; ;mypic.c: 639: if(PVState == 1)
+"639
+[e $ ! == -> _PVState `i -> 1 `i 377  ]
+[; ;mypic.c: 640: {
+"640
+{
+[; ;mypic.c: 641: ClampVoltage = *(BatteryStandard + 7) - TemBase + TemVoltage - ADBase + ADVoltage;
+"641
+[e = _ClampVoltage + - + - *U + _BatteryStandard * -> -> 7 `i `x -> -> # *U _BatteryStandard `i `x _TemBase _TemVoltage _ADBase _ADVoltage ]
+[; ;mypic.c: 642: if(EqualizingChargeFlag == 0)
+"642
+[e $ ! == -> _EqualizingChargeFlag `i -> 0 `i 378  ]
+[; ;mypic.c: 643: {
+"643
+{
+[; ;mypic.c: 644: EqualizingChargeFlag = 1;
+"644
+[e = _EqualizingChargeFlag -> -> 1 `i `b ]
+[; ;mypic.c: 645: EqualizingCharge_Time = 0;
+"645
+[e = _EqualizingCharge_Time -> -> 0 `i `ui ]
+"646
+}
+[e :U 378 ]
+[; ;mypic.c: 646: }
+[; ;mypic.c: 647: gBatteryVoltage = GetBatteryVoltage();
+"647
+[e = _gBatteryVoltage ( _GetBatteryVoltage ..  ]
+[; ;mypic.c: 648: if(gBatteryVoltage < *(BatteryStandard + 1) - TemBase + TemVoltage - ADBase + ADVoltage)
+"648
+[e $ ! < _gBatteryVoltage + - + - *U + _BatteryStandard * -> -> 1 `i `x -> -> # *U _BatteryStandard `i `x _TemBase _TemVoltage _ADBase _ADVoltage 379  ]
+[; ;mypic.c: 649: {
+"649
+{
+[; ;mypic.c: 650: BatteryState = BatteryStateSwitch(gBatteryVoltage);
+"650
+[e = _BatteryState ( _BatteryStateSwitch (1 _gBatteryVoltage ]
+"651
+}
+[e :U 379 ]
+"652
+}
+[; ;mypic.c: 651: }
+[; ;mypic.c: 652: }
+[e $U 380  ]
+"653
+[e :U 377 ]
+[; ;mypic.c: 653: else
+[; ;mypic.c: 654: {
+"654
+{
+[; ;mypic.c: 655: EqualizingChargeFlag = 0;
+"655
+[e = _EqualizingChargeFlag -> -> 0 `i `b ]
+[; ;mypic.c: 656: EqualizingCharge_Time = 0;
+"656
+[e = _EqualizingCharge_Time -> -> 0 `i `ui ]
+[; ;mypic.c: 657: gBatteryVoltage = GetBatteryVoltage();
+"657
+[e = _gBatteryVoltage ( _GetBatteryVoltage ..  ]
+[; ;mypic.c: 658: BatteryState = BatteryStateSwitch(gBatteryVoltage);
+"658
+[e = _BatteryState ( _BatteryStateSwitch (1 _gBatteryVoltage ]
+"659
+}
+[e :U 380 ]
+[; ;mypic.c: 659: }
+[; ;mypic.c: 661: if(EqualizingCharge_Time >= 36000)
+"661
+[e $ ! >= -> _EqualizingCharge_Time `l -> 36000 `l 381  ]
+[; ;mypic.c: 662: {
+"662
+{
+[; ;mypic.c: 663: EqualizingChargeFlag = 0;
+"663
+[e = _EqualizingChargeFlag -> -> 0 `i `b ]
+[; ;mypic.c: 664: EqualizingCharge_Time = 0;
+"664
+[e = _EqualizingCharge_Time -> -> 0 `i `ui ]
+[; ;mypic.c: 665: CTKSoftDelay(100);
+"665
+[e ( _CTKSoftDelay (1 -> -> 100 `i `ui ]
+[; ;mypic.c: 666: gBatteryVoltage = GetBatteryVoltage();
+"666
+[e = _gBatteryVoltage ( _GetBatteryVoltage ..  ]
+[; ;mypic.c: 668: BatteryState = BatteryStateSwitch(gBatteryVoltage);
+"668
+[e = _BatteryState ( _BatteryStateSwitch (1 _gBatteryVoltage ]
+"669
+}
+[e :U 381 ]
+[; ;mypic.c: 669: }
+[; ;mypic.c: 670: break;
+"670
+[e $U 356  ]
+"671
+}
+[; ;mypic.c: 671: }
+[; ;mypic.c: 672: case 4:
+"672
+[e :U 382 ]
+[; ;mypic.c: 673: {
+"673
+{
+[; ;mypic.c: 674: if(BatteryLastState != 4)
+"674
+[e $ ! != -> _BatteryLastState `i -> 4 `i 383  ]
+[; ;mypic.c: 675: {
+"675
+{
+[; ;mypic.c: 677: EnhanceChargeFlag = 0;
+"677
+[e = _EnhanceChargeFlag -> -> 0 `i `b ]
+[; ;mypic.c: 678: EnhanceCharge_Time = 0;
+"678
+[e = _EnhanceCharge_Time -> -> 0 `i `ui ]
+[; ;mypic.c: 679: EqualizingChargeFlag = 0;
+"679
+[e = _EqualizingChargeFlag -> -> 0 `i `b ]
+[; ;mypic.c: 680: EqualizingCharge_Time = 0;
+"680
+[e = _EqualizingCharge_Time -> -> 0 `i `ui ]
+[; ;mypic.c: 681: FloatingChargeFlag = 0;
+"681
+[e = _FloatingChargeFlag -> -> 0 `i `b ]
+[; ;mypic.c: 682: BatteryLastState = 4;
+"682
+[e = _BatteryLastState -> -> 4 `i `uc ]
+"684
+}
+[e :U 383 ]
+[; ;mypic.c: 684: }
+[; ;mypic.c: 685: if(PVState == 1)
+"685
+[e $ ! == -> _PVState `i -> 1 `i 384  ]
+[; ;mypic.c: 686: {
+"686
+{
+[; ;mypic.c: 687: ClampVoltage = *(BatteryStandard + 7) - TemBase + TemVoltage - ADBase + ADVoltage;
+"687
+[e = _ClampVoltage + - + - *U + _BatteryStandard * -> -> 7 `i `x -> -> # *U _BatteryStandard `i `x _TemBase _TemVoltage _ADBase _ADVoltage ]
+[; ;mypic.c: 688: if(EqualizingChargeFlag == 0)
+"688
+[e $ ! == -> _EqualizingChargeFlag `i -> 0 `i 385  ]
+[; ;mypic.c: 689: {
+"689
+{
+[; ;mypic.c: 690: EqualizingChargeFlag = 1;
+"690
+[e = _EqualizingChargeFlag -> -> 1 `i `b ]
+[; ;mypic.c: 691: EqualizingCharge_Time = 0;
+"691
+[e = _EqualizingCharge_Time -> -> 0 `i `ui ]
+"692
+}
+[e :U 385 ]
+[; ;mypic.c: 692: }
+[; ;mypic.c: 693: gBatteryVoltage = GetBatteryVoltage();
+"693
+[e = _gBatteryVoltage ( _GetBatteryVoltage ..  ]
+[; ;mypic.c: 694: if(gBatteryVoltage < *(BatteryStandard + 3) - TemBase + TemVoltage - ADBase + ADVoltage)
+"694
+[e $ ! < _gBatteryVoltage + - + - *U + _BatteryStandard * -> -> 3 `i `x -> -> # *U _BatteryStandard `i `x _TemBase _TemVoltage _ADBase _ADVoltage 386  ]
+[; ;mypic.c: 695: {
+"695
+{
+[; ;mypic.c: 696: BatteryState = BatteryStateSwitch(gBatteryVoltage);
+"696
+[e = _BatteryState ( _BatteryStateSwitch (1 _gBatteryVoltage ]
+"697
+}
+[e :U 386 ]
+"698
+}
+[; ;mypic.c: 697: }
+[; ;mypic.c: 698: }
+[e $U 387  ]
+"699
+[e :U 384 ]
+[; ;mypic.c: 699: else
+[; ;mypic.c: 700: {
+"700
+{
+[; ;mypic.c: 701: EqualizingChargeFlag = 0;
+"701
+[e = _EqualizingChargeFlag -> -> 0 `i `b ]
+[; ;mypic.c: 702: EqualizingCharge_Time = 0;
+"702
+[e = _EqualizingCharge_Time -> -> 0 `i `ui ]
+[; ;mypic.c: 703: gBatteryVoltage = GetBatteryVoltage();
+"703
+[e = _gBatteryVoltage ( _GetBatteryVoltage ..  ]
+[; ;mypic.c: 704: BatteryState = BatteryStateSwitch(gBatteryVoltage);
+"704
+[e = _BatteryState ( _BatteryStateSwitch (1 _gBatteryVoltage ]
+"705
+}
+[e :U 387 ]
+[; ;mypic.c: 705: }
+[; ;mypic.c: 707: if(EqualizingCharge_Time >= 36000)
+"707
+[e $ ! >= -> _EqualizingCharge_Time `l -> 36000 `l 388  ]
+[; ;mypic.c: 708: {
+"708
+{
+[; ;mypic.c: 709: EqualizingChargeFlag = 0;
+"709
+[e = _EqualizingChargeFlag -> -> 0 `i `b ]
+[; ;mypic.c: 710: EqualizingCharge_Time = 0;
+"710
+[e = _EqualizingCharge_Time -> -> 0 `i `ui ]
+[; ;mypic.c: 711: CTKSoftDelay(100);
+"711
+[e ( _CTKSoftDelay (1 -> -> 100 `i `ui ]
+[; ;mypic.c: 712: gBatteryVoltage = GetBatteryVoltage();
+"712
+[e = _gBatteryVoltage ( _GetBatteryVoltage ..  ]
+[; ;mypic.c: 714: BatteryState = BatteryStateSwitch(gBatteryVoltage);
+"714
+[e = _BatteryState ( _BatteryStateSwitch (1 _gBatteryVoltage ]
+"715
+}
+[e :U 388 ]
+[; ;mypic.c: 715: }
+[; ;mypic.c: 716: break;
+"716
+[e $U 356  ]
+"717
+}
+[; ;mypic.c: 717: }
+[; ;mypic.c: 718: case 5:
+"718
+[e :U 389 ]
+[; ;mypic.c: 719: {
+"719
+{
+[; ;mypic.c: 720: if(BatteryLastState != 5)
+"720
+[e $ ! != -> _BatteryLastState `i -> 5 `i 390  ]
+[; ;mypic.c: 721: {
+"721
+{
+[; ;mypic.c: 723: EnhanceChargeFlag = 0;
+"723
+[e = _EnhanceChargeFlag -> -> 0 `i `b ]
+[; ;mypic.c: 724: EnhanceCharge_Time = 0;
+"724
+[e = _EnhanceCharge_Time -> -> 0 `i `ui ]
+[; ;mypic.c: 725: EqualizingChargeFlag = 0;
+"725
+[e = _EqualizingChargeFlag -> -> 0 `i `b ]
+[; ;mypic.c: 726: EqualizingCharge_Time = 0;
+"726
+[e = _EqualizingCharge_Time -> -> 0 `i `ui ]
+[; ;mypic.c: 727: FloatingChargeFlag = 0;
+"727
+[e = _FloatingChargeFlag -> -> 0 `i `b ]
+[; ;mypic.c: 728: BatteryLastState = 5;
+"728
+[e = _BatteryLastState -> -> 5 `i `uc ]
+"729
+}
+[e :U 390 ]
+[; ;mypic.c: 729: }
+[; ;mypic.c: 730: if(PVState == 1)
+"730
+[e $ ! == -> _PVState `i -> 1 `i 391  ]
+[; ;mypic.c: 731: {
+"731
+{
+[; ;mypic.c: 732: ClampVoltage = *(BatteryStandard + 8) - TemBase + TemVoltage - ADBase + ADVoltage;
+"732
+[e = _ClampVoltage + - + - *U + _BatteryStandard * -> -> 8 `i `x -> -> # *U _BatteryStandard `i `x _TemBase _TemVoltage _ADBase _ADVoltage ]
+[; ;mypic.c: 733: FloatingChargeFlag = 1;
+"733
+[e = _FloatingChargeFlag -> -> 1 `i `b ]
+"734
+}
+[; ;mypic.c: 734: }
+[e $U 392  ]
+"735
+[e :U 391 ]
+[; ;mypic.c: 735: else
+[; ;mypic.c: 736: {
+"736
+{
+[; ;mypic.c: 737: FloatingChargeFlag = 0;
+"737
+[e = _FloatingChargeFlag -> -> 0 `i `b ]
+"738
+}
+[e :U 392 ]
+[; ;mypic.c: 738: }
+[; ;mypic.c: 740: gBatteryVoltage = GetBatteryVoltage();
+"740
+[e = _gBatteryVoltage ( _GetBatteryVoltage ..  ]
+[; ;mypic.c: 741: BatteryState = BatteryStateSwitch(gBatteryVoltage);
+"741
+[e = _BatteryState ( _BatteryStateSwitch (1 _gBatteryVoltage ]
+[; ;mypic.c: 742: break;
+"742
+[e $U 356  ]
+"743
+}
+[; ;mypic.c: 743: }
+[; ;mypic.c: 744: case 6:
+"744
+[e :U 393 ]
+[; ;mypic.c: 745: {
+"745
+{
+[; ;mypic.c: 746: if(BatteryLastState != 6)
+"746
+[e $ ! != -> _BatteryLastState `i -> 6 `i 394  ]
+[; ;mypic.c: 747: {
+"747
+{
+[; ;mypic.c: 748: ClampVoltage = 0;
+"748
+[e = _ClampVoltage -> -> 0 `i `ui ]
+[; ;mypic.c: 749: TMR2IE = 0;
+"749
+[e = _TMR2IE -> -> 0 `i `b ]
+[; ;mypic.c: 750: T2Flag = 0;
+"750
+[e = _T2Flag -> -> 0 `i `b ]
+[; ;mypic.c: 751: PWMFlag = 0;
+"751
+[e = _PWMFlag -> -> 0 `i `b ]
+[; ;mypic.c: 752: (PORTB |= (1 << 0));
+"752
+[e =| _PORTB -> << -> 1 `i -> 0 `i `uc ]
+[; ;mypic.c: 753: (PORTA |= (1 << 0));
+"753
+[e =| _PORTA -> << -> 1 `i -> 0 `i `uc ]
+[; ;mypic.c: 755: EnhanceChargeFlag = 0;
+"755
+[e = _EnhanceChargeFlag -> -> 0 `i `b ]
+[; ;mypic.c: 756: EnhanceCharge_Time = 0;
+"756
+[e = _EnhanceCharge_Time -> -> 0 `i `ui ]
+[; ;mypic.c: 757: EqualizingChargeFlag = 0;
+"757
+[e = _EqualizingChargeFlag -> -> 0 `i `b ]
+[; ;mypic.c: 758: EqualizingCharge_Time = 0;
+"758
+[e = _EqualizingCharge_Time -> -> 0 `i `ui ]
+[; ;mypic.c: 759: FloatingChargeFlag = 0;
+"759
+[e = _FloatingChargeFlag -> -> 0 `i `b ]
+[; ;mypic.c: 760: BatteryLastState = 6;
+"760
+[e = _BatteryLastState -> -> 6 `i `uc ]
+"761
+}
+[e :U 394 ]
+[; ;mypic.c: 761: }
+[; ;mypic.c: 762: gBatteryVoltage = GetBatteryVoltage();
+"762
+[e = _gBatteryVoltage ( _GetBatteryVoltage ..  ]
+[; ;mypic.c: 763: if(gBatteryVoltage < *(BatteryStandard + 5) - TemBase + TemVoltage - ADBase + ADVoltage)
+"763
+[e $ ! < _gBatteryVoltage + - + - *U + _BatteryStandard * -> -> 5 `i `x -> -> # *U _BatteryStandard `i `x _TemBase _TemVoltage _ADBase _ADVoltage 395  ]
+[; ;mypic.c: 764: {
+"764
+{
+[; ;mypic.c: 765: BatteryState = BatteryStateSwitch(gBatteryVoltage);
+"765
+[e = _BatteryState ( _BatteryStateSwitch (1 _gBatteryVoltage ]
+"766
+}
+[e :U 395 ]
+[; ;mypic.c: 766: }
+[; ;mypic.c: 767: break;
+"767
+[e $U 356  ]
+"768
+}
+[; ;mypic.c: 768: }
+[; ;mypic.c: 769: case 7:
+"769
+[e :U 396 ]
+[; ;mypic.c: 770: {
+"770
+{
+"771
+}
+"772
+}
+[; ;mypic.c: 771: }
+[; ;mypic.c: 772: }
+[e $U 356  ]
+"513
+[e :U 357 ]
+[e [\ _BatteryState , $ -> -> 0 `i `uc 358
+ , $ -> -> 1 `i `uc 359
+ , $ -> -> 2 `i `uc 368
+ , $ -> -> 3 `i `uc 375
+ , $ -> -> 4 `i `uc 382
+ , $ -> -> 5 `i `uc 389
+ , $ -> -> 6 `i `uc 393
+ , $ -> -> 7 `i `uc 396
+ 356 ]
+"772
+[e :U 356 ]
+[; ;mypic.c: 773: }
+"773
+[e :UE 355 ]
+}
+"778
+[v _KaiJi `(v 1 ef ]
+{
+[; ;mypic.c: 777: void KaiJi()
+[; ;mypic.c: 778: {
+[e :U _KaiJi ]
+[f ]
+[; ;mypic.c: 782: gBatteryVoltage = GetBatteryVoltage();
+"782
+[e = _gBatteryVoltage ( _GetBatteryVoltage ..  ]
+[; ;mypic.c: 783: if(gBatteryVoltage < 391)
+"783
+[e $ ! < _gBatteryVoltage -> -> 391 `i `ui 398  ]
+[; ;mypic.c: 784: {
+"784
+{
+[; ;mypic.c: 785: BatteryStandard = Battery_12V;
+"785
+[e = _BatteryStandard &U _Battery_12V ]
+[; ;mypic.c: 786: System12V = 1;
+"786
+[e = _System12V -> -> 1 `i `b ]
+[; ;mypic.c: 787: System24V = 0;
+"787
+[e = _System24V -> -> 0 `i `b ]
+"788
+}
+[; ;mypic.c: 788: }
+[e $U 399  ]
+"789
+[e :U 398 ]
+[; ;mypic.c: 789: else if((gBatteryVoltage < 782) && (gBatteryVoltage > 512))
+[e $ ! && < _gBatteryVoltage -> -> 782 `i `ui > _gBatteryVoltage -> -> 512 `i `ui 400  ]
+[; ;mypic.c: 790: {
+"790
+{
+[; ;mypic.c: 791: BatteryStandard = Battery_24V;
+"791
+[e = _BatteryStandard &U _Battery_24V ]
+[; ;mypic.c: 792: System12V = 0;
+"792
+[e = _System12V -> -> 0 `i `b ]
+[; ;mypic.c: 793: System24V = 1;
+"793
+[e = _System24V -> -> 1 `i `b ]
+"794
+}
+[; ;mypic.c: 794: }
+[e $U 401  ]
+"795
+[e :U 400 ]
+[; ;mypic.c: 795: else
+[; ;mypic.c: 796: {
+"796
+{
+[; ;mypic.c: 797: SystemErrorState = 1;
+"797
+[e = _SystemErrorState -> -> 1 `i `uc ]
+[; ;mypic.c: 798: ErrorType = 1;
+"798
+[e = _ErrorType -> -> 1 `i `uc ]
+[; ;mypic.c: 799: System12V = 0;
+"799
+[e = _System12V -> -> 0 `i `b ]
+[; ;mypic.c: 800: System24V = 0;
+"800
+[e = _System24V -> -> 0 `i `b ]
+"801
+}
+[e :U 401 ]
+[e :U 399 ]
+[; ;mypic.c: 801: }
+[; ;mypic.c: 805: SDSolarPanelVoltage = GetSolarPanelVoltage();
+"805
+[e = _SDSolarPanelVoltage ( _GetSolarPanelVoltage ..  ]
+[; ;mypic.c: 806: SDBatteryVoltage = GetBatteryVoltage();
+"806
+[e = _SDBatteryVoltage ( _GetBatteryVoltage ..  ]
+[; ;mypic.c: 807: if((SDSolarPanelVoltage*47) < ((SDBatteryVoltage*48) - 2400)
+[; ;mypic.c: 808: || (SDSolarPanelVoltage*47) > ((SDBatteryVoltage*48) + 2400))
+"808
+[e $ ! || < * _SDSolarPanelVoltage -> -> 47 `i `ui - * _SDBatteryVoltage -> -> 48 `i `ui -> -> 2400 `i `ui > * _SDSolarPanelVoltage -> -> 47 `i `ui + * _SDBatteryVoltage -> -> 48 `i `ui -> -> 2400 `i `ui 402  ]
+[; ;mypic.c: 809: {
+"809
+{
+[; ;mypic.c: 810: SystemErrorState = 1;
+"810
+[e = _SystemErrorState -> -> 1 `i `uc ]
+[; ;mypic.c: 811: ErrorType = 7;
+"811
+[e = _ErrorType -> -> 7 `i `uc ]
+[; ;mypic.c: 812: System12V = 0;
+"812
+[e = _System12V -> -> 0 `i `b ]
+[; ;mypic.c: 813: System24V = 0;
+"813
+[e = _System24V -> -> 0 `i `b ]
+"814
+}
+[e :U 402 ]
+[; ;mypic.c: 814: }
+[; ;mypic.c: 815: gFbVoltage = GetLoadCurrentVoltage();
+"815
+[e = _gFbVoltage ( _GetLoadCurrentVoltage ..  ]
+[; ;mypic.c: 816: if(gFbVoltage > 13)
+"816
+[e $ ! > _gFbVoltage -> -> 13 `i `ui 403  ]
+[; ;mypic.c: 817: {
+"817
+{
+[; ;mypic.c: 818: SystemErrorState = 1;
+"818
+[e = _SystemErrorState -> -> 1 `i `uc ]
+[; ;mypic.c: 819: ErrorType = 8;
+"819
+[e = _ErrorType -> -> 8 `i `uc ]
+[; ;mypic.c: 820: System12V = 0;
+"820
+[e = _System12V -> -> 0 `i `b ]
+[; ;mypic.c: 821: System24V = 0;
+"821
+[e = _System24V -> -> 0 `i `b ]
+"822
+}
+[e :U 403 ]
+[; ;mypic.c: 822: }
+[; ;mypic.c: 823: ADVoltage = 0;
+"823
+[e = _ADVoltage -> -> 0 `i `ui ]
+[; ;mypic.c: 824: ADBase = 0;
+"824
+[e = _ADBase -> -> 0 `i `ui ]
+[; ;mypic.c: 825: PVCount = 0;
+"825
+[e = _PVCount -> -> 0 `i `uc ]
+[; ;mypic.c: 826: }
+"826
+[e :UE 397 ]
+}
+"831
+[v _GetBoradTemperature `(uc 1 ef ]
+{
+[; ;mypic.c: 830: unsigned char GetBoradTemperature()
+[; ;mypic.c: 831: {
+[e :U _GetBoradTemperature ]
+[f ]
+[; ;mypic.c: 832: FVRCON = 0b00000000;
+"832
+[e = _FVRCON -> -> 0 `i `uc ]
+[; ;mypic.c: 833: ADCON0 = 0b00001101;
+"833
+[e = _ADCON0 -> -> 13 `i `uc ]
+[; ;mypic.c: 834: ADCON1 = 0b00010000;;
+"834
+[e = _ADCON1 -> -> 16 `i `uc ]
+"836
+[v _x `uc -> 6 `i a ]
+"837
+[v _i `ui 1 a ]
+[; ;mypic.c: 836: unsigned char x[6];
+[; ;mypic.c: 837: unsigned int i = 0 ;
+[e = _i -> -> 0 `i `ui ]
+[; ;mypic.c: 839: for (i = 0 ; i < 6; i++)
+"839
+{
+[e = _i -> -> 0 `i `ui ]
+[e $ < _i -> -> 6 `i `ui 405  ]
+[e $U 406  ]
+"840
+[e :U 405 ]
+[; ;mypic.c: 840: {
+{
+[; ;mypic.c: 841: FVRCON = 0b00000000;
+"841
+[e = _FVRCON -> -> 0 `i `uc ]
+[; ;mypic.c: 842: ADCON0 = 0b00001101;
+"842
+[e = _ADCON0 -> -> 13 `i `uc ]
+[; ;mypic.c: 843: ADCON1 = 0b00010000;;
+"843
+[e = _ADCON1 -> -> 16 `i `uc ]
+[; ;mypic.c: 844: CTKSoftDelay(20);
+"844
+[e ( _CTKSoftDelay (1 -> -> 20 `i `ui ]
+[; ;mypic.c: 845: ADGO = 1;
+"845
+[e = _ADGO -> -> 1 `i `b ]
+[; ;mypic.c: 846: while(ADGO);
+"846
+[e $U 408  ]
+[e :U 409 ]
+[e :U 408 ]
+[e $ _ADGO 409  ]
+[e :U 410 ]
+[; ;mypic.c: 847: x[i] = ADRESH;
+"847
+[e = *U + &U _x * -> _i `ux -> -> # *U &U _x `ui `ux _ADRESH ]
+[; ;mypic.c: 848: ADCON0 = 0b00001100;
+"848
+[e = _ADCON0 -> -> 12 `i `uc ]
+"849
+}
+"839
+[e ++ _i -> -> 1 `i `ui ]
+[e $ < _i -> -> 6 `i `ui 405  ]
+[e :U 406 ]
+"849
+}
+"851
+[v _AD_Result `ui 1 a ]
+[; ;mypic.c: 849: }
+[; ;mypic.c: 851: unsigned int AD_Result = 0;
+[e = _AD_Result -> -> 0 `i `ui ]
+"852
+[v _max `uc 1 a ]
+[v _min `uc 1 a ]
+[; ;mypic.c: 852: unsigned char max , min;
+[; ;mypic.c: 853: max = min = x[0];
+"853
+[e = _max = _min *U + &U _x * -> -> -> 0 `i `ui `ux -> -> # *U &U _x `ui `ux ]
+[; ;mypic.c: 854: for(i=0;i<6;i++)
+"854
+{
+[e = _i -> -> 0 `i `ui ]
+[e $ < _i -> -> 6 `i `ui 411  ]
+[e $U 412  ]
+"855
+[e :U 411 ]
+[; ;mypic.c: 855: {
+{
+[; ;mypic.c: 856: if(max<x[i])
+"856
+[e $ ! < -> _max `i -> *U + &U _x * -> _i `ux -> -> # *U &U _x `ui `ux `i 414  ]
+[; ;mypic.c: 857: max=x[i];
+"857
+[e = _max *U + &U _x * -> _i `ux -> -> # *U &U _x `ui `ux ]
+[e :U 414 ]
+[; ;mypic.c: 858: if(min>x[i])
+"858
+[e $ ! > -> _min `i -> *U + &U _x * -> _i `ux -> -> # *U &U _x `ui `ux `i 415  ]
+[; ;mypic.c: 859: min=x[i];
+"859
+[e = _min *U + &U _x * -> _i `ux -> -> # *U &U _x `ui `ux ]
+[e :U 415 ]
+"860
+}
+"854
+[e ++ _i -> -> 1 `i `ui ]
+[e $ < _i -> -> 6 `i `ui 411  ]
+[e :U 412 ]
+"860
+}
+[; ;mypic.c: 860: }
+[; ;mypic.c: 861: for(i=0;i<6;i++)
+"861
+{
+[e = _i -> -> 0 `i `ui ]
+[e $ < _i -> -> 6 `i `ui 416  ]
+[e $U 417  ]
+"862
+[e :U 416 ]
+[; ;mypic.c: 862: {
+{
+[; ;mypic.c: 863: AD_Result += x[i];
+"863
+[e =+ _AD_Result -> *U + &U _x * -> _i `ux -> -> # *U &U _x `ui `ux `ui ]
+"864
+}
+"861
+[e ++ _i -> -> 1 `i `ui ]
+[e $ < _i -> -> 6 `i `ui 416  ]
+[e :U 417 ]
+"864
+}
+[; ;mypic.c: 864: }
+[; ;mypic.c: 866: AD_Result = AD_Result - max - min;
+"866
+[e = _AD_Result - - _AD_Result -> _max `ui -> _min `ui ]
+[; ;mypic.c: 867: AD_Result = AD_Result >> 2;
+"867
+[e = _AD_Result >> _AD_Result -> 2 `i ]
+[; ;mypic.c: 868: return AD_Result;
+"868
+[e ) -> _AD_Result `uc ]
+[e $UE 404  ]
+[; ;mypic.c: 869: }
+"869
+[e :UE 404 ]
+}
+"871
+[v _GetOutTemperature `(uc 1 ef ]
+{
+[; ;mypic.c: 870: unsigned char GetOutTemperature()
+[; ;mypic.c: 871: {
+[e :U _GetOutTemperature ]
+[f ]
+[; ;mypic.c: 872: FVRCON = 0b00000000;
+"872
+[e = _FVRCON -> -> 0 `i `uc ]
+[; ;mypic.c: 873: ADCON0 = 0b00000101;
+"873
+[e = _ADCON0 -> -> 5 `i `uc ]
+[; ;mypic.c: 874: ADCON1 = 0b00010000;;
+"874
+[e = _ADCON1 -> -> 16 `i `uc ]
+"876
+[v _x `uc -> 6 `i a ]
+"877
+[v _i `ui 1 a ]
+[; ;mypic.c: 876: unsigned char x[6];
+[; ;mypic.c: 877: unsigned int i = 0 ;
+[e = _i -> -> 0 `i `ui ]
+[; ;mypic.c: 879: for (i = 0 ; i < 6; i++)
+"879
+{
+[e = _i -> -> 0 `i `ui ]
+[e $ < _i -> -> 6 `i `ui 420  ]
+[e $U 421  ]
+"880
+[e :U 420 ]
+[; ;mypic.c: 880: {
+{
+[; ;mypic.c: 881: FVRCON = 0b00000000;
+"881
+[e = _FVRCON -> -> 0 `i `uc ]
+[; ;mypic.c: 882: ADCON0 = 0b00000101;
+"882
+[e = _ADCON0 -> -> 5 `i `uc ]
+[; ;mypic.c: 883: ADCON1 = 0b00010000;;
+"883
+[e = _ADCON1 -> -> 16 `i `uc ]
+[; ;mypic.c: 884: CTKSoftDelay(20);
+"884
+[e ( _CTKSoftDelay (1 -> -> 20 `i `ui ]
+[; ;mypic.c: 885: ADGO = 1;
+"885
+[e = _ADGO -> -> 1 `i `b ]
+[; ;mypic.c: 886: while(ADGO);
+"886
+[e $U 423  ]
+[e :U 424 ]
+[e :U 423 ]
+[e $ _ADGO 424  ]
+[e :U 425 ]
+[; ;mypic.c: 887: x[i] = ADRESH;
+"887
+[e = *U + &U _x * -> _i `ux -> -> # *U &U _x `ui `ux _ADRESH ]
+[; ;mypic.c: 888: ADCON0 = 0b00000100;
+"888
+[e = _ADCON0 -> -> 4 `i `uc ]
+"889
+}
+"879
+[e ++ _i -> -> 1 `i `ui ]
+[e $ < _i -> -> 6 `i `ui 420  ]
+[e :U 421 ]
+"889
+}
+"891
+[v _AD_Result `ui 1 a ]
+[; ;mypic.c: 889: }
+[; ;mypic.c: 891: unsigned int AD_Result = 0;
+[e = _AD_Result -> -> 0 `i `ui ]
+"892
+[v _max `uc 1 a ]
+[v _min `uc 1 a ]
+[; ;mypic.c: 892: unsigned char max , min;
+[; ;mypic.c: 893: max = min = x[0];
+"893
+[e = _max = _min *U + &U _x * -> -> -> 0 `i `ui `ux -> -> # *U &U _x `ui `ux ]
+[; ;mypic.c: 894: for(i=0;i<6;i++)
+"894
+{
+[e = _i -> -> 0 `i `ui ]
+[e $ < _i -> -> 6 `i `ui 426  ]
+[e $U 427  ]
+"895
+[e :U 426 ]
+[; ;mypic.c: 895: {
+{
+[; ;mypic.c: 896: if(max<x[i])
+"896
+[e $ ! < -> _max `i -> *U + &U _x * -> _i `ux -> -> # *U &U _x `ui `ux `i 429  ]
+[; ;mypic.c: 897: max=x[i];
+"897
+[e = _max *U + &U _x * -> _i `ux -> -> # *U &U _x `ui `ux ]
+[e :U 429 ]
+[; ;mypic.c: 898: if(min>x[i])
+"898
+[e $ ! > -> _min `i -> *U + &U _x * -> _i `ux -> -> # *U &U _x `ui `ux `i 430  ]
+[; ;mypic.c: 899: min=x[i];
+"899
+[e = _min *U + &U _x * -> _i `ux -> -> # *U &U _x `ui `ux ]
+[e :U 430 ]
+"900
+}
+"894
+[e ++ _i -> -> 1 `i `ui ]
+[e $ < _i -> -> 6 `i `ui 426  ]
+[e :U 427 ]
+"900
+}
+[; ;mypic.c: 900: }
+[; ;mypic.c: 901: for(i=0;i<6;i++)
+"901
+{
+[e = _i -> -> 0 `i `ui ]
+[e $ < _i -> -> 6 `i `ui 431  ]
+[e $U 432  ]
+"902
+[e :U 431 ]
+[; ;mypic.c: 902: {
+{
+[; ;mypic.c: 903: AD_Result += x[i];
+"903
+[e =+ _AD_Result -> *U + &U _x * -> _i `ux -> -> # *U &U _x `ui `ux `ui ]
+"904
+}
+"901
+[e ++ _i -> -> 1 `i `ui ]
+[e $ < _i -> -> 6 `i `ui 431  ]
+[e :U 432 ]
+"904
+}
+[; ;mypic.c: 904: }
+[; ;mypic.c: 906: AD_Result = AD_Result - max - min;
+"906
+[e = _AD_Result - - _AD_Result -> _max `ui -> _min `ui ]
+[; ;mypic.c: 907: AD_Result = AD_Result >> 2;
+"907
+[e = _AD_Result >> _AD_Result -> 2 `i ]
+[; ;mypic.c: 908: return AD_Result;
+"908
+[e ) -> _AD_Result `uc ]
+[e $UE 419  ]
+[; ;mypic.c: 909: }
+"909
+[e :UE 419 ]
+}
+"912
+[v _LedDisplay `(v 1 ef ]
+{
+[; ;mypic.c: 911: void LedDisplay()
+[; ;mypic.c: 912: {
+[e :U _LedDisplay ]
+[f ]
+[; ;mypic.c: 913: if(LoadFlag == 0)
+"913
+[e $ ! == -> _LoadFlag `i -> 0 `i 435  ]
+[; ;mypic.c: 914: {
+"914
+{
+[; ;mypic.c: 915: (LATB |= (1 << 7));
+"915
+[e =| _LATB -> << -> 1 `i -> 7 `i `uc ]
+"916
+}
+[e :U 435 ]
+[; ;mypic.c: 916: }
+[; ;mypic.c: 917: if(LoadFlag == 1)
+"917
+[e $ ! == -> _LoadFlag `i -> 1 `i 436  ]
+[; ;mypic.c: 918: {
+"918
+{
+[; ;mypic.c: 919: (LATB &= ~(1 << 7));
+"919
+[e =& _LATB -> ~ << -> 1 `i -> 7 `i `uc ]
+"920
+}
+[e :U 436 ]
+[; ;mypic.c: 920: }
+[; ;mypic.c: 922: if(PVChargeFlag == 1)
+"922
+[e $ ! == -> _PVChargeFlag `i -> 1 `i 437  ]
+[; ;mypic.c: 923: {
+"923
+{
+[; ;mypic.c: 924: (LATB |= (1 << 6));
+"924
+[e =| _LATB -> << -> 1 `i -> 6 `i `uc ]
+"925
+}
+[e :U 437 ]
+[; ;mypic.c: 925: }
+[; ;mypic.c: 926: if(PVChargeFlag == 0)
+"926
+[e $ ! == -> _PVChargeFlag `i -> 0 `i 438  ]
+[; ;mypic.c: 927: {
+"927
+{
+[; ;mypic.c: 928: (LATB &= ~(1 << 6));
+"928
+[e =& _LATB -> ~ << -> 1 `i -> 6 `i `uc ]
+"929
+}
+[e :U 438 ]
+[; ;mypic.c: 929: }
+[; ;mypic.c: 930: }
+"930
+[e :UE 434 ]
+}

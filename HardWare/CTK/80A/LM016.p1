@@ -1,4 +1,6 @@
 Version 3.2 HI-TECH Software Intermediate Code
+"49 C:\CTK\CTK80A 150928\CTK80A_Jas\public.h
+[v _OS_Time `ul 1 e ]
 "140 C:\Program Files\HI-TECH Software\PICC\9.80\include\pic16f1934.h
 [v _INDF0 `Vuc 1 e@0 ]
 "144 C:\Program Files\HI-TECH Software\PICC\9.80\include\pic16f1934.h
@@ -2529,204 +2531,23 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S258 . . ]
 "3418 C:\Program Files\HI-TECH Software\PICC\9.80\include\pic16f1934.h
 [v _TOSHbits `VS258 1 e@4079 ]
+"52 C:\CTK\CTK80A 150928\CTK80A_Jas\public.h
+[v _CTKSoftDelay `(v 0 ef1`ui ]
 "49 C:\CTK\CTK80A 150928\CTK80A_Jas\public.h
-[v _OS_Time `ul 1 e ]
-"85 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _BatteryStandard `*ui 1 e ]
-"95 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _Battery_12V `ui -> 0 `x e ]
-"96 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _Battery_24V `ui -> 0 `x e ]
-"98 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _SystemErrorState `uc 1 e ]
-"99 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _SystemModeType `uc 1 e ]
-"100 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _EENum `uc 1 e ]
-"101 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _BatteryState `uc 1 e ]
-"102 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _BatteryLastState `uc 1 e ]
-"104 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _LoadOpen `b 1 e ]
-"105 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _LoadState `b 1 e ]
-"106 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _LoadShort `b 1 e ]
-"107 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _LoadFlag `b 1 e ]
-"108 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _PVState `b 1 e ]
-"110 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _EnhanceChargeFlag `b 1 e ]
-"111 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _EqualizingChargeFlag `b 1 e ]
-"112 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _FloatingChargeFlag `b 1 e ]
-"113 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _PWMChargeFlag `b 1 e ]
-"114 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _PWMFlag `b 1 e ]
-"115 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _T2Flag `b 1 e ]
-"116 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _PVChargeFlag `b 1 e ]
-"118 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _System12V `b 1 e ]
-"119 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _System24V `b 1 e ]
-"121 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _DAYTIME `b 1 e ]
-"123 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _LightTime `uc 1 e ]
-"124 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _TimeModeHour `ui 1 e ]
-"125 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _EnhanceCharge_Time `ui 1 e ]
-"128 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _EqualizingCharge_Time `ui 1 e ]
-"129 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _OverLoadTime `ui 1 e ]
-"131 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _SDSolarPanelVoltage `ui 1 e ]
-"132 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _SDBatteryVoltage `ui 1 e ]
-"134 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _gSolarPanelVoltage `ui 1 e ]
-"135 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _gBatteryVoltage `ui 1 e ]
-"136 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _gFbVoltage `ui 1 e ]
-"137 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _ClampVoltage `ui 1 e ]
-"138 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _TemVoltage `ui 1 e ]
-"139 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _TemBase `ui 1 e ]
-"140 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _ADVoltage `ui 1 e ]
-"141 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _ADBase `ui 1 e ]
-"143 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _DutyRatio `uc 1 e ]
-"144 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _PwmCount `uc 1 e ]
-"145 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _PVCount `uc 1 e ]
-"148 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _ErrorType `uc 1 e ]
-"150 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _SystemErrorCount `ui 1 e ]
-"152 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _LPVFlag `b 1 e ]
-"153 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _LPVCount `uc 1 e ]
-"155 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _globalState `uc 1 e ]
-"158 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _lcd_state `uc 1 e ]
-"159 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _lcd_setting_state `uc 1 e ]
-"160 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _lcd_timer `uc 1 e ]
-"161 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _lcd_extinguwish_timer `uc 1 e ]
-"162 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _enter_settings_timer `uc 1 e ]
-"163 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _setting_save_timer `uc 1 e ]
-"164 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _setting_no_save_timer `uc 1 e ]
-"165 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _isNeedChange `b 1 e ]
-"54 C:\CTK\CTK80A 150928\CTK80A_Jas\kernel.h
-[v _ParamConfig `ui -> 11 `i e ]
-"64 C:\CTK\CTK80A 150928\CTK80A_Jas\kernel.h
-[v _PWM_CONTROL_FLAG `uc 1 e ]
-"65 C:\CTK\CTK80A 150928\CTK80A_Jas\kernel.h
-[v _PWM_CONTROL_TIMEOUT `ul 1 e ]
-"66 C:\CTK\CTK80A 150928\CTK80A_Jas\kernel.h
-[v _PWM_ON_TIME `uc 1 e ]
-[s S260 `uc 1 `uc 1 `uc 1 `ui 1 `ul 1 ]
-[n S260 _InputIOState HWState enable swState ADValue ADTime ]
-"87 C:\CTK\CTK80A 150928\CTK80A_Jas\kernel.h
-[v _BATTERY `S260 1 e ]
-"88 C:\CTK\CTK80A 150928\CTK80A_Jas\kernel.h
-[v _SOLARPANEL `S260 1 e ]
-"89 C:\CTK\CTK80A 150928\CTK80A_Jas\kernel.h
-[v _CHARGE `S260 1 e ]
-"90 C:\CTK\CTK80A 150928\CTK80A_Jas\kernel.h
-[v _LOAD `S260 1 e ]
-[s S261 `uc 1 `ui 1 `ui 1 `ui 1 `ui 1 `ui 1 `ui 1 `ui 1 `ui 1 `ui 1 `ui 1 `ui 1 ]
-[n S261 _SystemConfig Param_config Param_BATTERY_VOLTAGE_UNDER Param_RETURN_VOLTAGE_UNDER Param_BATTERY_VOLTAGE_WARN Param_BATTERY_VOLTAGE_NORMAL Param_BATTERY_VOLTAGE_FULL Param_RETURN_VOLTAGE_FULL Param_Enhance_Charge_VOLTAGE Param_Equalizing_Charge_VOLTAGE Param_Floating_Charge_VOLTAGE Param_DAY_VOLTAGE Param_NIGHT_VOLTAGE ]
-"111 C:\CTK\CTK80A 150928\CTK80A_Jas\kernel.h
-[v _SystemConfig12V `S261 1 e ]
-"113 C:\CTK\CTK80A 150928\CTK80A_Jas\kernel.h
-[v _SystemConfig24V `S261 1 e ]
-"115 C:\CTK\CTK80A 150928\CTK80A_Jas\kernel.h
-[v _SystemConfig `*S261 1 e ]
-"22 C:\CTK\CTK80A 150928\CTK80A_Jas\main.c
-[v _KeyEvent_PendKeyCode `uc 1 e ]
-"23 C:\CTK\CTK80A 150928\CTK80A_Jas\main.c
-[v _KeyEvent_KeyTime `ul 1 e ]
-"24 C:\CTK\CTK80A 150928\CTK80A_Jas\main.c
-[v _KeyEvent_KeyCode `uc 1 e ]
-"57 C:\CTK\CTK80A 150928\CTK80A_Jas\main.c
-[v _LCD_PAGE `uc 1 e ]
-"58 C:\CTK\CTK80A 150928\CTK80A_Jas\main.c
-[v _LCD_POINT `ui 1 e ]
-"206 C:\Program Files\HI-TECH Software\PICC\9.80\include\stdio.h
-[v _sprintf `(i 0 e1v`*uc`*Cuc ]
-"80 C:\CTK\CTK80A 150928\CTK80A_Jas\main.c
-[v _LCD_CurrentState `uc 1 e ]
-"81 C:\CTK\CTK80A 150928\CTK80A_Jas\main.c
-[v _LCD_LastState `uc 1 e ]
-"82 C:\CTK\CTK80A 150928\CTK80A_Jas\main.c
-[v _LCD_StateTime `ul 1 e ]
-"55 C:\CTK\CTK80A 150928\CTK80A_Jas\LM016.h
-[v _API_LCD_INIT `(v 0 ef ]
-"56 C:\CTK\CTK80A 150928\CTK80A_Jas\LM016.h
-[v _API_LCD_CLEAR `(v 0 ef ]
-"155 C:\CTK\CTK80A 150928\CTK80A_Jas\main.c
-[v _isSettingMode `b 1 e ]
-"156 C:\CTK\CTK80A 150928\CTK80A_Jas\main.c
-[v _isSaveSettings `b 1 e ]
-"157 C:\CTK\CTK80A 150928\CTK80A_Jas\main.c
-[v _rb4_flag `b 1 e ]
-"158 C:\CTK\CTK80A 150928\CTK80A_Jas\main.c
-[v _is_second_setting `b 1 e ]
-"159 C:\CTK\CTK80A 150928\CTK80A_Jas\main.c
-[v _needInitSetting `b 1 e ]
-"160 C:\CTK\CTK80A 150928\CTK80A_Jas\main.c
-[v _batteryType `uc 1 e ]
-"161 C:\CTK\CTK80A 150928\CTK80A_Jas\main.c
-[v _charPointer `*Cuc 1 e ]
-"169 C:\CTK\CTK80A 150928\CTK80A_Jas\main.c
-[v _OS_CurrentState `uc 1 e ]
-"170 C:\CTK\CTK80A 150928\CTK80A_Jas\main.c
-[v _OS_StateTime `ul 1 e ]
-[p mainexit ]
-"172 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _system_state_init `(v 0 ef ]
-"38 C:\CTK\CTK80A 150928\CTK80A_Jas\kernel.h
-[v _LoadParamFromEPPROM `(v 0 ef ]
-"196 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _KaiJi `(v 0 ef ]
-"184 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _SelectMode `(v 0 ef ]
-"186 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _LoadCurrentDealWith `(v 0 ef ]
-"194 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _SwitchBatteryState `(v 0 ef ]
-"201 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _LedDisplay `(v 0 ef ]
-"188 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _SolarPanelDealWith `(v 0 ef ]
-"190 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[v _PWMCharge `(v 0 ef ]
-"58 C:\CTK\CTK80A 150928\CTK80A_Jas\LM016.h
-[v _lcd_write_command `(v 0 ef1`uc ]
-[p f _sprintf 8388608 ]
+[i _OS_Time
+-> -> -> 0 `i `l `ul
+]
+[; ;public.h: 49: unsigned long OS_Time = 0;
+[; ;public.h: 52: void CTKSoftDelay(unsigned int x);
+[; ;LM016.h: 55: void API_LCD_INIT(void);
+[; ;LM016.h: 56: void API_LCD_CLEAR(void);
+[; ;LM016.h: 57: void API_LCD_PRINT_LINE(unsigned char linenumber,unsigned char * charPointer,unsigned char postion);
+[; ;LM016.h: 58: void lcd_write_command(unsigned char command);
+[; ;LM016.h: 59: void lcd_write_data(unsigned char data);
+[; ;LM016.h: 60: void lcd_print_line1(unsigned char *charPaint, unsigned char postion, unsigned char clear);
+[; ;LM016.h: 61: void lcd_print_line2(unsigned char *charPaint, unsigned char clear);
+[; ;LM016.h: 62: void lcd_move_char(unsigned char postion);
+[; ;LM016.h: 63: void num_to_char(int number, unsigned char point);
 [; ;pic16f1934.h: 140: volatile unsigned char INDF0 @ 0x000;
 [; ;pic16f1934.h: 144: volatile unsigned char INDF1 @ 0x001;
 [; ;pic16f1934.h: 148: volatile unsigned char PCL @ 0x002;
@@ -4988,1444 +4809,437 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eeprom_routines.h: 41: extern void eeprom_write(unsigned char addr, unsigned char value);
 [; ;eeprom_routines.h: 42: extern unsigned char eeprom_read(unsigned char addr);
 [; ;pic.h: 630: extern void _delay(unsigned long);
-"49 C:\CTK\CTK80A 150928\CTK80A_Jas\public.h
-[i _OS_Time
--> -> -> 0 `i `l `ul
-]
-[; ;public.h: 49: unsigned long OS_Time = 0;
-[; ;public.h: 52: void CTKSoftDelay(unsigned int x);
-[; ;LM016.h: 55: void API_LCD_INIT(void);
-[; ;LM016.h: 56: void API_LCD_CLEAR(void);
-[; ;LM016.h: 57: void API_LCD_PRINT_LINE(unsigned char linenumber,unsigned char * charPointer,unsigned char postion);
-[; ;LM016.h: 58: void lcd_write_command(unsigned char command);
-[; ;LM016.h: 59: void lcd_write_data(unsigned char data);
-[; ;LM016.h: 60: void lcd_print_line1(unsigned char *charPaint, unsigned char postion, unsigned char clear);
-[; ;LM016.h: 61: void lcd_print_line2(unsigned char *charPaint, unsigned char clear);
-[; ;LM016.h: 62: void lcd_move_char(unsigned char postion);
-[; ;LM016.h: 63: void num_to_char(int number, unsigned char point);
-"85 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
-[i _BatteryStandard
--> -> -> 0 `i `*v `*ui
-]
-[; ;mypic.h: 85: unsigned int *BatteryStandard = (void *)0;
-"95
-[i _Battery_12V
-:U ..
--> -> 256 `i `ui
--> -> 303 `i `ui
--> -> 284 `i `ui
--> -> 313 `i `ui
--> -> 391 `i `ui
--> -> 355 `i `ui
--> -> 351 `i `ui
--> -> 341 `i `ui
--> -> 327 `i `ui
--> -> 3965 `i `ui
--> -> 900 `i `ui
-..
-]
-[; ;mypic.h: 95: unsigned int Battery_12V[] = {256 , 303 , 284 , 313 , 391 , 355 , 351 , 341 , 327 , 3965 , 900};
-"96
-[i _Battery_24V
-:U ..
--> -> 512 `i `ui
--> -> 606 `i `ui
--> -> 568 `i `ui
--> -> 626 `i `ui
--> -> 782 `i `ui
--> -> 710 `i `ui
--> -> 702 `i `ui
--> -> 682 `i `ui
--> -> 654 `i `ui
--> -> 8231 `i `ui
--> -> 3333 `i `ui
-..
-]
-[; ;mypic.h: 96: unsigned int Battery_24V[] = {512 , 606 , 568 , 626 , 782 , 710 , 702 , 682 , 654 , 8231 , 3333};
-"98
-[i _SystemErrorState
--> -> 0 `i `uc
-]
-[; ;mypic.h: 98: unsigned char SystemErrorState = 0;
-"99
-[i _SystemModeType
--> -> 3 `i `uc
-]
-[; ;mypic.h: 99: unsigned char SystemModeType = 0x03;
-"100
-[i _EENum
--> -> 0 `i `uc
-]
-[; ;mypic.h: 100: unsigned char EENum = 0;
-"101
-[i _BatteryState
--> -> 0 `i `uc
-]
-[; ;mypic.h: 101: unsigned char BatteryState = 0;
-"102
-[i _BatteryLastState
--> -> 0 `i `uc
-]
-[; ;mypic.h: 102: unsigned char BatteryLastState = 0;
-"104
-[i _LoadOpen
--> 0 `i
-]
-[; ;mypic.h: 104: bit LoadOpen = 0;
-"105
-[i _LoadState
--> 0 `i
-]
-[; ;mypic.h: 105: bit LoadState = 0;
-"106
-[i _LoadShort
--> 0 `i
-]
-[; ;mypic.h: 106: bit LoadShort = 0;
-"107
-[i _LoadFlag
--> 0 `i
-]
-[; ;mypic.h: 107: bit LoadFlag = 0;
-"108
-[i _PVState
--> 0 `i
-]
-[; ;mypic.h: 108: bit PVState = 0;
-"110
-[i _EnhanceChargeFlag
--> 0 `i
-]
-[; ;mypic.h: 110: bit EnhanceChargeFlag = 0;
-"111
-[i _EqualizingChargeFlag
--> 0 `i
-]
-[; ;mypic.h: 111: bit EqualizingChargeFlag = 0;
-"112
-[i _FloatingChargeFlag
--> 0 `i
-]
-[; ;mypic.h: 112: bit FloatingChargeFlag = 0;
-"113
-[i _PWMChargeFlag
--> 0 `i
-]
-[; ;mypic.h: 113: bit PWMChargeFlag = 0;
-"114
-[i _PWMFlag
--> 0 `i
-]
-[; ;mypic.h: 114: bit PWMFlag = 0;
-"115
-[i _T2Flag
--> 0 `i
-]
-[; ;mypic.h: 115: bit T2Flag = 0;
-"116
-[i _PVChargeFlag
--> 0 `i
-]
-[; ;mypic.h: 116: bit PVChargeFlag = 0;
-"118
-[i _System12V
--> 0 `i
-]
-[; ;mypic.h: 118: bit System12V = 0;
-"119
-[i _System24V
--> 0 `i
-]
-[; ;mypic.h: 119: bit System24V = 0;
-"121
-[i _DAYTIME
--> 0 `i
-]
-[; ;mypic.h: 121: bit DAYTIME = 0;
-"123
-[i _LightTime
--> -> 0 `i `uc
-]
-[; ;mypic.h: 123: unsigned char LightTime = 0;
-"124
-[i _TimeModeHour
--> -> 0 `i `ui
-]
-[; ;mypic.h: 124: unsigned int TimeModeHour = 0;
-"125
-[i _EnhanceCharge_Time
--> -> 0 `i `ui
-]
-[; ;mypic.h: 125: unsigned int EnhanceCharge_Time = 0;
-"128
-[i _EqualizingCharge_Time
--> -> 0 `i `ui
-]
-[; ;mypic.h: 128: unsigned int EqualizingCharge_Time = 0;
-"129
-[i _OverLoadTime
--> -> 0 `i `ui
-]
-[; ;mypic.h: 129: unsigned int OverLoadTime = 0 ;
-"131
-[i _SDSolarPanelVoltage
--> -> 0 `i `ui
-]
-[; ;mypic.h: 131: unsigned int SDSolarPanelVoltage = 0;
-"132
-[i _SDBatteryVoltage
--> -> 0 `i `ui
-]
-[; ;mypic.h: 132: unsigned int SDBatteryVoltage = 0;
-[; ;mypic.h: 134: unsigned int gSolarPanelVoltage;
-[; ;mypic.h: 135: unsigned int gBatteryVoltage;
-[; ;mypic.h: 136: unsigned int gFbVoltage;
-"137
-[i _ClampVoltage
--> -> 0 `i `ui
-]
-[; ;mypic.h: 137: unsigned int ClampVoltage = 0;
-"138
-[i _TemVoltage
--> -> 0 `i `ui
-]
-[; ;mypic.h: 138: unsigned int TemVoltage = 0;
-"139
-[i _TemBase
--> -> 0 `i `ui
-]
-[; ;mypic.h: 139: unsigned int TemBase = 0;
-"140
-[i _ADVoltage
--> -> 0 `i `ui
-]
-[; ;mypic.h: 140: unsigned int ADVoltage = 0;
-"141
-[i _ADBase
--> -> 0 `i `ui
-]
-[; ;mypic.h: 141: unsigned int ADBase = 0;
-"143
-[i _DutyRatio
--> -> 0 `i `uc
-]
-[; ;mypic.h: 143: unsigned char DutyRatio = 0;
-"144
-[i _PwmCount
--> -> 0 `i `uc
-]
-[; ;mypic.h: 144: unsigned char PwmCount = 0;
-"145
-[i _PVCount
--> -> 0 `i `uc
-]
-[; ;mypic.h: 145: unsigned char PVCount = 0;
-"148
-[i _ErrorType
--> -> 0 `i `uc
-]
-[; ;mypic.h: 148: unsigned char ErrorType = 0;
-"150
-[i _SystemErrorCount
--> -> 0 `i `ui
-]
-[; ;mypic.h: 150: unsigned int SystemErrorCount = 0;
-"152
-[i _LPVFlag
--> 0 `i
-]
-[; ;mypic.h: 152: bit LPVFlag = 0;
-"153
-[i _LPVCount
--> -> 0 `i `uc
-]
-[; ;mypic.h: 153: unsigned char LPVCount = 0;
-"155
-[i _globalState
--> -> 0 `i `uc
-]
-[; ;mypic.h: 155: unsigned char globalState = 0;
-"158
-[i _lcd_state
--> -> 0 `i `uc
-]
-[; ;mypic.h: 158: unsigned char lcd_state = 0;
-"159
-[i _lcd_setting_state
--> -> 0 `i `uc
-]
-[; ;mypic.h: 159: unsigned char lcd_setting_state = 0;
-"160
-[i _lcd_timer
--> -> 0 `i `uc
-]
-[; ;mypic.h: 160: unsigned char lcd_timer = 0;
-"161
-[i _lcd_extinguwish_timer
--> -> 0 `i `uc
-]
-[; ;mypic.h: 161: unsigned char lcd_extinguwish_timer = 0;
-"162
-[i _enter_settings_timer
--> -> 0 `i `uc
-]
-[; ;mypic.h: 162: unsigned char enter_settings_timer = 0;
-"163
-[i _setting_save_timer
--> -> 0 `i `uc
-]
-[; ;mypic.h: 163: unsigned char setting_save_timer = 0;
-"164
-[i _setting_no_save_timer
--> -> 0 `i `uc
-]
-[; ;mypic.h: 164: unsigned char setting_no_save_timer = 0;
-"165
-[i _isNeedChange
--> 0 `i
-]
-[; ;mypic.h: 165: bit isNeedChange = 0;
-[; ;mypic.h: 168: unsigned char ReadEE(unsigned char addr);
-[; ;mypic.h: 169: void WriteEE(unsigned char data, unsigned char addr);
-[; ;mypic.h: 170: unsigned int getADValue(unsigned char channel);
-[; ;mypic.h: 172: void system_state_init();
-[; ;mypic.h: 175: void load_system_state();
-[; ;mypic.h: 176: void save_system_state();
-[; ;mypic.h: 178: unsigned int GetBatteryVoltage();
-[; ;mypic.h: 179: unsigned int GetSolarPanelVoltage();
-[; ;mypic.h: 180: unsigned int GetChargeCurrentVoltage();
-[; ;mypic.h: 181: unsigned int GetLoadCurrentVoltage();
-[; ;mypic.h: 184: void SelectMode();
-[; ;mypic.h: 186: void LoadCurrentDealWith();
-[; ;mypic.h: 188: void SolarPanelDealWith();
-[; ;mypic.h: 190: void PWMCharge();
-[; ;mypic.h: 192: unsigned char BatteryStateSwitch(unsigned int BatteryVoltage);
-[; ;mypic.h: 194: void SwitchBatteryState();
-[; ;mypic.h: 196: void KaiJi();
-[; ;mypic.h: 198: unsigned char GetBoradTemperature();
-[; ;mypic.h: 199: unsigned char GetOutTemperature();
-[; ;mypic.h: 201: void LedDisplay();
-[; ;mypic.h: 203: void saveToEEPROM(unsigned int data, unsigned char type);
-[; ;mypic.h: 204: unsigned int readFromEEPROM(unsigned char type);
-[; ;kernel.h: 38: void LoadParamFromEPPROM();
-[; ;kernel.h: 40: void SaveParamToEPPROM();
-"54 C:\CTK\CTK80A 150928\CTK80A_Jas\kernel.h
-[i _ParamConfig
-:U ..
--> -> 0 `i `ui
--> -> 0 `i `ui
--> -> 0 `i `ui
--> -> 0 `i `ui
--> -> 0 `i `ui
--> -> 0 `i `ui
--> -> 0 `i `ui
--> -> 0 `i `ui
--> -> 0 `i `ui
--> -> 0 `i `ui
--> -> 0 `i `ui
-..
-]
-[; ;kernel.h: 54: unsigned int ParamConfig[11] = {0,0,0,0,0,0,0,0,0,0,0};
-"64
-[i _PWM_CONTROL_FLAG
--> -> 0 `i `uc
-]
-[; ;kernel.h: 64: unsigned char PWM_CONTROL_FLAG = 0;
-"65
-[i _PWM_CONTROL_TIMEOUT
--> -> -> 0 `i `l `ul
-]
-[; ;kernel.h: 65: unsigned long PWM_CONTROL_TIMEOUT = 0;
-"66
-[i _PWM_ON_TIME
--> -> 0 `i `uc
-]
-[; ;kernel.h: 66: unsigned char PWM_ON_TIME = 0;
-[; ;kernel.h: 80: typedef struct _InputIOState{
-[; ;kernel.h: 81: unsigned char HWState;
-[; ;kernel.h: 82: unsigned char enable;
-[; ;kernel.h: 83: unsigned char swState;
-[; ;kernel.h: 84: unsigned int ADValue;
-[; ;kernel.h: 85: unsigned long ADTime;
-[; ;kernel.h: 86: };
-"87
-[i _BATTERY
-:U ..
-:U ..
--> -> 1 `i `uc
--> -> 0 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `ui
--> -> -> 1 `i `l `ul
-..
-..
-]
-[; ;kernel.h: 87: struct _InputIOState BATTERY = {1, 0, 1, 1, 1};
-"88
-[i _SOLARPANEL
-:U ..
-:U ..
--> -> 1 `i `uc
--> -> 0 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `ui
--> -> -> 1 `i `l `ul
-..
-..
-]
-[; ;kernel.h: 88: struct _InputIOState SOLARPANEL = {1, 0, 1, 1, 1};
-"89
-[i _CHARGE
-:U ..
-:U ..
--> -> 1 `i `uc
--> -> 0 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `ui
--> -> -> 1 `i `l `ul
-..
-..
-]
-[; ;kernel.h: 89: struct _InputIOState CHARGE = {1, 0, 1, 1, 1};
-"90
-[i _LOAD
-:U ..
-:U ..
--> -> 1 `i `uc
--> -> 0 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `ui
--> -> -> 1 `i `l `ul
-..
-..
-]
-[; ;kernel.h: 90: struct _InputIOState LOAD = {1, 0, 1, 1, 1};
-[; ;kernel.h: 96: typedef struct _SystemConfig{
-[; ;kernel.h: 97: unsigned char Param_config;
-[; ;kernel.h: 98: unsigned int Param_BATTERY_VOLTAGE_UNDER;
-[; ;kernel.h: 99: unsigned int Param_RETURN_VOLTAGE_UNDER;
-[; ;kernel.h: 100: unsigned int Param_BATTERY_VOLTAGE_WARN;
-[; ;kernel.h: 101: unsigned int Param_BATTERY_VOLTAGE_NORMAL;
-[; ;kernel.h: 102: unsigned int Param_BATTERY_VOLTAGE_FULL;
-[; ;kernel.h: 103: unsigned int Param_RETURN_VOLTAGE_FULL;
-[; ;kernel.h: 104: unsigned int Param_Enhance_Charge_VOLTAGE;
-[; ;kernel.h: 105: unsigned int Param_Equalizing_Charge_VOLTAGE;
-[; ;kernel.h: 106: unsigned int Param_Floating_Charge_VOLTAGE;
-[; ;kernel.h: 107: unsigned int Param_DAY_VOLTAGE;
-[; ;kernel.h: 108: unsigned int Param_NIGHT_VOLTAGE;
-[; ;kernel.h: 109: };
-"111
-[i _SystemConfig12V
-:U ..
-:U ..
--> -> 1 `i `uc
--> -> 256 `i `ui
--> -> 303 `i `ui
--> -> 284 `i `ui
--> -> 313 `i `ui
--> -> 391 `i `ui
--> -> 355 `i `ui
--> -> 351 `i `ui
--> -> 341 `i `ui
--> -> 327 `i `ui
--> -> 3965 `i `ui
--> -> 900 `i `ui
-..
-..
-]
-[; ;kernel.h: 111: struct _SystemConfig SystemConfig12V = {1 ,256 , 303 , 284 , 313 , 391 , 355 , 351 , 341 , 327 , 3965 , 900};
-"113
-[i _SystemConfig24V
-:U ..
-:U ..
--> -> 2 `i `uc
--> -> 512 `i `ui
--> -> 606 `i `ui
--> -> 568 `i `ui
--> -> 626 `i `ui
--> -> 782 `i `ui
--> -> 710 `i `ui
--> -> 702 `i `ui
--> -> 682 `i `ui
--> -> 654 `i `ui
--> -> 8231 `i `ui
--> -> 3333 `i `ui
-..
-..
-]
-[; ;kernel.h: 113: struct _SystemConfig SystemConfig24V = {2 ,512 , 606 , 568 , 626 , 782 , 710 , 702 , 682 , 654 , 8231 , 3333};
-[; ;kernel.h: 115: struct _SystemConfig *SystemConfig;
-"13 C:\CTK\CTK80A 150928\CTK80A_Jas\74HC595.h
-[v _HC595_Send_Data `(v 1 ef1`uc ]
+"14 C:\CTK\CTK80A 150928\CTK80A_Jas\LM016.c
+[v _lcd_write_command `(v 1 ef1`uc ]
 {
-[; ;74HC595.h: 12: void HC595_Send_Data(unsigned char byte)
-[; ;74HC595.h: 13: {
-[e :U _HC595_Send_Data ]
-[v _byte `uc 1 r1 ]
+[; ;LM016.c: 14: void lcd_write_command(unsigned char command){
+[e :U _lcd_write_command ]
+[v _command `uc 1 r1 ]
 [f ]
-[; ;74HC595.h: 15: }
+[; ;LM016.c: 15: RC1 = 0;
 "15
+[e = _RC1 -> -> 0 `i `b ]
+[; ;LM016.c: 16: RC2 = 0;
+"16
+[e = _RC2 -> -> 0 `i `b ]
+[; ;LM016.c: 17: PORTD = command;
+"17
+[e = _PORTD _command ]
+[; ;LM016.c: 21: CTKSoftDelay(50);
+"21
+[e ( _CTKSoftDelay (1 -> -> 50 `i `ui ]
+[; ;LM016.c: 22: RC3 = 1;
+"22
+[e = _RC3 -> -> 1 `i `b ]
+[; ;LM016.c: 23: RC3 = 0;
+"23
+[e = _RC3 -> -> 0 `i `b ]
+[; ;LM016.c: 24: }
+"24
+[e :UE 260 ]
+}
+"27
+[v _lcd_write_data `(v 1 ef1`uc ]
+{
+[; ;LM016.c: 27: void lcd_write_data(unsigned char data){
+[e :U _lcd_write_data ]
+[v _data `uc 1 r1 ]
+[f ]
+[; ;LM016.c: 28: RC1 = 1;
+"28
+[e = _RC1 -> -> 1 `i `b ]
+[; ;LM016.c: 29: RC2 = 0;
+"29
+[e = _RC2 -> -> 0 `i `b ]
+[; ;LM016.c: 30: PORTD = data;
+"30
+[e = _PORTD _data ]
+[; ;LM016.c: 34: CTKSoftDelay(30);
+"34
+[e ( _CTKSoftDelay (1 -> -> 30 `i `ui ]
+[; ;LM016.c: 35: RC3 = 1;
+"35
+[e = _RC3 -> -> 1 `i `b ]
+[; ;LM016.c: 36: RC3 = 0;
+"36
+[e = _RC3 -> -> 0 `i `b ]
+[; ;LM016.c: 37: }
+"37
+[e :UE 261 ]
+}
+"40
+[v _lcd_wait_for_busy `(v 1 ef ]
+{
+[; ;LM016.c: 40: void lcd_wait_for_busy(void){
+[e :U _lcd_wait_for_busy ]
+[f ]
+"41
+[v _readin `uc 1 a ]
+[; ;LM016.c: 41: unsigned char readin = 0;
+[e = _readin -> -> 0 `i `uc ]
+[; ;LM016.c: 42: do {
+"42
+[e :U 265 ]
+{
+[; ;LM016.c: 43: RC1 = 0;
+"43
+[e = _RC1 -> -> 0 `i `b ]
+[; ;LM016.c: 44: RC2 = 1;
+"44
+[e = _RC2 -> -> 1 `i `b ]
+[; ;LM016.c: 45: TRISD = 0xFF;
+"45
+[e = _TRISD -> -> 255 `i `uc ]
+[; ;LM016.c: 46: RC3 = 1;
+"46
+[e = _RC3 -> -> 1 `i `b ]
+[; ;LM016.c: 47: readin = PORTD;
+"47
+[e = _readin _PORTD ]
+[; ;LM016.c: 48: RC3 = 0;
+"48
+[e = _RC3 -> -> 0 `i `b ]
+"49
+}
+[; ;LM016.c: 49: }while(RD7 == 1);
+[e $ == -> _RD7 `i -> 1 `i 265  ]
+[e :U 264 ]
+[; ;LM016.c: 50: TRISD = 0x00;
+"50
+[e = _TRISD -> -> 0 `i `uc ]
+[; ;LM016.c: 51: }
+"51
 [e :UE 262 ]
 }
-"18
-[v _Display_num `(v 1 ef1`uc ]
+"53
+[v _API_LCD_INIT `(v 1 ef ]
 {
-[; ;74HC595.h: 17: void Display_num(unsigned char code)
-[; ;74HC595.h: 18: {
-[e :U _Display_num ]
-[v _code `uc 1 r1 ]
+[; ;LM016.c: 53: void API_LCD_INIT(void){
+[e :U _API_LCD_INIT ]
 [f ]
-[; ;74HC595.h: 20: }
-"20
-[e :UE 263 ]
-}
-[; ;stdio.h: 12: typedef int ptrdiff_t;
-[; ;stdio.h: 13: typedef unsigned size_t;
-[; ;stdio.h: 14: typedef unsigned short wchar_t;
-[; ;stdarg.h: 31: typedef void * va_list[1];
-[; ;stdarg.h: 34: extern void * __va_start(void);
-[; ;stdarg.h: 37: extern void * __va_arg(void *, ...);
-[; ;stdio.h: 27: extern int errno;
-[; ;stdio.h: 58: struct __prbuf
-[; ;stdio.h: 59: {
-[; ;stdio.h: 60: char * ptr;
-[; ;stdio.h: 61: void (* func)(char);
-[; ;stdio.h: 62: };
-[; ;conio.h: 17: extern int errno;
-[; ;conio.h: 20: extern void init_uart(void);
-[; ;conio.h: 22: extern char getch(void);
-[; ;conio.h: 23: extern char getche(void);
-[; ;conio.h: 24: extern void putch(char);
-[; ;conio.h: 25: extern void ungetch(char);
-[; ;conio.h: 27: extern bit kbhit(void);
-[; ;conio.h: 31: extern char * cgets(char *);
-[; ;conio.h: 32: extern void cputs(const char *);
-[; ;stdio.h: 103: extern int cprintf(char *, ...);
-[; ;stdio.h: 108: extern int _doprnt(struct __prbuf *, const register char *, register va_list);
-[; ;stdio.h: 195: extern char * gets(char *);
-[; ;stdio.h: 196: extern int puts(const char *);
-[; ;stdio.h: 197: extern int scanf(const char *, ...);
-[; ;stdio.h: 198: extern int sscanf(const char *, const char *, ...);
-[; ;stdio.h: 199: extern int vprintf(const char *, va_list);
-[; ;stdio.h: 200: extern int vsprintf(char *, const char *, va_list);
-[; ;stdio.h: 201: extern int vscanf(const char *, va_list ap);
-[; ;stdio.h: 202: extern int vsscanf(const char *, const char *, va_list);
-[; ;stdio.h: 206: extern int sprintf(char *, const char *, ...);
-[; ;stdio.h: 207: extern int printf(const char *, ...);
-"22 C:\CTK\CTK80A 150928\CTK80A_Jas\main.c
-[i _KeyEvent_PendKeyCode
--> -> 1 `i `uc
-]
-[; ;main.c: 22: unsigned char KeyEvent_PendKeyCode = 1;
-"23
-[i _KeyEvent_KeyTime
--> -> -> 0 `i `l `ul
-]
-[; ;main.c: 23: unsigned long KeyEvent_KeyTime = 0;
-"24
-[i _KeyEvent_KeyCode
--> -> 1 `i `uc
-]
-[; ;main.c: 24: unsigned char KeyEvent_KeyCode = 1;
-"26
-[v _setKeyEventDealed `(v 1 ef ]
-{
-[; ;main.c: 26: void setKeyEventDealed(){
-[e :U _setKeyEventDealed ]
-[f ]
-[; ;main.c: 27: KeyEvent_KeyCode = 1;
-"27
-[e = _KeyEvent_KeyCode -> -> 1 `i `uc ]
-[; ;main.c: 28: }
-"28
-[e :UE 265 ]
-}
-"29
-[v _setKeyEventDispatchered `(v 1 ef ]
-{
-[; ;main.c: 29: void setKeyEventDispatchered(){
-[e :U _setKeyEventDispatchered ]
-[f ]
-[; ;main.c: 30: KeyEvent_PendKeyCode = 1;
-"30
-[e = _KeyEvent_PendKeyCode -> -> 1 `i `uc ]
-[; ;main.c: 31: KeyEvent_KeyTime = OS_Time;
-"31
-[e = _KeyEvent_KeyTime _OS_Time ]
-[; ;main.c: 32: }
-"32
+[; ;LM016.c: 54: lcd_write_command(0x38);
+"54
+[e ( _lcd_write_command (1 -> -> 56 `i `uc ]
+[; ;LM016.c: 55: lcd_write_command(0x0c);
+"55
+[e ( _lcd_write_command (1 -> -> 12 `i `uc ]
+[; ;LM016.c: 56: lcd_write_command(0x06);
+"56
+[e ( _lcd_write_command (1 -> -> 6 `i `uc ]
+[; ;LM016.c: 57: lcd_write_command(0x01);
+"57
+[e ( _lcd_write_command (1 -> -> 1 `i `uc ]
+[; ;LM016.c: 58: CTKSoftDelay(1000);
+"58
+[e ( _CTKSoftDelay (1 -> -> 1000 `i `ui ]
+[; ;LM016.c: 59: }
+"59
 [e :UE 266 ]
 }
-"33
-[v _handlerKeyEventInput `(v 1 ef1`i ]
+"60
+[v _API_LCD_CLEAR `(v 1 ef ]
 {
-[; ;main.c: 33: void handlerKeyEventInput(int keyCode){
-[e :U _handlerKeyEventInput ]
-[v _keyCode `i 1 r1 ]
+[; ;LM016.c: 60: void API_LCD_CLEAR(void){
+[e :U _API_LCD_CLEAR ]
 [f ]
-[; ;main.c: 35: if(keyCode == 2 || keyCode == 3 || keyCode == 4){
-"35
-[e $ ! || || == _keyCode -> 2 `i == _keyCode -> 3 `i == _keyCode -> 4 `i 268  ]
-{
-[; ;main.c: 36: if(KeyEvent_PendKeyCode != keyCode){
-"36
-[e $ ! != -> _KeyEvent_PendKeyCode `i _keyCode 269  ]
-{
-[; ;main.c: 37: KeyEvent_PendKeyCode = keyCode;
-"37
-[e = _KeyEvent_PendKeyCode -> _keyCode `uc ]
-[; ;main.c: 38: KeyEvent_KeyTime = OS_Time;
-"38
-[e = _KeyEvent_KeyTime _OS_Time ]
-"39
-}
-[e :U 269 ]
-"40
-}
-[e :U 268 ]
-[; ;main.c: 39: }
-[; ;main.c: 40: }
-[; ;main.c: 41: }
-"41
+[; ;LM016.c: 61: lcd_write_command(0x01);
+"61
+[e ( _lcd_write_command (1 -> -> 1 `i `uc ]
+[; ;LM016.c: 62: CTKSoftDelay(1000);
+"62
+[e ( _CTKSoftDelay (1 -> -> 1000 `i `ui ]
+[; ;LM016.c: 63: }
+"63
 [e :UE 267 ]
 }
-"42
-[v _handlerKeyEvent `(v 1 ef ]
+"64
+[v _API_LCD_PRINTString `(v 1 ef1`*uc ]
 {
-[; ;main.c: 42: void handlerKeyEvent(){
-[e :U _handlerKeyEvent ]
+[; ;LM016.c: 64: void API_LCD_PRINTString(unsigned char *charPointer){
+[e :U _API_LCD_PRINTString ]
+[v _charPointer `*uc 1 r1 ]
 [f ]
-[; ;main.c: 43: setKeyEventDealed();
-"43
-[e ( _setKeyEventDealed ..  ]
-[; ;main.c: 44: if(KeyEvent_PendKeyCode == 2 && RB4 != 2){
-"44
-[e $ ! && == -> _KeyEvent_PendKeyCode `i -> 2 `i != -> _RB4 `i -> 2 `i 271  ]
+[; ;LM016.c: 65: while(*charPointer != 0) {
+"65
+[e $U 269  ]
+[e :U 270 ]
 {
-[; ;main.c: 45: KeyEvent_KeyCode = 2;
-"45
-[e = _KeyEvent_KeyCode -> -> 2 `i `uc ]
-[; ;main.c: 46: setKeyEventDispatchered();
-"46
-[e ( _setKeyEventDispatchered ..  ]
-"47
+[; ;LM016.c: 66: lcd_write_data(*charPointer);
+"66
+[e ( _lcd_write_data (1 *U _charPointer ]
+[; ;LM016.c: 67: charPointer++;
+"67
+[e ++ _charPointer * -> -> 1 `i `x -> -> # *U _charPointer `i `x ]
+"68
 }
-[; ;main.c: 47: }else if(KeyEvent_PendKeyCode == 3 && RB3 != 3){
-[e $U 272  ]
+[e :U 269 ]
+"65
+[e $ != -> *U _charPointer `i -> 0 `i 270  ]
 [e :U 271 ]
-[e $ ! && == -> _KeyEvent_PendKeyCode `i -> 3 `i != -> _RB3 `i -> 3 `i 273  ]
-{
-[; ;main.c: 48: KeyEvent_KeyCode = 3;
-"48
-[e = _KeyEvent_KeyCode -> -> 3 `i `uc ]
-[; ;main.c: 49: setKeyEventDispatchered();
-"49
-[e ( _setKeyEventDispatchered ..  ]
-"50
+[; ;LM016.c: 68: }
+[; ;LM016.c: 69: }
+"69
+[e :UE 268 ]
 }
-[; ;main.c: 50: }else if(KeyEvent_PendKeyCode == 4 && RB5 != 4){
+"70
+[v _API_LCD_PRINT_LINE `(v 1 ef3`uc`*uc`uc ]
+{
+[; ;LM016.c: 70: void API_LCD_PRINT_LINE(unsigned char linenumber, unsigned char *charPointer, unsigned char postion){
+[e :U _API_LCD_PRINT_LINE ]
+[v _linenumber `uc 1 r1 ]
+[v _charPointer `*uc 1 r2 ]
+[v _postion `uc 1 r3 ]
+[f ]
+[; ;LM016.c: 71: if(linenumber == 0){
+"71
+[e $ ! == -> _linenumber `i -> 0 `i 273  ]
+{
+[; ;LM016.c: 72: lcd_write_command(0x0c);
+"72
+[e ( _lcd_write_command (1 -> -> 12 `i `uc ]
+[; ;LM016.c: 73: lcd_write_command(0x80 + postion);
+"73
+[e ( _lcd_write_command (1 -> + -> 128 `i -> _postion `i `uc ]
+"74
+}
+[; ;LM016.c: 74: }else if(linenumber == 1){
 [e $U 274  ]
 [e :U 273 ]
-[e $ ! && == -> _KeyEvent_PendKeyCode `i -> 4 `i != -> _RB5 `i -> 4 `i 275  ]
+[e $ ! == -> _linenumber `i -> 1 `i 275  ]
 {
-[; ;main.c: 51: KeyEvent_KeyCode = 4;
-"51
-[e = _KeyEvent_KeyCode -> -> 4 `i `uc ]
-[; ;main.c: 52: setKeyEventDispatchered();
-"52
-[e ( _setKeyEventDispatchered ..  ]
-"53
+[; ;LM016.c: 75: lcd_write_command(0xc0 + postion);
+"75
+[e ( _lcd_write_command (1 -> + -> 192 `i -> _postion `i `uc ]
+[; ;LM016.c: 76: lcd_write_command(0x0c);
+"76
+[e ( _lcd_write_command (1 -> -> 12 `i `uc ]
+"77
 }
 [e :U 275 ]
-"54
+"78
 [e :U 274 ]
-[e :U 272 ]
-[; ;main.c: 53: }
-[; ;main.c: 54: }
-[e :UE 270 ]
+[; ;LM016.c: 77: }
+[; ;LM016.c: 78: API_LCD_PRINTString(charPointer);
+[e ( _API_LCD_PRINTString (1 _charPointer ]
+[; ;LM016.c: 79: }
+"79
+[e :UE 272 ]
 }
-"57
-[i _LCD_PAGE
--> -> 0 `i `uc
-]
-[; ;main.c: 57: unsigned char LCD_PAGE = 0;
-"58
-[i _LCD_POINT
--> -> 0 `i `ui
-]
-[; ;main.c: 58: unsigned int LCD_POINT = 0;
-"60
-[v _updateLCDShow `(v 1 ef2`uc`uc ]
+"80
+[v _API_LCD_MOVE_POINT `(v 1 ef1`uc ]
 {
-[; ;main.c: 60: void updateLCDShow(unsigned char page,unsigned char point_line){
-[e :U _updateLCDShow ]
-[v _page `uc 1 r1 ]
-[v _point_line `uc 1 r2 ]
+[; ;LM016.c: 80: void API_LCD_MOVE_POINT(unsigned char position){
+[e :U _API_LCD_MOVE_POINT ]
+[v _position `uc 1 r1 ]
 [f ]
-[; ;main.c: 61: if(page == LCD_PAGE)return;
-"61
-[e $ ! == -> _page `i -> _LCD_PAGE `i 277  ]
-[e $UE 276  ]
+"81
+[v _i `uc 1 a ]
+[; ;LM016.c: 81: unsigned char i = 0;
+[e = _i -> -> 0 `i `uc ]
+[; ;LM016.c: 82: lcd_write_command(0x0f);
+"82
+[e ( _lcd_write_command (1 -> -> 15 `i `uc ]
+[; ;LM016.c: 83: lcd_write_command(0x02);
+"83
+[e ( _lcd_write_command (1 -> -> 2 `i `uc ]
+[; ;LM016.c: 84: while(i++ < position) {
+"84
+[e $U 277  ]
+[e :U 278 ]
+{
+[; ;LM016.c: 85: lcd_write_command(0x14);
+"85
+[e ( _lcd_write_command (1 -> -> 20 `i `uc ]
+"86
+}
 [e :U 277 ]
-[; ;main.c: 62: LCD_PAGE = page;
-"62
-[e = _LCD_PAGE _page ]
-"63
-[v F3219 `uc -> 15 `i s ]
-[i F3219
+"84
+[e $ < -> ++ _i -> -> 1 `i `uc `i -> _position `i 278  ]
+[e :U 279 ]
+[; ;LM016.c: 86: }
+[; ;LM016.c: 87: }
+"87
+[e :UE 276 ]
+}
+"89
+[v _lcd_print_line1 `(v 1 ef3`*uc`uc`uc ]
+{
+[; ;LM016.c: 89: void lcd_print_line1(unsigned char *charPointer, unsigned char postion, unsigned char clear) {
+[e :U _lcd_print_line1 ]
+[v _charPointer `*uc 1 r1 ]
+[v _postion `uc 1 r2 ]
+[v _clear `uc 1 r3 ]
+[f ]
+[; ;LM016.c: 90: if(clear)API_LCD_CLEAR();
+"90
+[e $ ! != -> _clear `i -> -> -> 0 `i `uc `i 281  ]
+[e ( _API_LCD_CLEAR ..  ]
+[e :U 281 ]
+[; ;LM016.c: 91: API_LCD_PRINT_LINE(0, charPointer, postion);
+"91
+[e ( _API_LCD_PRINT_LINE (3 , , -> -> 0 `i `uc _charPointer _postion ]
+[; ;LM016.c: 92: }
+"92
+[e :UE 280 ]
+}
+"95
+[v _lcd_print_line2 `(v 1 ef2`*uc`uc ]
+{
+[; ;LM016.c: 95: void lcd_print_line2(unsigned char *charPointer, unsigned char postion) {
+[e :U _lcd_print_line2 ]
+[v _charPointer `*uc 1 r1 ]
+[v _postion `uc 1 r2 ]
+[f ]
+[; ;LM016.c: 96: API_LCD_PRINT_LINE(1, charPointer, postion);
+"96
+[e ( _API_LCD_PRINT_LINE (3 , , -> -> 1 `i `uc _charPointer _postion ]
+[; ;LM016.c: 97: }
+"97
+[e :UE 282 ]
+}
+"99
+[v _lcd_move_char `(v 1 ef1`uc ]
+{
+[; ;LM016.c: 99: void lcd_move_char(unsigned char postion){
+[e :U _lcd_move_char ]
+[v _postion `uc 1 r1 ]
+[f ]
+[; ;LM016.c: 100: API_LCD_MOVE_POINT(postion);
+"100
+[e ( _API_LCD_MOVE_POINT (1 _postion ]
+[; ;LM016.c: 101: }
+"101
+[e :UE 283 ]
+}
+"106
+[v _num_to_char `(v 1 ef2`i`uc ]
+{
+[; ;LM016.c: 106: void num_to_char(int num, unsigned char point) {
+[e :U _num_to_char ]
+[v _num `i 1 r1 ]
+[v _point `uc 1 r2 ]
+[f ]
+"108
+[v _tmp `uc 1 a ]
+[v _t `uc 1 a ]
+[; ;LM016.c: 108: unsigned char tmp, t = 0;
+[e = _t -> -> 0 `i `uc ]
+"110
+[v F3046 `uc -> 4 `i s ]
+[i F3046
 :U ..
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
 -> -> 0 `i `uc
 ..
 ]
-[v _data `uc -> 15 `i a ]
-[; ;main.c: 63: unsigned char data[15] = {0};
-[e = _data F3219 ]
-[; ;main.c: 64: switch(LCD_PAGE){
-"64
-[e $U 279  ]
-{
-[; ;main.c: 65: case 0:{
-"65
-[e :U 280 ]
-{
-[; ;main.c: 66: sprintf(data, "Bv13.2V Soc0000");
-"66
-[e ( _sprintf (1 , &U _data :s 1C ]
-"67
-}
-[; ;main.c: 67: }break;
-[e $U 278  ]
-[; ;main.c: 68: case 1:{
-"68
-[e :U 281 ]
-{
-"70
-}
-[; ;main.c: 70: }break;
-[e $U 278  ]
-"71
-}
-[; ;main.c: 71: }
-[e $U 278  ]
-"64
-[e :U 279 ]
-[e [\ _LCD_PAGE , $ -> -> 0 `i `uc 280
- , $ -> -> 1 `i `uc 281
- 278 ]
-"71
-[e :U 278 ]
-[; ;main.c: 72: }
-"72
-[e :UE 276 ]
-}
-"80
-[i _LCD_CurrentState
--> -> 0 `i `uc
-]
-[; ;main.c: 80: unsigned char LCD_CurrentState = 0;
-"81
-[i _LCD_LastState
--> -> 0 `i `uc
-]
-[; ;main.c: 81: unsigned char LCD_LastState = 0;
-"82
-[i _LCD_StateTime
--> -> -> 0 `i `l `ul
-]
-[; ;main.c: 82: unsigned long LCD_StateTime = 0;
-"83
-[v _setLCDBackground `(v 1 ef1`uc ]
-{
-[; ;main.c: 83: void setLCDBackground(unsigned char open){
-[e :U _setLCDBackground ]
-[v _open `uc 1 r1 ]
-[f ]
-[; ;main.c: 84: if(open == 1){
-"84
-[e $ ! == -> _open `i -> 1 `i 283  ]
-{
-[; ;main.c: 85: (LATC &= ~(1 << 4));
-"85
-[e =& _LATC -> ~ << -> 1 `i -> 4 `i `uc ]
-"86
-}
-[; ;main.c: 86: }else {
-[e $U 284  ]
-[e :U 283 ]
-{
-[; ;main.c: 87: (LATC |= (1 << 4));
-"87
-[e =| _LATC -> << -> 1 `i -> 4 `i `uc ]
-"88
-}
-[e :U 284 ]
-[; ;main.c: 88: }
-[; ;main.c: 89: }
-"89
-[e :UE 282 ]
-}
-"90
-[v _tranformLCDState `(v 1 ef1`i ]
-{
-[; ;main.c: 90: void tranformLCDState(int state){
-[e :U _tranformLCDState ]
-[v _state `i 1 r1 ]
-[f ]
-[; ;main.c: 91: if(state != LCD_CurrentState){
-"91
-[e $ ! != _state -> _LCD_CurrentState `i 286  ]
-{
-[; ;main.c: 92: LCD_LastState = LCD_CurrentState;
-"92
-[e = _LCD_LastState _LCD_CurrentState ]
-[; ;main.c: 93: LCD_CurrentState = state;
-"93
-[e = _LCD_CurrentState -> _state `uc ]
-[; ;main.c: 94: LCD_StateTime = OS_Time;
-"94
-[e = _LCD_StateTime _OS_Time ]
-"95
-}
-[e :U 286 ]
-[; ;main.c: 95: }
-[; ;main.c: 96: }
-"96
-[e :UE 285 ]
-}
-"97
-[v _handlerLCD `(ui 1 ef ]
-{
-[; ;main.c: 97: unsigned int handlerLCD(){
-[e :U _handlerLCD ]
-[f ]
-[; ;main.c: 98: switch(LCD_CurrentState){
-"98
-[e $U 289  ]
-{
-[; ;main.c: 99: case 0:{
-"99
-[e :U 290 ]
-{
-[; ;main.c: 100: if(LCD_LastState != 0){
-"100
-[e $ ! != -> _LCD_LastState `i -> 0 `i 291  ]
-{
-[; ;main.c: 101: API_LCD_INIT();
-"101
-[e ( _API_LCD_INIT ..  ]
-[; ;main.c: 102: API_LCD_CLEAR();
-"102
-[e ( _API_LCD_CLEAR ..  ]
-"103
-}
-[e :U 291 ]
-[; ;main.c: 103: }
-[; ;main.c: 104: tranformLCDState(2);
-"104
-[e ( _tranformLCDState (1 -> 2 `i ]
-"105
-}
-[; ;main.c: 105: }break;
-[e $U 288  ]
-[; ;main.c: 106: case 1:{
-"106
-[e :U 292 ]
-{
-[; ;main.c: 107: if(LCD_LastState != 1){
-"107
-[e $ ! != -> _LCD_LastState `i -> 1 `i 293  ]
-{
-[; ;main.c: 108: API_LCD_CLEAR();
-"108
-[e ( _API_LCD_CLEAR ..  ]
-"109
-}
-[e :U 293 ]
-[; ;main.c: 109: }
-[; ;main.c: 110: setLCDBackground(0);
-"110
-[e ( _setLCDBackground (1 -> -> 0 `i `uc ]
-[; ;main.c: 111: if(KeyEvent_KeyCode != 1){
+[v _lcdNum4 `uc -> 4 `i a ]
+[; ;LM016.c: 110: unsigned char lcdNum4[4] = {0,0,0,0};
+[e = _lcdNum4 F3046 ]
+[; ;LM016.c: 111: switch(point) {
 "111
-[e $ ! != -> _KeyEvent_KeyCode `i -> 1 `i 294  ]
+[e $U 286  ]
 {
-[; ;main.c: 112: setKeyEventDealed();
+[; ;LM016.c: 112: case 1:
 "112
-[e ( _setKeyEventDealed ..  ]
-[; ;main.c: 113: tranformLCDState(2);
+[e :U 287 ]
+[; ;LM016.c: 113: lcdNum4[0] = '0' + num;
 "113
-[e ( _tranformLCDState (1 -> 2 `i ]
+[e = *U + &U _lcdNum4 * -> -> -> 0 `i `ui `ux -> -> # *U &U _lcdNum4 `ui `ux -> + -> 48 `ui -> _num `ui `uc ]
+[; ;LM016.c: 114: break;
 "114
-}
-[e :U 294 ]
+[e $U 285  ]
+[; ;LM016.c: 115: case 2:
 "115
-}
-[; ;main.c: 114: }
-[; ;main.c: 115: }break;
-[e $U 288  ]
-[; ;main.c: 116: case 2:{
-"116
-[e :U 295 ]
-{
-[; ;main.c: 117: if(LCD_LastState != 2){
-"117
-[e $ ! != -> _LCD_LastState `i -> 2 `i 296  ]
-{
-[; ;main.c: 118: setLCDBackground(1);
-"118
-[e ( _setLCDBackground (1 -> -> 1 `i `uc ]
-"120
-}
-[; ;main.c: 120: }else{
-[e $U 297  ]
-[e :U 296 ]
-{
-"122
-}
-[e :U 297 ]
-"123
-}
-[; ;main.c: 122: }
-[; ;main.c: 123: }break;
-[e $U 288  ]
-"124
-}
-[; ;main.c: 124: }
-[e $U 288  ]
-"98
-[e :U 289 ]
-[e [\ _LCD_CurrentState , $ -> -> 0 `i `uc 290
- , $ -> -> 1 `i `uc 292
- , $ -> -> 2 `i `uc 295
- 288 ]
-"124
 [e :U 288 ]
-[; ;main.c: 125: }
+[; ;LM016.c: 116: tmp = num / 10;
+"116
+[e = _tmp -> / _num -> 10 `i `uc ]
+[; ;LM016.c: 117: lcdNum4[0] = '0' + tmp;
+"117
+[e = *U + &U _lcdNum4 * -> -> -> 0 `i `ui `ux -> -> # *U &U _lcdNum4 `ui `ux -> + -> 48 `ui -> _tmp `ui `uc ]
+[; ;LM016.c: 118: tmp = num % 10;
+"118
+[e = _tmp -> % _num -> 10 `i `uc ]
+[; ;LM016.c: 119: lcdNum4[1] = '0' + tmp;
+"119
+[e = *U + &U _lcdNum4 * -> -> -> 1 `i `ui `ux -> -> # *U &U _lcdNum4 `ui `ux -> + -> 48 `ui -> _tmp `ui `uc ]
+[; ;LM016.c: 120: lcdNum4[2] = '\0';
+"120
+[e = *U + &U _lcdNum4 * -> -> -> 2 `i `ui `ux -> -> # *U &U _lcdNum4 `ui `ux -> -> 0 `ui `uc ]
+[; ;LM016.c: 121: break;
+"121
+[e $U 285  ]
+[; ;LM016.c: 122: case 3:
+"122
+[e :U 289 ]
+[; ;LM016.c: 123: tmp = num / 100;
+"123
+[e = _tmp -> / _num -> 100 `i `uc ]
+[; ;LM016.c: 124: if (tmp != 0) {
+"124
+[e $ ! != -> _tmp `i -> 0 `i 290  ]
+{
+[; ;LM016.c: 125: lcdNum4[t] = '0' + tmp;
 "125
-[e :UE 287 ]
+[e = *U + &U _lcdNum4 * -> _t `ux -> -> # *U &U _lcdNum4 `ui `ux -> + -> 48 `ui -> _tmp `ui `uc ]
+[; ;LM016.c: 126: t++;
+"126
+[e ++ _t -> -> 1 `i `uc ]
+"127
 }
-"132
-[v _setPWM `(v 1 ef1`uc ]
-{
-[; ;main.c: 132: void setPWM(char open){
-[e :U _setPWM ]
-[v _open `uc 1 r1 ]
-[f ]
-[; ;main.c: 133: if(open == 1){
+[e :U 290 ]
+[; ;LM016.c: 127: }
+[; ;LM016.c: 129: tmp = (num / 10) % 10;
+"129
+[e = _tmp -> % / _num -> 10 `i -> 10 `i `uc ]
+[; ;LM016.c: 130: lcdNum4[t] = '0' + tmp;
+"130
+[e = *U + &U _lcdNum4 * -> _t `ux -> -> # *U &U _lcdNum4 `ui `ux -> + -> 48 `ui -> _tmp `ui `uc ]
+[; ;LM016.c: 131: t++;
+"131
+[e ++ _t -> -> 1 `i `uc ]
+[; ;LM016.c: 133: lcdNum4[t] = '.';
 "133
-[e $ ! == -> _open `i -> 1 `i 299  ]
-{
-[; ;main.c: 134: (PORTA &= ~(1 << 0));
+[e = *U + &U _lcdNum4 * -> _t `ux -> -> # *U &U _lcdNum4 `ui `ux -> -> 46 `ui `uc ]
+[; ;LM016.c: 134: t++;
 "134
-[e =& _PORTA -> ~ << -> 1 `i -> 0 `i `uc ]
-"135
-}
-[; ;main.c: 135: }else{
-[e $U 300  ]
-[e :U 299 ]
-{
-[; ;main.c: 136: (PORTA |= (1 << 0));
+[e ++ _t -> -> 1 `i `uc ]
+[; ;LM016.c: 136: tmp = num % 10;
 "136
-[e =| _PORTA -> << -> 1 `i -> 0 `i `uc ]
+[e = _tmp -> % _num -> 10 `i `uc ]
+[; ;LM016.c: 137: lcdNum4[t] = '0' + tmp;
 "137
-}
-[e :U 300 ]
-[; ;main.c: 137: }
-[; ;main.c: 138: }
+[e = *U + &U _lcdNum4 * -> _t `ux -> -> # *U &U _lcdNum4 `ui `ux -> + -> 48 `ui -> _tmp `ui `uc ]
+[; ;LM016.c: 138: t++;
 "138
-[e :UE 298 ]
-}
-"139
-[v _openOrClosePWM `(v 1 ef1`uc ]
-{
-[; ;main.c: 139: void openOrClosePWM(unsigned char open){
-[e :U _openOrClosePWM ]
-[v _open `uc 1 r1 ]
-[f ]
-[; ;main.c: 140: PWM_CONTROL_FLAG = open;
+[e ++ _t -> -> 1 `i `uc ]
+[; ;LM016.c: 140: lcdNum4[t] = '\0';
 "140
-[e = _PWM_CONTROL_FLAG _open ]
-[; ;main.c: 141: TMR2IE = open;
+[e = *U + &U _lcdNum4 * -> _t `ux -> -> # *U &U _lcdNum4 `ui `ux -> -> 0 `ui `uc ]
+[; ;LM016.c: 141: break;
 "141
-[e = _TMR2IE -> _open `b ]
-[; ;main.c: 142: setPWM(open);
+[e $U 285  ]
+[; ;LM016.c: 142: default:
 "142
-[e ( _setPWM (1 _open ]
-[; ;main.c: 143: }
+[e :U 291 ]
+[; ;LM016.c: 143: break;
 "143
-[e :UE 301 ]
-}
+[e $U 285  ]
 "144
-[v _handlerPWMInterrupt `(v 1 ef ]
-{
-[; ;main.c: 144: void handlerPWMInterrupt(){
-[e :U _handlerPWMInterrupt ]
-[f ]
-[; ;main.c: 145: if(PWM_CONTROL_FLAG == 0){
+}
+[; ;LM016.c: 144: }
+[e $U 285  ]
+"111
+[e :U 286 ]
+[e [\ _point , $ -> -> 1 `i `uc 287
+ , $ -> -> 2 `i `uc 288
+ , $ -> -> 3 `i `uc 289
+ 291 ]
+"144
+[e :U 285 ]
+[; ;LM016.c: 145: }
 "145
-[e $ ! == -> _PWM_CONTROL_FLAG `i -> 0 `i 303  ]
-{
-[; ;main.c: 146: openOrClosePWM(0);
-"146
-[e ( _openOrClosePWM (1 -> -> 0 `i `uc ]
-"147
+[e :UE 284 ]
 }
-[; ;main.c: 147: }else{
-[e $U 304  ]
-[e :U 303 ]
-{
-[; ;main.c: 148: if(PWM_CONTROL_TIMEOUT != 0){
-"148
-[e $ ! != _PWM_CONTROL_TIMEOUT -> -> -> 0 `i `l `ul 305  ]
-{
-"150
-}
-[e :U 305 ]
-"151
-}
-[e :U 304 ]
-[; ;main.c: 150: }
-[; ;main.c: 151: }
-[; ;main.c: 152: }
-"152
-[e :UE 302 ]
-}
-"155
-[i _isSettingMode
--> 0 `i
-]
-[; ;main.c: 155: bit isSettingMode = 0;
-"156
-[i _isSaveSettings
--> 0 `i
-]
-[; ;main.c: 156: bit isSaveSettings = 0;
-"157
-[i _rb4_flag
--> 0 `i
-]
-[; ;main.c: 157: bit rb4_flag = 0;
-[; ;main.c: 158: bit is_second_setting;
-[; ;main.c: 159: bit needInitSetting;
-"160
-[i _batteryType
--> -> 0 `i `uc
-]
-[; ;main.c: 160: unsigned char batteryType = 0;
-[; ;main.c: 161: unsigned char const *charPointer;
-"169
-[i _OS_CurrentState
--> -> 0 `i `uc
-]
-[; ;main.c: 169: unsigned char OS_CurrentState = 0;
-"170
-[i _OS_StateTime
--> -> -> 0 `i `l `ul
-]
-[; ;main.c: 170: unsigned long OS_StateTime = 0;
-"172
-[v _tranform_OS_State `(v 1 ef1`i ]
-{
-[; ;main.c: 172: void tranform_OS_State(int state){
-[e :U _tranform_OS_State ]
-[v _state `i 1 r1 ]
-[f ]
-[; ;main.c: 173: if(state != OS_CurrentState){
-"173
-[e $ ! != _state -> _OS_CurrentState `i 307  ]
-{
-[; ;main.c: 174: OS_CurrentState = state;
-"174
-[e = _OS_CurrentState -> _state `uc ]
-[; ;main.c: 175: OS_StateTime = OS_Time;
-"175
-[e = _OS_StateTime _OS_Time ]
-"176
-}
-[e :U 307 ]
-[; ;main.c: 176: }
-[; ;main.c: 177: }
-"177
-[e :UE 306 ]
-}
-"178
-[v _handlerOSStateMachine `(uc 1 ef ]
-{
-[; ;main.c: 178: unsigned char handlerOSStateMachine(){
-[e :U _handlerOSStateMachine ]
-[f ]
-[; ;main.c: 179: switch(OS_CurrentState){
-"179
-[e $U 310  ]
-{
-[; ;main.c: 180: case 0:{
-"180
-[e :U 311 ]
-{
-[; ;main.c: 181: (LATC |= (1 << 4));
-"181
-[e =| _LATC -> << -> 1 `i -> 4 `i `uc ]
-[; ;main.c: 182: PWM_CONTROL_FLAG = 0;
-"182
-[e = _PWM_CONTROL_FLAG -> -> 0 `i `uc ]
-"183
-}
-[; ;main.c: 183: }break;
-[e $U 309  ]
-[; ;main.c: 184: case 1:{
-"184
-[e :U 312 ]
-{
-"186
-}
-[; ;main.c: 186: }break;
-[e $U 309  ]
-[; ;main.c: 187: case 2:{
-"187
-[e :U 313 ]
-{
-"189
-}
-[; ;main.c: 189: }break;
-[e $U 309  ]
-"190
-}
-[; ;main.c: 190: }
-[e $U 309  ]
-"179
-[e :U 310 ]
-[e [\ _OS_CurrentState , $ -> -> 0 `i `uc 311
- , $ -> -> 1 `i `uc 312
- , $ -> -> 2 `i `uc 313
- 309 ]
-"190
-[e :U 309 ]
-[; ;main.c: 191: }
-"191
-[e :UE 308 ]
-}
-"193
-[v _main `(v 1 ef ]
-{
-[; ;main.c: 193: void main(){
-[e :U _main ]
-[f ]
-[; ;main.c: 194: system_state_init();
-"194
-[e ( _system_state_init ..  ]
-[; ;main.c: 195: LoadParamFromEPPROM();
-"195
-[e ( _LoadParamFromEPPROM ..  ]
-[; ;main.c: 197: API_LCD_INIT();
-"197
-[e ( _API_LCD_INIT ..  ]
-[; ;main.c: 198: API_LCD_CLEAR();
-"198
-[e ( _API_LCD_CLEAR ..  ]
-[; ;main.c: 199: (LATC |= (1 << 4));
-"199
-[e =| _LATC -> << -> 1 `i -> 4 `i `uc ]
-[; ;main.c: 200: KaiJi();
-"200
-[e ( _KaiJi ..  ]
-[; ;main.c: 201: while(1)
-"201
-[e :U 316 ]
-[; ;main.c: 202: {
-"202
-{
-[; ;main.c: 203: asm("CLRWDT");
-"203
-[; CLRWDT ;#
-[; ;main.c: 205: SelectMode();
-"205
-[e ( _SelectMode ..  ]
-[; ;main.c: 206: SystemModeType = 0x01;
-"206
-[e = _SystemModeType -> -> 1 `i `uc ]
-[; ;main.c: 207: LoadCurrentDealWith();
-"207
-[e ( _LoadCurrentDealWith ..  ]
-[; ;main.c: 208: SwitchBatteryState();
-"208
-[e ( _SwitchBatteryState ..  ]
-[; ;main.c: 209: LedDisplay();
-"209
-[e ( _LedDisplay ..  ]
-[; ;main.c: 210: if(PVCount > 50)
-"210
-[e $ ! > -> _PVCount `i -> 50 `i 318  ]
-[; ;main.c: 211: {
-"211
-{
-[; ;main.c: 212: PVCount = 0;
-"212
-[e = _PVCount -> -> 0 `i `uc ]
-[; ;main.c: 213: SolarPanelDealWith();
-"213
-[e ( _SolarPanelDealWith ..  ]
-"214
-}
-[e :U 318 ]
-[; ;main.c: 214: }
-[; ;main.c: 215: if(PWMChargeFlag == 1)
-"215
-[e $ ! == -> _PWMChargeFlag `i -> 1 `i 319  ]
-[; ;main.c: 216: {
-"216
-{
-[; ;main.c: 217: PWMChargeFlag = 0;
-"217
-[e = _PWMChargeFlag -> -> 0 `i `b ]
-[; ;main.c: 218: PWMCharge();
-"218
-[e ( _PWMCharge ..  ]
-"219
-}
-[e :U 319 ]
-[; ;main.c: 219: }
-[; ;main.c: 223: if (lcd_extinguwish_timer == 70) {
-"223
-[e $ ! == -> _lcd_extinguwish_timer `i -> 70 `i 320  ]
-{
-[; ;main.c: 225: lcd_extinguwish_timer++;
-"225
-[e ++ _lcd_extinguwish_timer -> -> 1 `i `uc ]
-[; ;main.c: 227: lcd_write_command(0x08);
-"227
-[e ( _lcd_write_command (1 -> -> 8 `i `uc ]
-"228
-}
-[e :U 320 ]
-[; ;main.c: 228: }
-[; ;main.c: 230: if (isSaveSettings) {
-"230
-[e $ ! _isSaveSettings 321  ]
-{
-[; ;main.c: 231: isSaveSettings = 0;
-"231
-[e = _isSaveSettings -> -> 0 `i `b ]
-[; ;main.c: 232: isNeedChange = 1;
-"232
-[e = _isNeedChange -> -> 1 `i `b ]
-[; ;main.c: 233: lcd_state = 2;
-"233
-[e = _lcd_state -> -> 2 `i `uc ]
-[; ;main.c: 234: isSettingMode = 0;
-"234
-[e = _isSettingMode -> -> 0 `i `b ]
-"236
-}
-[e :U 321 ]
-[; ;main.c: 236: }
-[; ;main.c: 238: if (isSettingMode && needInitSetting) {
-"238
-[e $ ! && _isSettingMode _needInitSetting 322  ]
-{
-[; ;main.c: 239: needInitSetting = 0;
-"239
-[e = _needInitSetting -> -> 0 `i `b ]
-[; ;main.c: 240: isNeedChange = 1;
-"240
-[e = _isNeedChange -> -> 1 `i `b ]
-[; ;main.c: 241: lcd_state = 3;
-"241
-[e = _lcd_state -> -> 3 `i `uc ]
-[; ;main.c: 242: is_second_setting = 0;
-"242
-[e = _is_second_setting -> -> 0 `i `b ]
-"243
-}
-[e :U 322 ]
-"245
-}
-[e :U 315 ]
-"201
-[e $U 316  ]
-[e :U 317 ]
-[; ;main.c: 243: }
-[; ;main.c: 245: }
-[; ;main.c: 246: }
-"246
-[e :UE 314 ]
-}
-"249
-[v F3247 `(v 1 tf ]
-[v _ISR_Timer `IF3247 1 e ]
-{
-[; ;main.c: 248: void interrupt ISR_Timer()
-[; ;main.c: 249: {
-[e :U _ISR_Timer ]
-[f ]
-[; ;main.c: 250: if(IOCBF3 && lcd_state != 0 && lcd_state != 1)
-"250
-[e $ ! && && _IOCBF3 != -> _lcd_state `i -> 0 `i != -> _lcd_state `i -> 1 `i 324  ]
-[; ;main.c: 251: {
-"251
-{
-[; ;main.c: 253: if (RB3 == 0) {
-"253
-[e $ ! == -> _RB3 `i -> 0 `i 325  ]
-{
-[; ;main.c: 254: handlerKeyEventInput(3);
-"254
-[e ( _handlerKeyEventInput (1 -> 3 `i ]
-"255
-}
-[e :U 325 ]
-[; ;main.c: 255: }
-[; ;main.c: 256: IOCBF3 = 0;
-"256
-[e = _IOCBF3 -> -> 0 `i `b ]
-"257
-}
-[e :U 324 ]
-[; ;main.c: 257: }
-[; ;main.c: 258: if(IOCBF5 && lcd_state != 0 && lcd_state != 1)
-"258
-[e $ ! && && _IOCBF5 != -> _lcd_state `i -> 0 `i != -> _lcd_state `i -> 1 `i 326  ]
-[; ;main.c: 259: {
-"259
-{
-[; ;main.c: 260: if (RB5 == 0) {
-"260
-[e $ ! == -> _RB5 `i -> 0 `i 327  ]
-{
-[; ;main.c: 261: handlerKeyEventInput(4);
-"261
-[e ( _handlerKeyEventInput (1 -> 4 `i ]
-"262
-}
-[e :U 327 ]
-[; ;main.c: 262: }
-[; ;main.c: 263: IOCBF5 = 0;
-"263
-[e = _IOCBF5 -> -> 0 `i `b ]
-"264
-}
-[e :U 326 ]
-[; ;main.c: 264: }
-[; ;main.c: 266: if(IOCBF4)
-"266
-[e $ ! _IOCBF4 328  ]
-[; ;main.c: 267: {
-"267
-{
-[; ;main.c: 269: if (RB4 == 0) {
-"269
-[e $ ! == -> _RB4 `i -> 0 `i 329  ]
-{
-[; ;main.c: 270: handlerKeyEventInput(2);
-"270
-[e ( _handlerKeyEventInput (1 -> 2 `i ]
-"271
-}
-[e :U 329 ]
-[; ;main.c: 271: }
-[; ;main.c: 273: IOCBF4 = 0;
-"273
-[e = _IOCBF4 -> -> 0 `i `b ]
-"274
-}
-[e :U 328 ]
-[; ;main.c: 274: }
-[; ;main.c: 276: if(TMR1IF)
-"276
-[e $ ! _TMR1IF 330  ]
-[; ;main.c: 277: {
-"277
-{
-[; ;main.c: 278: OS_Time ++;
-"278
-[e ++ _OS_Time -> -> -> 1 `i `l `ul ]
-[; ;main.c: 279: TMR1IF = 0;
-"279
-[e = _TMR1IF -> -> 0 `i `b ]
-[; ;main.c: 280: TMR1H = (65536 - (100000 / 4)) >> 8;
-"280
-[e = _TMR1H -> >> - -> 65536 `l / -> 100000 `l -> -> 4 `i `l -> 8 `i `uc ]
-[; ;main.c: 281: TMR1L = (65536 - (100000 / 4)) & 0xFF;
-"281
-[e = _TMR1L -> & - -> 65536 `l / -> 100000 `l -> -> 4 `i `l -> -> 255 `i `l `uc ]
-"282
-}
-[e :U 330 ]
-[; ;main.c: 282: }
-[; ;main.c: 283: if(TMR2IF)
-"283
-[e $ ! _TMR2IF 331  ]
-[; ;main.c: 284: {
-"284
-{
-[; ;main.c: 285: TMR2IF = 0;
-"285
-[e = _TMR2IF -> -> 0 `i `b ]
-[; ;main.c: 286: if(PWMFlag == 1)
-"286
-[e $ ! == -> _PWMFlag `i -> 1 `i 332  ]
-[; ;main.c: 287: {
-"287
-{
-[; ;main.c: 288: PwmCount++;
-"288
-[e ++ _PwmCount -> -> 1 `i `uc ]
-[; ;main.c: 290: if(PwmCount >= DutyRatio)
-"290
-[e $ ! >= -> _PwmCount `i -> _DutyRatio `i 333  ]
-[; ;main.c: 291: (PORTA |= (1 << 0));
-"291
-[e =| _PORTA -> << -> 1 `i -> 0 `i `uc ]
-[e $U 334  ]
-"292
-[e :U 333 ]
-[; ;main.c: 292: else
-[; ;main.c: 293: (PORTA &= ~(1 << 0));
-"293
-[e =& _PORTA -> ~ << -> 1 `i -> 0 `i `uc ]
-[e :U 334 ]
-"294
-}
-[e :U 332 ]
-[; ;main.c: 294: }
-[; ;main.c: 295: handlerPWMInterrupt();
-"295
-[e ( _handlerPWMInterrupt ..  ]
-"296
-}
-[e :U 331 ]
-[; ;main.c: 296: }
-[; ;main.c: 297: if(TMR4IF)
-"297
-[e $ ! _TMR4IF 335  ]
-[; ;main.c: 298: {
-"298
-{
-[; ;main.c: 299: TMR4IF = 0;
-"299
-[e = _TMR4IF -> -> 0 `i `b ]
-[; ;main.c: 300: RE2 = ~RE2;
-"300
-[e = _RE2 ! _RE2 ]
-"301
-}
-[e :U 335 ]
-[; ;main.c: 301: }
-[; ;main.c: 302: if(TMR6IF)
-"302
-[e $ ! _TMR6IF 336  ]
-[; ;main.c: 303: {
-"303
-{
-[; ;main.c: 304: TMR6IF = 0;
-"304
-[e = _TMR6IF -> -> 0 `i `b ]
-"305
-}
-[e :U 336 ]
-[; ;main.c: 305: }
-[; ;main.c: 306: }
-"306
-[e :UE 323 ]
-}
-[a 1C 66 118 49 51 46 50 86 32 83 111 99 48 48 48 48 0 ]
-
