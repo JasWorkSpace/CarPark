@@ -30,6 +30,13 @@ void setKeyEventDispatchered(){
 	KeyEvent_PendKeyCode = KEYCODE_UNKNOW;
 	KeyEvent_KeyTime     = OS_Time;
 }
+uint hasLongPressKey(){
+	if(KeyEvent_PendKeyCode != KEYCODE_UNKNOW
+		&& (OS_Time-KeyEvent_KeyTime) > 30){//3s
+		return TRUE;
+	}
+	return FALSE;
+}
 void handlerKeyEventInput(int keyCode){
 	// KEYCODE_SET > KEYCODE_UP > KEYCODE_DOWN
 	if(keyCode == KEYCODE_SET || keyCode == KEYCODE_UP || keyCode == KEYCODE_DOWN){
@@ -54,24 +61,116 @@ void handlerKeyEvent(){
 }
 //////////////////////////////////////////////////////////////////////////////
 /// 显示相关逻辑
+#define LCD_AUTO_EXTINGUWISH_TIME  50  // 自动息屏时间, 50*100ms = 5s
+
 uchar LCD_PAGE  = 0;
-uint  LCD_POINT = 0;
-////////
-void updateLCDShow(uchar page,uchar point_line){
-	if(page == LCD_PAGE)return;
-	LCD_PAGE = page;
-	uchar data[15] = {0};
-	switch(LCD_PAGE){
-	case 0:{//Bv13.2V soc0000
-		sprintf(data, "Bv13.2V Soc0000");
+uchar LCD_Settings_Index = 0;
+void getBatteryType(uchar *data){
+	switch(ParamConfig[HW_BATTERY_TYPE][0]){
+	case HW_BATTERY_TYPE_BAT:{
+		sprintf(data, "Lead-acid Bat");
 	}break;
-	case 1:{
-		//
+	case HW_BATTERY_TYPE_GEL:{
+		sprintf(data, "Gel battery");
+	}break;
+	case HW_BATTERY_TYPE_OPEN:{
+		sprintf(data, "Open cell");
+	}break;
+	case HW_BATTERY_TYPE_SELF:{
+		sprintf(data, "Self settings");
 	}break;
 	}
 }
-
-
+void getParamLibString(uchar index, uchar *data){
+	switch(index){
+	case Param_battery_type:{
+		getBatteryType(data);
+	}break;
+	case Param_en_charge:{
+		sprintf(data,"En_Charge:%03.01fV", ParamConfig[HW_BATTERY_TYPE][Param_en_charge]);
+	}break;
+	case Param_eq_charge:{
+		sprintf(data,"Eq_Charge:%03.01fV", ParamConfig[HW_BATTERY_TYPE][Param_eq_charge]);
+	}break;
+	case Param_flo_charge:{
+		sprintf(data,"Fl_Charge:%03.01fV", ParamConfig[HW_BATTERY_TYPE][Param_flo_charge]);
+	}break;
+	case Param_time_change:{
+		sprintf(data,"TIME:     %03.01fV", ParamConfig[HW_BATTERY_TYPE][Param_time_change]);
+	}break;
+	case Param_under_vol:{
+		sprintf(data,"UNDER VOL:%03.01fV", ParamConfig[HW_BATTERY_TYPE][Param_under_vol]);
+	}break;
+	case Param_re_under:{
+		sprintf(data,"RE UNDER :%03.01fV", ParamConfig[HW_BATTERY_TYPE][Param_re_under]);
+	}break;
+	case Param_over_vol:{
+		sprintf(data,"VOER  VOL:%03.01fV", ParamConfig[HW_BATTERY_TYPE][Param_over_vol]);
+	}break;
+	case Param_re_over:{
+		sprintf(data,"RE   OVER:%03.01fV", ParamConfig[HW_BATTERY_TYPE][Param_re_over]);
+	}break;
+	case Param_day_vol:{
+		sprintf(data,"DAY   VOL:%03.01fV", ParamConfig[HW_BATTERY_TYPE][Param_day_vol]);
+	}break;
+	case Param_night_vol:{
+		sprintf(data,"NIGHT VOL:%03.01fV", ParamConfig[HW_BATTERY_TYPE][Param_night_vol]);
+	}break;
+	}
+}
+void showNormalPage(int force, int page){
+	if(LCD_PAGE != page || force){//force 强制刷新
+		LCD_PAGE = (page%7);//控制循环
+		uchar data1[LCD_LINENUMBER_MAXCHAR] = {0}; 
+		uchar data2[LCD_LINENUMBER_MAXCHAR] = {0};
+		switch(LCD_PAGE){
+			case 0:{//这里需要具体的参数修改
+				sprintf(data1,"Bv13.3V Soc0000");
+				sprintf(data2,"Ic15.3A Io18.8A");
+			}break;
+			case 1:{
+				sprintf(data1,"Battery Type");
+				getParamLibString(Param_battery_type, data2);
+			}break;
+			case 2:{
+				getParamLibString(Param_en_charge, data1);
+				getParamLibString(Param_eq_charge, data2);
+			}break;
+			case 3:{
+				getParamLibString(Param_flo_charge,  data1);
+				getParamLibString(Param_time_change, data2);
+			}break;
+			case 4:{
+				getParamLibString(Param_under_vol, data1);
+				getParamLibString(Param_re_under,  data2);
+			}break;
+			case 5:{
+				getParamLibString(Param_over_vol, data1);
+				getParamLibString(Param_re_over,  data2);
+			}break;
+			case 6:{
+				getParamLibString(Param_day_vol,    data1);
+				getParamLibString(Param_night_vol,  data2);
+			}break;
+		}
+		API_LCD_PRINT_LINE(LCD_LINENUMBER_1, data1, 0);
+		API_LCD_PRINT_LINE(LCD_LINENUMBER_2, data2, 0);
+	}
+}
+void showSettingsPage(int force, int page){
+	if(page != LCD_Settings_Index || force){
+		LCD_Settings_Index = (page%Param_MAX);
+		uchar data1[LCD_LINENUMBER_MAXCHAR] = {0}; 
+		getParamLibString(LCD_Settings_Index,  data1);
+		API_LCD_PRINT_LINE(LCD_LINENUMBER_1, data1, 0);
+	}
+}
+void showWelcome(){
+	uchar data1[LCD_LINENUMBER_MAXCHAR] = {"Welcome"}; 
+	uchar data2[LCD_LINENUMBER_MAXCHAR] = {"Waiting..."};
+	API_LCD_PRINT_LINE(LCD_LINENUMBER_1, data1, 0);
+	API_LCD_PRINT_LINE(LCD_LINENUMBER_2, data2, 0);
+}
 #define LCD_STATE_IDLE 0
 #define LCD_STATE_WAIT 1
 #define LCD_STATE_WORK 2
@@ -87,6 +186,9 @@ void setLCDBackground(uchar open){
 		TURN_OFF_Lcd_L;
 	}
 }
+void resetLCDStateTime(){
+	LCD_StateTime    = OS_Time;
+}
 void tranformLCDState(int state){
 	if(state != LCD_CurrentState){
 		LCD_LastState    = LCD_CurrentState;
@@ -94,14 +196,15 @@ void tranformLCDState(int state){
 		LCD_StateTime    = OS_Time;
 	}
 }
-uint handlerLCD(){
-	switch(LCD_CurrentState){
+uchar handlerLCD(){
+	uchar pendingState = LCD_CurrentState;
+	switch(pendingState){
 	case LCD_STATE_IDLE:{
 		if(LCD_LastState != LCD_STATE_IDLE){//第一次进入IDLE状态
 			API_LCD_INIT();
 			API_LCD_CLEAR();
 		}
-		tranformLCDState(LCD_STATE_WORK);//显示5s
+		pendingState = LCD_STATE_WORK;//显示5s
 	}break;
 	case LCD_STATE_WAIT:{
 		if(LCD_LastState != LCD_STATE_WAIT){
@@ -110,18 +213,66 @@ uint handlerLCD(){
 		setLCDBackground(CLOSE);
 		if(KeyEvent_KeyCode != KEYCODE_UNKNOW){//有按键按下
 			setKeyEventDealed();
-			tranformLCDState(LCD_STATE_WORK);//显示5s
+			pendingState = LCD_STATE_WORK;//显示5s
 		}
 	}break;
 	case LCD_STATE_WORK:{
 		if(LCD_LastState != LCD_STATE_WORK){
+			if(LCD_LastState == LCD_STATE_SET){
+				LoadParamFromEPPROM();//确保数据正确
+			}
 			setLCDBackground(OPEN);
-			
+			showNormalPage(TRUE, 0);////tranform it to first.
 		}else{
-
+			if(hasLongPressKey() && KeyEvent_PendKeyCode == KEYCODE_SET){
+				setKeyEventDispatchered();
+				pendingState = LCD_STATE_SET;//进入设置模式
+			}else if(KeyEvent_KeyCode == KEYCODE_SET){
+				setKeyEventDealed();
+				showNormalPage(FALSE, ++LCD_PAGE);//循环翻页显示
+				resetLCDStateTime();
+			}else{
+				if((OS_Time - LCD_StateTime) > LCD_AUTO_EXTINGUWISH_TIME){
+					pendingState = LCD_STATE_WAIT;//关闭显示
+				}
+			}
+		}
+	}break;
+	case LCD_STATE_SET:{
+		if(LCD_LastState != LCD_STATE_SET){
+			showSettingsPage(TRUE, 0);//show first
+			uchar data1[LCD_LINENUMBER_MAXCHAR] = {0};
+			sprintf(data1,"SETTING UP DOWN");
+			API_LCD_PRINT_LINE(LCD_LINENUMBER_2, data1, 0);
+		}else{
+			if(hasLongPressKey() && KeyEvent_PendKeyCode == KEYCODE_SET){
+				setKeyEventDispatchered();
+				SaveParamToEPPROM();
+				pendingState = LCD_STATE_WORK;//进入设置模式
+			}else if(KeyEvent_KeyCode == KEYCODE_SET){
+				setKeyEventDealed();
+				showSettingsPage(FALSE, ++LCD_Settings_Index);
+				resetLCDStateTime();
+			}else if(KeyEvent_KeyCode == KEYCODE_UP){
+				ParamConfig[HW_BATTERY_TYPE][Param_battery_type] = HW_BATTERY_TYPE_SELF;//电池为设置模式
+				setKeyEventDealed();
+				ParamConfig[HW_BATTERY_TYPE][LCD_Settings_Index] ++;
+				showSettingsPage(TRUE, LCD_Settings_Index);
+			}else if(KeyEvent_KeyCode == KEYCODE_DOWN){
+				ParamConfig[HW_BATTERY_TYPE][Param_battery_type] = HW_BATTERY_TYPE_SELF;//电池为设置模式
+				setKeyEventDealed();
+				ParamConfig[HW_BATTERY_TYPE][LCD_Settings_Index] --;
+				showSettingsPage(TRUE, LCD_Settings_Index);
+			}else{
+				if((OS_Time - LCD_StateTime) > LCD_AUTO_EXTINGUWISH_TIME){
+					pendingState = LCD_STATE_WORK;//进入正常工作显示
+				}
+			}
 		}
 	}break;
 	}
+	tranformLCDState(pendingState);//切换状态
+	return TRUE;
 }
 
 //////////////////////////////////////////////////////////////////////////////
@@ -129,13 +280,14 @@ uint handlerLCD(){
 
 //////////////////////////////////////////////////////////////////////////////
 /// PWM 处理逻辑
-void setPWM(char open){
+void setPWM(uchar open){
 	if(open == OPEN){
 		TURN_ON_PwmCtrl;
 	}else{
 		TURN_OFF_PwmCtrl;
 	}
 }
+
 void openOrClosePWM(uchar open){
 	PWM_CONTROL_FLAG = open;
 	TMR2IE = open; //关闭timer2中断	
@@ -152,14 +304,6 @@ void handlerPWMInterrupt(){
 }
 ////////////////////////////////////////////
 
-bit isSettingMode = 0; // 是否处于设置模式
-bit isSaveSettings = 0;
-bit rb4_flag = 0; // SET是否被长按的flag
-bit is_second_setting; //设置模式中改变第一个值还是第二个值
-bit needInitSetting; //需要初始化设置
-uchar batteryType = 0; // 标识哪一种电池类型
-uchar const *charPointer; //字符指针
-
 ////////////////////////////////////////////////////////////
 /// OS 状态逻辑处理
 #define OS_STATE_IDLE 0
@@ -167,27 +311,64 @@ uchar const *charPointer; //字符指针
 #define OS_STATE_WORK 2
 
 uchar   OS_CurrentState = OS_STATE_IDLE;
+uchar   OS_LastState    = OS_STATE_IDLE;
 uint32  OS_StateTime    = 0;
 
 void tranform_OS_State(int state){
 	if(state != OS_CurrentState){
+		OS_LastState    = OS_CurrentState;
 		OS_CurrentState = state;
 		OS_StateTime    = OS_Time;
 	}
 }
 uchar handlerOSStateMachine(){
+	uchar pendingState = OS_CurrentState;
 	switch(OS_CurrentState){
 	case OS_STATE_IDLE:{
 		TURN_OFF_Lcd_L;//关液晶屏背光
 		PWM_CONTROL_FLAG = CLOSE;//关闭PWM
+		pendingState   =  OS_STATE_LOAD;
 	}break;
-	case OS_STATE_LOAD:{
-
+	case OS_STATE_LOAD:{//系统检测状态
+		if(OS_LastState != OS_STATE_LOAD){
+			showWelcome();
+		}else{
+			//这里增加开机的状态监测
+			KaiJi();//开机启动，确认上电电压，使用数组，电路自检等
+			if((OS_Time-OS_StateTime) > 30){//显示3S. 30*100 = 3S
+				pendingState = OS_STATE_WORK;
+			}
+		}
 	}break;
-	case OS_STATE_WORK:{
+	case OS_STATE_WORK:{//系统正常工作状态
+		handlerLCD();//处理显示
+		////////////////////////////////////////////////////////////////////////////////////////////////////
+		//////  这里需要增加和修改 PWM, 电池检测等操作.                                                  ///
+		//////    PWM请按照"PWM处理逻辑"进行相应的增加                                                   ///
+		//////    关于电压的AD, 在这里可以一次循环读取一个值. 在充放电的逻辑处理中禁止读取.这样效率很高  ///
+		////////////////////////////////////////////////////////////////////////////////////////////////////
 
+		//SelectMode();
+		//SystemModeType = OUTPUT_MODE;
+		//LoadCurrentDealWith();
+		//SwitchBatteryState();
+		//LedDisplay();
+		//if(PVCount > 50)                      //5s检测处理一次 50
+		//{
+		//	PVCount = 0;
+		//	SolarPanelDealWith();			   //根据太阳能电池板的电压，进行相应的处理，并获得当前太阳能电池板的状态 
+		//}
+		//if(PWMChargeFlag == 1)                 //调用PWM充电函数100ms 监测一次
+		//{
+		//	PWMChargeFlag = 0;                 //定时器值还原
+		//	PWMCharge();
+		//} 
+		////////////////////////////////////////////////////////////////////////////////////////////////
+		handlerKeyEvent();//没有逻辑消耗按键.这里将按键消耗掉
 	}break;
 	}
+	tranform_OS_State(pendingState);
+	return TRUE;
 }
 //////////////////////////////////////////////////////////////////
 void main(){
@@ -197,51 +378,13 @@ void main(){
  	API_LCD_INIT();
 	API_LCD_CLEAR();
 	TURN_OFF_Lcd_L;//关液晶屏背光
-	KaiJi();//开机启动，确认上电电压，使用数组，电路自检等
 	while(1)
 	{
-		asm("CLRWDT");		//在用户设置的时候应该也加入看门狗
-		
-		SelectMode();
-		SystemModeType = OUTPUT_MODE;
-		LoadCurrentDealWith();
-		SwitchBatteryState();
-		LedDisplay();
-		if(PVCount > 50)                      //5s检测处理一次 50
-		{
-			PVCount = 0;
-			SolarPanelDealWith();			   //根据太阳能电池板的电压，进行相应的处理，并获得当前太阳能电池板的状态 
+		asm("CLRWDT");//在用户设置的时候应该也加入看门狗
+		if(handlerOSStateMachine() != TRUE){
+			tranform_OS_State(OS_STATE_IDLE);//代码跑飞了,重启系统
 		}
-		if(PWMChargeFlag == 1)                 //调用PWM充电函数100ms 监测一次
-		{
-			PWMChargeFlag = 0;                 //定时器值还原
-			PWMCharge();
-		} 
-
-
-		
-		if (lcd_extinguwish_timer == AUTO_EXTINGUWISH_TIME) {
-			// 不需要一直更新状态
-			lcd_extinguwish_timer++;
-			// 清除屏幕
-			lcd_write_command(0x08);
-		}
-
-		if (isSaveSettings) {
-			isSaveSettings = 0;
-			isNeedChange = 1;
-			lcd_state = 2;
-			isSettingMode = 0;
-			// todo: 保存当前系统状态到EEPROM中
-		}
-
-		if (isSettingMode && needInitSetting) {
-			needInitSetting = 0;
-			isNeedChange = 1;
-			lcd_state = 3;
-			is_second_setting = 0;
-		}
-		
+		//handlerLCD();
 	}
 }
 

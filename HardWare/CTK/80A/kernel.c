@@ -16,12 +16,17 @@ void writeIntParam(uint value, uchar addr){
 }
 void ReadOrWriteEE(int read){
 	int i = 0;
-	uchar startAddr = ADDR_EPPROM_en_charge;//
-	for(i = 0; i<10; i++){
+	uchar startAddr = ADDR_EPPROM_battery_type;//
+	if(read){
+		HW_BATTERY_TYPE = (uchar)readIntParam(startAddr);
+	}else{
+		writeIntParam((uint)HW_BATTERY_TYPE, startAddr);
+	}
+	for(i = 1; i<10; i++){//see EPPROM ADDR alloction, in Kernel.h
 		if(read){
-			ParamConfig[i] = readIntParam(startAddr + 2*i);;
+			ParamConfig[HW_BATTERY_TYPE_SELF][i] = readIntParam(startAddr + 2*i);;
 		}else{
-			writeIntParam(ParamConfig[i], (startAddr + 2*i));
+			writeIntParam(ParamConfig[HW_BATTERY_TYPE_SELF][i], (startAddr + 2*i));
 		}
 	}
 }

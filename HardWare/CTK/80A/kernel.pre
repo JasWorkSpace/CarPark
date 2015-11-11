@@ -12,15 +12,22 @@ void LoadParamFromEPPROM();
 
 void SaveParamToEPPROM();
 
-# 54
-unsigned int ParamConfig[11] = {0,0,0,0,0,0,0,0,0,0,0};
+# 60
+unsigned char HW_BATTERY_TYPE = 0;
 
-# 64
+unsigned int ParamConfig[][11] = {
+{0, 0,0,0,0,0,0,0,0,0,0},
+{1, 0,0,0,0,0,0,0,0,0,0},
+{2,0,0,0,0,0,0,0,0,0,0},
+{3,0,0,0,0,0,0,0,0,0,0}
+};
+
+# 74
 unsigned char PWM_CONTROL_FLAG = 0;
 unsigned long PWM_CONTROL_TIMEOUT = 0;
 unsigned char PWM_ON_TIME = 0;
 
-# 80
+# 90
 typedef struct _InputIOState{
 unsigned char HWState;
 unsigned char enable;
@@ -28,12 +35,8 @@ unsigned char swState;
 unsigned int ADValue;
 unsigned long ADTime;
 };
-struct _InputIOState BATTERY = {1, 0, 1, 1, 1};
-struct _InputIOState SOLARPANEL = {1, 0, 1, 1, 1};
-struct _InputIOState CHARGE = {1, 0, 1, 1, 1};
-struct _InputIOState LOAD = {1, 0, 1, 1, 1};
 
-# 96
+# 106
 typedef struct _SystemConfig{
 unsigned char Param_config;
 unsigned int Param_BATTERY_VOLTAGE_UNDER;
@@ -48,12 +51,6 @@ unsigned int Param_Floating_Charge_VOLTAGE;
 unsigned int Param_DAY_VOLTAGE;
 unsigned int Param_NIGHT_VOLTAGE;
 };
-
-struct _SystemConfig SystemConfig12V = {1 ,256 , 303 , 284 , 313 , 391 , 355 , 351 , 341 , 327 , 3965 , 900};
-
-struct _SystemConfig SystemConfig24V = {2 ,512 , 606 , 568 , 626 , 782 , 710 , 702 , 682 , 654 , 8231 , 3333};
-
-struct _SystemConfig *SystemConfig;
 
 # 140 "C:\Program Files\HI-TECH Software\PICC\9.80\include\pic16f1934.h"
 volatile unsigned char INDF0 @ 0x000;
@@ -3287,7 +3284,7 @@ extern unsigned char eeprom_read(unsigned char addr);
 #pragma inline(_delay)
 extern void _delay(unsigned long);
 
-# 55 "C:\CTK\CTK80A 150928\CTK80A_Jas\LM016.h"
+# 60 "C:\CTK\CTK80A 150928\CTK80A_Jas\LM016.h"
 void API_LCD_INIT(void);
 void API_LCD_CLEAR(void);
 void API_LCD_PRINT_LINE(unsigned char linenumber,unsigned char * charPointer,unsigned char postion);
@@ -3427,12 +3424,17 @@ WriteEE((data>>8)&0xff, addr+1);
 }
 void ReadOrWriteEE(int read){
 int i = 0;
-unsigned char startAddr = ((0 +2) +2);
-for(i = 0; i<10; i++){
+unsigned char startAddr = (0 +2);
 if(read){
-ParamConfig[i] = readIntParam(startAddr + 2*i);;
+HW_BATTERY_TYPE = (unsigned char)readIntParam(startAddr);
 }else{
-writeIntParam(ParamConfig[i], (startAddr + 2*i));
+writeIntParam((unsigned int)HW_BATTERY_TYPE, startAddr);
+}
+for(i = 1; i<10; i++){
+if(read){
+ParamConfig[3][i] = readIntParam(startAddr + 2*i);;
+}else{
+writeIntParam(ParamConfig[3][i], (startAddr + 2*i));
 }
 }
 }

@@ -2539,15 +2539,15 @@ Version 3.2 HI-TECH Software Intermediate Code
 ]
 [; ;public.h: 49: unsigned long OS_Time = 0;
 [; ;public.h: 52: void CTKSoftDelay(unsigned int x);
-[; ;LM016.h: 55: void API_LCD_INIT(void);
-[; ;LM016.h: 56: void API_LCD_CLEAR(void);
-[; ;LM016.h: 57: void API_LCD_PRINT_LINE(unsigned char linenumber,unsigned char * charPointer,unsigned char postion);
-[; ;LM016.h: 58: void lcd_write_command(unsigned char command);
-[; ;LM016.h: 59: void lcd_write_data(unsigned char data);
-[; ;LM016.h: 60: void lcd_print_line1(unsigned char *charPaint, unsigned char postion, unsigned char clear);
-[; ;LM016.h: 61: void lcd_print_line2(unsigned char *charPaint, unsigned char clear);
-[; ;LM016.h: 62: void lcd_move_char(unsigned char postion);
-[; ;LM016.h: 63: void num_to_char(int number, unsigned char point);
+[; ;LM016.h: 60: void API_LCD_INIT(void);
+[; ;LM016.h: 61: void API_LCD_CLEAR(void);
+[; ;LM016.h: 62: void API_LCD_PRINT_LINE(unsigned char linenumber,unsigned char * charPointer,unsigned char postion);
+[; ;LM016.h: 63: void lcd_write_command(unsigned char command);
+[; ;LM016.h: 64: void lcd_write_data(unsigned char data);
+[; ;LM016.h: 65: void lcd_print_line1(unsigned char *charPaint, unsigned char postion, unsigned char clear);
+[; ;LM016.h: 66: void lcd_print_line2(unsigned char *charPaint, unsigned char clear);
+[; ;LM016.h: 67: void lcd_move_char(unsigned char postion);
+[; ;LM016.h: 68: void num_to_char(int number, unsigned char point);
 [; ;pic16f1934.h: 140: volatile unsigned char INDF0 @ 0x000;
 [; ;pic16f1934.h: 144: volatile unsigned char INDF1 @ 0x001;
 [; ;pic16f1934.h: 148: volatile unsigned char PCL @ 0x002;

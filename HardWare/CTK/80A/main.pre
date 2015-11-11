@@ -3239,7 +3239,7 @@ unsigned long OS_Time = 0;
 
 void CTKSoftDelay(unsigned int x);
 
-# 55 "C:\CTK\CTK80A 150928\CTK80A_Jas\LM016.h"
+# 60 "C:\CTK\CTK80A 150928\CTK80A_Jas\LM016.h"
 void API_LCD_INIT(void);
 void API_LCD_CLEAR(void);
 void API_LCD_PRINT_LINE(unsigned char linenumber,unsigned char * charPointer,unsigned char postion);
@@ -3370,15 +3370,22 @@ void LoadParamFromEPPROM();
 
 void SaveParamToEPPROM();
 
-# 54
-unsigned int ParamConfig[11] = {0,0,0,0,0,0,0,0,0,0,0};
+# 60
+unsigned char HW_BATTERY_TYPE = 0;
 
-# 64
+unsigned int ParamConfig[][11] = {
+{0, 0,0,0,0,0,0,0,0,0,0},
+{1, 0,0,0,0,0,0,0,0,0,0},
+{2,0,0,0,0,0,0,0,0,0,0},
+{3,0,0,0,0,0,0,0,0,0,0}
+};
+
+# 74
 unsigned char PWM_CONTROL_FLAG = 0;
 unsigned long PWM_CONTROL_TIMEOUT = 0;
 unsigned char PWM_ON_TIME = 0;
 
-# 80
+# 90
 typedef struct _InputIOState{
 unsigned char HWState;
 unsigned char enable;
@@ -3386,12 +3393,8 @@ unsigned char swState;
 unsigned int ADValue;
 unsigned long ADTime;
 };
-struct _InputIOState BATTERY = {1, 0, 1, 1, 1};
-struct _InputIOState SOLARPANEL = {1, 0, 1, 1, 1};
-struct _InputIOState CHARGE = {1, 0, 1, 1, 1};
-struct _InputIOState LOAD = {1, 0, 1, 1, 1};
 
-# 96
+# 106
 typedef struct _SystemConfig{
 unsigned char Param_config;
 unsigned int Param_BATTERY_VOLTAGE_UNDER;
@@ -3406,12 +3409,6 @@ unsigned int Param_Floating_Charge_VOLTAGE;
 unsigned int Param_DAY_VOLTAGE;
 unsigned int Param_NIGHT_VOLTAGE;
 };
-
-struct _SystemConfig SystemConfig12V = {1 ,256 , 303 , 284 , 313 , 391 , 355 , 351 , 341 , 327 , 3965 , 900};
-
-struct _SystemConfig SystemConfig24V = {2 ,512 , 606 , 568 , 626 , 782 , 710 , 702 , 682 , 654 , 8231 , 3333};
-
-struct _SystemConfig *SystemConfig;
 
 # 12 "C:\CTK\CTK80A 150928\CTK80A_Jas\74HC595.h"
 void HC595_Send_Data(unsigned char byte)
@@ -3500,6 +3497,13 @@ void setKeyEventDispatchered(){
 KeyEvent_PendKeyCode = 1;
 KeyEvent_KeyTime = OS_Time;
 }
+unsigned int hasLongPressKey(){
+if(KeyEvent_PendKeyCode != 1
+&& (OS_Time-KeyEvent_KeyTime) > 30){
+return 1;
+}
+return 0;
+}
 void handlerKeyEventInput(int keyCode){
 
 if(keyCode == 2 || keyCode == 3 || keyCode == 4){
@@ -3524,24 +3528,118 @@ setKeyEventDispatchered();
 }
 
 
-unsigned char LCD_PAGE = 0;
-unsigned int LCD_POINT = 0;
 
-void updateLCDShow(unsigned char page,unsigned char point_line){
-if(page == LCD_PAGE)return;
-LCD_PAGE = page;
-unsigned char data[15] = {0};
-switch(LCD_PAGE){
+
+unsigned char LCD_PAGE = 0;
+unsigned char LCD_Settings_Index = 0;
+void getBatteryType(unsigned char *data){
+switch(ParamConfig[HW_BATTERY_TYPE][0]){
 case 0:{
-sprintf(data, "Bv13.2V Soc0000");
+sprintf(data, "Lead-acid Bat");
 }break;
 case 1:{
-
+sprintf(data, "Gel battery");
+}break;
+case 2:{
+sprintf(data, "Open cell");
+}break;
+case 3:{
+sprintf(data, "Self settings");
 }break;
 }
 }
+void getParamLibString(unsigned char index, unsigned char *data){
+switch(index){
+case 0:{
+getBatteryType(data);
+}break;
+case 1:{
+sprintf(data,"En_Charge:%03.01fV", ParamConfig[HW_BATTERY_TYPE][1]);
+}break;
+case 2:{
+sprintf(data,"Eq_Charge:%03.01fV", ParamConfig[HW_BATTERY_TYPE][2]);
+}break;
+case 3:{
+sprintf(data,"Fl_Charge:%03.01fV", ParamConfig[HW_BATTERY_TYPE][3]);
+}break;
+case 4:{
+sprintf(data,"TIME:     %03.01fV", ParamConfig[HW_BATTERY_TYPE][4]);
+}break;
+case 5:{
+sprintf(data,"UNDER VOL:%03.01fV", ParamConfig[HW_BATTERY_TYPE][5]);
+}break;
+case 6:{
+sprintf(data,"RE UNDER :%03.01fV", ParamConfig[HW_BATTERY_TYPE][6]);
+}break;
+case 7:{
+sprintf(data,"VOER  VOL:%03.01fV", ParamConfig[HW_BATTERY_TYPE][7]);
+}break;
+case 8:{
+sprintf(data,"RE   OVER:%03.01fV", ParamConfig[HW_BATTERY_TYPE][8]);
+}break;
+case 9:{
+sprintf(data,"DAY   VOL:%03.01fV", ParamConfig[HW_BATTERY_TYPE][9]);
+}break;
+case 10:{
+sprintf(data,"NIGHT VOL:%03.01fV", ParamConfig[HW_BATTERY_TYPE][10]);
+}break;
+}
+}
+void showNormalPage(int force, int page){
+if(LCD_PAGE != page || force){
+LCD_PAGE = (page%7);
+unsigned char data1[16] = {0};
+unsigned char data2[16] = {0};
+switch(LCD_PAGE){
+case 0:{
+sprintf(data1,"Bv13.3V Soc0000");
+sprintf(data2,"Ic15.3A Io18.8A");
+}break;
+case 1:{
+sprintf(data1,"Battery Type");
+getParamLibString(0, data2);
+}break;
+case 2:{
+getParamLibString(1, data1);
+getParamLibString(2, data2);
+}break;
+case 3:{
+getParamLibString(3, data1);
+getParamLibString(4, data2);
+}break;
+case 4:{
+getParamLibString(5, data1);
+getParamLibString(6, data2);
+}break;
+case 5:{
+getParamLibString(7, data1);
+getParamLibString(8, data2);
+}break;
+case 6:{
+getParamLibString(9, data1);
+getParamLibString(10, data2);
+}break;
+}
+API_LCD_PRINT_LINE(0, data1, 0);
+API_LCD_PRINT_LINE(1, data2, 0);
+}
+}
+void showSettingsPage(int force, int page){
+if(page != LCD_Settings_Index || force){
+LCD_Settings_Index = (page%11);
+unsigned char data1[16] = {0};
+getParamLibString(LCD_Settings_Index, data1);
+API_LCD_PRINT_LINE(0, data1, 0);
+}
+}
+void showWelcome(){
+unsigned char data1[16] = {"Welcome"};
+unsigned char data2[16] = {"Waiting..."};
+API_LCD_PRINT_LINE(0, data1, 0);
+API_LCD_PRINT_LINE(1, data2, 0);
+}
 
-# 80
+# 179
 unsigned char LCD_CurrentState = 0;
 unsigned char LCD_LastState = 0;
 unsigned long LCD_StateTime = 0;
@@ -3552,6 +3650,9 @@ if(open == 1){
 (LATC |= (1 << 4));
 }
 }
+void resetLCDStateTime(){
+LCD_StateTime = OS_Time;
+}
 void tranformLCDState(int state){
 if(state != LCD_CurrentState){
 LCD_LastState = LCD_CurrentState;
@@ -3559,14 +3660,15 @@ LCD_CurrentState = state;
 LCD_StateTime = OS_Time;
 }
 }
-unsigned int handlerLCD(){
-switch(LCD_CurrentState){
+unsigned char handlerLCD(){
+unsigned char pendingState = LCD_CurrentState;
+switch(pendingState){
 case 0:{
 if(LCD_LastState != 0){
 API_LCD_INIT();
 API_LCD_CLEAR();
 }
-tranformLCDState(2);
+pendingState = 2;
 }break;
 case 1:{
 if(LCD_LastState != 1){
@@ -3575,28 +3677,77 @@ API_LCD_CLEAR();
 setLCDBackground(0);
 if(KeyEvent_KeyCode != 1){
 setKeyEventDealed();
-tranformLCDState(2);
+pendingState = 2;
 }
 }break;
 case 2:{
 if(LCD_LastState != 2){
+if(LCD_LastState == 3){
+LoadParamFromEPPROM();
+}
 setLCDBackground(1);
+showNormalPage(1, 0);
+}else{
+if(hasLongPressKey() && KeyEvent_PendKeyCode == 2){
+setKeyEventDispatchered();
+pendingState = 3;
+}else if(KeyEvent_KeyCode == 2){
+setKeyEventDealed();
+showNormalPage(0, ++LCD_PAGE);
+resetLCDStateTime();
+}else{
+if((OS_Time - LCD_StateTime) > 50){
+pendingState = 1;
+}
+}
+}
+}break;
+case 3:{
+if(LCD_LastState != 3){
+showSettingsPage(1, 0);
+unsigned char data1[16] = {0};
+sprintf(data1,"SETTING UP DOWN");
+API_LCD_PRINT_LINE(1, data1, 0);
+}else{
+if(hasLongPressKey() && KeyEvent_PendKeyCode == 2){
+setKeyEventDispatchered();
+SaveParamToEPPROM();
+pendingState = 2;
+}else if(KeyEvent_KeyCode == 2){
+setKeyEventDealed();
+showSettingsPage(0, ++LCD_Settings_Index);
+resetLCDStateTime();
+}else if(KeyEvent_KeyCode == 3){
+ParamConfig[HW_BATTERY_TYPE][0] = 3;
+setKeyEventDealed();
+ParamConfig[HW_BATTERY_TYPE][LCD_Settings_Index] ++;
+
+}else if(KeyEvent_KeyCode == 4){
+ParamConfig[HW_BATTERY_TYPE][0] = 3;
+setKeyEventDealed();
+ParamConfig[HW_BATTERY_TYPE][LCD_Settings_Index] --;
 
 }else{
-
+if((OS_Time - LCD_StateTime) > 50){
+pendingState = 2;
+}
+}
 }
 }break;
 }
+tranformLCDState(pendingState);
+return 1;
 }
 
-# 132
-void setPWM(char open){
+# 283
+void setPWM(unsigned char open){
 if(open == 1){
 (PORTA &= ~(1 << 0));
 }else{
 (PORTA |= (1 << 0));
 }
 }
+
 void openOrClosePWM(unsigned char open){
 PWM_CONTROL_FLAG = open;
 TMR2IE = open;
@@ -3612,38 +3763,46 @@ if(PWM_CONTROL_TIMEOUT != 0){
 }
 }
 
-
-bit isSettingMode = 0;
-bit isSaveSettings = 0;
-bit rb4_flag = 0;
-bit is_second_setting;
-bit needInitSetting;
-unsigned char batteryType = 0;
-unsigned char const *charPointer;
-
-# 169
+# 313
 unsigned char OS_CurrentState = 0;
+unsigned char OS_LastState = 0;
 unsigned long OS_StateTime = 0;
 
 void tranform_OS_State(int state){
 if(state != OS_CurrentState){
+OS_LastState = OS_CurrentState;
 OS_CurrentState = state;
 OS_StateTime = OS_Time;
 }
 }
 unsigned char handlerOSStateMachine(){
+unsigned char pendingState = OS_CurrentState;
 switch(OS_CurrentState){
 case 0:{
 (LATC |= (1 << 4));
 PWM_CONTROL_FLAG = 0;
+pendingState = 1;
 }break;
 case 1:{
+if(OS_LastState != 1){
+showWelcome();
+}else{
 
+KaiJi();
+if((OS_Time-OS_StateTime) > 30){
+pendingState = 2;
+}
+}
 }break;
 case 2:{
+handlerLCD();
 
+# 367
+handlerKeyEvent();
 }break;
 }
+tranform_OS_State(pendingState);
+return 1;
 }
 
 void main(){
@@ -3653,49 +3812,11 @@ LoadParamFromEPPROM();
 API_LCD_INIT();
 API_LCD_CLEAR();
 (LATC |= (1 << 4));
-KaiJi();
 while(1)
 {
 asm("CLRWDT");
-
-SelectMode();
-SystemModeType = 0x01;
-LoadCurrentDealWith();
-SwitchBatteryState();
-LedDisplay();
-if(PVCount > 50)
-{
-PVCount = 0;
-SolarPanelDealWith();
-}
-if(PWMChargeFlag == 1)
-{
-PWMChargeFlag = 0;
-PWMCharge();
-}
-
-
-
-if (lcd_extinguwish_timer == 70) {
-
-lcd_extinguwish_timer++;
-
-lcd_write_command(0x08);
-}
-
-if (isSaveSettings) {
-isSaveSettings = 0;
-isNeedChange = 1;
-lcd_state = 2;
-isSettingMode = 0;
-
-}
-
-if (isSettingMode && needInitSetting) {
-needInitSetting = 0;
-isNeedChange = 1;
-lcd_state = 3;
-is_second_setting = 0;
+if(handlerOSStateMachine() != 1){
+tranform_OS_State(0);
 }
 
 }

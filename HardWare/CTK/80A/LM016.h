@@ -9,6 +9,8 @@
 #define LCD_LINENUMBER_1 0
 #define LCD_LINENUMBER_2 1
 
+#define LCD_LINENUMBER_MAXCHAR 16//15个字符
+
 /***********变量声明区**************/
 /*uchar welcome[] = "WELCOME";
 uchar checking[] = "CHECKING...";
@@ -45,12 +47,15 @@ uchar const state7_2[] = "NIGHT VOL: xx.xv";
 //uchar flicker_position[] = {0x5, 0x5};
 
 //以下是使用定时器1的时间 100ms为单位
+/*
 #define CHECKING_DURATION_TIME 30
 #define SYSTEM_STATE_DISPLAY   30
+#define AUTO_EXTINGUWISH_TIME  70  // 自动息屏时间
 #define AUTO_EXTINGUWISH_TIME  70  // 自动息屏时间
 #define ENTER_SETTINGS_TIME    50
 #define SETTING_SAVE_TIME      50 //长按SET保存的时间
 #define SETTING_NO_SAVE_TIME   100 //设置状态下不保存的时间
+*/
 
 void API_LCD_INIT(void);
 void API_LCD_CLEAR(void);

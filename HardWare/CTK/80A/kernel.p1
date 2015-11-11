@@ -1,32 +1,18 @@
 Version 3.2 HI-TECH Software Intermediate Code
 "49 C:\CTK\CTK80A 150928\CTK80A_Jas\public.h
 [v _OS_Time `ul 1 e ]
-"54 C:\CTK\CTK80A 150928\CTK80A_Jas\kernel.h
-[v _ParamConfig `ui -> 11 `i e ]
-"64 C:\CTK\CTK80A 150928\CTK80A_Jas\kernel.h
+"60 C:\CTK\CTK80A 150928\CTK80A_Jas\kernel.h
+[v _HW_BATTERY_TYPE `uc 1 e ]
+"62 C:\CTK\CTK80A 150928\CTK80A_Jas\kernel.h
+[v F8 `ui -> 11 `i t ]
+"62 C:\CTK\CTK80A 150928\CTK80A_Jas\kernel.h
+[v _ParamConfig `F8 -> 0 `x e ]
+"74 C:\CTK\CTK80A 150928\CTK80A_Jas\kernel.h
 [v _PWM_CONTROL_FLAG `uc 1 e ]
-"65 C:\CTK\CTK80A 150928\CTK80A_Jas\kernel.h
+"75 C:\CTK\CTK80A 150928\CTK80A_Jas\kernel.h
 [v _PWM_CONTROL_TIMEOUT `ul 1 e ]
-"66 C:\CTK\CTK80A 150928\CTK80A_Jas\kernel.h
+"76 C:\CTK\CTK80A 150928\CTK80A_Jas\kernel.h
 [v _PWM_ON_TIME `uc 1 e ]
-[s S1 `uc 1 `uc 1 `uc 1 `ui 1 `ul 1 ]
-[n S1 _InputIOState HWState enable swState ADValue ADTime ]
-"87 C:\CTK\CTK80A 150928\CTK80A_Jas\kernel.h
-[v _BATTERY `S1 1 e ]
-"88 C:\CTK\CTK80A 150928\CTK80A_Jas\kernel.h
-[v _SOLARPANEL `S1 1 e ]
-"89 C:\CTK\CTK80A 150928\CTK80A_Jas\kernel.h
-[v _CHARGE `S1 1 e ]
-"90 C:\CTK\CTK80A 150928\CTK80A_Jas\kernel.h
-[v _LOAD `S1 1 e ]
-[s S2 `uc 1 `ui 1 `ui 1 `ui 1 `ui 1 `ui 1 `ui 1 `ui 1 `ui 1 `ui 1 `ui 1 `ui 1 ]
-[n S2 _SystemConfig Param_config Param_BATTERY_VOLTAGE_UNDER Param_RETURN_VOLTAGE_UNDER Param_BATTERY_VOLTAGE_WARN Param_BATTERY_VOLTAGE_NORMAL Param_BATTERY_VOLTAGE_FULL Param_RETURN_VOLTAGE_FULL Param_Enhance_Charge_VOLTAGE Param_Equalizing_Charge_VOLTAGE Param_Floating_Charge_VOLTAGE Param_DAY_VOLTAGE Param_NIGHT_VOLTAGE ]
-"111 C:\CTK\CTK80A 150928\CTK80A_Jas\kernel.h
-[v _SystemConfig12V `S2 1 e ]
-"113 C:\CTK\CTK80A 150928\CTK80A_Jas\kernel.h
-[v _SystemConfig24V `S2 1 e ]
-"115 C:\CTK\CTK80A 150928\CTK80A_Jas\kernel.h
-[v _SystemConfig `*S2 1 e ]
 "140 C:\Program Files\HI-TECH Software\PICC\9.80\include\pic16f1934.h
 [v _INDF0 `Vuc 1 e@0 ]
 "144 C:\Program Files\HI-TECH Software\PICC\9.80\include\pic16f1934.h
@@ -2677,9 +2663,16 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;public.h: 52: void CTKSoftDelay(unsigned int x);
 [; ;kernel.h: 38: void LoadParamFromEPPROM();
 [; ;kernel.h: 40: void SaveParamToEPPROM();
-"54 C:\CTK\CTK80A 150928\CTK80A_Jas\kernel.h
+"60 C:\CTK\CTK80A 150928\CTK80A_Jas\kernel.h
+[i _HW_BATTERY_TYPE
+-> -> 0 `i `uc
+]
+[; ;kernel.h: 60: unsigned char HW_BATTERY_TYPE = 0;
+"62
 [i _ParamConfig
 :U ..
+:U ..
+"63
 -> -> 0 `i `ui
 -> -> 0 `i `ui
 -> -> 0 `i `ui
@@ -2692,137 +2685,92 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> -> 0 `i `ui
 -> -> 0 `i `ui
 ..
-]
-[; ;kernel.h: 54: unsigned int ParamConfig[11] = {0,0,0,0,0,0,0,0,0,0,0};
+:U ..
 "64
+-> -> 1 `i `ui
+-> -> 0 `i `ui
+-> -> 0 `i `ui
+-> -> 0 `i `ui
+-> -> 0 `i `ui
+-> -> 0 `i `ui
+-> -> 0 `i `ui
+-> -> 0 `i `ui
+-> -> 0 `i `ui
+-> -> 0 `i `ui
+-> -> 0 `i `ui
+..
+:U ..
+"65
+-> -> 2 `i `ui
+-> -> 0 `i `ui
+-> -> 0 `i `ui
+-> -> 0 `i `ui
+-> -> 0 `i `ui
+-> -> 0 `i `ui
+-> -> 0 `i `ui
+-> -> 0 `i `ui
+-> -> 0 `i `ui
+-> -> 0 `i `ui
+-> -> 0 `i `ui
+..
+:U ..
+"66
+-> -> 3 `i `ui
+-> -> 0 `i `ui
+-> -> 0 `i `ui
+-> -> 0 `i `ui
+-> -> 0 `i `ui
+-> -> 0 `i `ui
+-> -> 0 `i `ui
+-> -> 0 `i `ui
+-> -> 0 `i `ui
+-> -> 0 `i `ui
+-> -> 0 `i `ui
+..
+..
+]
+[; ;kernel.h: 62: unsigned int ParamConfig[][11] = {
+[; ;kernel.h: 63: {0, 0,0,0,0,0,0,0,0,0,0},
+[; ;kernel.h: 64: {1, 0,0,0,0,0,0,0,0,0,0},
+[; ;kernel.h: 65: {2,0,0,0,0,0,0,0,0,0,0},
+[; ;kernel.h: 66: {3,0,0,0,0,0,0,0,0,0,0}
+[; ;kernel.h: 67: };
+"74
 [i _PWM_CONTROL_FLAG
 -> -> 0 `i `uc
 ]
-[; ;kernel.h: 64: unsigned char PWM_CONTROL_FLAG = 0;
-"65
+[; ;kernel.h: 74: unsigned char PWM_CONTROL_FLAG = 0;
+"75
 [i _PWM_CONTROL_TIMEOUT
 -> -> -> 0 `i `l `ul
 ]
-[; ;kernel.h: 65: unsigned long PWM_CONTROL_TIMEOUT = 0;
-"66
+[; ;kernel.h: 75: unsigned long PWM_CONTROL_TIMEOUT = 0;
+"76
 [i _PWM_ON_TIME
 -> -> 0 `i `uc
 ]
-[; ;kernel.h: 66: unsigned char PWM_ON_TIME = 0;
-[; ;kernel.h: 80: typedef struct _InputIOState{
-[; ;kernel.h: 81: unsigned char HWState;
-[; ;kernel.h: 82: unsigned char enable;
-[; ;kernel.h: 83: unsigned char swState;
-[; ;kernel.h: 84: unsigned int ADValue;
-[; ;kernel.h: 85: unsigned long ADTime;
-[; ;kernel.h: 86: };
-"87
-[i _BATTERY
-:U ..
-:U ..
--> -> 1 `i `uc
--> -> 0 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `ui
--> -> -> 1 `i `l `ul
-..
-..
-]
-[; ;kernel.h: 87: struct _InputIOState BATTERY = {1, 0, 1, 1, 1};
-"88
-[i _SOLARPANEL
-:U ..
-:U ..
--> -> 1 `i `uc
--> -> 0 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `ui
--> -> -> 1 `i `l `ul
-..
-..
-]
-[; ;kernel.h: 88: struct _InputIOState SOLARPANEL = {1, 0, 1, 1, 1};
-"89
-[i _CHARGE
-:U ..
-:U ..
--> -> 1 `i `uc
--> -> 0 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `ui
--> -> -> 1 `i `l `ul
-..
-..
-]
-[; ;kernel.h: 89: struct _InputIOState CHARGE = {1, 0, 1, 1, 1};
-"90
-[i _LOAD
-:U ..
-:U ..
--> -> 1 `i `uc
--> -> 0 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `ui
--> -> -> 1 `i `l `ul
-..
-..
-]
-[; ;kernel.h: 90: struct _InputIOState LOAD = {1, 0, 1, 1, 1};
-[; ;kernel.h: 96: typedef struct _SystemConfig{
-[; ;kernel.h: 97: unsigned char Param_config;
-[; ;kernel.h: 98: unsigned int Param_BATTERY_VOLTAGE_UNDER;
-[; ;kernel.h: 99: unsigned int Param_RETURN_VOLTAGE_UNDER;
-[; ;kernel.h: 100: unsigned int Param_BATTERY_VOLTAGE_WARN;
-[; ;kernel.h: 101: unsigned int Param_BATTERY_VOLTAGE_NORMAL;
-[; ;kernel.h: 102: unsigned int Param_BATTERY_VOLTAGE_FULL;
-[; ;kernel.h: 103: unsigned int Param_RETURN_VOLTAGE_FULL;
-[; ;kernel.h: 104: unsigned int Param_Enhance_Charge_VOLTAGE;
-[; ;kernel.h: 105: unsigned int Param_Equalizing_Charge_VOLTAGE;
-[; ;kernel.h: 106: unsigned int Param_Floating_Charge_VOLTAGE;
-[; ;kernel.h: 107: unsigned int Param_DAY_VOLTAGE;
-[; ;kernel.h: 108: unsigned int Param_NIGHT_VOLTAGE;
-[; ;kernel.h: 109: };
-"111
-[i _SystemConfig12V
-:U ..
-:U ..
--> -> 1 `i `uc
--> -> 256 `i `ui
--> -> 303 `i `ui
--> -> 284 `i `ui
--> -> 313 `i `ui
--> -> 391 `i `ui
--> -> 355 `i `ui
--> -> 351 `i `ui
--> -> 341 `i `ui
--> -> 327 `i `ui
--> -> 3965 `i `ui
--> -> 900 `i `ui
-..
-..
-]
-[; ;kernel.h: 111: struct _SystemConfig SystemConfig12V = {1 ,256 , 303 , 284 , 313 , 391 , 355 , 351 , 341 , 327 , 3965 , 900};
-"113
-[i _SystemConfig24V
-:U ..
-:U ..
--> -> 2 `i `uc
--> -> 512 `i `ui
--> -> 606 `i `ui
--> -> 568 `i `ui
--> -> 626 `i `ui
--> -> 782 `i `ui
--> -> 710 `i `ui
--> -> 702 `i `ui
--> -> 682 `i `ui
--> -> 654 `i `ui
--> -> 8231 `i `ui
--> -> 3333 `i `ui
-..
-..
-]
-[; ;kernel.h: 113: struct _SystemConfig SystemConfig24V = {2 ,512 , 606 , 568 , 626 , 782 , 710 , 702 , 682 , 654 , 8231 , 3333};
-[; ;kernel.h: 115: struct _SystemConfig *SystemConfig;
+[; ;kernel.h: 76: unsigned char PWM_ON_TIME = 0;
+[; ;kernel.h: 90: typedef struct _InputIOState{
+[; ;kernel.h: 91: unsigned char HWState;
+[; ;kernel.h: 92: unsigned char enable;
+[; ;kernel.h: 93: unsigned char swState;
+[; ;kernel.h: 94: unsigned int ADValue;
+[; ;kernel.h: 95: unsigned long ADTime;
+[; ;kernel.h: 96: };
+[; ;kernel.h: 106: typedef struct _SystemConfig{
+[; ;kernel.h: 107: unsigned char Param_config;
+[; ;kernel.h: 108: unsigned int Param_BATTERY_VOLTAGE_UNDER;
+[; ;kernel.h: 109: unsigned int Param_RETURN_VOLTAGE_UNDER;
+[; ;kernel.h: 110: unsigned int Param_BATTERY_VOLTAGE_WARN;
+[; ;kernel.h: 111: unsigned int Param_BATTERY_VOLTAGE_NORMAL;
+[; ;kernel.h: 112: unsigned int Param_BATTERY_VOLTAGE_FULL;
+[; ;kernel.h: 113: unsigned int Param_RETURN_VOLTAGE_FULL;
+[; ;kernel.h: 114: unsigned int Param_Enhance_Charge_VOLTAGE;
+[; ;kernel.h: 115: unsigned int Param_Equalizing_Charge_VOLTAGE;
+[; ;kernel.h: 116: unsigned int Param_Floating_Charge_VOLTAGE;
+[; ;kernel.h: 117: unsigned int Param_DAY_VOLTAGE;
+[; ;kernel.h: 118: unsigned int Param_NIGHT_VOLTAGE;
+[; ;kernel.h: 119: };
 [; ;pic16f1934.h: 140: volatile unsigned char INDF0 @ 0x000;
 [; ;pic16f1934.h: 144: volatile unsigned char INDF1 @ 0x001;
 [; ;pic16f1934.h: 148: volatile unsigned char PCL @ 0x002;
@@ -5084,15 +5032,15 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eeprom_routines.h: 41: extern void eeprom_write(unsigned char addr, unsigned char value);
 [; ;eeprom_routines.h: 42: extern unsigned char eeprom_read(unsigned char addr);
 [; ;pic.h: 630: extern void _delay(unsigned long);
-[; ;LM016.h: 55: void API_LCD_INIT(void);
-[; ;LM016.h: 56: void API_LCD_CLEAR(void);
-[; ;LM016.h: 57: void API_LCD_PRINT_LINE(unsigned char linenumber,unsigned char * charPointer,unsigned char postion);
-[; ;LM016.h: 58: void lcd_write_command(unsigned char command);
-[; ;LM016.h: 59: void lcd_write_data(unsigned char data);
-[; ;LM016.h: 60: void lcd_print_line1(unsigned char *charPaint, unsigned char postion, unsigned char clear);
-[; ;LM016.h: 61: void lcd_print_line2(unsigned char *charPaint, unsigned char clear);
-[; ;LM016.h: 62: void lcd_move_char(unsigned char postion);
-[; ;LM016.h: 63: void num_to_char(int number, unsigned char point);
+[; ;LM016.h: 60: void API_LCD_INIT(void);
+[; ;LM016.h: 61: void API_LCD_CLEAR(void);
+[; ;LM016.h: 62: void API_LCD_PRINT_LINE(unsigned char linenumber,unsigned char * charPointer,unsigned char postion);
+[; ;LM016.h: 63: void lcd_write_command(unsigned char command);
+[; ;LM016.h: 64: void lcd_write_data(unsigned char data);
+[; ;LM016.h: 65: void lcd_print_line1(unsigned char *charPaint, unsigned char postion, unsigned char clear);
+[; ;LM016.h: 66: void lcd_print_line2(unsigned char *charPaint, unsigned char clear);
+[; ;LM016.h: 67: void lcd_move_char(unsigned char postion);
+[; ;LM016.h: 68: void num_to_char(int number, unsigned char point);
 "85 C:\CTK\CTK80A 150928\CTK80A_Jas\mypic.h
 [i _BatteryStandard
 -> -> -> 0 `i `*v `*ui
@@ -5457,72 +5405,92 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _i -> 0 `i ]
 "19
 [v _startAddr `uc 1 a ]
-[; ;kernel.c: 19: unsigned char startAddr = ((0 +2) +2);
-[e = _startAddr -> + + -> 0 `i -> 2 `i -> 2 `i `uc ]
-[; ;kernel.c: 20: for(i = 0; i<10; i++){
+[; ;kernel.c: 19: unsigned char startAddr = (0 +2);
+[e = _startAddr -> + -> 0 `i -> 2 `i `uc ]
+[; ;kernel.c: 20: if(read){
 "20
+[e $ ! != _read -> 0 `i 265  ]
 {
-[e = _i -> 0 `i ]
-[e $ < _i -> 10 `i 265  ]
+[; ;kernel.c: 21: HW_BATTERY_TYPE = (unsigned char)readIntParam(startAddr);
+"21
+[e = _HW_BATTERY_TYPE -> ( _readIntParam (1 _startAddr `uc ]
+"22
+}
+[; ;kernel.c: 22: }else{
 [e $U 266  ]
 [e :U 265 ]
 {
-[; ;kernel.c: 21: if(read){
-"21
-[e $ ! != _read -> 0 `i 268  ]
-{
-[; ;kernel.c: 22: ParamConfig[i] = readIntParam(startAddr + 2*i);;
-"22
-[e = *U + &U _ParamConfig * -> -> _i `ui `ux -> -> # *U &U _ParamConfig `ui `ux ( _readIntParam (1 -> + -> _startAddr `i * -> 2 `i _i `uc ]
+[; ;kernel.c: 23: writeIntParam((unsigned int)HW_BATTERY_TYPE, startAddr);
 "23
-}
-[; ;kernel.c: 23: }else{
-[e $U 269  ]
-[e :U 268 ]
-{
-[; ;kernel.c: 24: writeIntParam(ParamConfig[i], (startAddr + 2*i));
+[e ( _writeIntParam (2 , -> _HW_BATTERY_TYPE `ui _startAddr ]
 "24
-[e ( _writeIntParam (2 , *U + &U _ParamConfig * -> -> _i `ui `ux -> -> # *U &U _ParamConfig `ui `ux -> + -> _startAddr `i * -> 2 `i _i `uc ]
-"25
 }
-[e :U 269 ]
-"26
-}
-"20
-[e ++ _i -> 1 `i ]
-[e $ < _i -> 10 `i 265  ]
 [e :U 266 ]
+[; ;kernel.c: 24: }
+[; ;kernel.c: 25: for(i = 1; i<10; i++){
+"25
+{
+[e = _i -> 1 `i ]
+[e $ < _i -> 10 `i 267  ]
+[e $U 268  ]
+[e :U 267 ]
+{
+[; ;kernel.c: 26: if(read){
 "26
-}
-[; ;kernel.c: 25: }
-[; ;kernel.c: 26: }
-[; ;kernel.c: 27: }
+[e $ ! != _read -> 0 `i 270  ]
+{
+[; ;kernel.c: 27: ParamConfig[3][i] = readIntParam(startAddr + 2*i);;
 "27
+[e = *U + &U *U + &U _ParamConfig * -> -> -> 3 `i `ui `ux -> * -> # *U &U *U &U _ParamConfig `ui -> -> 11 `i `ui `ux * -> -> _i `ui `ux -> -> # *U &U *U + &U _ParamConfig * -> -> -> 3 `i `ui `ux -> * -> # *U &U *U &U _ParamConfig `ui -> -> 11 `i `ui `ux `ui `ux ( _readIntParam (1 -> + -> _startAddr `i * -> 2 `i _i `uc ]
+"28
+}
+[; ;kernel.c: 28: }else{
+[e $U 271  ]
+[e :U 270 ]
+{
+[; ;kernel.c: 29: writeIntParam(ParamConfig[3][i], (startAddr + 2*i));
+"29
+[e ( _writeIntParam (2 , *U + &U *U + &U _ParamConfig * -> -> -> 3 `i `ui `ux -> * -> # *U &U *U &U _ParamConfig `ui -> -> 11 `i `ui `ux * -> -> _i `ui `ux -> -> # *U &U *U + &U _ParamConfig * -> -> -> 3 `i `ui `ux -> * -> # *U &U *U &U _ParamConfig `ui -> -> 11 `i `ui `ux `ui `ux -> + -> _startAddr `i * -> 2 `i _i `uc ]
+"30
+}
+[e :U 271 ]
+"31
+}
+"25
+[e ++ _i -> 1 `i ]
+[e $ < _i -> 10 `i 267  ]
+[e :U 268 ]
+"31
+}
+[; ;kernel.c: 30: }
+[; ;kernel.c: 31: }
+[; ;kernel.c: 32: }
+"32
 [e :UE 264 ]
 }
-"28
+"33
 [v _LoadParamFromEPPROM `(v 1 ef ]
 {
-[; ;kernel.c: 28: void LoadParamFromEPPROM(){
+[; ;kernel.c: 33: void LoadParamFromEPPROM(){
 [e :U _LoadParamFromEPPROM ]
 [f ]
-[; ;kernel.c: 29: ReadOrWriteEE(0);
-"29
+[; ;kernel.c: 34: ReadOrWriteEE(0);
+"34
 [e ( _ReadOrWriteEE (1 -> 0 `i ]
-[; ;kernel.c: 30: }
-"30
-[e :UE 270 ]
+[; ;kernel.c: 35: }
+"35
+[e :UE 272 ]
 }
-"31
+"36
 [v _SaveParamToEPPROM `(v 1 ef ]
 {
-[; ;kernel.c: 31: void SaveParamToEPPROM(){
+[; ;kernel.c: 36: void SaveParamToEPPROM(){
 [e :U _SaveParamToEPPROM ]
 [f ]
-[; ;kernel.c: 32: ReadOrWriteEE(1);
-"32
+[; ;kernel.c: 37: ReadOrWriteEE(1);
+"37
 [e ( _ReadOrWriteEE (1 -> 1 `i ]
-[; ;kernel.c: 33: }
-"33
-[e :UE 271 ]
+[; ;kernel.c: 38: }
+"38
+[e :UE 273 ]
 }

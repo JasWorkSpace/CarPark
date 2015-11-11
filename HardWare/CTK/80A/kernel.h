@@ -50,12 +50,22 @@ void SaveParamToEPPROM();
 #define Param_re_over      8
 #define Param_day_vol      9
 #define Param_night_vol    10
+#define Param_MAX          11
 
-uint ParamConfig[11] = {0,0,0,0,0,0,0,0,0,0,0};
+#define HW_BATTERY_TYPE_BAT  0
+#define HW_BATTERY_TYPE_GEL  1
+#define HW_BATTERY_TYPE_OPEN 2
+#define HW_BATTERY_TYPE_SELF 3
 
-#define HW_BATTERY_TYPE_GEL  0
-#define HW_BATTERY_TYPE_OPEN 1
-#define HW_BATTERY_TYPE_SELF 2
+uchar  HW_BATTERY_TYPE = HW_BATTERY_TYPE_BAT;//default config.
+
+uint ParamConfig[][11] = {//Pls Config it by Custom.
+	{HW_BATTERY_TYPE_BAT, 0,0,0,0,0,0,0,0,0,0}, //BAT config
+	{HW_BATTERY_TYPE_GEL, 0,0,0,0,0,0,0,0,0,0}, //GEL config
+	{HW_BATTERY_TYPE_OPEN,0,0,0,0,0,0,0,0,0,0},//OPEN config
+	{HW_BATTERY_TYPE_SELF,0,0,0,0,0,0,0,0,0,0} //SELF config
+};
+
 
 
 ///////////////////////////////////////////////////////////
@@ -84,10 +94,10 @@ typedef struct _InputIOState{
 	uint   ADValue;  //AD 采样值
 	uint32 ADTime;   //AD 采样时间
 };
-struct _InputIOState BATTERY     = {ERROR, CLOSE, ERROR, ERROR, ERROR};
-struct _InputIOState SOLARPANEL  = {ERROR, CLOSE, ERROR, ERROR, ERROR};
-struct _InputIOState CHARGE      = {ERROR, CLOSE, ERROR, ERROR, ERROR};
-struct _InputIOState LOAD        = {ERROR, CLOSE, ERROR, ERROR, ERROR};
+//struct _InputIOState BATTERY     = {ERROR, CLOSE, ERROR, ERROR, ERROR};
+//struct _InputIOState SOLARPANEL  = {ERROR, CLOSE, ERROR, ERROR, ERROR};
+//struct _InputIOState CHARGE      = {ERROR, CLOSE, ERROR, ERROR, ERROR};
+//struct _InputIOState LOAD        = {ERROR, CLOSE, ERROR, ERROR, ERROR};
 //////////////////////////////////////////////////////////////////////////////
 //// System 配置
 #define SYSTEM_CONFIG_12V 1
@@ -108,11 +118,11 @@ typedef struct _SystemConfig{
 	uint  Param_NIGHT_VOLTAGE;
 };
 //12V 系统
-struct _SystemConfig SystemConfig12V = {SYSTEM_CONFIG_12V ,256 , 303 , 284 , 313 , 391 , 355 , 351 , 341 , 327 , 3965 , 900};
+//struct _SystemConfig SystemConfig12V = {SYSTEM_CONFIG_12V ,256 , 303 , 284 , 313 , 391 , 355 , 351 , 341 , 327 , 3965 , 900};
 //24V 系统
-struct _SystemConfig SystemConfig24V = {SYSTEM_CONFIG_24V ,512 , 606 , 568 , 626 , 782 , 710 , 702 , 682 , 654 , 8231 , 3333};
+//struct _SystemConfig SystemConfig24V = {SYSTEM_CONFIG_24V ,512 , 606 , 568 , 626 , 782 , 710 , 702 , 682 , 654 , 8231 , 3333};
 //系统指针
-struct _SystemConfig *SystemConfig;
+//struct _SystemConfig *SystemConfig;
 
 
 
