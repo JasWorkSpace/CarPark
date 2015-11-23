@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- for user info -->
+    <Preference android:layout="@layout/layout_userinfo" android:enabled="false"/>
+    <!-- for restore and backup -->
+    <PreferenceCategory android:title="@string/backupactivity_backup_cat_title" android:key="key_backup_category">
+        <SwitchPreference android:key="key_backup_contacts"
+                          android:icon="@drawable/icon_contacts"
+                          android:defaultValue="@bool/backupactivity_backup_value_contacts_defaultvalue"
+                          android:title="@string/backupactivity_backup_value_contacts"/>
+        <SwitchPreference android:key="key_backup_sms"
+                          android:icon="@drawable/icon_sms"
+                          android:defaultValue="@bool/backupactivity_backup_value_sms_defaultvalue"
+                          android:title="@string/backupactivity_backup_value_sms"/>
+        <SwitchPreference android:key="key_backup_calllog"
+                          android:icon="@drawable/icon_calllog"
+                          android:defaultValue="@bool/backupactivity_backup_value_celllog_defaultvalue"
+                          android:title="@string/backupactivity_backup_value_celllog"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/main_activity_settings">
+        <PreferenceScreen android:title="@string/main_activity_settings_backup"
+                          android:icon="@drawable/icon_settings">
+            <SwitchPreference android:key="key_backup_auto"
+                              android:defaultValue="@bool/backupdativity_autobackup_defaultvalue"
+                              android:title="@string/backupactivity_autobackup"/>
+            <SwitchPreference android:key="key_backup_auto_wifi"
+                              android:defaultValue="@bool/backupdativity_autobackup_wifi_defaultvalue"
+                              android:title="@string/backupactivity_autobackup_wifi"/>
+            <ListPreference   android:key="key_backup_auto_frq"
+                              android:title="@string/backupactivity_autobackup_frq"
+                              android:defaultValue="@string/backupactivity_autobackup_defaultvalue"
+                              android:entryValues="@array/backupactivity_autobackup_entryvalues"
+                              android:entries="@array/backupactivity_autobackup_entry"
+                              android:dialogTitle="@string/backupactivity_autobackup_dialog_title"/>
+        </PreferenceScreen>
+        <PreferenceScreen android:title="@string/main_activity_settings_restore"
+                          android:key="restore_setting"
+                          android:icon="@drawable/icon_settings">
+            <PreferenceCategory android:title="@string/backupactivity_restore_cat_title">
+                <CheckBoxPreference android:key="key_restore_contacts"
+                                  android:defaultValue="true"
+                                  android:title="@string/backupactivity_backup_value_contacts"/>
+                <CheckBoxPreference android:key="key_restore_sms"
+                                  android:defaultValue="true"
+                                  android:title="@string/backupactivity_backup_value_sms"/>
+                <CheckBoxPreference android:key="key_restore_calllog"
+                                  android:defaultValue="true"
+                                  android:title="@string/backupactivity_backup_value_celllog"/>
+            </PreferenceCategory>
+        </PreferenceScreen>
+    </PreferenceCategory>
+</PreferenceScreen>

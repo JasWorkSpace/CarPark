@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory />
+    <PreferenceScreen android:key="ddd"
+                        android:title="@string/userinfoactivity_userinfo"
+                        android:summary="@string/userinfoactivity_userinfo_sum">
+        <intent android:action="com.greenorange.android.myuiaccountinfo"/>
+    </PreferenceScreen>
+
+    <PreferenceScreen android:key="myuibackup"
+                      android:title="@string/bakcup_title"
+                      android:summary="@string/backup_summery">
+        <intent android:targetPackage="com.greenorange.myuicontantsbackup"
+                android:targetClass="com.greenorange.myuicontantsbackup.ui.MainActivity"/>
+    </PreferenceScreen>
+</PreferenceScreen>

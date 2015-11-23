@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools">
+    <item android:id="@+id/action_register"
+          android:title="@string/registeractivity_register"
+          android:textSize="@dimen/menu_textsize"
+          app:showAsAction="always"/>
+    <item android:id="@+id/action_changepassword"
+          android:title="@string/userinfoactivity_userinfo_changepassword"
+          android:textSize="@dimen/menu_textsize"
+          app:showAsAction="always"/>
+</menu>

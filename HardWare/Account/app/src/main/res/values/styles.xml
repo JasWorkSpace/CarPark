@@ -1,0 +1,80 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="@android:style/Theme.Material.Light">
+        <!-- Customize your theme here. -->
+        <item name="android:windowActionBar">true</item>
+        <item name="android:colorPrimary">@color/color_actionbar</item>
+        <item name="android:colorPrimaryDark">@color/color_titlebar</item>
+        <item name="android:actionMenuTextAppearance">@style/style_menu_text</item>
+    </style>
+    <style name="AppBaseTheme" parent="@style/AppTheme"></style>
+    <style name="style_menu_text">
+        <item name="android:textSize">@dimen/menu_textsize</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+
+    <!-- style for layer -->
+    <style name="preference_category">
+        <item name="android:layout_marginTop">@dimen/activity_padding_top</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:gravity">bottom</item>
+    </style>
+    <style name="preference">
+        <item name="android:gravity">bottom</item>
+        <item name="android:layout_height">@dimen/preference_height</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:paddingTop">8dp</item>
+    </style>
+    <style name="category_title" parent="@style/preference_category">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/color_text_hightline</item>
+    </style>
+    <style name="logainactivity_categort_title" parent="@style/category_title"></style>
+
+    <style name="logainactivity_input">
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:maxEms">30</item>
+        <item name="android:max">30</item>
+        <item name="android:textColor">@color/color_text_hint</item>
+    </style>
+    <style name="logainactivity_input_account" parent="@style/logainactivity_input">
+        <item name="android:inputType">phone</item>
+    </style>
+    <style name="logainactivity_input_password" parent="@style/logainactivity_input">
+        <item name="android:inputType">textPassword</item>
+    </style>
+    <style name="registeractivity_input_auth" parent="@style/logainactivity_input">
+        <item name="android:inputType">number</item>
+        <item name="android:maxEms">4</item>
+        <item name="android:max">4</item>
+    </style>
+
+    <style name="registeractivity_password_checkbox">
+        <item name="android:layout_height">@dimen/preference_height</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:gravity">bottom</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:textColor">@color/color_text_hint</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="registeractivity_auth_textview">
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">@dimen/registeractivity_auth_width</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:maxEms">30</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@color/color_main</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+</resources>

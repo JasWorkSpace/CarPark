@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.greenorange.myuicontantsbackup.ui.layout.MainUserInfo xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:clickable="false"
+              android:gravity="center_horizontal"
+              android:layout_height="98dp">
+
+        <ImageView
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/myui_cloud"
+            android:scaleType="center"
+            android:layout_width="@dimen/mainactivity_userinfo_icon_1_width"
+            android:layout_height="@dimen/mainactivity_userinfo_icon_1_height"/>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:padding="1dp"
+                android:id="@+id/user_name"
+                android:gravity="center"
+                android:textColor="#8a000000"
+                android:textSize="12sp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:padding="1dp"
+                android:id="@+id/user_mobile"
+                android:gravity="center"
+                android:textColor="#42000000"
+                android:textSize="10sp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+</com.greenorange.myuicontantsbackup.ui.layout.MainUserInfo>

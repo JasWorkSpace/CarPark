@@ -1,0 +1,23 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:Theme.Material.Light">
+        <!-- Customize your theme here. -->
+        <item name="android:colorPrimary">@android:color/transparent</item>
+        <item name="android:colorPrimaryDark">@color/basebackground</item>
+        <item name="android:colorAccent">@color/maincolor</item>
+    </style>
+    <style name="actionbaractivity" parent="AppTheme">
+    </style>
+    <style name="noactionbaractivity" parent="AppTheme">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="toolbar_title_textstyle">
+        <item name="android:textSize">@dimen/toolbar_title_textsize</item>
+        <!--<item name="android:textStyle">bold</item>-->
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+</resources>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:paddingLeft="@dimen/activity_padding_left"
+              android:paddingRight="@dimen/activity_padding_right"
+              android:layout_height="match_parent">
+    <!-- myui name -->
+    <TextView style="@style/logainactivity_categort_title" android:text="@string/loginactivity_loginname"/>
+    <RelativeLayout style="@style/preference">
+        <EditText style="@style/logainactivity_input_account" android:hint="@string/loginactivity_hint_loginname" android:id="@+id/username_edit" />
+    </RelativeLayout>
+    <!-- myui password -->
+    <TextView style="@style/logainactivity_categort_title" android:text="@string/loginactivity_password"/>
+    <RelativeLayout style="@style/preference">
+        <EditText style="@style/logainactivity_input_password" android:hint="@string/loginactivity_hint_password" android:id="@+id/password_edit" />
+    </RelativeLayout>
+    <!-- myui check password -->
+    <TextView style="@style/logainactivity_categort_title" android:text="@string/registeractivity_checkpassword" android:id="@+id/checkpassword_title"/>
+    <LinearLayout style="@style/preference">
+        <EditText style="@style/logainactivity_input_password" android:hint="@string/registeractivity_hint_checkpassword"
+                  android:id="@+id/passwordconfirm_edit" android:layout_weight="1"/>
+        <CheckBox style="@style/registeractivity_password_checkbox" android:id="@+id/passwordconfirm_checkbox" android:text="@string/registeractivity_showpassword"/>
+    </LinearLayout>
+    <!-- auth -->
+    <TextView style="@style/logainactivity_categort_title" android:text="@string/registeractivity_auth" android:id="@+id/auth_title"/>
+    <LinearLayout style="@style/preference">
+        <EditText style="@style/registeractivity_input_auth" android:hint="@string/registeractivity_hint_auth"
+                  android:id="@+id/auth_edit" android:layout_weight="1"/>
+        <TextView style="@style/registeractivity_auth_textview" android:id="@+id/auth_take" android:text="@string/registeractivity_send_auth" android:enabled="false"/>
+    </LinearLayout>
+
+</LinearLayout>

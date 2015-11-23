@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/userinfoactivity_baseinfo">
+        <PreferenceScreen android:key="userinfo_username"
+                      android:title="@string/userinfoactivity_baseinfo_username"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/userinfoactivity_secureinfo">
+        <PreferenceScreen android:key="userinfo_mobile"
+                          android:title="@string/userinfoactivity_secureinfo_mobile"/>
+        <PreferenceScreen android:key="userinfo_email"
+                          android:title="@string/userinfoactivity_secureinfo_email"/>
+    </PreferenceCategory>
+</PreferenceScreen>

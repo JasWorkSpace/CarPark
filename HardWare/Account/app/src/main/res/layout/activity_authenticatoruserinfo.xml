@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:paddingLeft="@dimen/activity_padding_left"
+              android:paddingRight="@dimen/activity_padding_right">
+    <!-- myui name -->
+    <TextView style="@style/logainactivity_categort_title" android:text="@string/loginactivity_loginname" android:textColor="@color/color_main"/>
+    <LinearLayout style="@style/preference" android:orientation="vertical">
+        <TextView />
+    </LinearLayout>
+</LinearLayout>

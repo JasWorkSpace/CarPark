@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="app_name">MyUI账户</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="loginactivity_actionbar_title">MyUI 登录</string>
+    <string name="loginactivity_actionbar_bindtitle">MyUI 绑定</string>
+    <string name="loginactivity_loginname">MyUI 帐号</string>
+    <string name="loginactivity_hint_loginname">请输入MyUI 帐号</string>
+    <string name="loginactivity_invalid_loginname">MyUI 帐号不可取</string>
+    <string name="loginactivity_password">密码</string>
+    <string name="loginactivity_hint_password">请输入密码</string>
+    <string name="loginactivity_invalid_password">密码不可取</string>
+    <string name="logainactivity_login">登录</string>
+    <string name="logainactivity_register">没有帐号？点此注册</string>
+    <string name="registeractivity_logainfail_backpassword">取回密码</string>
+    <string name="registeractivity_logainfail">MyUI 帐号登录失败</string>
+    <string name="loginactivity_notify_bindaccount">MyUI 帐户系统升级，需要绑定新的MyUI帐户</string>
+
+    <string name="registeractivity_actionbar_title">MyUI 帐号注册</string>
+    <string name="registeractivity_register">注册</string>
+    <string name="registeractivity_changepassword">修改密码</string>
+    <string name="registeractivity_showpassword">显示密码</string>
+    <string name="registeractivity_checkpassword">确认密码</string>
+    <string name="registeractivity_hint_checkpassword">请再次输入密码</string>
+    <string name="registeractivity_checkpassword_new">新密码</string>
+    <string name="registeractivity_hint_checkpassword_new">请输入新密码</string>
+    <string name="registeractivity_invalid_checkpassword">密码确认不可取</string>
+    <string name="registeractivity_send_auth">发送验证码</string>
+    <string name="registeractivity_resend_auth">重新发送</string>
+    <string name="registeractivity_resend_auth_time">重新发送(%1ds)</string>
+    <string name="registeractivity_auth">验证码</string>
+    <string name="registeractivity_invalid_auth">验证码不可取</string>
+    <string name="registeractivity_hint_auth">请输入验证码</string>
+    <string name="registeractivity_send_sms">MyUI帐户验证码为 %1s ，30分钟内有效</string>
+    <string name="registeractivity_registering">注册中</string>
+    <string name="registeractivity_changepasswording">密码修改中</string>
+    <string name="registeractivity_registerfail">注册失败，请检查网络或者信息是否正确</string>
+    <string name="registeractivity_changepasswordfail">密码失败，请检查网络或者信息是否正确</string>
+    <string name="registeractivity_registersuccess">注册成功</string>
+    <string name="registeractivity_changepasswordsuccess">密码更改成功</string>
+
+    <string name="userinfoactivity_userinfo1">个人信息</string>
+    <string name="userinfoactivity_baseinfo">基础信息</string>
+    <string name="userinfoactivity_baseinfo_username">用户名</string>
+    <string name="userinfoactivity_secureinfo">保密信息</string>
+    <string name="userinfoactivity_secureinfo_mobile">手机号</string>
+    <string name="userinfoactivity_secureinfo_email">邮箱</string>
+    <string name="userinfoactivity_userinfo">用户信息</string>
+    <string name="userinfoactivity_userinfo_sum">更改用户信息</string>
+    <string name="userinfoactivity_userinfo_changepassword">修改密码</string>
+
+    <string name="bakcup_title">MyUI备份</string>
+    <string name="backup_summery">备份短信，联系人，通话记录等信息</string>
+    <!-- copy from demo -->
+    <!-- Label for this package -->
+    <string name="label">MyUI账户</string>
+
+    <!-- Permission label -->
+    <string
+        name="permlab_samplesyncadapterAuthPassword">access to passwords for Sample SyncAdapter accounts</string>
+    <!-- Permission description -->
+    <string
+        name="permdesc_samplesyncadapterAuthPassword">Allows applications direct access to the passwords for the
+        Sample SyncAdapter account(s) you have configured.</string>
+
+    <!-- Permission label -->
+    <string
+        name="permlab_samplesyncadapterAuth">view configured accounts</string>
+    <!-- Permission description -->
+    <string
+        name="permdesc_samplesyncadapterAuth">Allows applications to see the usernames (email addresses) of
+        the Sample SyncAdapter account(s) you have configured.</string>
+    <string
+        name="notification_login_error">Touch to sign into your Sample SyncAdapter account.</string>
+
+    <!-- Title string for Login activity-->
+    <string
+        name="ui_activity_title">Sign-in</string>
+    <!-- Message shown in progress dialog while app connects to the server -->
+    <string
+        name="ui_activity_authenticating">Authenticating\u2026</string>
+
+    <!-- AuthenticatorActivity -->
+    <skip />
+    <!-- Label above username EditText -->
+    <string
+        name="login_activity_username_label">Username</string>
+    <!-- Label above password EditText -->
+    <string
+        name="login_activity_password_label">Password</string>
+    <!-- Button to sign in after entering username and password -->
+    <string
+        name="login_activity_ok_button">Sign in</string>
+
+    <!-- Message shown in dialog if the username or password is invalid. -->
+    <string
+        name="login_activity_loginfail_text_both">The username or password isn\'t valid. A Sample SyncAdapter account is
+        required. Please try again. </string>
+    <!-- Message shown in dialog if the password is invalid -->
+    <string
+        name="login_activity_loginfail_text_pwonly">You entered the wrong password or your account has changed.
+        Please re-enter your password.</string>
+    <!-- Message shown in dialog to prompt the user for their password -->
+    <string
+        name="login_activity_loginfail_text_pwmissing">Type the password for this account.</string>
+    <!--
+        Message shown if the provided account doesn't support the current
+        activity.
+    -->
+    <string
+        name="login_activity_newaccount_text">Sign in to your Sample SyncAdapter account. </string>
+
+    <!-- Button that takes the user to the "sign in" screen -->
+    <string
+        name="sign_in_button_label">Sign in</string>
+    <!-- Button for going to the previous screen or step -->
+    <string
+        name="back_button_label">Back</string>
+    <!-- Button to cancel the current operation -->
+    <string
+        name="cancel_button_label">Cancel</string>
+    <string
+        name="profile_action">Sample profile</string>
+    <string
+        name="view_profile">View Profile</string>
+
+    <string name="header_account_type">SampleSync contact</string>
+
+    <string name="label_name">Name</string>
+    <string name="label_phone_home">Home Phone</string>
+    <string name="label_phone_mobile">Mobile Phone</string>
+    <string name="label_phone_work">Work Phone</string>
+    <string name="label_email">Email</string>
+    <string
+        name="menu_done">Done</string>
+    <string
+        name="menu_cancel">Cancel</string>
+
+    <!-- Strings for contacts.xml -->
+    <skip />
+
+    <!-- The label of the button to add contact to this contact provider  -->
+    <string name="invite_action_label">Add to Sample SyncAdaper</string>
+
+    <!-- The description for the invite contact flow -->
+    <string name="invite_contact_description">Congratulations! The user wants to add the contact
+        to the amazing Sample SyncAdapter social network. If this was a real app, it should now
+        make best efforts to add the contact to this network. This would probably involve
+        looking up the person on the network, inviting if he is not there already and syncing
+        the new contact down.
+
+        Ideally, when the user gets back to the People app, the new contact should already
+        be there, enriching the original contact.
+
+        This is the information we got to lookup the contact:</string>
+
+    <!-- The label of the button to view a group -->
+    <string name="view_group_action_label">Show sample group details</string>
+
+    <!-- The description for the view group button -->
+    <string name="view_group_description">This would now show the details of the group.
+
+        This is the group uri:</string>
+
+    <!-- The description for the view stream item -->
+    <string name="view_stream_item_description">This would now show the details of the stream item.
+
+        This is the uri of the stream item:</string>
+
+    <!-- The description for the view stream item photo -->
+    <string name="view_stream_item_photo_description">This would now show the details of the stream item photo.
+
+        This is the uri of the photo:</string>
+</resources>

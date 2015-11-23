@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:paddingLeft="@dimen/activity_padding_left"
+              android:paddingRight="@dimen/activity_padding_right"
+              android:layout_height="match_parent">
+     <!-- myui name -->
+     <TextView style="@style/logainactivity_categort_title" android:text="@string/loginactivity_loginname"/>
+     <RelativeLayout style="@style/preference">
+        <EditText style="@style/logainactivity_input" android:hint="@string/loginactivity_hint_loginname" android:id="@+id/username_edit" />
+     </RelativeLayout>
+     <!-- myui password -->
+     <TextView style="@style/logainactivity_categort_title" android:text="@string/loginactivity_password"/>
+     <RelativeLayout style="@style/preference">
+        <EditText style="@style/logainactivity_input_password" android:hint="@string/loginactivity_hint_password" android:id="@+id/password_edit" />
+     </RelativeLayout>
+     <!-- register -->
+     <RelativeLayout android:layout_height="wrap_content" android:layout_width="fill_parent">
+         <TextView style="@style/logainactivity_categort_title"
+                   android:id="@+id/register"
+                   android:clickable="true"
+                   android:textColor="@color/color_main"
+                   android:layout_width="wrap_content"
+                   android:layout_alignParentEnd="true"
+                   android:gravity="end" android:text="@string/logainactivity_register"/>
+     </RelativeLayout>
+
+</LinearLayout>
